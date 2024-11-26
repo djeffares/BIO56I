@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIO00056I",
+    "section": "",
+    "text": "This site is to contain the workshop material for the module BIO00056I Population Genetics & Evolution"
+  },
+  {
+    "objectID": "workshops/gwas/evolution-gwas1.html",
+    "href": "workshops/gwas/evolution-gwas1.html",
+    "title": "BIO00056I GWAS Workshop",
+    "section": "",
+    "text": "#Introduction This is GWAS workshop for Genes & genomes in populations & evolution - BIO00056I.\nIn the lecture last week, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as “complex” traits, because they are usually controlled by many genes, which each account for a small proportion of the trait variation. For this reason, they are known as additive genes.\nAs we saw in the lecture, one good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.\nUsing a diversity panel instead of a biparental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.\n###Fission yeast In this workshop we’ll use data from the fission yeast Schizosacharomyces pombe, which is a model species for cell biology. You can read more here about S. pombe here.\nWhen fission yeast is not being used in labs as a model species for cell biology, it grows on fuit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).\nThe data we will use is from two papers from Nature Genetics, and Nature Communications. These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits.\n###GWAS for yeast GWAS is usually used for human or crop traits, but of course we can apply this method to any eukaryote species where we have trait data and polymorphism (usually SNP) data.\nIn this workshop we’ll have a look at the GWAS results for four traits, and think about what these results could mean for the evolution of this species.\n###The traits The traits we will look at are:\nGrowth in 400mM NaCl This trait is the growth rate of the strains in 400mM salt. This could be important if strains grew in fruit near the sea, for example.\nGrowth at an elevated temperature This trait is the growth rate of the strains at 40 degrees centigade. This is quite warm for this yeast, so its a stressful condition.\nThe maximal cell density in rich media This trait measures how well each strain grows, if its given plenty of sugar and other resources.\nThe glucose/fructose utlisation level in wine This trait measures how much of the glucose and fructose sugars each strain used in grape must (that is used to make wine).\n\nA high value in any of these traits could be adaptive one condition or another. But optimising one trait may limit another, particularly if the alleles that influence two traits are closely linked.\n\nAll the GWAS output data is is the files:\n\ngwas.0.4M-NaCl-growth.txt\ngwas.heat-growthrate.txt\ngwas.richmedia-max-mass.txt\ngwas.wine-glucose-fructose.txt\n\n\n##Exploring the data\nLoading GWAS data in to R\nWe will now look at the results of the GWAS for the growth in 400mM NaCl. You can obtain the data by downloding the file gwas.0.4M-NaCl-growth.txt, from here.\n\n  salt = read.table(\"gwas.0.4M-NaCl-growth.txt\",h=T)\n\nThis table contains the output from a GWAS program called LDAK.\nEach row of the table contains information about a SNP. For our purposes, the important columns are Wald_P (the p-value), Chr (which chromosome the SNP is on), and BP (the position in the chromosome).\n\nMake a Manhattan plot\n\n#pdf(\"manhats.bestset2.pdf\",width=18,height=10)\nlayout(matrix(c(1:3), 1, 3, byrow = TRUE),widths = c(5579133,4539804,2452883))\npar(bty=\"l\",cex=0.8,mar=c(2,2,2,0)+2)\n\nfor (j in 1:3){\n      temp = subset(salt, Chr == j)\n      plot(temp$BP, -log10(temp$Wald_P),\n           main = \"salt\",ylim=c(1,10),\n           xlab=\"position\",ylab=\"-log10(P)\"\n      )\n      abline(h=-log10(1e-5),col=2,lty=2)\n}\n\n\n\n\n\n\n\n\n\nThen we could get them to make plots of other traits and talk about how:\n\nhow many hits there are\nthe effect sizes?\nhow these alleles might interact if these ay close on the same chromosomes"
+  },
+  {
+    "objectID": "BIO56I-gwas-workshop.html",
+    "href": "BIO56I-gwas-workshop.html",
+    "title": "BIO00056I GWAS Workshop",
+    "section": "",
+    "text": "This page is a draft that may contain small errors"
+  },
+  {
+    "objectID": "BIO56I-gwas-workshop.html#background",
+    "href": "BIO56I-gwas-workshop.html#background",
+    "title": "BIO00056I GWAS Workshop",
+    "section": "1.1 Background",
+    "text": "1.1 Background\nIn the lectures, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as complex traits, because they are affected by genetic variation in many genes. The genetic variants in the genes each account for a small proportion of the trait variation. We usually assume that the contribute in an additive way (rather than more complex ways).\nOne good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.\nUsing a diversity panel instead of a bi parental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.\n\n\n\n\n\n\nQuantitative traits and evolution\n\n\n\nMost traits are quantitative, and are caused by multiple genetic variants. This means that:\n\nWe expect traits to adapt gradually, as a few variants change\nWe do not expect to observe many strong selective sweeps"
+  },
+  {
+    "objectID": "BIO56I-gwas-workshop.html#fission-yeast",
+    "href": "BIO56I-gwas-workshop.html#fission-yeast",
+    "title": "BIO00056I GWAS Workshop",
+    "section": "1.2 Fission yeast",
+    "text": "1.2 Fission yeast\nIn this workshop we’ll use data from the fission yeast Schizosacharomyces pombe, which is a model species for cell biology. You can read more here about S. pombe here.\nWhen fission yeast is not being used in labs as a model species for cell biology, it usually grows on fruit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).\n Figure 1. some facts about S. pombe \nThe data we will use is from two papers from Nature Genetics, and Nature Communications. These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits."
+  },
+  {
+    "objectID": "BIO56I-gwas-workshop.html#gwas-for-yeast",
+    "href": "BIO56I-gwas-workshop.html#gwas-for-yeast",
+    "title": "BIO00056I GWAS Workshop",
+    "section": "1.3 GWAS for yeast",
+    "text": "1.3 GWAS for yeast\nGWAS is usually used for human or crop traits, but of course we can apply this method to any recombing sexually-recombining eukaryotic species where we have trait data and polymorphism data (eg: SNPs).\nIn this workshop we’ll have a look at the GWAS results for four traits, and think about what these results could mean for the evolution of this species."
+  }
+]

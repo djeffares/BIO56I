@@ -1,0 +1,23 @@
+---
+title: "BIO00056I"
+subtitle: "Population Genetics & Evolution"
+
+date: 2024-01-30
+format:
+    html:
+        code-copy: true
+        code-tools: true
+        code-link: true
+        toc: true
+        number-sections: true
+        toc-location: right
+        toc-depth: 2
+        highlight-style: github
+
+editor: source
+
+---
+
+This site is to contain the workshop material for the module BIO00056I Population Genetics & Evolution
+
+

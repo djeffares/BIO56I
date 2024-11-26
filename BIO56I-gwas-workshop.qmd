@@ -1,0 +1,63 @@
+---
+title: "BIO00056I GWAS Workshop"
+
+
+author: Daniel Jeffares
+date: 2024-10-16
+format:
+    html:
+      
+        code-copy: true
+        code-tools: true
+        code-link: true
+        toc: true
+        number-sections: true
+        toc-location: right
+        toc-depth: 2
+        highlight-style: github
+
+editor: source
+    
+---
+
+::: callout-warning
+## This page is a draft that may contain small errors
+:::
+
+# Introduction
+
+## Background
+In the lectures, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as *complex traits*, because they are affected by genetic variation in **many genes**. The genetic variants in the genes each account for a small proportion of the trait variation. We usually assume that the contribute in an additive way (rather than more complex ways). 
+
+One good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.
+
+Using a diversity panel instead of a bi parental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.
+
+:::callout-important
+# Quantitative traits and evolution
+Most traits are quantitative, and are caused by multiple genetic variants. This means that:
+
+* We expect traits to adapt *gradually*, as a few variants change
+* We do not expect to observe many strong *selective sweeps*
+:::
+
+
+## Fission yeast
+In this workshop we'll use data from the fission yeast *Schizosacharomyces pombe*, which is a model species for cell biology.
+You can read more here about *S. pombe* [here](http://www-users.york.ac.uk/~dj757/BIO00047I/BIO00056I_index.html).
+
+When fission yeast is not being used in labs as a model species for cell biology, it usually grows on fruit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).
+
+![](fission-yeast-facts.jpeg){width=100%}
+**Figure 1. some facts about *S. pombe* **
+
+The data we will use is from two papers from [Nature Genetics](https://www.ncbi.nlm.nih.gov/pubmed/25665008), and [Nature Communications](http://europepmc.org/abstract/MED/28117401). These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits.
+
+## GWAS for yeast
+GWAS is usually used for human or crop traits, but of course we can apply this method to any recombing sexually-recombining eukaryotic species where we have trait data and polymorphism data (eg: SNPs).
+
+In this workshop we'll have a look at the GWAS results for four traits, and think about what these results could mean for the evolution of this species.
+
+
+
+
