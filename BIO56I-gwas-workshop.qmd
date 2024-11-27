@@ -21,6 +21,9 @@ editor: source
 
 # Learning objectives
 
+1. To understand the principles of quantitative genetics.
+2. To appreciate how this alters our perspective on evolution
+3. To learn how to design experiments that explore quantitative trait variation.
 
 # Introduction
 

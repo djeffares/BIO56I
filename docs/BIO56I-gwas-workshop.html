@@ -173,7 +173,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><section id="learning-objectives" class="level1" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> Learning objectives</h1>
-</section><section id="introduction" class="level1" data-number="2"><h1 data-number="2">
+<ol type="1">
+<li>To understand the principles of quantitative genetics.</li>
+<li>To appreciate how this alters our perspective on evolution</li>
+<li>To learn how to design experiments that explore quantitative trait variation.</li>
+</ol></section><section id="introduction" class="level1" data-number="2"><h1 data-number="2">
 <span class="header-section-number">2</span> Introduction</h1>
 <section id="background" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="background">
 <span class="header-section-number">2.1</span> Background</h2>
@@ -967,346 +971,349 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># Learning objectives</span></span>
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background</span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>In the lectures, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as *complex traits*, because they are affected by genetic variation in **many genes**. The genetic variants in the genes each account for a small proportion of the trait variation. We usually assume that the contribute in an additive way (rather than more complex ways). </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To understand the principles of quantitative genetics.</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>To appreciate how this alters our perspective on evolution</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>To learn how to design experiments that explore quantitative trait variation.</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
 <span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>One good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>Using a diversity panel instead of a bi parental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>:::callout-important</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="fu"># Quantitative traits and evolution</span></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>Most traits are quantitative, and are caused by multiple genetic variants. This means that:</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>We expect traits to adapt *gradually*, as a few variants change</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>We do not expect to observe many strong *selective sweeps*</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>In the lectures, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as *complex traits*, because they are affected by genetic variation in **many genes**. The genetic variants in the genes each account for a small proportion of the trait variation. We usually assume that the contribute in an additive way (rather than more complex ways). </span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>One good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>Using a diversity panel instead of a bi parental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>:::callout-important</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Quantitative traits and evolution</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>Most traits are quantitative, and are caused by multiple genetic variants. This means that:</span>
 <span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>We expect traits to adapt *gradually*, as a few variants change</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>We do not expect to observe many strong *selective sweeps*</span>
 <span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fission yeast</span></span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>In this workshop we'll use data from the fission yeast *Schizosacharomyces pombe*, which is a model species for cell biology.</span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>You can read more here about *S. pombe* <span class="co">[</span><span class="ot">here</span><span class="co">](http://www-users.york.ac.uk/~dj757/BIO00047I/BIO00056I_index.html)</span>.</span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>When fission yeast is not being used in labs as a model species for cell biology, it usually grows on fruit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="al">![](fission-yeast-image.jpg)</span>{width=50%}</span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>::: {style="font-size: 80%;"}</span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>**Figure 1. The fission yeast *Schizosacharomyces pombe.* ** Fission yeast is an excellent model system. It is easy to grow in the laboratory, easy to transform, and it has a very small genome (12 Mb). It has **~5,000** protein coding genes, and ~1500 non-coding RNAs. It is **haploid**. Fission yeast and the budding yeast *Saccharomyces cerevisiae* are **not closely related** fungi, so study of both has contributed vastly to our understanding of molecular biology, and to evolutionary biology and quantitative genetics.</span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>::: {style="font-size: 100%;"}</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fission yeast</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>In this workshop we'll use data from the fission yeast *Schizosacharomyces pombe*, which is a model species for cell biology.</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>You can read more here about *S. pombe* <span class="co">[</span><span class="ot">here</span><span class="co">](http://www-users.york.ac.uk/~dj757/BIO00047I/BIO00056I_index.html)</span>.</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>When fission yeast is not being used in labs as a model species for cell biology, it usually grows on fruit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="al">![](fission-yeast-image.jpg)</span>{width=50%}</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>::: {style="font-size: 80%;"}</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>**Figure 1. The fission yeast *Schizosacharomyces pombe.* ** Fission yeast is an excellent model system. It is easy to grow in the laboratory, easy to transform, and it has a very small genome (12 Mb). It has **~5,000** protein coding genes, and ~1500 non-coding RNAs. It is **haploid**. Fission yeast and the budding yeast *Saccharomyces cerevisiae* are **not closely related** fungi, so study of both has contributed vastly to our understanding of molecular biology, and to evolutionary biology and quantitative genetics.</span>
 <span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## GWAS for yeast</span></span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>GWAS is usually used for human or crop traits, but of course we can apply this method to any recombing sexually-recombining eukaryotic species where we have trait data and polymorphism data (eg: SNPs).</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>::: {style="font-size: 100%;"}</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>\</span>
 <span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>The data we will use is from two papers from <span class="co">[</span><span class="ot">Nature Genetics</span><span class="co">](https://www.ncbi.nlm.nih.gov/pubmed/25665008)</span>, and <span class="co">[</span><span class="ot">Nature Communications</span><span class="co">](http://europepmc.org/abstract/MED/28117401)</span>. These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits.</span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>In this workshop we will examine some GWAS results for four traits, and think about what these results could mean for the evolution of this species. </span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## The traits</span></span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>The traits we will look at today are:</span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>**Growth in 400mM NaCl**</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>The growth rate of the strains in 400 mM salt. This could be important if strains grew in fruit near the sea, for example.</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## GWAS for yeast</span></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>GWAS is usually used for human or crop traits, but of course we can apply this method to any recombing sexually-recombining eukaryotic species where we have trait data and polymorphism data (eg: SNPs).</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>The data we will use is from two papers from <span class="co">[</span><span class="ot">Nature Genetics</span><span class="co">](https://www.ncbi.nlm.nih.gov/pubmed/25665008)</span>, and <span class="co">[</span><span class="ot">Nature Communications</span><span class="co">](http://europepmc.org/abstract/MED/28117401)</span>. These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits.</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>In this workshop we will examine some GWAS results for four traits, and think about what these results could mean for the evolution of this species. </span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## The traits</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>The traits we will look at today are:</span>
 <span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>**Growth at an elevated temperature** </span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>The growth rate of the strains at 40 degrees centigrade. This is quite warm for this yeast, so it's a stressful condition.</span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>**Growth in 400mM NaCl**</span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>The growth rate of the strains in 400 mM salt. This could be important if strains grew in fruit near the sea, for example.</span>
 <span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>**Maximal cell density in rich media** </span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>This trait measures how well each strain grows, if it's given plenty of sugar and other resources.</span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>**Growth at an elevated temperature** </span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>The growth rate of the strains at 40 degrees centigrade. This is quite warm for this yeast, so it's a stressful condition.</span>
 <span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>**Glucose/fructose utlisation level in wine** </span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>How much of the glucose and fructose sugars each strain used in grape must (which is used to make wine).</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>**Maximal cell density in rich media** </span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>This trait measures how well each strain grows, if it's given plenty of sugar and other resources.</span>
 <span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Traits and trade-offs</span></span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>A high value in one of these traits could be adaptive one environment. But it ma be sub-optimal in another environment. Also, optimising one trait may limit another trait. This could be vbause one mutation may result in multiple changes, or the alleles that influence two traits are closely linked.</span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exercises</span></span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exploring the data</span></span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>First, clear all the previous data you may have in R, set your working directory, and load the new data.</span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>**To set a working directory** you can either use a command (as below), or use the menus; </span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>Session &gt; Set Working Directory &gt; Choose Directory.</span>
-<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="co">#clear all the previous data</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>**Glucose/fructose utlisation level in wine** </span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>How much of the glucose and fructose sugars each strain used in grape must (which is used to make wine).</span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Traits and trade-offs</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>A high value in one of these traits could be adaptive one environment. But it ma be sub-optimal in another environment. Also, optimising one trait may limit another trait. This could be vbause one mutation may result in multiple changes, or the alleles that influence two traits are closely linked.</span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exercises</span></span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exploring the data</span></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>First, clear all the previous data you may have in R, set your working directory, and load the new data.</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>**To set a working directory** you can either use a command (as below), or use the menus; </span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>Session &gt; Set Working Directory &gt; Choose Directory.</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
 <span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a><span class="co">#set working directory</span></span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="co">#your working directory will be different!</span></span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/dj757/gd/modules/BIO56I/workshops/gwas"</span>)</span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a><span class="co">#load the data</span></span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">url</span>(<span class="st">"http://www-users.york.ac.uk/~dj757/BIO00056I/data/gwas-data.Rda"</span>))</span>
-<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>After loading this data you'll then have four data frames of data called <span class="in">`gluc`</span>, <span class="in">`heat`</span>, <span class="in">`rich`</span> and <span class="in">`salt`</span>. Each of these data frames contains the GWAS results for one trait. Let's start by looking at one table, salt. </span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>Try these commands to see what the contain:</span>
-<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="co">#examine what is in the salt data frame</span></span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(salt)</span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(salt)</span>
-<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(salt)</span>
-<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(salt)</span>
-<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>This table contains the output from GWAS program called <span class="co">[</span><span class="ot">LDAK</span><span class="co">](https://dougspeed.com/)</span>. This is one of man software tools that run GWAS analysis. It describes the association of each SNP with the trait of salt tolerance.</span>
-<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a>Each row of the table contains information about a SNP. For our purposes, the important columns are:</span>
-<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Wald_P`</span>, the *P-value*, the probability that this SNP is associated with this trait</span>
-<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Chr`</span>, which chromosome the SNP is on</span>
-<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`BP`</span>, the position of the SNP in the chromosome</span>
-<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Effect_size`</span>, how strongly this variant effects the trait</span>
-<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a>The **effect size** of the variant estimates the proportion of trait variation that is explained by this SNP. From our understanding of [The Neutral Theory of Moleclar Evolution](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution), we know that **most variants are selectively neutral.** ie: they have little or no effect on fitness.</span>
-<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a>Given this, we might expect that most variants have small, or no effect, on **traits**.</span>
-<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## Manhattan plot</span></span>
-<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a>A Manhattan plot is a standard way of viewing GWAS results. They are named Manhattan plots because they resemble the skyline of a highrise city, such as Manhattan Island (New York).</span>
-<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a>Manhattan plots show the position of the SNP on the x axis, and the p-value of the association on the y axis. P-alues are plotted as -log10(P), so that very small p-values end up at the top of the plot, and stand out.</span>
-<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>The code below will make a Manhattan plot for the salt trait.</span>
-<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a><span class="co">#set plotting parameters</span></span>
-<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
-<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
-<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
-<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
-<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a>      <span class="co">#make a subset of SNPs from this chromosome</span></span>
-<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
-<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a>      <span class="co">#plot these</span></span>
-<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
-<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Chr"</span>,j),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
-<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
-<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a>      <span class="co">#draw a threshold line</span></span>
-<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a>      <span class="co">#SNPs above this line are statistically associated with the trait</span></span>
-<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
-<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a>We see a **small number* of very low P-values, with -log10 values they are at the **top** of the *y* axis. For these, there is strong support that the affect the trait.</span>
-<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a>Then, there are a large number with P-values of around 0.1 or greater. These are at the *bottom** of the *y* axis. There is weak support that the affect the trait. These may have tiny effect sizes, or none at all.</span>
-<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a>:::callout-important</span>
-<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a><span class="fu"># -log10 scale plotting</span></span>
-<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a>Note that we use <span class="in">` plot(temp$BP, -log10(temp$Wald_P)`</span> to plot the <span class="in">`Wald_P`</span> P-values on a negative log scale. This means that very significant P-values (eg: *P* = 1 x 10^**-9.5**^), will show as high points on the plot (eg: at position **9.5** on the vertical *y* axis in this case). </span>
-<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>All the non-signifcant SNPs (eg: *P* = 0.1, which is *P* = 1 x 10^**-1**^) will be at the bottom of the *y* axis. If **most variants have small effects, or no effects on traits**, there will be many of these.</span>
-<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a>This shows how GWAS relates to other areas of evolutionary theory.</span>
-<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## SNP effect sizes </span></span>
-<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a>The strength of the association between the genotype and the phenotype is related to the effect size of the variant (how strongly it affects the trait). Some alleles will affect the trait very strongly, others not so much. Now let's look at how large the effect sizes are, by making a histogram of all the effect sizes.</span>
-<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(salt<span class="sc">$</span>Effect_size,<span class="at">br=</span><span class="dv">30</span>)</span>
-<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a>:::callout-important</span>
-<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a><span class="fu"># Condider this result</span></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a><span class="co">#clear all the previous data</span></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="co">#set working directory</span></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a><span class="co">#your working directory will be different!</span></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/dj757/gd/modules/BIO56I/workshops/gwas"</span>)</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a><span class="co">#load the data</span></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">url</span>(<span class="st">"http://www-users.york.ac.uk/~dj757/BIO00056I/data/gwas-data.Rda"</span>))</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>After loading this data you'll then have four data frames of data called <span class="in">`gluc`</span>, <span class="in">`heat`</span>, <span class="in">`rich`</span> and <span class="in">`salt`</span>. Each of these data frames contains the GWAS results for one trait. Let's start by looking at one table, salt. </span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>Try these commands to see what the contain:</span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a><span class="co">#examine what is in the salt data frame</span></span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(salt)</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(salt)</span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(salt)</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(salt)</span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a>This table contains the output from GWAS program called <span class="co">[</span><span class="ot">LDAK</span><span class="co">](https://dougspeed.com/)</span>. This is one of man software tools that run GWAS analysis. It describes the association of each SNP with the trait of salt tolerance.</span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>Each row of the table contains information about a SNP. For our purposes, the important columns are:</span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Wald_P`</span>, the *P-value*, the probability that this SNP is associated with this trait</span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Chr`</span>, which chromosome the SNP is on</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`BP`</span>, the position of the SNP in the chromosome</span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Effect_size`</span>, how strongly this variant effects the trait</span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>The **effect size** of the variant estimates the proportion of trait variation that is explained by this SNP. From our understanding of [The Neutral Theory of Moleclar Evolution](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution), we know that **most variants are selectively neutral.** ie: they have little or no effect on fitness.</span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>Given this, we might expect that most variants have small, or no effect, on **traits**.</span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Manhattan plot</span></span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a>A Manhattan plot is a standard way of viewing GWAS results. They are named Manhattan plots because they resemble the skyline of a highrise city, such as Manhattan Island (New York).</span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a>Manhattan plots show the position of the SNP on the x axis, and the p-value of the association on the y axis. P-alues are plotted as -log10(P), so that very small p-values end up at the top of the plot, and stand out.</span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>The code below will make a Manhattan plot for the salt trait.</span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a><span class="co">#set plotting parameters</span></span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
+<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a>      <span class="co">#make a subset of SNPs from this chromosome</span></span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a>      <span class="co">#plot these</span></span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Chr"</span>,j),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a>      <span class="co">#draw a threshold line</span></span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a>      <span class="co">#SNPs above this line are statistically associated with the trait</span></span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a>We see a **small number* of very low P-values, with -log10 values they are at the **top** of the *y* axis. For these, there is strong support that the affect the trait.</span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a>Then, there are a large number with P-values of around 0.1 or greater. These are at the *bottom** of the *y* axis. There is weak support that the affect the trait. These may have tiny effect sizes, or none at all.</span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a>:::callout-important</span>
+<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a><span class="fu"># -log10 scale plotting</span></span>
+<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>Note that we use <span class="in">` plot(temp$BP, -log10(temp$Wald_P)`</span> to plot the <span class="in">`Wald_P`</span> P-values on a negative log scale. This means that very significant P-values (eg: *P* = 1 x 10^**-9.5**^), will show as high points on the plot (eg: at position **9.5** on the vertical *y* axis in this case). </span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a>All the non-signifcant SNPs (eg: *P* = 0.1, which is *P* = 1 x 10^**-1**^) will be at the bottom of the *y* axis. If **most variants have small effects, or no effects on traits**, there will be many of these.</span>
+<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a>This shows how GWAS relates to other areas of evolutionary theory.</span>
+<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a><span class="fu">## SNP effect sizes </span></span>
+<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a>The strength of the association between the genotype and the phenotype is related to the effect size of the variant (how strongly it affects the trait). Some alleles will affect the trait very strongly, others not so much. Now let's look at how large the effect sizes are, by making a histogram of all the effect sizes.</span>
+<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(salt<span class="sc">$</span>Effect_size,<span class="at">br=</span><span class="dv">30</span>)</span>
+<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What this histogram tell you about SNP effect sizes?</span>
-<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Is this consistent with The Neutral Theory of Moleclar Evolution?</span>
-<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## How does this influence evolution?</span></span>
-<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>The effect size of a variant is **the proportion of the phenotypic variance that the SNP explains**. We can see that most of the effect sizes are very small. Most are smaller than 0.05, meaning that they produce an effect that is much smaller than 5% of the trait. They have tiny effects on the trait.</span>
-<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a>At this point let's think about how such tiny effect alleles might influence evolutionary change.</span>
-<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a>A <span class="co">[</span><span class="ot">selective sweep</span><span class="co">](https://en.wikipedia.org/wiki/Selective_sweep)</span> is a process where a beneficial mutation becomes fixed in a population rapidly, removing the genetic variation around the selected allele. Ask yourself:</span>
-<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>If a trait is caused by *small number* of *large effect* mutations, would we expect to observe a selective sweep?</span>
-<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What about a trait with a *large number* of mutations with very *tiny effects*?</span>
-<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Would we expect to observe a selective sweep if a *large effect* mutation lies very close to a *deleterious* allele?</span>
-<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## Another trait: glucose &amp; fructose use</span></span>
-<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a>In a vineyard environment, where this yeast grows, it will be an advantage to be able to metabolise the glucose and fructose in the rotting fruit. The glucose/fructose use is in the <span class="in">`gluc`</span> data frame.</span>
-<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a>Again, we will look at the P-values <span class="in">`Wald_P`</span> and how much each SNP is predcited to affect the trait (<span class="in">`Effect_size`</span>).</span>
-<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a><span class="co">#set plotting parameters</span></span>
-<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
-<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
-<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
-<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
-<span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(gluc, Chr <span class="sc">==</span> j)</span>
-<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
-<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Chr"</span>, j, <span class="st">"Gluc"</span>),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
-<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
-<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
-<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-253"><a href="#cb8-253" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a>Again, we see a **small number** of very low P-values, with -log10 values they are at the **top** of the *y* axis. For these, there is strong support that the affect the trait.</span>
-<span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a>Then, there are a large number with P-values of around 0.1 or greater. These are at the **bottom** of the *y* axis. There is weak support that the affect the trait. These may have **tiny effect sizes**, or **none at all**.</span>
-<span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a>Now, make a histogram of the effect sizes:</span>
-<span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-264"><a href="#cb8-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-265"><a href="#cb8-265" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-266"><a href="#cb8-266" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-267"><a href="#cb8-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-268"><a href="#cb8-268" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(gluc<span class="sc">$</span>Effect_size)</span>
-<span id="cb8-269"><a href="#cb8-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a>:::callout-important</span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a><span class="fu"># Condider this result</span></span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What this histogram tell you about SNP effect sizes?</span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Is this consistent with The Neutral Theory of Moleclar Evolution?</span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## How does this influence evolution?</span></span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a>The effect size of a variant is **the proportion of the phenotypic variance that the SNP explains**. We can see that most of the effect sizes are very small. Most are smaller than 0.05, meaning that they produce an effect that is much smaller than 5% of the trait. They have tiny effects on the trait.</span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a>At this point let's think about how such tiny effect alleles might influence evolutionary change.</span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a>A <span class="co">[</span><span class="ot">selective sweep</span><span class="co">](https://en.wikipedia.org/wiki/Selective_sweep)</span> is a process where a beneficial mutation becomes fixed in a population rapidly, removing the genetic variation around the selected allele. Ask yourself:</span>
+<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>If a trait is caused by *small number* of *large effect* mutations, would we expect to observe a selective sweep?</span>
+<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What about a trait with a *large number* of mutations with very *tiny effects*?</span>
+<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Would we expect to observe a selective sweep if a *large effect* mutation lies very close to a *deleterious* allele?</span>
+<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a><span class="fu">## Another trait: glucose &amp; fructose use</span></span>
+<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a>In a vineyard environment, where this yeast grows, it will be an advantage to be able to metabolise the glucose and fructose in the rotting fruit. The glucose/fructose use is in the <span class="in">`gluc`</span> data frame.</span>
+<span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a>Again, we will look at the P-values <span class="in">`Wald_P`</span> and how much each SNP is predcited to affect the trait (<span class="in">`Effect_size`</span>).</span>
+<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a><span class="co">#set plotting parameters</span></span>
+<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
+<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
+<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(gluc, Chr <span class="sc">==</span> j)</span>
+<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
+<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Chr"</span>, j, <span class="st">"Gluc"</span>),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
+<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
+<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb8-253"><a href="#cb8-253" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a>Again, we see a **small number** of very low P-values, with -log10 values they are at the **top** of the *y* axis. For these, there is strong support that the affect the trait.</span>
+<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a>Then, there are a large number with P-values of around 0.1 or greater. These are at the **bottom** of the *y* axis. There is weak support that the affect the trait. These may have **tiny effect sizes**, or **none at all**.</span>
+<span id="cb8-261"><a href="#cb8-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-262"><a href="#cb8-262" aria-hidden="true" tabindex="-1"></a>Now, make a histogram of the effect sizes:</span>
+<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-266"><a href="#cb8-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-267"><a href="#cb8-267" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-268"><a href="#cb8-268" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-269"><a href="#cb8-269" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
 <span id="cb8-270"><a href="#cb8-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-271"><a href="#cb8-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## Looking at two traits</span></span>
+<span id="cb8-271"><a href="#cb8-271" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(gluc<span class="sc">$</span>Effect_size)</span>
+<span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb8-273"><a href="#cb8-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-274"><a href="#cb8-274" aria-hidden="true" tabindex="-1"></a>Species are not able to adapt simply to one condition, like heat or salt stress, because the natural environment is complex, and it changes from day to day. As a thought experiment, we will consider this using the fission yeast data. </span>
-<span id="cb8-275"><a href="#cb8-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-276"><a href="#cb8-276" aria-hidden="true" tabindex="-1"></a>We will compare the two Manhattan plots by plotting them on top of each other. We will plot the salt results in black, and the glucose metabolism results in red, and write the plot output to a pdf file. This pdf will appear in your working directory.</span>
-<span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-280"><a href="#cb8-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-281"><a href="#cb8-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb8-282"><a href="#cb8-282" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb8-283"><a href="#cb8-283" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a><span class="co">#open the pdf writer</span></span>
-<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"GWAS-plot3.pdf"</span>,<span class="at">width=</span><span class="dv">60</span>)</span>
-<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a><span class="co">#set up the plot layout</span></span>
-<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
-<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
-<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes</span></span>
-<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
-<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a>      <span class="co">#plot the salt GWAS points (black dots)</span></span>
-<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
-<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),<span class="at">main =</span> <span class="st">""</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),<span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span>)</span>
-<span id="cb8-295"><a href="#cb8-295" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb8-296"><a href="#cb8-296" aria-hidden="true" tabindex="-1"></a>      <span class="co">#add the glucose/fructose GWAS points (red crosses)</span></span>
-<span id="cb8-297"><a href="#cb8-297" aria-hidden="true" tabindex="-1"></a>      temp2 <span class="ot">=</span> <span class="fu">subset</span>(gluc, Chr <span class="sc">==</span> j)</span>
-<span id="cb8-298"><a href="#cb8-298" aria-hidden="true" tabindex="-1"></a>      <span class="fu">points</span>(temp2<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp2<span class="sc">$</span>Wald_P),<span class="at">main =</span> <span class="st">"gluc"</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),<span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">pch=</span><span class="dv">3</span>)</span>
-<span id="cb8-299"><a href="#cb8-299" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb8-300"><a href="#cb8-300" aria-hidden="true" tabindex="-1"></a>      <span class="co">#add the significance threshold</span></span>
-<span id="cb8-301"><a href="#cb8-301" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
-<span id="cb8-302"><a href="#cb8-302" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-303"><a href="#cb8-303" aria-hidden="true" tabindex="-1"></a><span class="co">#close the pdf writer</span></span>
-<span id="cb8-304"><a href="#cb8-304" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb8-305"><a href="#cb8-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-306"><a href="#cb8-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-307"><a href="#cb8-307" aria-hidden="true" tabindex="-1"></a>Now find the pdf called <span class="in">`GWAS-plot3.pdf`</span> and take a look.</span>
-<span id="cb8-308"><a href="#cb8-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-309"><a href="#cb8-309" aria-hidden="true" tabindex="-1"></a><span class="fu">### Might mutations for two traits conflict?</span></span>
-<span id="cb8-310"><a href="#cb8-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-311"><a href="#cb8-311" aria-hidden="true" tabindex="-1"></a>Look at that significant peak on chromosome 3, at position ~1,500,000. Remember, this will have a large effect size. See how there is also an important variant for glucose &amp; fructose use on chromosome 3, near the same position.</span>
-<span id="cb8-312"><a href="#cb8-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-313"><a href="#cb8-313" aria-hidden="true" tabindex="-1"></a>Let's consider what might happen if alleles are linked and the environment is complex (which all environments are). In this case, we consider an environment which is salty, but has plenty of fructose. A coastal vineyard, for example.</span>
-<span id="cb8-314"><a href="#cb8-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-315"><a href="#cb8-315" aria-hidden="true" tabindex="-1"></a>What might happen if the all the helpful alleles are on the same **haplotype**? </span>
-<span id="cb8-316"><a href="#cb8-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-274"><a href="#cb8-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-275"><a href="#cb8-275" aria-hidden="true" tabindex="-1"></a><span class="fu">## Looking at two traits</span></span>
+<span id="cb8-276"><a href="#cb8-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a>Species are not able to adapt simply to one condition, like heat or salt stress, because the natural environment is complex, and it changes from day to day. As a thought experiment, we will consider this using the fission yeast data. </span>
+<span id="cb8-278"><a href="#cb8-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-279"><a href="#cb8-279" aria-hidden="true" tabindex="-1"></a>We will compare the two Manhattan plots by plotting them on top of each other. We will plot the salt results in black, and the glucose metabolism results in red, and write the plot output to a pdf file. This pdf will appear in your working directory.</span>
+<span id="cb8-280"><a href="#cb8-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-283"><a href="#cb8-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a><span class="co">#open the pdf writer</span></span>
+<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"GWAS-plot3.pdf"</span>,<span class="at">width=</span><span class="dv">60</span>)</span>
+<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a><span class="co">#set up the plot layout</span></span>
+<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
+<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes</span></span>
+<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb8-295"><a href="#cb8-295" aria-hidden="true" tabindex="-1"></a>      <span class="co">#plot the salt GWAS points (black dots)</span></span>
+<span id="cb8-296"><a href="#cb8-296" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
+<span id="cb8-297"><a href="#cb8-297" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),<span class="at">main =</span> <span class="st">""</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),<span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span>)</span>
+<span id="cb8-298"><a href="#cb8-298" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-299"><a href="#cb8-299" aria-hidden="true" tabindex="-1"></a>      <span class="co">#add the glucose/fructose GWAS points (red crosses)</span></span>
+<span id="cb8-300"><a href="#cb8-300" aria-hidden="true" tabindex="-1"></a>      temp2 <span class="ot">=</span> <span class="fu">subset</span>(gluc, Chr <span class="sc">==</span> j)</span>
+<span id="cb8-301"><a href="#cb8-301" aria-hidden="true" tabindex="-1"></a>      <span class="fu">points</span>(temp2<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp2<span class="sc">$</span>Wald_P),<span class="at">main =</span> <span class="st">"gluc"</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),<span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">pch=</span><span class="dv">3</span>)</span>
+<span id="cb8-302"><a href="#cb8-302" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-303"><a href="#cb8-303" aria-hidden="true" tabindex="-1"></a>      <span class="co">#add the significance threshold</span></span>
+<span id="cb8-304"><a href="#cb8-304" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb8-305"><a href="#cb8-305" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-306"><a href="#cb8-306" aria-hidden="true" tabindex="-1"></a><span class="co">#close the pdf writer</span></span>
+<span id="cb8-307"><a href="#cb8-307" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb8-308"><a href="#cb8-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-309"><a href="#cb8-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-310"><a href="#cb8-310" aria-hidden="true" tabindex="-1"></a>Now find the pdf called <span class="in">`GWAS-plot3.pdf`</span> and take a look.</span>
+<span id="cb8-311"><a href="#cb8-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-312"><a href="#cb8-312" aria-hidden="true" tabindex="-1"></a><span class="fu">### Might mutations for two traits conflict?</span></span>
+<span id="cb8-313"><a href="#cb8-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-314"><a href="#cb8-314" aria-hidden="true" tabindex="-1"></a>Look at that significant peak on chromosome 3, at position ~1,500,000. Remember, this will have a large effect size. See how there is also an important variant for glucose &amp; fructose use on chromosome 3, near the same position.</span>
+<span id="cb8-315"><a href="#cb8-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-316"><a href="#cb8-316" aria-hidden="true" tabindex="-1"></a>Let's consider what might happen if alleles are linked and the environment is complex (which all environments are). In this case, we consider an environment which is salty, but has plenty of fructose. A coastal vineyard, for example.</span>
 <span id="cb8-317"><a href="#cb8-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-318"><a href="#cb8-318" aria-hidden="true" tabindex="-1"></a><span class="al">![](two-traits.jpeg)</span>{width=100%}</span>
+<span id="cb8-318"><a href="#cb8-318" aria-hidden="true" tabindex="-1"></a>What might happen if the all the helpful alleles are on the same **haplotype**? </span>
 <span id="cb8-319"><a href="#cb8-319" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-320"><a href="#cb8-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-321"><a href="#cb8-321" aria-hidden="true" tabindex="-1"></a>:::callout-note</span>
-<span id="cb8-322"><a href="#cb8-322" aria-hidden="true" tabindex="-1"></a><span class="fu"># haplotypes</span></span>
-<span id="cb8-323"><a href="#cb8-323" aria-hidden="true" tabindex="-1"></a>In a physical sense a <span class="in">`haplotype`</span> is a length of DNA from *one chromosome*. For **diploid** species such as yourself tht have a paternal and a maternal chromosome, this is easy to understand.</span>
-<span id="cb8-324"><a href="#cb8-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-325"><a href="#cb8-325" aria-hidden="true" tabindex="-1"></a>But for fission yeast is haploid (one copy of each chromosome), what does this mean? We can think of different haplotypes as different *versions* of the chromosome that exist within the population. Each will carry it's own SNPs.</span>
-<span id="cb8-326"><a href="#cb8-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-327"><a href="#cb8-327" aria-hidden="true" tabindex="-1"></a>Through meiotic recombination, haplotypes will be mixed. But SNPs that are *very close together* on the chromosome will not become separated very often. So they will usually travel together.</span>
-<span id="cb8-328"><a href="#cb8-328" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-321"><a href="#cb8-321" aria-hidden="true" tabindex="-1"></a><span class="al">![](two-traits.jpeg)</span>{width=100%}</span>
+<span id="cb8-322"><a href="#cb8-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-323"><a href="#cb8-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-324"><a href="#cb8-324" aria-hidden="true" tabindex="-1"></a>:::callout-note</span>
+<span id="cb8-325"><a href="#cb8-325" aria-hidden="true" tabindex="-1"></a><span class="fu"># haplotypes</span></span>
+<span id="cb8-326"><a href="#cb8-326" aria-hidden="true" tabindex="-1"></a>In a physical sense a <span class="in">`haplotype`</span> is a length of DNA from *one chromosome*. For **diploid** species such as yourself tht have a paternal and a maternal chromosome, this is easy to understand.</span>
+<span id="cb8-327"><a href="#cb8-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-328"><a href="#cb8-328" aria-hidden="true" tabindex="-1"></a>But for fission yeast is haploid (one copy of each chromosome), what does this mean? We can think of different haplotypes as different *versions* of the chromosome that exist within the population. Each will carry it's own SNPs.</span>
 <span id="cb8-329"><a href="#cb8-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-330"><a href="#cb8-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Haplotype problems</span></span>
-<span id="cb8-331"><a href="#cb8-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-332"><a href="#cb8-332" aria-hidden="true" tabindex="-1"></a>Condider these situations:</span>
-<span id="cb8-333"><a href="#cb8-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-334"><a href="#cb8-334" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What might happen if the all the helpful alleles are on **the same haplotype**?</span>
-<span id="cb8-335"><a href="#cb8-335" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What might happen if the two helpful alleles are on **different (opposing) haplotypes**?</span>
+<span id="cb8-330"><a href="#cb8-330" aria-hidden="true" tabindex="-1"></a>Through meiotic recombination, haplotypes will be mixed. But SNPs that are *very close together* on the chromosome will not become separated very often. So they will usually travel together.</span>
+<span id="cb8-331"><a href="#cb8-331" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-332"><a href="#cb8-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-333"><a href="#cb8-333" aria-hidden="true" tabindex="-1"></a><span class="fu">### Haplotype problems</span></span>
+<span id="cb8-334"><a href="#cb8-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-335"><a href="#cb8-335" aria-hidden="true" tabindex="-1"></a>Condider these situations:</span>
 <span id="cb8-336"><a href="#cb8-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-337"><a href="#cb8-337" aria-hidden="true" tabindex="-1"></a>The figures below will help to explain.</span>
-<span id="cb8-338"><a href="#cb8-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-339"><a href="#cb8-339" aria-hidden="true" tabindex="-1"></a><span class="al">![](haplotypes-same.jpeg)</span>{width=100%}</span>
-<span id="cb8-340"><a href="#cb8-340" aria-hidden="true" tabindex="-1"></a>**Figure 2. Beneficial alleles on one haplotype.** Would there be any 'conflict' here?</span>
-<span id="cb8-341"><a href="#cb8-341" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb8-342"><a href="#cb8-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-343"><a href="#cb8-343" aria-hidden="true" tabindex="-1"></a><span class="al">![](haplotypes-opposing.jpeg)</span>{width=100%}</span>
-<span id="cb8-344"><a href="#cb8-344" aria-hidden="true" tabindex="-1"></a>**Figure 3. Beneficial alleles on two different haplotypes.** What might happen here? What would the problem be?</span>
-<span id="cb8-345"><a href="#cb8-345" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb8-346"><a href="#cb8-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-347"><a href="#cb8-347" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
-<span id="cb8-348"><a href="#cb8-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-349"><a href="#cb8-349" aria-hidden="true" tabindex="-1"></a>This workshop used data from fission yeast, but the principles apply to quantitative traits in general. Some general principles we can obtain are:</span>
-<span id="cb8-350"><a href="#cb8-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-351"><a href="#cb8-351" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Most SNPs *do not* strongly associate with traits.</span>
-<span id="cb8-352"><a href="#cb8-352" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Most SNPs have very small effects on traits, but some do have detectable effects.</span>
-<span id="cb8-353"><a href="#cb8-353" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>SNPs do not affect *all traits* at once. Some SNPs affect one trait, some affect another.</span>
-<span id="cb8-354"><a href="#cb8-354" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Genetic variants, like SNPs, 'travel' through time and space in *haplotypes*</span>
-<span id="cb8-355"><a href="#cb8-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-356"><a href="#cb8-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-357"><a href="#cb8-357" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam style questions</span></span>
+<span id="cb8-337"><a href="#cb8-337" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What might happen if the all the helpful alleles are on **the same haplotype**?</span>
+<span id="cb8-338"><a href="#cb8-338" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What might happen if the two helpful alleles are on **different (opposing) haplotypes**?</span>
+<span id="cb8-339"><a href="#cb8-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-340"><a href="#cb8-340" aria-hidden="true" tabindex="-1"></a>The figures below will help to explain.</span>
+<span id="cb8-341"><a href="#cb8-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-342"><a href="#cb8-342" aria-hidden="true" tabindex="-1"></a><span class="al">![](haplotypes-same.jpeg)</span>{width=100%}</span>
+<span id="cb8-343"><a href="#cb8-343" aria-hidden="true" tabindex="-1"></a>**Figure 2. Beneficial alleles on one haplotype.** Would there be any 'conflict' here?</span>
+<span id="cb8-344"><a href="#cb8-344" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb8-345"><a href="#cb8-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-346"><a href="#cb8-346" aria-hidden="true" tabindex="-1"></a><span class="al">![](haplotypes-opposing.jpeg)</span>{width=100%}</span>
+<span id="cb8-347"><a href="#cb8-347" aria-hidden="true" tabindex="-1"></a>**Figure 3. Beneficial alleles on two different haplotypes.** What might happen here? What would the problem be?</span>
+<span id="cb8-348"><a href="#cb8-348" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb8-349"><a href="#cb8-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-350"><a href="#cb8-350" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
+<span id="cb8-351"><a href="#cb8-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-352"><a href="#cb8-352" aria-hidden="true" tabindex="-1"></a>This workshop used data from fission yeast, but the principles apply to quantitative traits in general. Some general principles we can obtain are:</span>
+<span id="cb8-353"><a href="#cb8-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-354"><a href="#cb8-354" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Most SNPs *do not* strongly associate with traits.</span>
+<span id="cb8-355"><a href="#cb8-355" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Most SNPs have very small effects on traits, but some do have detectable effects.</span>
+<span id="cb8-356"><a href="#cb8-356" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>SNPs do not affect *all traits* at once. Some SNPs affect one trait, some affect another.</span>
+<span id="cb8-357"><a href="#cb8-357" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Genetic variants, like SNPs, 'travel' through time and space in *haplotypes*</span>
 <span id="cb8-358"><a href="#cb8-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-359"><a href="#cb8-359" aria-hidden="true" tabindex="-1"></a>In exam questions, we often ask you to apply principles we have learned in workshops to other species, or other situations. Here are some examples to think about. Thinking about these situations will help to improve our grasp of the principes.</span>
-<span id="cb8-360"><a href="#cb8-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-361"><a href="#cb8-361" aria-hidden="true" tabindex="-1"></a>:::callout-note</span>
-<span id="cb8-362"><a href="#cb8-362" aria-hidden="true" tabindex="-1"></a><span class="fu"># Principles of quantitative genetics</span></span>
-<span id="cb8-363"><a href="#cb8-363" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Most SNPs have no effect, or very small effects, on traits.</span>
-<span id="cb8-364"><a href="#cb8-364" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>SNPs that *do* affect traits, are generally responsible for less than 5% of the trait variation.</span>
-<span id="cb8-365"><a href="#cb8-365" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Effect sizes are also small for other genetic variants, such as transposon insertions, duplications/deletions and so on.</span>
-<span id="cb8-366"><a href="#cb8-366" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Genetic variants can affect one trait, or several.</span>
-<span id="cb8-367"><a href="#cb8-367" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>In the short term, selection occurs on *haplotypes*, but over time recombination will separate linked variants.</span>
-<span id="cb8-368"><a href="#cb8-368" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-369"><a href="#cb8-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-370"><a href="#cb8-370" aria-hidden="true" tabindex="-1"></a><span class="fu">### Question 1. Why do we observe that most genetic variants have small effects on traits?</span></span>
-<span id="cb8-371"><a href="#cb8-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-372"><a href="#cb8-372" aria-hidden="true" tabindex="-1"></a>**Hint:** There are two was to anwser this one. a) To think about what we would expect to happen over time to variants that do have large effects. Consider  those with large *negative* (deleterious) effects first, then those that are large and advantagous. b) To consider <span class="co">[</span><span class="ot">The Neutral Theory of Moleclar Evolution</span><span class="co">](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution)</span> and molecular biology. If you change one amino acid in one protein, how much would you expect this to affect fitness? What about one synonymous mutation?</span>
-<span id="cb8-373"><a href="#cb8-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-374"><a href="#cb8-374" aria-hidden="true" tabindex="-1"></a><span class="fu">### Question 2. Imagine we observe that a fungicde-resistant fungus is spread though a country, destroying crops. </span></span>
-<span id="cb8-375"><a href="#cb8-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-376"><a href="#cb8-376" aria-hidden="true" tabindex="-1"></a>We know that this fungicde-resistance is new, so we hypothesise that a new mutation has occured. We can culture this fungus in the laboratory and measure their fungicde-resistance. How could we use quantiative genetics and population genetics *together* to find out what is happening?</span>
-<span id="cb8-377"><a href="#cb8-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-359"><a href="#cb8-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-360"><a href="#cb8-360" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam style questions</span></span>
+<span id="cb8-361"><a href="#cb8-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-362"><a href="#cb8-362" aria-hidden="true" tabindex="-1"></a>In exam questions, we often ask you to apply principles we have learned in workshops to other species, or other situations. Here are some examples to think about. Thinking about these situations will help to improve our grasp of the principes.</span>
+<span id="cb8-363"><a href="#cb8-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-364"><a href="#cb8-364" aria-hidden="true" tabindex="-1"></a>:::callout-note</span>
+<span id="cb8-365"><a href="#cb8-365" aria-hidden="true" tabindex="-1"></a><span class="fu"># Principles of quantitative genetics</span></span>
+<span id="cb8-366"><a href="#cb8-366" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Most SNPs have no effect, or very small effects, on traits.</span>
+<span id="cb8-367"><a href="#cb8-367" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>SNPs that *do* affect traits, are generally responsible for less than 5% of the trait variation.</span>
+<span id="cb8-368"><a href="#cb8-368" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Effect sizes are also small for other genetic variants, such as transposon insertions, duplications/deletions and so on.</span>
+<span id="cb8-369"><a href="#cb8-369" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Genetic variants can affect one trait, or several.</span>
+<span id="cb8-370"><a href="#cb8-370" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>In the short term, selection occurs on *haplotypes*, but over time recombination will separate linked variants.</span>
+<span id="cb8-371"><a href="#cb8-371" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-372"><a href="#cb8-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-373"><a href="#cb8-373" aria-hidden="true" tabindex="-1"></a><span class="fu">### Question 1. Why do we observe that most genetic variants have small effects on traits?</span></span>
+<span id="cb8-374"><a href="#cb8-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-375"><a href="#cb8-375" aria-hidden="true" tabindex="-1"></a>**Hint:** There are two was to anwser this one. a) To think about what we would expect to happen over time to variants that do have large effects. Consider  those with large *negative* (deleterious) effects first, then those that are large and advantagous. b) To consider <span class="co">[</span><span class="ot">The Neutral Theory of Moleclar Evolution</span><span class="co">](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution)</span> and molecular biology. If you change one amino acid in one protein, how much would you expect this to affect fitness? What about one synonymous mutation?</span>
+<span id="cb8-376"><a href="#cb8-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-377"><a href="#cb8-377" aria-hidden="true" tabindex="-1"></a><span class="fu">### Question 2. Imagine we observe that a fungicde-resistant fungus is spread though a country, destroying crops. </span></span>
+<span id="cb8-378"><a href="#cb8-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-379"><a href="#cb8-379" aria-hidden="true" tabindex="-1"></a>We know that this fungicde-resistance is new, so we hypothesise that a new mutation has occured. We can culture this fungus in the laboratory and measure their fungicde-resistance. How could we use quantiative genetics and population genetics *together* to find out what is happening?</span>
+<span id="cb8-380"><a href="#cb8-380" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
