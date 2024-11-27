@@ -340,14 +340,25 @@ This workshop used data from fission yeast, but the principles apply to quantita
 4. Genetic variants, like SNPs, 'travel' through time and space in *haplotypes*
 
 
-# After the workshop
+# After the workshop: exam style questions
 
-In exam questions, we often ask you to apply principles we have learned in workshops to other species, or other situations. Here are some examples to think about. Thinking about these situations will give you a better grasp of the principes.
+In exam questions, we often ask you to apply principles we have learned in workshops to other species, or other situations. Here are some examples to think about. Thinking about these situations will help to improve our grasp of the principes.
 
 :::callout-note
-I will add these soon.
+# Principles of quantitative genetics
+* Most SNPs have no effect, or very small effects, on traits.
+* SNPs that *do* affect traits, are generally responsible for less than 5% of the trait variation.
+* Effect sizes are also small for other genetic variants, such as transposon insertions, duplications/deletions and so on.
+* Genetic variants can affect one trait, or several.
+* In the short term, selection occurs on *haplotypes*, but over time recombination will separate linked variants.
 :::
 
+### Question 1. Why do we observe that most genetic variants have small effects on traits?
 
+**Hint:** There are two was to anwser this one. a) To think about what we would expect to happen over time to variants that do have large effects. Consider  those with large *negative* (deleterious) effects first, then those that are large and advantagous. b) To consider [The Neutral Theory of Moleclar Evolution](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution) and molecular biology. If you change one amino acid in one protein, how much would you expect this to affect fitness? What about one synonymous mutation?
+
+### Question 2. Imagine we observe that a fungicde-resistant fungus is spread though a country, destroying crops. 
+
+We know that this fungicde-resistance is new, so we hypothesise that a new mutation has occured. We can culture this fungus in the laboratory and measure their fungicde-resistance. How could we use quantiative genetics and population genetics *together* to find out what is happening?
 
 
