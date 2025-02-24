@@ -40,7 +40,19 @@ Most traits are quantitative, and are caused by multiple genetic variants. This 
 
 * We expect traits to adapt *gradually*, as a few variants change
 * We do not expect to observe many strong *selective sweeps*
+:::
 
+:::callout-note
+# Glossary
+Technical definitions for this workshop.
+
+* *Schizosacharomyces pombe*:
+* *GWAS*:
+* *trait* :
+* *Manhattan plot*:
+* *QTL*:
+* *haplotype*:
+* *selective sweep*:
 :::
 
 
@@ -57,6 +69,7 @@ When fission yeast is not being used in labs as a model species for cell biology
 **Figure 1. The fission yeast *Schizosacharomyces pombe.* ** Fission yeast is an excellent model system. It is easy to grow in the laboratory, easy to transform, and it has a very small genome (12 Mb). It has **~5,000** protein coding genes, and ~1500 non-coding RNAs. It is **haploid**. Fission yeast and the budding yeast *Saccharomyces cerevisiae* are **not closely related** fungi, so study of both has contributed vastly to our understanding of molecular biology, and to evolutionary biology and quantitative genetics.
 
 ::: {style="font-size: 100%;"}
+
 \
 
 ## GWAS for yeast
@@ -138,7 +151,7 @@ Each row of the table contains information about a SNP. For our purposes, the im
 * `BP`, the position of the SNP in the chromosome
 * `Effect_size`, how strongly this variant effects the trait
 
-The **effect size** of the variant estimates the proportion of trait variation that is explained by this SNP. From our understanding of [The Neutral Theory of Moleclar Evolution](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution), we know that **most variants are selectively neutral.** ie: they have little or no effect on fitness.
+The **effect size** of the variant estimates the proportion of trait variation that is explained by this SNP. From our understanding of [The Neutral Theory of Molecular Evolution](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution), we know that **most variants are selectively neutral.** ie: they have little or no effect on fitness.
 
 Given this, we might expect that most variants have small, or no effect, on **traits**.
 
