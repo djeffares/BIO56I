@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.33">
+<meta name="generator" content="quarto-1.4.545">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Daniel Jeffares">
 <meta name="dcterms.date" content="2024-10-16">
-<title>BIO00056I GWAS Workshop – BIO00056I</title>
+
+<title>BIO00056I - BIO00056I GWAS Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -55,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -67,10 +71,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6fbc3b7d0ac83ab8a043646d6c6d94a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6f9ef9b5a12f5b8ef14302403eafb8d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -96,55 +101,88 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="styles.css">
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">BIO00056I</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">BIO00087H - home</span></a>
+<span class="menu-text">BIO00056I</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./BIO56I-gwas-workshop.html" aria-current="page"> 
-<span class="menu-text">GWAS</span></a>
+<span class="menu-text">GWAS workshop</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./BIO56I-pop-genomics-workshop.html"> 
+<span class="menu-text">population genomics workshop</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./BIO56I-comp-genomics-workshop.html"> 
+<span class="menu-text">comparative genomics workshop</span></a>
   </li>  
 </ul>
-</div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">1</span> Learning objectives</a></li>
-  <li>
-<a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">1</span> Learning objectives</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a>
   <ul class="collapse">
-<li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">2.1</span> Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">2.1</span> Background</a></li>
   <li><a href="#fission-yeast" id="toc-fission-yeast" class="nav-link" data-scroll-target="#fission-yeast"><span class="header-section-number">2.2</span> Fission yeast</a></li>
+  <li><a href="#gwas-for-yeast" id="toc-gwas-for-yeast" class="nav-link" data-scroll-target="#gwas-for-yeast"><span class="header-section-number">2.3</span> GWAS for yeast</a></li>
+  <li><a href="#the-traits" id="toc-the-traits" class="nav-link" data-scroll-target="#the-traits"><span class="header-section-number">2.4</span> The traits</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3</span> Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link" data-scroll-target="#exploring-the-data"><span class="header-section-number">3.1</span> Exploring the data</a></li>
+  <li><a href="#manhattan-plot" id="toc-manhattan-plot" class="nav-link" data-scroll-target="#manhattan-plot"><span class="header-section-number">3.2</span> Manhattan plot</a></li>
+  <li><a href="#snp-effect-sizes" id="toc-snp-effect-sizes" class="nav-link" data-scroll-target="#snp-effect-sizes"><span class="header-section-number">3.3</span> SNP effect sizes</a></li>
+  <li><a href="#how-does-this-influence-evolution" id="toc-how-does-this-influence-evolution" class="nav-link" data-scroll-target="#how-does-this-influence-evolution"><span class="header-section-number">3.4</span> How does this influence evolution?</a></li>
+  <li><a href="#another-trait-glucose-fructose-use" id="toc-another-trait-glucose-fructose-use" class="nav-link" data-scroll-target="#another-trait-glucose-fructose-use"><span class="header-section-number">3.5</span> Another trait: glucose &amp; fructose use</a></li>
+  <li><a href="#looking-at-two-traits" id="toc-looking-at-two-traits" class="nav-link" data-scroll-target="#looking-at-two-traits"><span class="header-section-number">3.6</span> Looking at two traits</a></li>
+  </ul></li>
+  <li><a href="#summary-what-we-have-learned" id="toc-summary-what-we-have-learned" class="nav-link" data-scroll-target="#summary-what-we-have-learned"><span class="header-section-number">4</span> Summary: what we have learned</a></li>
+  <li><a href="#after-the-workshop-exam-style-questions" id="toc-after-the-workshop-exam-style-questions" class="nav-link" data-scroll-target="#after-the-workshop-exam-style-questions"><span class="header-section-number">5</span> After the workshop: exam style questions</a></li>
   </ul>
-</li>
-  </ul></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">BIO00056I GWAS Workshop</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -171,16 +209,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="learning-objectives" class="level1" data-number="1"><h1 data-number="1">
-<span class="header-section-number">1</span> Learning objectives</h1>
+</header>
+
+
+<section id="learning-objectives" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Learning objectives</h1>
 <ol type="1">
 <li>To understand the principles of quantitative genetics.</li>
 <li>To appreciate how this alters our perspective on evolution</li>
 <li>To learn how to design experiments that explore quantitative trait variation.</li>
-</ol></section><section id="introduction" class="level1" data-number="2"><h1 data-number="2">
-<span class="header-section-number">2</span> Introduction</h1>
-<section id="background" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="background">
-<span class="header-section-number">2.1</span> Background</h2>
+</ol>
+</section>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<section id="background" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="background"><span class="header-section-number">2.1</span> Background</h2>
 <p>In the lectures, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as <em>complex traits</em>, because they are affected by genetic variation in <strong>many genes</strong>. The genetic variants in the genes each account for a small proportion of the trait variation. We usually assume that the contribute in an additive way (rather than more complex ways).</p>
 <p>One good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.</p>
 <p>Using a diversity panel instead of a bi parental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.</p>
@@ -197,27 +240,29 @@ Quantitative traits and evolution
 <p>Most traits are quantitative, and are caused by multiple genetic variants. This means that:</p>
 <ul>
 <li>We expect traits to adapt <em>gradually</em>, as a few variants change</li>
-<li>We do not expect to observe many strong <em>selective sweeps</em>
-</li>
+<li>We do not expect to observe many strong <em>selective sweeps</em></li>
 </ul>
 </div>
 </div>
-</section><section id="fission-yeast" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="fission-yeast">
-<span class="header-section-number">2.2</span> Fission yeast</h2>
+</section>
+<section id="fission-yeast" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="fission-yeast"><span class="header-section-number">2.2</span> Fission yeast</h2>
 <p>In this workshop we’ll use data from the fission yeast <em>Schizosacharomyces pombe</em>, which is a model species for cell biology. You can read more here about <em>S. pombe</em> <a href="http://www-users.york.ac.uk/~dj757/BIO00047I/BIO00056I_index.html">here</a>.</p>
 <p>When fission yeast is not being used in labs as a model species for cell biology, it usually grows on fruit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).</p>
 <p><img src="fission-yeast-image.jpg" class="img-fluid" style="width:50.0%"></p>
-<div style="font-size: 80%;">
+<p>::: {style=“font-size: 80%;”}</p>
 <p><strong>Figure 1. The fission yeast <em>Schizosacharomyces pombe.</em> </strong> Fission yeast is an excellent model system. It is easy to grow in the laboratory, easy to transform, and it has a very small genome (12 Mb). It has <strong>~5,000</strong> protein coding genes, and ~1500 non-coding RNAs. It is <strong>haploid</strong>. Fission yeast and the budding yeast <em>Saccharomyces cerevisiae</em> are <strong>not closely related</strong> fungi, so study of both has contributed vastly to our understanding of molecular biology, and to evolutionary biology and quantitative genetics.</p>
-<div style="font-size: 100%;">
-<p><br></p>
-<section id="gwas-for-yeast" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="gwas-for-yeast">
-<span class="header-section-number">2.3</span> GWAS for yeast</h2>
+<p>::: {style=“font-size: 100%;”}<br>
+</p>
+</section>
+<section id="gwas-for-yeast" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="gwas-for-yeast"><span class="header-section-number">2.3</span> GWAS for yeast</h2>
 <p>GWAS is usually used for human or crop traits, but of course we can apply this method to any recombing sexually-recombining eukaryotic species where we have trait data and polymorphism data (eg: SNPs).</p>
 <p>The data we will use is from two papers from <a href="https://www.ncbi.nlm.nih.gov/pubmed/25665008">Nature Genetics</a>, and <a href="http://europepmc.org/abstract/MED/28117401">Nature Communications</a>. These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits.</p>
 <p>In this workshop we will examine some GWAS results for four traits, and think about what these results could mean for the evolution of this species.</p>
-</section><section id="the-traits" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="the-traits">
-<span class="header-section-number">2.4</span> The traits</h2>
+</section>
+<section id="the-traits" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="the-traits"><span class="header-section-number">2.4</span> The traits</h2>
 <p>The traits we will look at today are:</p>
 <p><strong>Growth in 400mM NaCl</strong> The growth rate of the strains in 400 mM salt. This could be important if strains grew in fruit near the sea, for example.</p>
 <p><strong>Growth at an elevated temperature</strong> The growth rate of the strains at 40 degrees centigrade. This is quite warm for this yeast, so it’s a stressful condition.</p>
@@ -236,70 +281,69 @@ Traits and trade-offs
 <p>A high value in one of these traits could be adaptive one environment. But it ma be sub-optimal in another environment. Also, optimising one trait may limit another trait. This could be vbause one mutation may result in multiple changes, or the alleles that influence two traits are closely linked.</p>
 </div>
 </div>
-</section><section id="exercises" class="level1" data-number="3"><h1 data-number="3">
-<span class="header-section-number">3</span> Exercises</h1>
-<section id="exploring-the-data" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="exploring-the-data">
-<span class="header-section-number">3.1</span> Exploring the data</h2>
+</section>
+</section>
+<section id="exercises" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Exercises</h1>
+<section id="exploring-the-data" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exploring-the-data"><span class="header-section-number">3.1</span> Exploring the data</h2>
 <p>First, clear all the previous data you may have in R, set your working directory, and load the new data.</p>
 <p><strong>To set a working directory</strong> you can either use a command (as below), or use the menus;</p>
 <p>Session &gt; Set Working Directory &gt; Choose Directory.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#clear all the previous data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span>list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#set working directory</span></span>
-<span><span class="co">#your working directory will be different!</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"/Users/dj757/gd/modules/BIO56I/workshops/gwas"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#load the data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/connections.html">url</a></span><span class="op">(</span><span class="st">"http://www-users.york.ac.uk/~dj757/BIO00056I/data/gwas-data.Rda"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#clear all the previous data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#set working directory</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#your working directory will be different!</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/dj757/gd/modules/BIO56I/workshops/gwas"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#load the data</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">url</span>(<span class="st">"http://www-users.york.ac.uk/~dj757/BIO00056I/data/gwas-data.Rda"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>After loading this data you’ll then have four data frames of data called <code>gluc</code>, <code>heat</code>, <code>rich</code> and <code>salt</code>. Each of these data frames contains the GWAS results for one trait. Let’s start by looking at one table, salt.</p>
 <p>Try these commands to see what the contain:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#examine what is in the salt data frame</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">salt</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">salt</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">salt</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="va">salt</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#examine what is in the salt data frame</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(salt)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(salt)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(salt)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(salt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This table contains the output from GWAS program called <a href="https://dougspeed.com/">LDAK</a>. This is one of man software tools that run GWAS analysis. It describes the association of each SNP with the trait of salt tolerance.</p>
 <p>Each row of the table contains information about a SNP. For our purposes, the important columns are:</p>
 <ul>
-<li>
-<code>Wald_P</code>, the <em>P-value</em>, the probability that this SNP is associated with this trait</li>
-<li>
-<code>Chr</code>, which chromosome the SNP is on</li>
-<li>
-<code>BP</code>, the position of the SNP in the chromosome</li>
-<li>
-<code>Effect_size</code>, how strongly this variant effects the trait</li>
+<li><code>Wald_P</code>, the <em>P-value</em>, the probability that this SNP is associated with this trait</li>
+<li><code>Chr</code>, which chromosome the SNP is on</li>
+<li><code>BP</code>, the position of the SNP in the chromosome</li>
+<li><code>Effect_size</code>, how strongly this variant effects the trait</li>
 </ul>
 <p>The <strong>effect size</strong> of the variant estimates the proportion of trait variation that is explained by this SNP. From our understanding of <a href="https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution">The Neutral Theory of Moleclar Evolution</a>, we know that <strong>most variants are selectively neutral.</strong> ie: they have little or no effect on fitness.</p>
 <p>Given this, we might expect that most variants have small, or no effect, on <strong>traits</strong>.</p>
-</section><section id="manhattan-plot" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="manhattan-plot">
-<span class="header-section-number">3.2</span> Manhattan plot</h2>
+</section>
+<section id="manhattan-plot" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="manhattan-plot"><span class="header-section-number">3.2</span> Manhattan plot</h2>
 <p>A Manhattan plot is a standard way of viewing GWAS results. They are named Manhattan plots because they resemble the skyline of a highrise city, such as Manhattan Island (New York).</p>
 <p>Manhattan plots show the position of the SNP on the x axis, and the p-value of the association on the y axis. P-alues are plotted as -log10(P), so that very small p-values end up at the top of the plot, and stand out.</p>
 <p>The code below will make a Manhattan plot for the salt trait.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#set plotting parameters</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>, <span class="fl">1</span>, <span class="fl">3</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,widths <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5579133</span>,<span class="fl">4539804</span>,<span class="fl">2452883</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bty<span class="op">=</span><span class="st">"l"</span>,cex<span class="op">=</span><span class="fl">0.8</span>,mar<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">0</span><span class="op">)</span><span class="op">+</span><span class="fl">2</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
-<span><span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">{</span></span>
-<span>      <span class="co">#make a subset of SNPs from this chromosome</span></span>
-<span>      <span class="va">temp</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">salt</span>, <span class="va">Chr</span> <span class="op">==</span> <span class="va">j</span><span class="op">)</span></span>
-<span>      <span class="co">#plot these</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">BP</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">Wald_P</span><span class="op">)</span>,</span>
-<span>           main <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Chr"</span>,<span class="va">j</span><span class="op">)</span>,ylim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span>,</span>
-<span>           xlab<span class="op">=</span><span class="st">"position"</span>,ylab<span class="op">=</span><span class="st">"-log10(P)"</span></span>
-<span>      <span class="op">)</span></span>
-<span>      <span class="co">#draw a threshold line</span></span>
-<span>      <span class="co">#SNPs above this line are statistically associated with the trait</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>h<span class="op">=</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="fl">1e-5</span><span class="op">)</span>,col<span class="op">=</span><span class="fl">2</span>,lty<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set plotting parameters</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      <span class="co">#make a subset of SNPs from this chromosome</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="co">#plot these</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Chr"</span>,j),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="co">#draw a threshold line</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      <span class="co">#SNPs above this line are statistically associated with the trait</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We see a <strong>small number* of very low P-values, with -log10 values they are at the </strong>top** of the <em>y</em> axis. For these, there is strong support that the affect the trait.</p>
 <p>Then, there are a large number with P-values of around 0.1 or greater. These are at the *bottom** of the <em>y</em> axis. There is weak support that the affect the trait. These may have tiny effect sizes, or none at all.</p>
@@ -318,11 +362,12 @@ Traits and trade-offs
 </div>
 <p>All the non-signifcant SNPs (eg: <em>P</em> = 0.1, which is <em>P</em> = 1 x 10<sup><strong>-1</strong></sup>) will be at the bottom of the <em>y</em> axis. If <strong>most variants have small effects, or no effects on traits</strong>, there will be many of these.</p>
 <p>This shows how GWAS relates to other areas of evolutionary theory.</p>
-</section><section id="snp-effect-sizes" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="snp-effect-sizes">
-<span class="header-section-number">3.3</span> SNP effect sizes</h2>
+</section>
+<section id="snp-effect-sizes" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="snp-effect-sizes"><span class="header-section-number">3.3</span> SNP effect sizes</h2>
 <p>The strength of the association between the genotype and the phenotype is related to the effect size of the variant (how strongly it affects the trait). Some alleles will affect the trait very strongly, others not so much. Now let’s look at how large the effect sizes are, by making a histogram of all the effect sizes.</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">salt</span><span class="op">$</span><span class="va">Effect_size</span>,br<span class="op">=</span><span class="fl">30</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(salt<span class="sc">$</span>Effect_size,<span class="at">br=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -340,8 +385,9 @@ Condider this result
 </ul>
 </div>
 </div>
-</section><section id="how-does-this-influence-evolution" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="how-does-this-influence-evolution">
-<span class="header-section-number">3.4</span> How does this influence evolution?</h2>
+</section>
+<section id="how-does-this-influence-evolution" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="how-does-this-influence-evolution"><span class="header-section-number">3.4</span> How does this influence evolution?</h2>
 <p>The effect size of a variant is <strong>the proportion of the phenotypic variance that the SNP explains</strong>. We can see that most of the effect sizes are very small. Most are smaller than 0.05, meaning that they produce an effect that is much smaller than 5% of the trait. They have tiny effects on the trait.</p>
 <p>At this point let’s think about how such tiny effect alleles might influence evolutionary change.</p>
 <p>A <a href="https://en.wikipedia.org/wiki/Selective_sweep">selective sweep</a> is a process where a beneficial mutation becomes fixed in a population rapidly, removing the genetic variation around the selected allele. Ask yourself:</p>
@@ -349,61 +395,65 @@ Condider this result
 <li>If a trait is caused by <em>small number</em> of <em>large effect</em> mutations, would we expect to observe a selective sweep?</li>
 <li>What about a trait with a <em>large number</em> of mutations with very <em>tiny effects</em>?</li>
 <li>Would we expect to observe a selective sweep if a <em>large effect</em> mutation lies very close to a <em>deleterious</em> allele?</li>
-</ul></section><section id="another-trait-glucose-fructose-use" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="another-trait-glucose-fructose-use">
-<span class="header-section-number">3.5</span> Another trait: glucose &amp; fructose use</h2>
+</ul>
+</section>
+<section id="another-trait-glucose-fructose-use" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="another-trait-glucose-fructose-use"><span class="header-section-number">3.5</span> Another trait: glucose &amp; fructose use</h2>
 <p>In a vineyard environment, where this yeast grows, it will be an advantage to be able to metabolise the glucose and fructose in the rotting fruit. The glucose/fructose use is in the <code>gluc</code> data frame.</p>
 <p>Again, we will look at the P-values <code>Wald_P</code> and how much each SNP is predcited to affect the trait (<code>Effect_size</code>).</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#set plotting parameters</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>, <span class="fl">1</span>, <span class="fl">3</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,widths <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5579133</span>,<span class="fl">4539804</span>,<span class="fl">2452883</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bty<span class="op">=</span><span class="st">"l"</span>,cex<span class="op">=</span><span class="fl">0.8</span>,mar<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">0</span><span class="op">)</span><span class="op">+</span><span class="fl">2</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
-<span><span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">{</span></span>
-<span>      <span class="va">temp</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">gluc</span>, <span class="va">Chr</span> <span class="op">==</span> <span class="va">j</span><span class="op">)</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">BP</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">Wald_P</span><span class="op">)</span>,</span>
-<span>           main <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Chr"</span>, <span class="va">j</span>, <span class="st">"Gluc"</span><span class="op">)</span>,ylim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span>,</span>
-<span>           xlab<span class="op">=</span><span class="st">"position"</span>,ylab<span class="op">=</span><span class="st">"-log10(P)"</span></span>
-<span>      <span class="op">)</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>h<span class="op">=</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="fl">1e-5</span><span class="op">)</span>,col<span class="op">=</span><span class="fl">2</span>,lty<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set plotting parameters</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes 1,2,3, plotting each one in turn</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(gluc, Chr <span class="sc">==</span> j)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Chr"</span>, j, <span class="st">"Gluc"</span>),<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br></p>
+<p><br>
+</p>
 <p>Again, we see a <strong>small number</strong> of very low P-values, with -log10 values they are at the <strong>top</strong> of the <em>y</em> axis. For these, there is strong support that the affect the trait.</p>
 <p>Then, there are a large number with P-values of around 0.1 or greater. These are at the <strong>bottom</strong> of the <em>y</em> axis. There is weak support that the affect the trait. These may have <strong>tiny effect sizes</strong>, or <strong>none at all</strong>.</p>
 <p>Now, make a histogram of the effect sizes:</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">gluc</span><span class="op">$</span><span class="va">Effect_size</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(gluc<span class="sc">$</span>Effect_size)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="looking-at-two-traits" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="looking-at-two-traits">
-<span class="header-section-number">3.6</span> Looking at two traits</h2>
+</section>
+<section id="looking-at-two-traits" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="looking-at-two-traits"><span class="header-section-number">3.6</span> Looking at two traits</h2>
 <p>Species are not able to adapt simply to one condition, like heat or salt stress, because the natural environment is complex, and it changes from day to day. As a thought experiment, we will consider this using the fission yeast data.</p>
 <p>We will compare the two Manhattan plots by plotting them on top of each other. We will plot the salt results in black, and the glucose metabolism results in red, and write the plot output to a pdf file. This pdf will appear in your working directory.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#open the pdf writer</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/grDevices/pdf.html">pdf</a></span><span class="op">(</span><span class="st">"GWAS-plot3.pdf"</span>,width<span class="op">=</span><span class="fl">60</span><span class="op">)</span></span>
-<span><span class="co">#set up the plot layout</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/layout.html">layout</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>, <span class="fl">1</span>, <span class="fl">3</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,widths <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5579133</span>,<span class="fl">4539804</span>,<span class="fl">2452883</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bty<span class="op">=</span><span class="st">"l"</span>,cex<span class="op">=</span><span class="fl">0.8</span>,mar<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">0</span><span class="op">)</span><span class="op">+</span><span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#loop through chromosomes</span></span>
-<span><span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">{</span></span>
-<span>      <span class="co">#plot the salt GWAS points (black dots)</span></span>
-<span>      <span class="va">temp</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">salt</span>, <span class="va">Chr</span> <span class="op">==</span> <span class="va">j</span><span class="op">)</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">BP</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">temp</span><span class="op">$</span><span class="va">Wald_P</span><span class="op">)</span>,main <span class="op">=</span> <span class="st">""</span>,ylim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span>,xlab<span class="op">=</span><span class="st">"position"</span>,ylab<span class="op">=</span><span class="st">"-log10(P)"</span><span class="op">)</span></span>
-<span>      </span>
-<span>      <span class="co">#add the glucose/fructose GWAS points (red crosses)</span></span>
-<span>      <span class="va">temp2</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">gluc</span>, <span class="va">Chr</span> <span class="op">==</span> <span class="va">j</span><span class="op">)</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/points.html">points</a></span><span class="op">(</span><span class="va">temp2</span><span class="op">$</span><span class="va">BP</span>, <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">temp2</span><span class="op">$</span><span class="va">Wald_P</span><span class="op">)</span>,main <span class="op">=</span> <span class="st">"gluc"</span>,ylim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span>,xlab<span class="op">=</span><span class="st">"position"</span>,ylab<span class="op">=</span><span class="st">"-log10(P)"</span>,col<span class="op">=</span><span class="fl">2</span>,pch<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span>
-<span>      </span>
-<span>      <span class="co">#add the significance threshold</span></span>
-<span>      <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>h<span class="op">=</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="fl">1e-5</span><span class="op">)</span>,col<span class="op">=</span><span class="fl">2</span>,lty<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="co">#close the pdf writer</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#open the pdf writer</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"GWAS-plot3.pdf"</span>,<span class="at">width=</span><span class="dv">60</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#set up the plot layout</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#loop through chromosomes</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      <span class="co">#plot the salt GWAS points (black dots)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),<span class="at">main =</span> <span class="st">""</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),<span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="co">#add the glucose/fructose GWAS points (red crosses)</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      temp2 <span class="ot">=</span> <span class="fu">subset</span>(gluc, Chr <span class="sc">==</span> j)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">points</span>(temp2<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp2<span class="sc">$</span>Wald_P),<span class="at">main =</span> <span class="st">"gluc"</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),<span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">pch=</span><span class="dv">3</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      <span class="co">#add the significance threshold</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#close the pdf writer</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now find the pdf called <code>GWAS-plot3.pdf</code> and take a look.</p>
-<section id="might-mutations-for-two-traits-conflict" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="might-mutations-for-two-traits-conflict">
-<span class="header-section-number">3.6.1</span> Might mutations for two traits conflict?</h3>
+<section id="might-mutations-for-two-traits-conflict" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="might-mutations-for-two-traits-conflict"><span class="header-section-number">3.6.1</span> Might mutations for two traits conflict?</h3>
 <p>Look at that significant peak on chromosome 3, at position ~1,500,000. Remember, this will have a large effect size. See how there is also an important variant for glucose &amp; fructose use on chromosome 3, near the same position.</p>
 <p>Let’s consider what might happen if alleles are linked and the environment is complex (which all environments are). In this case, we consider an environment which is salty, but has plenty of fructose. A coastal vineyard, for example.</p>
 <p>What might happen if the all the helpful alleles are on the same <strong>haplotype</strong>?</p>
@@ -423,27 +473,34 @@ haplotypes
 <p>Through meiotic recombination, haplotypes will be mixed. But SNPs that are <em>very close together</em> on the chromosome will not become separated very often. So they will usually travel together.</p>
 </div>
 </div>
-</section><section id="haplotype-problems" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="haplotype-problems">
-<span class="header-section-number">3.6.2</span> Haplotype problems</h3>
+</section>
+<section id="haplotype-problems" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="haplotype-problems"><span class="header-section-number">3.6.2</span> Haplotype problems</h3>
 <p>Condider these situations:</p>
 <ul>
 <li>What might happen if the all the helpful alleles are on <strong>the same haplotype</strong>?</li>
 <li>What might happen if the two helpful alleles are on <strong>different (opposing) haplotypes</strong>?</li>
 </ul>
 <p>The figures below will help to explain.</p>
-<p><img src="haplotypes-same.jpeg" class="img-fluid" style="width:100.0%"><strong>Figure 2. Beneficial alleles on one haplotype.</strong> Would there be any ‘conflict’ here?<br></p>
-<p><img src="haplotypes-opposing.jpeg" class="img-fluid" style="width:100.0%"><strong>Figure 3. Beneficial alleles on two different haplotypes.</strong> What might happen here? What would the problem be?<br></p>
-</section></section></section><section id="summary-what-we-have-learned" class="level1" data-number="4"><h1 data-number="4">
-<span class="header-section-number">4</span> Summary: what we have learned</h1>
+<p><img src="haplotypes-same.jpeg" class="img-fluid" style="width:100.0%"> <strong>Figure 2. Beneficial alleles on one haplotype.</strong> Would there be any ‘conflict’ here?<br>
+</p>
+<p><img src="haplotypes-opposing.jpeg" class="img-fluid" style="width:100.0%"> <strong>Figure 3. Beneficial alleles on two different haplotypes.</strong> What might happen here? What would the problem be?<br>
+</p>
+</section>
+</section>
+</section>
+<section id="summary-what-we-have-learned" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Summary: what we have learned</h1>
 <p>This workshop used data from fission yeast, but the principles apply to quantitative traits in general. Some general principles we can obtain are:</p>
 <ol type="1">
 <li>Most SNPs <em>do not</em> strongly associate with traits.</li>
 <li>Most SNPs have very small effects on traits, but some do have detectable effects.</li>
 <li>SNPs do not affect <em>all traits</em> at once. Some SNPs affect one trait, some affect another.</li>
-<li>Genetic variants, like SNPs, ‘travel’ through time and space in <em>haplotypes</em>
-</li>
-</ol></section><section id="after-the-workshop-exam-style-questions" class="level1" data-number="5"><h1 data-number="5">
-<span class="header-section-number">5</span> After the workshop: exam style questions</h1>
+<li>Genetic variants, like SNPs, ‘travel’ through time and space in <em>haplotypes</em></li>
+</ol>
+</section>
+<section id="after-the-workshop-exam-style-questions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> After the workshop: exam style questions</h1>
 <p>In exam questions, we often ask you to apply principles we have learned in workshops to other species, or other situations. Here are some examples to think about. Thinking about these situations will help to improve our grasp of the principes.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -464,20 +521,22 @@ Principles of quantitative genetics
 </ul>
 </div>
 </div>
-<section id="question-1.-why-do-we-observe-that-most-genetic-variants-have-small-effects-on-traits" class="level3" data-number="5.0.1"><h3 data-number="5.0.1" class="anchored" data-anchor-id="question-1.-why-do-we-observe-that-most-genetic-variants-have-small-effects-on-traits">
-<span class="header-section-number">5.0.1</span> Question 1. Why do we observe that most genetic variants have small effects on traits?</h3>
+<section id="question-1.-why-do-we-observe-that-most-genetic-variants-have-small-effects-on-traits" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="question-1.-why-do-we-observe-that-most-genetic-variants-have-small-effects-on-traits"><span class="header-section-number">5.0.1</span> Question 1. Why do we observe that most genetic variants have small effects on traits?</h3>
 <p><strong>Hint:</strong> There are two was to anwser this one. a) To think about what we would expect to happen over time to variants that do have large effects. Consider those with large <em>negative</em> (deleterious) effects first, then those that are large and advantagous. b) To consider <a href="https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution">The Neutral Theory of Moleclar Evolution</a> and molecular biology. If you change one amino acid in one protein, how much would you expect this to affect fitness? What about one synonymous mutation?</p>
-</section><section id="question-2.-imagine-we-observe-that-a-fungicde-resistant-fungus-is-spread-though-a-country-destroying-crops." class="level3" data-number="5.0.2"><h3 data-number="5.0.2" class="anchored" data-anchor-id="question-2.-imagine-we-observe-that-a-fungicde-resistant-fungus-is-spread-though-a-country-destroying-crops.">
-<span class="header-section-number">5.0.2</span> Question 2. Imagine we observe that a fungicde-resistant fungus is spread though a country, destroying crops.</h3>
+</section>
+<section id="question-2.-imagine-we-observe-that-a-fungicde-resistant-fungus-is-spread-though-a-country-destroying-crops." class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="question-2.-imagine-we-observe-that-a-fungicde-resistant-fungus-is-spread-though-a-country-destroying-crops."><span class="header-section-number">5.0.2</span> Question 2. Imagine we observe that a fungicde-resistant fungus is spread though a country, destroying crops.</h3>
 <p>We know that this fungicde-resistance is new, so we hypothesise that a new mutation has occured. We can culture this fungus in the laboratory and measure their fungicde-resistance. How could we use quantiative genetics and population genetics <em>together</em> to find out what is happening?</p>
 
 
 <!-- -->
 
-</section></section>
-</div>
-</div>
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -512,7 +571,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -544,29 +614,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -618,24 +666,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -670,11 +700,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1314,9 +1340,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-378"><a href="#cb8-378" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-379"><a href="#cb8-379" aria-hidden="true" tabindex="-1"></a>We know that this fungicde-resistance is new, so we hypothesise that a new mutation has occured. We can culture this fungus in the laboratory and measure their fungicde-resistance. How could we use quantiative genetics and population genetics *together* to find out what is happening?</span>
 <span id="cb8-380"><a href="#cb8-380" aria-hidden="true" tabindex="-1"></a></span>
-</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+
 
 
 

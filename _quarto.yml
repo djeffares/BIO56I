@@ -7,10 +7,16 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: "BIO00087H - home"
+        text: "BIO00056I"
         
       - href: BIO56I-gwas-workshop.qmd
-        text: "GWAS"
+        text: "GWAS workshop"
+       
+      - href: BIO56I-pop-genomics-workshop.qmd
+        text: "population genomics workshop"
+
+      - href: BIO56I-comp-genomics-workshop.qmd
+        text: "comparative genomics workshop"
 
 format:
   html:
