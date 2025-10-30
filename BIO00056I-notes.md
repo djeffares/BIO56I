@@ -84,6 +84,13 @@ https://drive.google.com/drive/folders/0AFjNJV63zpqBUk9PVA
 
 #### Links to all my videos for BIO00056I
 
+Phylogenies and moleculra clock 
+
+
+Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=327fb8cc-9f70-4207-8afc-b0b2012cd0d4
+
+Part 2: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=22c2aa19-d1eb-4819-88d0-b0b2013211ee
+
 Population genomics
 
 Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dbcad2c0-7538-4674-bc6b-b0b800bd4e41
@@ -91,6 +98,7 @@ Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dbcad2c0-7538
 Part 2: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1a07a26d-f1b4-4a74-a61a-b0b800bd4de4
 
 Part 3: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6a5ef9be-157b-4bd0-9f92-b0b800bd4e04
+
 
 Comparative genomics
 

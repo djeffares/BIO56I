@@ -1,21 +1,19 @@
-################################################################################################
-#Population Genetics & Evolution - BIO00056I
-#Influenza Virus Practical
-################################################################################################
+#BIO00056I Influenza Virus Practical ----
+
+# SET UP ----
 
 #set your working directory
 #Your working directory will be different!
-setwd("~/Library/CloudStorage/GoogleDrive-daniel.jeffares@york.ac.uk/My Drive/modules/BIO56I/workshops/influenza/workshop-files")
+setwd("~/path/to/your/files/")
 
 #You can use the Session menu to set this with:
 #Session menu  > Set Working Directory > Choose Directory
 #then select the directory where your files are.
 
-################################################################################################
-#Wellington data
-################################################################################################
 #load the tidyverse
 library(tidyverse)
+
+# WELLINGTON DATA ----
 
 #open your distances file, into a data frame:
 #Your distance file may have a different name
@@ -39,26 +37,10 @@ flu_plot
 flu_plot +
   geom_smooth(method="lm")
 
-
 #examine whether the correlation is statistically significant: 
 cor.test(flu$time.passed,flu$Distance)
 
-#################################################################################################
-#You should see a good correlation between genetic distance and time distance.
-#What causes this? (Which processes of evolution) 
-#Why is there such a strong correlation?
-  #We can observe this relationship over just a few decades*. 
-  #What does this tell us about the rate of change*?
-#################################################################################################
-
-#NOW GO BACK TO THE WORKSHOP EXERCISES
-
-
-
-################################################################################################
-#Tasman sea data
-################################################################################################
-
+# TASMAN SEA DATA ----
 
 #open the Tasman genetic distance data
 tas <- read_csv("H3N2_tasman.distances.csv")
@@ -78,8 +60,10 @@ tas[grep("AUS", tas$region2),]$country2 = "AUS"
 #add a comparison.type column
 tas$comparison.type <- NA
 
-#get the within country data
+#mark the within country data
 tas[which(tas$region1 == tas$region2),]$comparison.type <- 'within country'
+
+#mark the between country data
 tas[which(tas$region1 != tas$region2),]$comparison.type <- 'between country'
 
 #plot this data 
@@ -96,8 +80,6 @@ wilcox.test(Distance ~ comparison.type, data = tas)
 
 #Now go back to the exercises, to think about this data.
 
+# END ---
 
-################################################################################################
-#END
-################################################################################################
 

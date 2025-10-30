@@ -1,0 +1,82 @@
+---
+title: "BIO00056I"
+subtitle: "Directed study 11 (worksheet): Phylogenies & Molecular Clock"
+
+
+author: Daniel Jeffares
+date: 2025-02-24
+format:
+    html:
+      
+        code-copy: true
+        code-tools: true
+        code-link: true
+        toc: true
+        number-sections: true
+        toc-location: right
+        toc-depth: 2
+        highlight-style: github
+
+editor: source
+    
+---
+
+# Learning objectives
+
+This worksheet is deigned to prepare you for exam questions on phylogenies and molecular clocks.Here we show one example for how we can use and interpret a phylogenetic trees.
+
+# Introduction
+
+## Pathogens and epidemiology (the study of the causes of disease)
+
+There are many types of pathogenic organisms; viruses, bacteria and protozoans are common types. Protozoans are single-celled eukaryotes, such as *Plasmodium *species that cause malaria. Here we consider *Leishmania* and *Endotrypanum*, protozoan pathogens that cause skin lesions that do not heal. 
+
+## Relevant facts about these protozoan pathogens
+
+Three facts about these protozoan pathogens are important here:
+
+- **Breeding**: They undergo meiosis and sexual recombination. ie: they breed sexually.
+
+- **Vectors**: They are almost always transmitted by insects. The insects feed on human and/or animal blood. They pick up the pathogen from the skin of an infected person or animal when they feed, and transfer the pathogen to another person or animal. Such insects are called the vector of the pathogen.
+
+- **Reservoirs**: Some pathogens and the insect vectors feed on animals as well as people. A large number of pathogens can be present in the animal population.  An animal that contains pathogens is called a reservoir species. A pathogen can have more than one reservoir species.
+
+
+# The exam style questions
+
+## The backgound
+
+In a remote island in the pacific there appears to be a new disease. Its symptoms are similar to the cutaneous leishmaniasis, but with larger lesions. It is spreading, and doctors suspect it is caused by the spread of a pathogen because it comes in clusters of cases within specific villages and households. You have received a grant to investigate the cause. Could this be a new protozoan?
+
+What is already known:
+
+- On this island, only two protozoans were known to cause symptoms like cutaneous leishmaniasis; *Leishmania major* and *Endotrypanum colombiensis*. They are quite different pathogens, and they can be distinguished genetically.
+
+- There are only three potential reservoirs: rats, dogs and pigs
+
+- There are two sandflies species that could be the vector
+
+- Both *L. major* and *E. colombiensis* and the mystery protozoan can be isolated from patients, cultured in a laboratory, and DNA extracted.
+
+
+
+## The questions
+
+You have a team of clinicians and laboratory technicians that can do parasite isolation, culturing and DNA extractions.
+Explain how you would use laboratory work and phylogenetic analysis to answer the following questions. The laboratory work should be simple, as we focus here on the phylogenetic analysis.
+
+- Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? (10 marks)
+
+- Question 2. Is there an insect vector? If so, what is it? (4 marks)
+
+- Question 3. Is there a potential reservoir? If so, what is it? (4 marks)
+
+# Model answers
+
+Will be provided at this website at a later date
+
+
+
+
+
+
