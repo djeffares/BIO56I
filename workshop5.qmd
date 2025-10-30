@@ -1,0 +1,100 @@
+---
+title: "BIO00056I"
+subtitle: "Workshop 5: Phylogenies & Molecular Clock"
+
+author: Daniel Jeffares
+date: 2025-02-24
+format:
+    html:
+      
+        code-copy: true
+        code-tools: true
+        code-link: true
+        toc: true
+        number-sections: true
+        toc-location: right
+        toc-depth: 2
+        highlight-style: github
+
+editor: source
+    
+---
+
+:::callout-note
+This web page is a work in progress.
+:::
+
+
+# Learning objectives
+
+The aim of this practical is to learn to visualise and interpret the data using phylogenetic analyses. You will see that we can extract a lot of information about evolutionary processes and populations from a phylogeny.
+
+By the end of this workshop, you should be able to:
+
+*	Build phylogenetic trees using using MEGA software
+*	Infer evolutionary relationships based on phylogeny
+*	Correlate molecular evolutionary changes with time using R
+
+These two articles will be useful fo those that want to extend their knowledge.
+
+* Baum (2005): [The Tree-Thinking Challenge](https://www.science.org/doi/10.1126/science.1117727)
+*	Shao (2017): [Evolution of Influenza A Virus by Mutation and Re-Assortment](https://www.mdpi.com/1422-0067/18/8/1650)
+
+:::callout-note
+# Glossary
+Technical definitions for this workshop.
+
+* *molecular clock*:
+* *node* (of a phylogenetic tree):
+* *branch* (of a phylogenetic tree):
+* *mutation rate*:
+* *purifying selection*:
+
+
+:::
+
+
+
+# Introduction
+
+##  Phylogenetic trees and the molecular clock 
+
+Much of what we can infer from phylogenies uses the model of the 'molecular clock'. This is the observation that there tends to be a uniform, 'clock-like' rate of genetic change per year both *within* and *between* species.  The *rate* of change differs between very different species and between genes. 
+
+Rates of change between species differ because:
+
+* small organisms (like viruses and bacteria) have short generation times
+* small organisms have high mutation rates
+
+Rates of change between genes within a genome differ because:
+* the amound of *purifying selection* 
+
+## The molecular clock and the real world
+
+Evolutionary thinking can also help us to understand disease. For example, the global pandemic of the coronavirus SARS-Cov2 (which causes COVID-19 disease) is an RNA virus. As with all viruses, SARS-Cov2 is constantly undergoing evolutionary change.
+
+The initial outbreak of the SARS-Cov2 virus in Wuhan China, was dated with amazing accuracy (to the month) to August 2019 [using a time tree](https://doi.org/10.3390/v13091790). Being able to tell when outbreaks occur, as well as where, can be a very powerful tool as it can supplement what we can see from epidemiology. Analysis of DNA sequences is the only way we can obtain this information.
+
+
+
+# Exercises
+
+:::callout-note
+**We do not advise doing this workshop on a Mac.** The Mega software does not work very well on the Mac OS. It is best to use the University PCs which have the software installed.
+:::
+
+
+# Summary: what we have learned
+
+# After the workshop: exam style questions
+
+## Question 1. 
+
+## Question 2. 
+
+
+:::callout-note
+# Acknowledegment
+This workshop was designed and shared by [François Balloux](https://en.wikipedia.org/wiki/Fran%C3%A7ois_Balloux).
+
+:::

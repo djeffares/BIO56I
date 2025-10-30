@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.docx
+*.zip
+*.pdf
+*.pptx
+*.Rda
+*potx
+*.dotx
+*.png
+/.quarto/
+.DS_Store

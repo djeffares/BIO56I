@@ -9,17 +9,17 @@ website:
       - href: index.qmd
         text: "BIO00056I"
         
-      - href: BIO56I-phylogeny-and-clock-workshop.qmd
-        text: "phylogeny and molecular clock workshop"
+      - href: workshop5.qmd
+        text: "workshop 5"
 
-      - href: BIO56I-pop-genomics-workshop.qmd
-        text: "population genomics workshop"
+      - href: workshop6.qmd
+        text: "workshop 6"
 
-      - href: BIO56I-comp-genomics-workshop.qmd
-        text: "comparative genomics workshop"
+      - href: workshop7.qmd
+        text: "workshop 7"
         
-      - href: BIO56I-gwas-workshop.qmd
-        text: "GWAS workshop"
+      - href: workshop9.qmd
+        text: "workshop 9"
 
 format:
   html:

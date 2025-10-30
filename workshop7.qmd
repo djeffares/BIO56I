@@ -1,0 +1,41 @@
+---
+title: "BIO00056I comparative genomics workshop"
+
+author: Daniel Jeffares
+date: 2025-02-24
+format:
+    html:
+      
+        code-copy: true
+        code-tools: true
+        code-link: true
+        toc: true
+        number-sections: true
+        toc-location: right
+        toc-depth: 2
+        highlight-style: github
+
+editor: source
+    
+---
+
+# Learning objectives
+
+
+# Introduction
+
+:::callout-warning
+This web page is a work in progress.
+:::
+
+# Exercises
+
+# Summary: what we have learned
+
+# After the workshop: exam style questions
+
+## Question 1. 
+
+## Question 2. 
+
+
