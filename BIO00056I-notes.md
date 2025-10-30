@@ -1,6 +1,70 @@
 # BIO00056I notes
 
-Date: 2025-02-24
+## Updates for 2025:
+
+## TO DO:
+
+You can use this checklist when you are reviewing your material:
+ https://docs.google.com/document/d/1s6ALyqcy-dWFtaORpQsEZyL9dJnfVxrXsGo4nE332BU/edit?tab=t.0#heading=h.3yor058g7zod
+
+## My weeks
+
+### week6
+
+Directed study 9 (recording): Phylogenies & Molecular Clock
+Directed study 10 (worksheet): Phylogenies & Molecular Clock
+Workshop 5: Phylogenies & Molecular Clock
+
+### week7
+
+Lecture 4: Population Genomics
+Directed study 11 (worksheet): Population Genomics
+Workshop 6: Population Genomics
+
+### week8
+
+Directed study 12 (recording): Comparative Genomics 
+Directed study 13 (worksheet): Comparative Genomics
+Workshop 7: Comparative Genomics
+
+### week 10
+
+
+Workshop 9: Quantitative Genetics 2
+
+
+## From Julia
+
+- You can use this checklist when you are reviewing your material:
+
+ https://docs.google.com/document/d/1s6ALyqcy-dWFtaORpQsEZyL9dJnfVxrXsGo4nE332BU/edit?tab=t.0#heading=h.3yor058g7zod
+
+
+- Exam: The exam questions will be due by the end of the consolidation week (31 Oct).  There'll be a proper call nearer the time
+
+- We are doing in person lectures every two weeks.  Please check the timetable for which material is in person, this will require some extra work converting video material into a lecture.
+
+- Send an announcement on Mondays, make sure it gets emailed to students. 
+
+- Accessibility. We got a request to check the accessibility of our material, please see Adrian's email below and check all your material.
+ - make anything you have provided as a google doc/sheet/slide or pdf available as a docx, xlsx or pptx file on the VLE, because students will then be able to download alternative formats. 
+- check all your materials (see Adrian's email) for accessibility using the tools below and make appropriate changes.
+
+- Workshop answers in red are not very accessible because of the low contrast.  If you are using word, can you please create a style called model answer (or use the template on the shared drive).  That way students can easily change the colour to something that suits them.  This isn't possible in google docs.
+
+ - If you have been providing any material as google docs/slides/sheets etc:  We have been keeping these on this shared google drive, please keep them there. If you want to keep providing links to google documents and update anything significantly, please keep the old version and rename the file to include the year (for any LoA students on an old VLE site) and make a copy for the new file. That way students will always have access to the correct documents, no matter what happens to any of us. Students have viewing access to the weekly folders on the drive but not the drive itself.
+
+
+- Please make sure that there are enough exam style questions in the workshops.  Students have been struggling with some of the material, so it's important that we provide questions that are similar enough to the exam questions.
+
+- Dan, as agreed your last workshop (week 8) is not in a computer room.  You can still use any figures etc that the students would have produced themselves, but please rework the workshop to use this material for more exam style questions.  It could include questions about the other two weeks.
+
+-  More on workshops. We still can't schedule the release of model answers. So please post these manually as soon as possible after a session (and remove them before the material gets released).
+
+- The discussion board is anonymous, so we will continue using this.  The notifications are a bit erratic, so please check regularly.
+
+- Video captions.  Just a reminder, these should be edited and available.  Please also add a transcript txt file to the VLE.  If you are rerecording anything: Gareth has a great guide on producing captions using whisper.  It works well but if you edit the video before producing the captions it does not handle cuts well, so please check.
+
 
 ## Udating material from 2024-25 year
 

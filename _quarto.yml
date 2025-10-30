@@ -21,6 +21,9 @@ website:
       - href: workshop9.qmd
         text: "workshop 9"
 
+      - href: worksheet10.qmd
+        text: "worksheet 10"
+
 format:
   html:
     theme: default
