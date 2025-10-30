@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
+<meta name="author" content="Daniel Jeffares">
+<meta name="dcterms.date" content="2025-02-24">
 
-<title>BIO00056I GWAS Workshop – BIO00056I</title>
+<title>BIO00056I comparative genomics workshop – BIO00056I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,22 +59,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a21a96fda2a35a6034e035564d362780.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6fbc3b7d0ac83ab8a043646d6c6d94a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6f9ef9b5a12f5b8ef14302403eafb8d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">BIO00056I</span>
     </a>
   </div>
@@ -124,12 +125,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">BIO00087H - home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">BIO00056I</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../BIO56I-gwas-workshop.html"> 
-<span class="menu-text">GWAS</span></a>
+    <a class="nav-link" href="./workshop5.html"> 
+<span class="menu-text">workshop 5</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workshop6.html"> 
+<span class="menu-text">workshop 6</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./workshop7.html" aria-current="page"> 
+<span class="menu-text">workshop 7</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workshop9.html"> 
+<span class="menu-text">workshop 9</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -142,22 +155,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">1</span> Learning objectives</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3</span> Exercises</a></li>
+  <li><a href="#summary-what-we-have-learned" id="toc-summary-what-we-have-learned" class="nav-link" data-scroll-target="#summary-what-we-have-learned"><span class="header-section-number">4</span> Summary: what we have learned</a></li>
+  <li><a href="#after-the-workshop-exam-style-questions" id="toc-after-the-workshop-exam-style-questions" class="nav-link" data-scroll-target="#after-the-workshop-exam-style-questions"><span class="header-section-number">5</span> After the workshop: exam style questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1." id="toc-question-1." class="nav-link" data-scroll-target="#question-1."><span class="header-section-number">5.1</span> Question 1.</a></li>
+  <li><a href="#question-2." id="toc-question-2." class="nav-link" data-scroll-target="#question-2."><span class="header-section-number">5.2</span> Question 2.</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIO00056I GWAS Workshop</h1>
+<div class="quarto-title-block"><div><h1 class="title">BIO00056I comparative genomics workshop</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Daniel Jeffares </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 24, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -167,72 +206,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<hr>
-<p>#Introduction This is GWAS workshop for Genes &amp; genomes in populations &amp; evolution - BIO00056I.</p>
-<p>In the lecture last week, we learnt about quantitative traits and how to analyse them. To recap, quantitative traits are often described as “complex” traits, because they are usually controlled by many genes, which each account for a small proportion of the trait variation. For this reason, they are known as additive genes.</p>
-<p>As we saw in the lecture, one good way to identify loci controlling quantitative traits is to perform a Genome-Wide Association Study, or GWAS. GWAS experiments use diversity panels of individuals to identify genetic markers that are significantly associated with a trait of interest.</p>
-<p>Using a diversity panel instead of a biparental mapping population ensures that linkage disequilibrium is low (bits of co-inherited DNA are small), and therefore resolution is high (QTL sizes are small), which helps to narrow down the regions containing the genes controlling the trait. They also capture much more genetic variation.</p>
-<p>###Fission yeast In this workshop we’ll use data from the fission yeast <em>Schizosacharomyces pombe</em>, which is a model species for cell biology. You can read more here about <em>S. pombe</em> <a href="http://www-users.york.ac.uk/~dj757/BIO00047I/BIO00056I_index.html">here</a>.</p>
-<p>When fission yeast is not being used in labs as a model species for cell biology, it grows on fuit. It is most often found in high-sugar fruits or in fermented beverages (wine, beer, and quite often in cachaça in Brazil).</p>
-<p>The data we will use is from two papers from <a href="https://www.ncbi.nlm.nih.gov/pubmed/25665008">Nature Genetics</a>, and <a href="http://europepmc.org/abstract/MED/28117401">Nature Communications</a>. These articles described the genetic diversity of 160 strains of this species by sequencing their genomes. We also measured over 200 traits.</p>
-<p>###GWAS for yeast GWAS is usually used for human or crop traits, but of course we can apply this method to any eukaryote species where we have trait data and polymorphism (usually SNP) data.</p>
-<p><strong>In this workshop</strong> we’ll have a look at the GWAS results for four traits, and think about what these results could mean for the evolution of this species.</p>
-<p>###The traits The traits we will look at are:</p>
-<p><strong>Growth in 400mM NaCl</strong> This trait is the growth rate of the strains in 400mM salt. This could be important if strains grew in fruit near the sea, for example.</p>
-<p><strong>Growth at an elevated temperature</strong> This trait is the growth rate of the strains at 40 degrees centigade. This is quite warm for this yeast, so its a stressful condition.</p>
-<p><strong>The maximal cell density in rich media</strong> This trait measures how well each strain grows, if its given plenty of sugar and other resources.</p>
-<p><strong>The glucose/fructose utlisation level in wine</strong> This trait measures how much of the glucose and fructose sugars each strain used in grape must (that is used to make wine).</p>
-<hr>
-<p><strong>A high value in any of these traits could be adaptive one condition or another. But optimising one trait may limit another, particularly if the alleles that influence two traits are closely <em>linked</em>.</strong></p>
-<hr>
-<p><strong>All the GWAS output data is is the files:</strong></p>
-<ul>
-<li><p>gwas.0.4M-NaCl-growth.txt</p></li>
-<li><p>gwas.heat-growthrate.txt</p></li>
-<li><p>gwas.richmedia-max-mass.txt</p></li>
-<li><p>gwas.wine-glucose-fructose.txt</p></li>
-</ul>
-<hr>
-<p>##Exploring the data</p>
-<p><strong>Loading GWAS data in to R</strong></p>
-<p>We will now look at the results of the GWAS for the growth in 400mM NaCl. You can obtain the data by downloding the file gwas.0.4M-NaCl-growth.txt, from <a href="http://www-users.york.ac.uk/~dj757/BIO00056I/data/gwas.0.4M-NaCl-growth.txt">here</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  salt <span class="ot">=</span> <span class="fu">read.table</span>(<span class="st">"gwas.0.4M-NaCl-growth.txt"</span>,<span class="at">h=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="learning-objectives" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Learning objectives</h1>
+</section>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>This table contains the output from a GWAS program called <a href="http://dougspeed.com/ldak/">LDAK</a>.</p>
-<p>Each row of the table contains information about a SNP. For our purposes, the important columns are <strong>Wald_P</strong> (the p-value), <strong>Chr</strong> (which chromosome the SNP is on), and <strong>BP</strong> (the position in the chromosome).</p>
-<hr>
-<p><strong>Make a Manhattan plot</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#pdf("manhats.bestset2.pdf",width=18,height=10)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="dv">1</span>, <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">5579133</span>,<span class="dv">4539804</span>,<span class="dv">2452883</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bty=</span><span class="st">"l"</span>,<span class="at">cex=</span><span class="fl">0.8</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>)<span class="sc">+</span><span class="dv">2</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      temp <span class="ot">=</span> <span class="fu">subset</span>(salt, Chr <span class="sc">==</span> j)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plot</span>(temp<span class="sc">$</span>BP, <span class="sc">-</span><span class="fu">log10</span>(temp<span class="sc">$</span>Wald_P),</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">main =</span> <span class="st">"salt"</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>),</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab=</span><span class="st">"position"</span>,<span class="at">ylab=</span><span class="st">"-log10(P)"</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abline</span>(<span class="at">h=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">1e-5</span>),<span class="at">col=</span><span class="dv">2</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="evolution-gwas1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="callout-title-container flex-fill">
+Warning
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>This web page is a work in progress.</p>
 </div>
-<hr>
-<p>Then we could get them to make plots of other traits and talk about how:</p>
-<ul>
-<li><p>how many hits there are</p></li>
-<li><p>the effect sizes?</p></li>
-<li><p>how these alleles might interact if these ay close on the same chromosomes</p></li>
-</ul>
+</div>
+</section>
+<section id="exercises" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Exercises</h1>
+</section>
+<section id="summary-what-we-have-learned" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Summary: what we have learned</h1>
+</section>
+<section id="after-the-workshop-exam-style-questions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> After the workshop: exam style questions</h1>
+<section id="question-1." class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="question-1."><span class="header-section-number">5.1</span> Question 1.</h2>
+</section>
+<section id="question-2." class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="question-2."><span class="header-section-number">5.2</span> Question 2.</h2>
 
 
+<!-- -->
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -324,6 +335,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -654,7 +716,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "BIO00056I comparative genomics workshop"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Daniel Jeffares</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2025-02-24</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    html:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">      </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">        code-copy: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">        code-tools: true</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">        code-link: true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">        toc: true</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">        number-sections: true</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">        toc-location: right</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">        toc-depth: 2</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">        highlight-style: github</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> source</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># Learning objectives</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>:::callout-warning</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>This web page is a work in progress.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exercises</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam style questions</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1. </span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2. </span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 
