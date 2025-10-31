@@ -446,7 +446,28 @@ plot?
 
 
 
-# After the workshop: exam style questions
+# Exam style questions
+
+## Question 1 (10 points)
+
+How could we use the molecular clock to understand the spread of a plant pathogenic virus? In this scenario, we have access to infected crops from throughout the United Kingdom, sampled from different fields over a period of 10 years, and if we invest more funds we can access samples from up to 30 years ago. We are interested to know how to control the virus.
+
+In your answer, explain:
+
+- What *useful* information we could gather from the phylogeny and molecular clock analyses? (4 points)
+- How we would collect samples so that we could obtain this information? (4 points)
+- What analysis we would perform? (2 points)
+
+
+## Question 2 (10 points)  
+
+Evidence and implications of the molecular clock (10 points)
+
+ - What aspects of RNA viruses make them so suitable for observing the molecular clock ? (3 points)
+ - Give an example of another sitation in a multicellular species (plant, animal or fungi), where we might be able to observe the molecular clock over a longer period of time (e.g. decades, or centuries). (5 points)
+- Now consider the genetic change between the multicellular species, once they that have been diverging for millions of years. Assuming that you showed the genetic change eas clock-like, what does this tell you about the effects of mutations? (2 points)
+
+
 
 # Further reading
 
@@ -454,12 +475,6 @@ These two articles will be useful for those that want to extend their knowledge.
 
 * Baum (2005): [The Tree-Thinking Challenge](https://www.science.org/doi/10.1126/science.1117727)
 *	Shao (2017): [Evolution of Influenza A Virus by Mutation and Re-Assortment](https://www.mdpi.com/1422-0067/18/8/1650)
-
-
-## Question 1. 
-
-## Question 2. 
-
 
 :::callout-note
 # Acknowledegment
