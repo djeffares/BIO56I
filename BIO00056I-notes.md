@@ -51,6 +51,15 @@ Workshop 7: Comparative Genomics
 
 Workshop 9: Quantitative Genetics 2
 
+## Exam questions 2025
+
+## New pathogen Could the situation be more complex than we suppose? How would you ensure you have robust answers?
+## Question 3. Could the situation be more complex than we suppose? How would you ensure you have robust answers?
+
+Yes, it could be, as the natural world is complex (1 mark). Perhaps there is a new strain of one of the pathogens, the new pathogen it is a hybrid of *Leishmania* and *Endotrypanum* (2 marks)? Using two genes helps us to see if our results are robust (2 marks). Once we have the DNA from patients, sand flies and vectors. If we suspect hybridization, we should design PCR primers for ~10 more genes and see what this shows (3 marks). If there is a hybrid some patient samples might cluster with *Leishmania* and some with *Endotrypanum*.
+
+
+
 
 ## From Julia
 
