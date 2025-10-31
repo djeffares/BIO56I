@@ -115,7 +115,7 @@ Mega software does not work very well on the Mac OS.
 Once you start Mega, you will see the following window. Be careful here, because Mega has multiple windows.
 
 
-![](mega1.jpg)
+![](images/mega1.jpg)
 
 
 
@@ -130,7 +130,7 @@ Then click:
 
 You shuld see the window shown below
 
-![](mega2.jpg)
+![](images/mega2.jpg)
 
 ## Group the strains by year.
 
@@ -150,7 +150,7 @@ For example:
 
 First, go to the `Display` menu, and click on `Show Group Names`. This will help you to keep track of what you‘ve done.
 
-![](mega3.jpg){width="300"}
+![](images/mega3.jpg){width="300"}
 
 
 To group strains, select one or more strains from a year by clicking on the name of the first strain in the grey part of the window, and shift+click to select the last one, as below:
@@ -159,7 +159,7 @@ Then, go to the `Edit` menu, and click on `Create Group from Selection`. A new g
 
 Repeat this for all years from 1985 to 2005.
 
-![](mega4.jpg){width="600"}
+![](images/mega4.jpg){width="600"}
 
 
 
@@ -193,7 +193,7 @@ It does not look very informative, so change the presentation of the tree using 
 
 You should see a tree like the one shown below.
 
-![](mega5.jpg){width="700"}
+![](images/mega5.jpg){width="700"}
 
 
 ### Understanding the tree
@@ -216,12 +216,12 @@ To do this:
 - Keep the `Kimura 2 parameter model`
 - Click `OK`
 
-![](mega6.jpg){width="400"}
+![](images/mega6.jpg){width="400"}
 
 
 You should see the matrix shown below.
 
-![](mega7.jpg){width="600"}
+![](images/mega7.jpg){width="600"}
 
 Next, export this data to a file:
 
@@ -232,7 +232,7 @@ Next, export this data to a file:
 
 You should see a window something like the image below.
 
-![](mega8.jpg){width="400"}
+![](images/mega8.jpg){width="400"}
 
 
 Finally edit and save this file:

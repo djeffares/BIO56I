@@ -9,11 +9,30 @@ You can use this checklist when you are reviewing your material:
 
 ## My weeks
 
-### week6
+### week6: done
 
 Directed study 9 (recording): Phylogenies & Molecular Clock
 Directed study 10 (worksheet): Phylogenies & Molecular Clock
 Workshop 5: Phylogenies & Molecular Clock
+Monday announcment: 
+
+Week 6: BIO00056I Population Genetics & Evolution
+
+Hi Everyone,
+
+Last week we learned about population structure and conservation genetics. This week we will learn about what we can do with phylogenetic trees and we will learn about the molecular clock, a concept that is central to constructing and interpreting phylogenetic trees.
+
+This week you should:
+
+Watch two videos on phylogenies and the molecular clock.
+Attempt worksheet 10, where we apply phylogenetic thinking.
+Attend workshop 5, where we examine influenza virus data and see some very strong evidence for the molecular clock.
+
+The model answers from last week’s workshop are available under week 5/Learning materials. As usual, please use the discussion board if you have any questions, or ask in one of the sessions.
+
+Best wishes,
+Dan
+
 
 ### week7
 
@@ -84,7 +103,7 @@ https://drive.google.com/drive/folders/0AFjNJV63zpqBUk9PVA
 
 #### Links to all my videos for BIO00056I
 
-Phylogenies and moleculra clock 
+Phylogenies and molecular clock 
 
 
 Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=327fb8cc-9f70-4207-8afc-b0b2012cd0d4
