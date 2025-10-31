@@ -3,7 +3,7 @@ title: "BIO00056I"
 subtitle: "Directed study 10 (worksheet): Phylogenies & Molecular Clock"
 
 author: Daniel Jeffares
-date: 2025-02-24
+date: 2025-10-31
 format:
     html:
         code-copy: true
@@ -25,7 +25,7 @@ editor: source
 
 # Learning objectives
 
-This worksheet is deigned to prepare you for exam questions on phylogenies and molecular clocks.Here we show one example for how we can use and interpret a phylogenetic trees.
+This worksheet is designed to prepare you for exam questions on phylogenies and molecular clocks.Here we show one example for how we can use and interpret a phylogenetic trees.
 
 # Introduction
 

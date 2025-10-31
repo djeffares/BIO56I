@@ -24,6 +24,9 @@ website:
       - href: worksheet10.qmd
         text: "worksheet 10"
 
+      - href: worksheet11.qmd
+        text: "worksheet 11"
+
 format:
   html:
     theme: default

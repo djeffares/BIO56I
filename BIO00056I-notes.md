@@ -37,7 +37,7 @@ Dan
 ### week7
 
 Lecture 4: Population Genomics
-Directed study 11 (worksheet): Population Genomics
+Directed study 11 (worksheet): Population Genomics: done
 Workshop 6: Population Genomics
 
 ### week8
