@@ -1,0 +1,103 @@
+---
+title: "BIO00056I"
+subtitle: "Directed study 11 (worksheet): Population genomics"
+
+
+author: Daniel Jeffares
+date: 2025-10-31
+format:
+    html:
+      
+        code-copy: true
+        code-tools: true
+        code-link: true
+        toc: true
+        number-sections: true
+        toc-location: right
+        toc-depth: 2
+        highlight-style: github
+    pdf:
+      toc: true
+      number-sections: true
+      colorlinks: true    
+
+editor: source
+    
+---
+
+# Learning objectives
+
+This worksheet is designed to prepare you for exam questions on population genomics.
+Upon completing this worksheet your  knowlede will be enhanced in these areas:
+
+- Understanding how population genomic data can be collected
+- Appreciating how population genomic data can be applied to various biological questions
+- Interpret various patterns that arise from population genomic data analysis
+
+# Introduction
+
+This exercise describes a scenario where you can use population genomics to study ancient history. One of the most ancient small cities is [Çatalhöyük](https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk) which is in modern day Turkey. This little city dates to about 7000 BCE. We know that this civilization had either goats or sheep, but we do not know which. The archeologists also suspect that the people of Çatalhöyük had a shared contemporaneous culture and traded with people at Aşıklı Höyük and some other settlements in the same part of the world (Figure 1). 
+
+![Figure 1. Archaeological sites that are contemporaneous with Çatalhöyük](images/Chatalhoyuk.jpg){width=600px}
+
+## The hypothetical scenario
+
+The remainder of this problem is hypothetical. Imagine that archaeologists disagree about whether Çatalhöyük and Aşıklı Höyük regularly trade. There is disagreement about whether this civilization domesticated goats (if they were goats) or if they merely caught and ate wild goats.
+
+Luckily, in this  scenario, we can occasionally obtain small amounts of DNA from the bones of sheep (or goats) at Çatalhöyük and Aşıklı Höyük. The samples we consider are described below. Note that while this is a hypothetical example, studies of ancient civilizations do use DNA and population genomics. 
+
+For example, the study of [Population genomics of the Viking world](https://doi.org/10.1038/s41586-020-2688-8) used population genomics extensively. Çatalhöyük is older, so in our scenario, we assume the quality and quantity of DNA is much lower.
+
+## Background Information
+
+There is a high-quality reference genome for sheep and goats. Studies have shown that it is possible to map reads from sheep and to ghosts and vice versa. But it is better to map reads within species, rather than between.
+
+### The data
+
+You can obtain small amounts of DNA from these ancient sheet/goat samples:
+
+-	10 samples from Çatalhöyük
+-	10 samples from Aşıklı Höyük
+
+There are thousands of genomes of modern goats and available at the European Nucleotide Archive (ENA) from the [VarGoats project](https://www.goatgenome.org/vargoats.html). This includes goat genomes from Pakistan, Spain & France, the Mediterranean, Northern Europe and most importantly, wild goats from Turkey and Iran.
+
+There are also more than 100 ancient genomes from Eurasian domestic and wild sheep samples spanning the past 12,000 years [from this article](https://www.science.org/doi/10.1126/science.adn2094), and 100s of modern sheep genomes available at ENA.
+
+::: callout-note
+You do not need to read these articles, but they show us what population genomic data is available.
+:::
+
+### The problem
+
+The archaeologists want to know whether Çatalhöyük and Aşıklı Höyük regularly traded sheet and/or goats.
+
+An experienced ancient DNA technician has extracted DNA for you from Çatalhöyük and Aşıklı Höyük. There isn’t much, but you can sequence it. You do, and it is disappointing - the sequence reads map to only ten tiny regions in 0.5% of the goat genome and 0.4% of the sheep genome. They don't have the funds or the samples to obtain any more.
+
+The challenge is to explain what this might mean if the SNPs show the samples are more like sheep, more like goats, or in between, and if they traded sheep and goats with each other, or merely caught wild sheep and goats.
+
+
+# The exam style questions
+
+1.	Did they keep sheep, or goats or both? 	
+a.	How can you use the ENA data to prove your point?
+b.	How might the data be ambiguous?
+
+2.	Did they domesticate these livestock?
+a.	What signals might you expect from domestication, for example from selective inbreeding of the sheep/goats?
+b.	How could you use the ENA data to prove your point?
+
+3.	Did they share the livestock between settlements?
+a.	It is possible that the various settlements might have independently domesticated sheep/goats from the same wild stock in Turkey.
+b.	How can you distinguish between this, and real trading of livestock?
+c.	Could the ENA data help here? If so, how?
+
+
+# Model answers
+
+Will be provided at this website at a later date
+
+
+
+
+
+

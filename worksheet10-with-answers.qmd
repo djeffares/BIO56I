@@ -2,12 +2,10 @@
 title: "BIO00056I"
 subtitle: "Directed study 10 (worksheet): Phylogenies & Molecular Clock"
 
-
 author: Daniel Jeffares
-date: 2025-02-24
+date: 2025-10-31
 format:
     html:
-      
         code-copy: true
         code-tools: true
         code-link: true
@@ -16,36 +14,34 @@ format:
         toc-location: right
         toc-depth: 2
         highlight-style: github
+    
+    pdf:
+      toc: true
+      number-sections: true
+      colorlinks: true    
 
 editor: source
-    
 ---
-
-::: {.callout-important}
-This website now contains model answers in @sec-answers
-:::
-
 
 # Learning objectives
 
-This worksheet is deigned to prepare you for exam questions on phylogenies and molecular clocks.Here we show one example for how we can use and interpret a phylogenetic trees.
+This worksheet is designed to prepare you for exam questions on phylogenies and molecular clocks.Here we show one example for how we can use and interpret a phylogenetic trees.
 
-# Introduction 
+# Introduction
 
 ## Pathogens and epidemiology (the study of the causes of disease)
 
-There are many types of pathogenic organisms; viruses, bacteria and protozoans are common types. Protozoans are single-celled eukaryotes, such as *Plasmodium *species that cause malaria. Here we consider *Leishmania* and *Endotrypanum*, protozoan pathogens that cause skin lesions that do not heal. 
+There are many types of pathogenic organisms; viruses, bacteria and protozoans are common types. Protozoans are single-celled eukaryotes, such as *Plasmodium* species that cause malaria. Here we consider *Leishmania* and *Endotrypanum*, protozoan pathogens that cause skin lesions that do not heal.
 
 ## Relevant facts about these protozoan pathogens
 
 Three facts about these protozoan pathogens are important here:
 
-- **Breeding**: They undergo meiosis and sexual recombination. ie: they breed sexually.
+-   **Breeding**: They undergo meiosis and sexual recombination. ie: they breed sexually.
 
-- **Vectors**: They are almost always transmitted by insects. The insects feed on human and/or animal blood. They pick up the pathogen from the skin of an infected person or animal when they feed, and transfer the pathogen to another person or animal. Such insects are called the vector of the pathogen.
+-   **Vectors**: They are almost always transmitted by insects. The insects feed on human and/or animal blood. They pick up the pathogen from the skin of an infected person or animal when they feed, and transfer the pathogen to another person or animal. Such insects are called the vector of the pathogen.
 
-- **Reservoirs**: Some pathogens and the insect vectors feed on animals as well as people. A large number of pathogens can be present in the animal population.  An animal that contains pathogens is called a reservoir species. A pathogen can have more than one reservoir species.
-
+-   **Reservoirs**: Some pathogens and the insect vectors feed on animals as well as people. A large number of pathogens can be present in the animal population. An animal that contains pathogens is called a reservoir species. A pathogen can have more than one reservoir species.
 
 # The exam style questions
 
@@ -55,66 +51,24 @@ In a remote island in the pacific there appears to be a new disease. Its symptom
 
 What is already known:
 
-- On this island, only two protozoans were known to cause symptoms like cutaneous leishmaniasis; *Leishmania major* and *Endotrypanum colombiensis*. They are quite different pathogens, and they can be distinguished genetically.
+-   On this island, only two protozoans were known to cause symptoms like cutaneous leishmaniasis; *Leishmania major* and *Endotrypanum colombiensis*. They are quite different pathogens, and they can be distinguished genetically.
 
-- There are only three potential reservoirs: rats, dogs and pigs
+-   There are only three potential reservoirs: rats, dogs and pigs
 
-- There are two sandflies species that could be the vector
+-   There are two sandflies species that could be the vector
 
-- Both *L. major* and *E. colombiensis* and the mystery protozoan can be isolated from patients, cultured in a laboratory, and DNA extracted.
-
-
+-   Both *L. major* and *E. colombiensis* and the mystery protozoan can be isolated from patients, cultured in a laboratory, and DNA extracted.
 
 ## The questions
 
-You have a team of clinicians and laboratory technicians that can do parasite isolation, culturing and DNA extractions.
-Explain how you would use laboratory work and phylogenetic analysis to answer the following questions. The laboratory work should be simple, as we focus here on the phylogenetic analysis.
+You have a team of clinicians and laboratory technicians that can do parasite isolation, culturing and DNA extractions. Explain how you would use laboratory work and phylogenetic analysis to answer the following questions. The laboratory work should be simple, as we focus here on the phylogenetic analysis.
 
-- Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? (10 marks)
+-   Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? (10 marks)
 
-- Question 2. Is there an insect vector? If so, what is it? (10 marks)
+-   Question 2. Is there an insect vector? If so, what is it? (4 marks)
 
-- Question 3. Is there a potential reservoir? If so, what is it? (10 marks)
+-   Question 3. Is there a potential reservoir? If so, what is it? (4 marks)
 
-# Model answers {#sec-answers}
+# Model answers
 
-## Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? (10 marks)
-
-
-a) Experimental design  (2 marks)
-
-We can use phylogeny to solve this. If we can obtain the sequence of one or two genes from the parasites that patients are infected with, and also some *Leishmania major* and *Endotrypanum colombiensis* strains, we can make a phylogeny. The new pathogen sequences should cluster with one or the other. We will first find one or two genes in *Leishmania major* and *Endotrypanum colombiensis* that have enough differences between them to create a robust phylogeny. Usually, a literature search will identify such genes.
-
-b) Collect samples and (3 marks)
-
-Consider the ethics of our work, and gain the relevant permissions. *This is not something you will be examined on, but it is important to say in this context.* Find patients who are willing to take part, gain their consent and then collect some small skin lesion samples. Extract DNA from the skin lesion samples.
-
-c) Generate DNA sequences (2 marks)
-
-Design PCR primers that will amplify each gene from each species. Amplify the genes from the known pathogen species *Leishmania major* and *Endotrypanum colombiensis*, or obtain DNA sequences from the The European Nucleotide Archive (ENA).  Amplify the genes from the skin sample DNA. Sequence the PCR products with Sanger sequencing.
-
-d) Analyse the sequences (3 marks)
-
-Build a phylogeny with MEGA. If the phylogenies for both genes show that the skin samples sequences cluster with *Leishmania* or *Endotrypanum* controls, we have our answer. If we do not obtain any PCR products (we have *Leishmania* and *Endotrypanum* control DNA remember), we may well have a new pathogen.
-
-
-## Question 2. Is there an insect vector? If so, what is it? (4 marks)
-
-If our PCR primers worked, we can follow the same strategy for detecting pathogen DNA in the two sand fly species. 
-
-We would want to focus on sand flies that live near the places where people are infected. This time, building a phylogeny is even more important - and we can add the sequences we obtained from the patients. If we find that the sequences from patients match those from the local sand flies, we have found the vector. If our PCR primers did not work, it is more of a challenge.
-
-
-## Question 3. Is there a potential reservoir? If so, what is it? (4 marks)
-
-Again, if we have PCR primers we can do what we did for the sand flies. We should catch rats, dogs and pigs that live near infected people, humanely obtain some skin samples, extract DNA, PCR, sequence and add the reservoirs to our phylogeny. If the reservoir samples should cluster with patient samples for both genes, we can implicate a reservoir. As a control, we can catch rats, dogs and pigs from far away from the infected people. If the PCR results are negative here, this will tell us if the reservoir is important.
-
-
-
-
-
-
-
-
-
-
+Will be provided at this website at a later date
