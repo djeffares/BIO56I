@@ -142,7 +142,7 @@ After this, we have the genotypes for the strains that are in the VCF (four in t
 The population genomics community has developed many software tools that process this data to extract some of this information (no tool does it all). In this workshop we will look at a phylogenetic tree, principal components analysis (PCA) and a STRUCTURE plot. These are all used to describe population structure and detect hybrids between populations or between species.
 
 
-## Phylogeny
+## The phylogeny
 
 A phylogenetic tree is a good first look at how similar or different many samples are. But when individuals mix between populations or species (hybridization), a *simple branching* tree can be misleading.
 
@@ -153,10 +153,15 @@ To handle this, we used a network approach (a splits network made with the softw
 Below is our SplitsTree network. There are many samples, so coloured dots cluster tightly. The Manaus samples are dark blue. Most cluster near Leishmania guyanensis at the top. We marked the Manaus samples that don’t with arrows.
 
 ![](images/populations2.jpg)
-Figure 2: A SplitsTree phylogeny.
+Figure 2: A SplitsTree phylogeny. The overall phylgeny is in the center, and we zoom in to various *clades* (groups of related samples) around the edges. Each dot is a sample, coloured by species. The dark blue dots are samples we collected from Manaus, Brazil.
 
 
-### Discuss these questions
+### Interpeting phylogeny
+Now spend some time discussing the SplitsTree phylogeny, using the using the discussion points below as a guide.
+
+::: callout-tip
+
+# Discussion points
 
 - From this figure, do the Viannia species look clearly separated or do some overlap?
 - A few Manaus samples don’t cluster with *L. guyanensis*. What could explain that?
@@ -164,6 +169,13 @@ Figure 2: A SplitsTree phylogeny.
 - What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?
 - Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?
 - Examine the data from the single *L. shawi* sample (light blue). Does its branch look unusually long? Remember: longer branches usually mean more mutations (this isn’t a dated tree, just a measure of genetic differences).
+
+:::
+
+----
+
+{{< pagebreak >}}
+
 
 ## Principal components clustering
 
