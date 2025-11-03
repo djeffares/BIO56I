@@ -7,6 +7,35 @@
 You can use this checklist when you are reviewing your material:
  https://docs.google.com/document/d/1s6ALyqcy-dWFtaORpQsEZyL9dJnfVxrXsGo4nE332BU/edit?tab=t.0#heading=h.3yor058g7zod
 
+## 2025 exam questions
+
+Please ensure that the exam has a good balance of question types. Most exam questions should test student understanding and problem-solving skills. Questions should have a good spread of difficulty with at least ¼ of the marks easily accessible and some challenging and/or longer answer questions to stretch the brightest students. Please see this document for more detailed guidelines.  We encourage you to include a question worth approximately 5 marks that steps away from the detailed module content and asks a more overarching question, some ideas are in this document.
+
+
+blank exam doc
+https://docs.google.com/document/d/13jiITKEDjs3q90_6RxMWBXSnQN1bZVgkzubM00R-Gpw/edit?tab=t.0
+
+Use this for my questions:
+
+https://wellcomeopenresearch.org/articles/10-325/v1
+
+
+
+last years paper
+https://docs.google.com/document/d/1tbbTOI67yTx43s38_JnrBgyuWHBxynRopaXcqIv8JQA/edit?tab=t.0
+
+resit papers from prevous years
+https://drive.google.com/drive/folders/12-8NcWPp_M7QMouGXvAOFPI_KPiucVRa
+
+last years resit
+https://drive.google.com/file/d/10sfCdPjMEtQodSCrULoT5LJuZFRmJWVA/view
+
+
+### Exam question ideas:
+You would like to teach a younger relative about TOPIC.  Highlight one/two areas that you think are important.  Explain why.
+
+
+
 ## My weeks
 
 ### week6: done
@@ -54,6 +83,7 @@ Workshop 9: Quantitative Genetics 2
 ## Exam questions 2025
 
 ## New pathogen Could the situation be more complex than we suppose? How would you ensure you have robust answers?
+
 ## Question 3. Could the situation be more complex than we suppose? How would you ensure you have robust answers?
 
 Yes, it could be, as the natural world is complex (1 mark). Perhaps there is a new strain of one of the pathogens, the new pathogen it is a hybrid of *Leishmania* and *Endotrypanum* (2 marks)? Using two genes helps us to see if our results are robust (2 marks). Once we have the DNA from patients, sand flies and vectors. If we suspect hybridization, we should design PCR primers for ~10 more genes and see what this shows (3 marks). If there is a hybrid some patient samples might cluster with *Leishmania* and some with *Endotrypanum*.
