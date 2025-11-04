@@ -3,7 +3,7 @@ title: "BIO00056I"
 subtitle: "Workshop 6: Population Genomics"
 
 author: Daniel Jeffares
-date: 2025-10-31
+date: 2025-11-04
 format:
     html:
         code-copy: true
@@ -19,7 +19,6 @@ format:
       toc: true
       number-sections: true
       colorlinks: true
-
 
 editor: source
 
@@ -272,13 +271,85 @@ Figure 5. PCA clustering of only the *Leishmania* strain we collected from Manau
 
 :::
 
+{{< pagebreak >}}
+
+## Admixture/STRUCTURE plots
+
+A common way of showing population genomic data are so-called STRUCTURE plots, generated using a software called STRUCTURE, or a similar one called Admixture, which is what we used. I’ll call these STRUCTURE plots for now.
+
+STRUCTURE plots show the proportion of ancestry from different populations (or species) for each individual in the data set. Usually, eah column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species). 
+
+STRUCTURE plots are usually used to describe population structure within a species, but they can also be used to describe structure between closely related species, as we do here.
+
+Our STRUCTURE plot is below. Samples from Manaus are marked in the open rectangle at the bottom of the plot. Again, most look like *L. guyanensis*, and those that do not, are marked with arrows as we did in the phylogeny.
+
+![](images/populations7.jpg)
+
+Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples that weer obtained from Manaus are marked in the open rectangle at the bottom of the plot. Most appear to be *Leishmania guyanensis*, but a few do not, and these are marked with arrows as we did in Figure 2, the SplitsTree phylogeny.
+
+::: callout-tip
+
+# Discussion points: the STRUCTURE plot
+
+- Each column is a different strain, and the colours represent the *proportion* of this strain's ancestry that is derived from each species. If there are hybrids between species, we would expect to see columns with multiple colours.
+
+- The most obvious thing about this plot is that the species are different colours. 
+
+- Does this visualisation of the data suggest that there is extensive breeding between species of the Viannia?
+
+- Consider the *Leishmania* parasites circulating around Manaus (see Figure 5). Do they all look like one species, or are there multiple species present?
+
+
+- Look at the one strain of *Leishmania shawi*. This certainly looks like a hybrid between two species.
+
+
+- Go back to Figure 2 (the phylogeny) and thr PCA plots to examine and see how the *Leishmania shawi* sample is placed. Does its placement in those plots make sense, given what we see in the STRUCTURE plot?
+
+
+:::
+
+
 
 # Summary: what we have learned
 
+- Population genomics data can be used to explore population structure and hybridization between populations and species.
+
+- There are different ways of visualising population genomics data, each with their own strengths and weaknesses.
+
+- In this workshop, we have seen examples of:
+
+  - isolation by distance (different species occurring in various counties)
+  - multiple species in one location (Manaus) with rare hybrids between species
+
 # After the workshop: exam style questions
 
-## Question 1. 
+## Question 1. Populations and migration.
 
-## Question 2. 
+A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are colored by the country they come from. Small coloured labels represent individuals and large coloured points represent median PC1 and PC2 values for each country.
+
+- Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.
+
+- What can we infer from this data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?
+
+- What can we infer from this data about the interbreeding between countries? Does this look like between country marriages are common, or the exception?
+
+- Part b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian).  Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in part a. Explain how this kind of analysis could be used to understand a) the migration of a parasite, b) how to conserve a threatened species. 
+
+- Part b of the plot shows the correlation between genetic distance and geographic distance (km between individuals' birthplaces). What phenomenon does this illustrate? How would you expect this to be different for a highly mobile species, such as birds, or a less mobile species, such as fish in lakes?
+
+![](images/populations8.jpg)
+
+Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are colored by the country they come from. Small coloured labels represent individuals and large coloured points represent median PC1 and PC2 values for each country. 
+  
+
+## Question 2. Understanding populations from DNA
+
+- Describe how population genomic data is collected; starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.
+
+- Describe three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, describe one strength and one weakness.
+
+- List three features of the *genetics* of natural populations that we can learn from population genomic data.
+
+
 
 

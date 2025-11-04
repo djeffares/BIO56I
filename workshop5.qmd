@@ -2,10 +2,9 @@
 title: "BIO00056I"
 subtitle: "Workshop 5: Phylogenies & Molecular Clock"
 author: Daniel Jeffares
-date: 2025-02-24
+date: 2025-11-04
 format:
     html:
-      
         code-copy: true
         code-tools: true
         code-link: true
@@ -14,9 +13,14 @@ format:
         toc-location: right
         toc-depth: 2
         highlight-style: github
+    
+    pdf:
+      toc: true
+      number-sections: true
+      colorlinks: true
+
 editor: source
-markdown: 
-  wrap: 72
+
 
 ---
 
