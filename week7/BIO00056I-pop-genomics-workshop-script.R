@@ -42,6 +42,11 @@ pca.meta$Species[pca.meta$Species=="Manaus"] <- "?"
 pca.meta <- pca.meta |>
   mutate(Manaus = ifelse(Species == "?", "Manaus", "Other"))
 
+#remove thos with unknown location
+pca.meta<- pca.meta |>
+  filter(!is.na(Location))
+  
+
 save.image("BIO00056I-pop-genomics-workshop-data2.Rda")
 
 #pca.meta
@@ -67,11 +72,11 @@ view(pca.meta)
 populations3 <- ggplot(pca.meta,aes(x=PC1,y=PC2,colour=Species))+
   geom_jitter(
     data = subset(pca.meta, Manaus != "Manaus"),
-    aes(x=PC1,y=PC2,colour=Species), shape=1,size=3,stroke=1,alpha=0.5,
+    aes(x=PC1,y=PC2,colour=Species), shape=1,size=3,stroke=2,alpha=0.5,
     width = 0.01, height = 0.01)+
-  xlim(-0.5,0.1)+ylim(-0.1,0.3)+
+  xlim(-0.45,0.1)+ylim(-0.1,0.3)+
   geom_hline(yintercept=0.05, linetype="dashed", color = "blue")+
-  geom_vline(xintercept=0, linetype="dashed", color = "blue")+
+  geom_vline(xintercept=0.05, linetype="dashed", color = "blue")+
   theme_light()+
   theme(axis.text=element_text(size=14),axis.title=element_text(size=14,face="bold"))
 populations3
@@ -85,17 +90,17 @@ ggsave("images/populations3.jpg", populations3, width = 7, height = 7)
 populations4 <-  ggplot(pca.meta,aes(x=PC1,y=PC2,colour=Species))+
   geom_jitter(
     data = subset(pca.meta, Manaus == "Manaus"),
-    aes(x=PC1,y=PC2,colour=Species), shape=1,size=3,stroke=1,alpha=0.5,
+    aes(x=PC1,y=PC2,colour=Species), shape=1,size=3,stroke=2,alpha=0.5,
     width = 0.01, height = 0.01)+
-  xlim(-0.5,0.1)+ylim(-0.1,0.3)+
+  xlim(-0.45,0.1)+ylim(-0.1,0.3)+
   geom_hline(yintercept=0.05, linetype="dashed", color = "blue")+
-  geom_vline(xintercept=0, linetype="dashed", color = "blue")+
+  geom_vline(xintercept=0.05, linetype="dashed", color = "blue")+
   theme_light()+
   theme(axis.text=element_text(size=14),axis.title=element_text(size=14,face="bold"))
 populations4
 
 #save plot as  populations4.jpg
-ggsave("images/populations4.jpg", populations4, width = 7, height = 7)
+ggsave("images/populations4.jpg", populations4, width = 12, height = 7)
 
 
 #plot the Manaus and other samples side by side
@@ -111,21 +116,26 @@ populations3.populations4
 ggsave("images/populations3.populations4.jpg", populations3.populations4, width = 15, height = 7)
 
 #PLOTS BY LOCATION ----
+view(pca.meta)
 
 # colour by location: not Manaus
-populations5 <-  
-  #pca.meta |> 
-  filter(pca.meta, Manaus != "Manaus") |>
+populations5 <-
+  pca.meta |>
+  filter(Manaus != "Manaus") |>
+  #filter(!is.na(Location)) |>
   ggplot(aes(x=PC1,y=PC2,colour=Location))+
   geom_jitter(
-    aes(x=PC1,y=PC2,colour=Location), shape=1,size=3,stroke=1,alpha=0.5,
+    aes(x=PC1,y=PC2,colour=Location), shape=1,size=3,stroke=2,alpha=0.5,
     width = 0.01, height = 0.01)+
-  xlim(-0.5,0.1)+ylim(-0.1,0.3)+
-  #geom_hline(yintercept=0.05, linetype="dashed", color = "blue")+
-  #geom_vline(xintercept=0, linetype="dashed", color = "blue")+
+  xlim(-0.45,0.1)+ylim(-0.1,0.3)+
+  geom_hline(yintercept=0.05, linetype="dashed", color = "blue")+
+  geom_vline(xintercept=0.05, linetype="dashed", color = "blue")+
   theme_light()+
   theme(axis.text=element_text(size=14),axis.title=element_text(size=14,face="bold"))
 populations5
+
+#save this image
+ggsave("images/populations5.jpg", populations5, width= 10, height = 7)
 
 # colour by location: Only Manaus
 populations6 <-  
@@ -133,14 +143,18 @@ populations6 <-
   filter(pca.meta, Manaus == "Manaus") |>
   ggplot(aes(x=PC1,y=PC2,colour=Location))+
   geom_jitter(
-    aes(x=PC1,y=PC2,colour=Location), shape=1,size=3,stroke=1,alpha=0.5,
+    aes(x=PC1,y=PC2,colour=Location), shape=1,size=3,stroke=2,alpha=0.5,
     width = 0.01, height = 0.01)+
-  xlim(-0.5,0.1)+ylim(-0.1,0.3)+
-  #geom_hline(yintercept=0.05, linetype="dashed", color = "blue")+
-  #geom_vline(xintercept=0, linetype="dashed", color = "blue")+
+  xlim(-0.45,0.1)+ylim(-0.1,0.3)+
+  geom_hline(yintercept=0.05, linetype="dashed", color = "blue")+
+  geom_vline(xintercept=0.05, linetype="dashed", color = "blue")+
   theme_light()+
   theme(axis.text=element_text(size=14),axis.title=element_text(size=14,face="bold"))
 populations6
+
+#save this image
+ggsave("images/populations6.jpg", populations6, width= 10, height = 7)
+
 
 #plot the Manaus and other samples side by side
 populations5.populations6 <- ggarrange(
@@ -153,27 +167,6 @@ populations5.populations6
 ggsave("images/populations5.populations6.jpg", populations5.populations6, width= 15, height = 7)
 
 view(pca.meta)
-
-#everything together, with Manaus samples as black circles
-plot3 <-  ggplot(pca.meta,aes(x=PC1,y=PC2,colour=Species))+
-  geom_jitter(data = subset(pca.meta, Species != "Manaus"),
-              aes(x=PC1,y=PC2,colour=Species),alpha = 0.25, shape=1,size=2,
-              width = jitter,height = jitter)+
-  geom_jitter(data = subset(pca.meta, Species == "Manaus"),
-              aes(x=PC1,y=PC2,colour=Species),alpha = 1,shape=1,size=2,
-              colour=1,width = jitter,height = jitter)+
-  theme_light()
-plot3
-
-#now lets save the plots
-ggsave("Lguy.PC1PC2.Species-colours.side-by-side.20231111.png", 
-       plot1.plot2, width = 15, height = 7)
-ggsave("Lguy.PC1PC2.Species-colours.non-manaus.20231111.png", 
-       plot1, width = 7, height = 7)
-ggsave("Lguy.PC1PC2.Species-colours.only-manaus.20231111.png", 
-       plot2, width = 7, height = 7)
-ggsave("Lguy.PC1PC2.Species-colours.everything.20231111.png", 
-       plot3, width = 7, height = 7)
 
 
 ################################################

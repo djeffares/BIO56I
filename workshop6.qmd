@@ -161,7 +161,7 @@ Now spend some time discussing the SplitsTree phylogeny, using the using the dis
 
 ::: callout-tip
 
-# Discussion points
+# Discussion points: phylogeny
 
 - From this figure, do the Viannia species look clearly separated or do some overlap?
 - A few Manaus samples don’t cluster with *L. guyanensis*. What could explain that?
@@ -192,39 +192,85 @@ First look at Figure 3 below. This shows PCA clustering of all the other Viannia
 
 Note: The blue dashed lines are a guide to the eye to help you see the clusters.
 
-![Figure 3. PCA clustering of all the other Viannia species from thoughout South America](images/populations3.jpg)
-
+![](images/populations3.jpg)
+Figure 3. PCA clustering of all the other Viannia species from thoughout South America
 
 Now look at Figure 4, which shows PCA clustering of all the other Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that **the PC axes are on the same scale** here.
 
 
-![Figure 4. PCA clustering of all the other Viannia species from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)
+![Figure 4. PCA clustering of all the *Leishmania* samples from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)
 
+### Interpeting principal component plots
 
-Discuss with the people at your table: 
+To learn to interpret principal components plots, using the using the discussion points below for a discuss with the people at your table.
+
+::: callout-tip
+
+# Discussion points: PCA (species)
 
 - Does it look like the samples that came from Manaus are all the same species?
 - Since we ensured the positions on the PCA plot identify the species, does it help to identify the species from Manaus?
 - What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?
-
-:::callout-note
-- Since *Leishmania* are single celled organisms, and they all cause a simular disease, population genomics is the only way to identify which sample belongs to which species.
-- If we used PCR, we would need to know which species we were looking for in advance, and design primers accordingly. This would be difficult since we do not know which species are present in Manaus.
+- Since *Leishmania* are single celled organisms, and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?
 :::
 
+{{< pagebreak >}}
 
-### Principal components clustering: interpretation by location
+### Principal components clustering 2: geography and genetics
 
-We can look at the PC plots another way, simply by colouring the samples according to where they came from. Because sand flies don’t fly very far, it is possible that each genetic population occupies just one area. 
+We can look at the PC plots another way, simply by colouring the samples according to where they came from (geography). 
 
-The genome data we downloaded from the nucleotide archive came from Brazil, Peru and Panama which are far apart. So perhaps the species definitions that the scientists have given the strains do not explain the data very well. Let’s have a look.
+Because sand flies that carry *Leishmania* do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between *Leishmania* populations. This concept is called **isolation by distance**.
 
-**Note:** In the Figure 5 below, the *colour* of each point indicates the location where the sample was collected, but the *position* on the PCA plot indicated how closely related the samples are genetically.
+The *Leishmania* parasite we have genome data from come from Brazil, Peru and Panama which are *very* far apart, so we might expect to see isolation by distance in the PCA plot.
 
 
+Note that in Figure 4 below:
+- the *colour* of each point indicates the location where the sample was collected
+- the *position* on the PCA plot indicated how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.
 
-![Figure 5. PCA clustering of all the other Viannia species from thoughout South America (left), and those that we collected from the Amazon (right)](images/populations5.populations6.jpg)
+{{< pagebreak >}}
 
+
+![](images/populations5.jpg){width=400, height=400}
+
+Figure 4. PCA clustering of all the other Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 5 below.)
+
+
+::: callout-tip
+
+# Discussion points: PCA and isolation by distance
+
+Note that samples from the *same country* are plotted in the same colour, and
+samples that are *genetically similar* will be fall close together on the plot.
+
+- Do you see any examples of genetically similar that are all from the same country? These will be one local population of the same species. This is what we expect, from a local population that is one species.
+
+- Do you see any examples of the opposite: genetically similar samples that are close together on  the PCA plot, with *different* colours showing that they are from different countries? 
+
+- How can we interpret the finding that there are genetically similar individuals living in different countries? It might help to think about this with respect to human populations.
+
+:::
+
+![](images/populations6.jpg){width=400, height=400}
+
+Figure 5. PCA clustering of only the *Leishmania* strain we collected from Manaus. The PCA axes are the same as Figure 4 above. The blue will help with interpretation, compared to Figure 4.
+
+::: callout-tip
+
+# Discussion points: PCA and specis in Manaus
+
+- Since samples that are *genetically similar* will be fall close together on the plot, does it look like all the samples from Manaus are the same species?
+
+- What does this tell us about the causes of genetic differentiation between species? 
+
+- In other words, why are all these *Leishmania* samples from Manaus not interbreeding, and becoming genetically related?
+
+- Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots? 
+
+- Is the idea that there are different *Leishmania* species in Manaus that we obtain from the PCA plots consistent with the phylogeny we looked at earlier?
+
+:::
 
 
 # Summary: what we have learned

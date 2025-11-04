@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Discussion points
+Discussion points: phylogeny
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -357,51 +357,84 @@ Discussion points
 <li>Do <em>L. peruviana</em> and <em>L. braziliensis</em> really look like two different species?</li>
 </ul>
 <p>Note: The blue dashed lines are a guide to the eye to help you see the clusters.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/populations3.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 3. PCA clustering of all the other Viannia species from thoughout South America</figcaption>
-</figure>
-</div>
+<p><img src="images/populations3.jpg" class="img-fluid"> Figure 3. PCA clustering of all the other Viannia species from thoughout South America</p>
 <p>Now look at Figure 4, which shows PCA clustering of all the other Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that <strong>the PC axes are on the same scale</strong> here.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/populations3.populations4.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. PCA clustering of all the other Viannia species from thoughout South America (left), and those that were collected from Manaus (right)</figcaption>
+<figcaption>Figure 4. PCA clustering of all the <em>Leishmania</em> samples from thoughout South America (left), and those that were collected from Manaus (right)</figcaption>
 </figure>
 </div>
-<p>Discuss with the people at your table:</p>
-<ul>
-<li>Does it look like the samples that came from Manaus are all the same species?</li>
-<li>Since we ensured the positions on the PCA plot identify the species, does it help to identify the species from Manaus?</li>
-<li>What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="interpeting-principal-component-plots" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="interpeting-principal-component-plots"><span class="header-section-number">3.3.1</span> Interpeting principal component plots</h3>
+<p>To learn to interpret principal components plots, using the using the discussion points below for a discuss with the people at your table.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Discussion points: PCA (species)
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Since <em>Leishmania</em> are single celled organisms, and they all cause a simular disease, population genomics is the only way to identify which sample belongs to which species.</li>
-<li>If we used PCR, we would need to know which species we were looking for in advance, and design primers accordingly. This would be difficult since we do not know which species are present in Manaus.</li>
+<li>Does it look like the samples that came from Manaus are all the same species?</li>
+<li>Since we ensured the positions on the PCA plot identify the species, does it help to identify the species from Manaus?</li>
+<li>What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?</li>
+<li>Since <em>Leishmania</em> are single celled organisms, and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?</li>
 </ul>
 </div>
 </div>
-<section id="principal-components-clustering-interpretation-by-location" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="principal-components-clustering-interpretation-by-location"><span class="header-section-number">3.3.1</span> Principal components clustering: interpretation by location</h3>
-<p>We can look at the PC plots another way, simply by colouring the samples according to where they came from. Because sand flies don’t fly very far, it is possible that each genetic population occupies just one area.</p>
-<p>The genome data we downloaded from the nucleotide archive came from Brazil, Peru and Panama which are far apart. So perhaps the species definitions that the scientists have given the strains do not explain the data very well. Let’s have a look.</p>
-<p><strong>Note:</strong> In the Figure 5 below, the <em>colour</em> of each point indicates the location where the sample was collected, but the <em>position</em> on the PCA plot indicated how closely related the samples are genetically.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/populations5.populations6.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 5. PCA clustering of all the other Viannia species from thoughout South America (left), and those that we collected from the Amazon (right)</figcaption>
-</figure>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="principal-components-clustering-2-geography-and-genetics" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="principal-components-clustering-2-geography-and-genetics"><span class="header-section-number">3.3.2</span> Principal components clustering 2: geography and genetics</h3>
+<p>We can look at the PC plots another way, simply by colouring the samples according to where they came from (geography).</p>
+<p>Because sand flies that carry <em>Leishmania</em> do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between <em>Leishmania</em> populations. This concept is called <strong>isolation by distance</strong>.</p>
+<p>The <em>Leishmania</em> parasite we have genome data from come from Brazil, Peru and Panama which are <em>very</em> far apart, so we might expect to see isolation by distance in the PCA plot.</p>
+<p>Note that in Figure 4 below: - the <em>colour</em> of each point indicates the location where the sample was collected - the <em>position</em> on the PCA plot indicated how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.</p>
+<div style="page-break-after: always;"></div>
+<p><img src="images/populations5.jpg" height="400"></p>
+<p>Figure 4. PCA clustering of all the other Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 5 below.)</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Discussion points: PCA and isolation by distance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that samples from the <em>same country</em> are plotted in the same colour, and samples that are <em>genetically similar</em> will be fall close together on the plot.</p>
+<ul>
+<li><p>Do you see any examples of genetically similar that are all from the same country? These will be one local population of the same species. This is what we expect, from a local population that is one species.</p></li>
+<li><p>Do you see any examples of the opposite: genetically similar samples that are close together on the PCA plot, with <em>different</em> colours showing that they are from different countries?</p></li>
+<li><p>How can we interpret the finding that there are genetically similar individuals living in different countries? It might help to think about this with respect to human populations.</p></li>
+</ul>
+</div>
+</div>
+<p><img src="images/populations6.jpg" height="400"></p>
+<p>Figure 5. PCA clustering of only the <em>Leishmania</em> strain we collected from Manaus. The PCA axes are the same as Figure 4 above. The blue will help with interpretation, compared to Figure 4.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Discussion points: PCA and specis in Manaus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Since samples that are <em>genetically similar</em> will be fall close together on the plot, does it look like all the samples from Manaus are the same species?</p></li>
+<li><p>What does this tell us about the causes of genetic differentiation between species?</p></li>
+<li><p>In other words, why are all these <em>Leishmania</em> samples from Manaus not interbreeding, and becoming genetically related?</p></li>
+<li><p>Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots?</p></li>
+<li><p>Is the idea that there are different <em>Leishmania</em> species in Manaus that we obtain from the PCA plots consistent with the phylogeny we looked at earlier?</p></li>
+</ul>
+</div>
 </div>
 </section>
 </section>
@@ -1058,7 +1091,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
 <span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points</span></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: phylogeny</span></span>
 <span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>From this figure, do the Viannia species look clearly separated or do some overlap?</span>
 <span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A few Manaus samples don’t cluster with *L. guyanensis*. What could explain that?</span>
@@ -1089,49 +1122,95 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a>Note: The blue dashed lines are a guide to the eye to help you see the clusters.</span>
 <span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 3. PCA clustering of all the other Viannia species from thoughout South America](images/populations3.jpg)</span></span>
-<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations3.jpg)</span></span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>Figure 3. PCA clustering of all the other Viannia species from thoughout South America</span>
 <span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>Now look at Figure 4, which shows PCA clustering of all the other Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that **the PC axes are on the same scale** here.</span>
 <span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 4. PCA clustering of all the other Viannia species from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)</span></span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 4. PCA clustering of all the *Leishmania* samples from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)</span></span>
 <span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>Discuss with the people at your table: </span>
-<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does it look like the samples that came from Manaus are all the same species?</span>
-<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since we ensured the positions on the PCA plot identify the species, does it help to identify the species from Manaus?</span>
-<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?</span>
-<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>:::callout-note</span>
-<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since *Leishmania* are single celled organisms, and they all cause a simular disease, population genomics is the only way to identify which sample belongs to which species.</span>
-<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If we used PCR, we would need to know which species we were looking for in advance, and design primers accordingly. This would be difficult since we do not know which species are present in Manaus.</span>
-<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principal components clustering: interpretation by location</span></span>
-<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>We can look at the PC plots another way, simply by colouring the samples according to where they came from. Because sand flies don’t fly very far, it is possible that each genetic population occupies just one area. </span>
-<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>The genome data we downloaded from the nucleotide archive came from Brazil, Peru and Panama which are far apart. So perhaps the species definitions that the scientists have given the strains do not explain the data very well. Let’s have a look.</span>
-<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a>**Note:** In the Figure 5 below, the *colour* of each point indicates the location where the sample was collected, but the *position* on the PCA plot indicated how closely related the samples are genetically.</span>
-<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpeting principal component plots</span></span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>To learn to interpret principal components plots, using the using the discussion points below for a discuss with the people at your table.</span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: PCA (species)</span></span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does it look like the samples that came from Manaus are all the same species?</span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since we ensured the positions on the PCA plot identify the species, does it help to identify the species from Manaus?</span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?</span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since *Leishmania* are single celled organisms, and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?</span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principal components clustering 2: geography and genetics</span></span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a>We can look at the PC plots another way, simply by colouring the samples according to where they came from (geography). </span>
+<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a>Because sand flies that carry *Leishmania* do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between *Leishmania* populations. This concept is called **isolation by distance**.</span>
 <span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 5. PCA clustering of all the other Viannia species from thoughout South America (left), and those that we collected from the Amazon (right)](images/populations5.populations6.jpg)</span></span>
+<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a>The *Leishmania* parasite we have genome data from come from Brazil, Peru and Panama which are *very* far apart, so we might expect to see isolation by distance in the PCA plot.</span>
+<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
+<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a>Note that in Figure 4 below:</span>
+<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the *colour* of each point indicates the location where the sample was collected</span>
+<span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the *position* on the PCA plot indicated how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.</span>
 <span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam style questions</span></span>
+<span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
 <span id="cb4-239"><a href="#cb4-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1. </span></span>
-<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2. </span></span>
-<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations5.jpg)</span>{width=400, height=400}</span>
+<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a>Figure 4. PCA clustering of all the other Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 5 below.)</span>
+<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: PCA and isolation by distance</span></span>
+<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a>Note that samples from the *same country* are plotted in the same colour, and</span>
+<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a>samples that are *genetically similar* will be fall close together on the plot.</span>
+<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do you see any examples of genetically similar that are all from the same country? These will be one local population of the same species. This is what we expect, from a local population that is one species.</span>
+<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do you see any examples of the opposite: genetically similar samples that are close together on  the PCA plot, with *different* colours showing that they are from different countries? </span>
+<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How can we interpret the finding that there are genetically similar individuals living in different countries? It might help to think about this with respect to human populations.</span>
+<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations6.jpg)</span>{width=400, height=400}</span>
+<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a>Figure 5. PCA clustering of only the *Leishmania* strain we collected from Manaus. The PCA axes are the same as Figure 4 above. The blue will help with interpretation, compared to Figure 4.</span>
+<span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: PCA and specis in Manaus</span></span>
+<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since samples that are *genetically similar* will be fall close together on the plot, does it look like all the samples from Manaus are the same species?</span>
+<span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What does this tell us about the causes of genetic differentiation between species? </span>
+<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In other words, why are all these *Leishmania* samples from Manaus not interbreeding, and becoming genetically related?</span>
+<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots? </span>
+<span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Is the idea that there are different *Leishmania* species in Manaus that we obtain from the PCA plots consistent with the phylogeny we looked at earlier?</span>
+<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
+<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-284"><a href="#cb4-284" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam style questions</span></span>
+<span id="cb4-285"><a href="#cb4-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1. </span></span>
+<span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2. </span></span>
+<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

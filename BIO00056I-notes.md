@@ -7,18 +7,13 @@
 You can use this checklist when you are reviewing your material:
  https://docs.google.com/document/d/1s6ALyqcy-dWFtaORpQsEZyL9dJnfVxrXsGo4nE332BU/edit?tab=t.0#heading=h.3yor058g7zod
 
-## 2025 exam questions
-
-Please ensure that the exam has a good balance of question types. Most exam questions should test student understanding and problem-solving skills. Questions should have a good spread of difficulty with at least ¼ of the marks easily accessible and some challenging and/or longer answer questions to stretch the brightest students. Please see this document for more detailed guidelines.  We encourage you to include a question worth approximately 5 marks that steps away from the detailed module content and asks a more overarching question, some ideas are in this document.
-
+## 2025 exam questions: done
 
 blank exam doc
 https://docs.google.com/document/d/13jiITKEDjs3q90_6RxMWBXSnQN1bZVgkzubM00R-Gpw/edit?tab=t.0
 
 Use this for my questions:
-
 https://wellcomeopenresearch.org/articles/10-325/v1
-
 
 
 last years paper
@@ -29,11 +24,6 @@ https://drive.google.com/drive/folders/12-8NcWPp_M7QMouGXvAOFPI_KPiucVRa
 
 last years resit
 https://drive.google.com/file/d/10sfCdPjMEtQodSCrULoT5LJuZFRmJWVA/view
-
-
-### Exam question ideas:
-You would like to teach a younger relative about TOPIC.  Highlight one/two areas that you think are important.  Explain why.
-
 
 
 ## My weeks
@@ -63,11 +53,12 @@ Best wishes,
 Dan
 
 
-### week7
+### week7: ongoing checks
+
+Workshop 6: Population Genomics: working on this
 
 Lecture 4: Population Genomics
 Directed study 11 (worksheet): Population Genomics: done
-Workshop 6: Population Genomics
 
 ### week8
 
