@@ -405,29 +405,21 @@ wilcox.test(Distance ~ comparison.type, data = tas)
 
 ## Question 1 (10 points)
 
-A plant pathogenic virus has been spreading across farms in the United Kingdom. You have collected viral DNA sequences from infected plants at different locations over the past 10 years.
+How could we use the molecular clock to understand the spread of a plant pathogenic virus? In this scenario, we have access to infected crops from throughout the United Kingdom, sampled from different fields over a period of 10 years, and if we invest more funds we can access samples from up to 30 years ago. We are interested to know how to control the virus.
 
-a) **Define** what the molecular clock hypothesis is. (2 points)
+In your answer, explain:
 
-b) You create a phylogenetic tree from your viral sequences. On this tree, sequences from 2015 are near the root, and sequences from 2025 are at the tips. **Explain** what the branch lengths on this tree represent. (2 points)
-
-c) You plot genetic distance against time (in years) between virus samples and observe a positive linear relationship. **State** which evolutionary process causes mutations to accumulate over time. (2 points)
-
-d) **Suggest** ONE piece of information that phylogenetic analysis could provide to help farmers control the spread of this virus. (2 points)
-
-e) To make your analysis more reliable, **identify** TWO pieces of metadata you would need to collect along with each viral sequence sample. (2 points)
+-   What *useful* information we could gather from the phylogeny and molecular clock analyses? (4 points)
+-   How we would collect samples so that we could obtain this information? (4 points)
+-   What analysis we would perform? (2 points)
 
 ## Question 2 (10 points)
 
-This practical examined molecular evolution in the influenza virus using phylogenetic methods.
+Evidence and implications of the molecular clock (10 points)
 
-a) RNA viruses like influenza are particularly good for studying the molecular clock over short time periods. **Give TWO reasons** why RNA viruses accumulate mutations rapidly. (4 points)
-
-b) In the Wellington influenza data, you found that genetic distance increased with time between sample groups. **Describe** the pattern you observed in the plot and **state** whether this supports the molecular clock hypothesis. (3 points)
-
-c) **Define** what purifying selection is. (1 point)
-
-d) A gene under strong purifying selection will have fewer mutations accumulate over time compared to a gene under weak purifying selection. **Explain** why this occurs. (2 points)
+-   What aspects of RNA viruses make them so suitable for observing the molecular clock ? (3 points)
+-   Give an example of another situation in a multicellular species (plant, animal or fungi), where we might be able to observe the molecular clock over a longer period of time (e.g. decades, or centuries). (5 points)
+-   Now consider the genetic change between the multicellular species, once they have been diverging for millions of years. Assuming that you showed the genetic change was clock-like, what does this tell you about the effects of mutations? (2 points)
 
 # Further reading
 
