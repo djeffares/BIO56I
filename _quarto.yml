@@ -25,7 +25,7 @@ website:
         text: "worksheet 10"
 
       - href: worksheet11.qmd
-        text: "worksheet 10"
+        text: "worksheet 11"
 
 format:
   html:
