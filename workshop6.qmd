@@ -30,8 +30,8 @@ The aims of this workshop are to:
 
 - Learn more about population genomics data
 - View a real-world example of population structure analysis
-- To appreciate how population genomics can be applied to eco-epidemiology 
-(the study of the ecology of infectious diseases)
+- Appreciate how population genomics can be applied to eco-epidemiology 
+  (the study of the ecology of infectious diseases)
 
 
 # Introduction
@@ -40,13 +40,13 @@ The aims of this workshop are to:
 
 You will be aware now from earlier on in this module that: 
 
-- Sometimes hybrids occur between these closely related species.
+-- Sometimes hybrids occur between these closely related species.
 
 - Most species contain multiple populations. Genetically, a population is a group of individuals more closely related to each other than to other groups, reflecting shared ancestry.
 
-In practice, it can be hard to tell which population—or even which species—an individual belongs to, especially for microorganisms. In this workshop, we’ll use genome data to investigate these questions
+In practice, it can be hard to tell which population—or even which species—an individual belongs to, especially for micro-organisms. In this workshop, we’ll use genome data to investigate these questions.
 
-In Figure 1 below, each box represents a *population* that contains mant individuals. Red and blue boxes represent two species. Some regions have hybrids (mixed colors), and some do not. Some populations show a little mixing; others show a lot.
+In Figure 1 below, each box represents a *population* that contains many individuals. Red and blue boxes represent two species. Some regions have hybrids (mixed colours), and some do not. Some populations show a little mixing; others show a lot.
 
 ![](images/populations1.jpg)
 Figure 1: Imagined populations of two species (red and blue), with some hybrids and varying levels of mixing.
@@ -54,7 +54,7 @@ Figure 1: Imagined populations of two species (red and blue), with some hybrids 
 
 ## The topic for today
 
-In this workshop, we’ll look at new genome data from *Leishmania* parasites collected in the Amazon.  *Leishmania* are single-celled protozoan parasites that infect mammals, including people. They have two copies of each chromosome (diploid) and reproduce sexually (they undergo meiosis).
+In this workshop, we’ll look at new genome data from *Leishmania* parasites collected in the Amazon. *Leishmania* are single-celled protozoan parasites that infect mammals, including people. They have two copies of each chromosome (diploid) and reproduce sexually (they undergo meiosis).
 
 We’ll focus on *Leishmania guyanensis* and closely related species found in South America. Together they form a species complex called Viannia—closely related species that can sometimes interbreed where their ranges overlap.
 
@@ -66,13 +66,13 @@ Because Viannia parasites infect many native mammals in South America, they are 
 
 Three facts about sand flies are important for today: 
 
-- Sand flies are mainly found in forests or forest edges (not in sand on the beach) 
+- Sand flies are mainly found in forests or forest edges (not in sand on the beach).
 - They are not strong flyers, so they don’t carry *Leishmania* parasites very long distances.
-- The different sand flies species, and even populations within species, have their own ecological niches and characteristics. 
+- The different sand fly species, and even populations within species, have their own ecological niches and characteristics. 
   - For example, certain populations of sand flies carry some species of *Leishmania*, but not others.
 
 
-## The data we use in this workshop
+## The data we will use in this workshop
 
 We’re studying the genetics of the Viannia group of *Leishmania* parasites. The analysis is being carried out at the University of York, working with colleagues in Manaus, Brazil—a large city on the Amazon River surrounded by the Amazon Rainforest. Because the Amazon is so biodiverse, several Viannia species may be present there.
 
@@ -82,11 +82,11 @@ From these genomes, we identified single-nucleotide polymorphisms (SNPs)—tiny 
 
 For this workshop, all you need to know is that we have SNP data from:
 
-- 71 *Leishmania* strains collected in Manaus (mostly likely to be *L. guyanensis*)
+- 71 *Leishmania* strains collected in Manaus (most likely to be *L. guyanensis*)
 - 21 *L. braziliensis* strains from various locations in Brazil
 - 25 *L. panamensis* strains from Panama
 - 34 *L. peruviana* strains from Peru
-- one *L.shawi* strain from Brazil
+- one *L. shawi* strain from Brazil
 
 We’ll use these data to explore species, populations, and mixing (hybridization) within the Viannia group.
 
@@ -99,15 +99,15 @@ In this workshop we will explore the results we generated. We will look at three
 
 ### Population genomic data files
 
-While genomes contain many types of polymorphisms, population genomic analysis often uses only single nucleotide polymorphisms (SNP) data. This is because SNPs are very abundant and they have some properties that make them easier to model mathematically. 
+While genomes contain many types of polymorphisms, population genomic analysis often uses only single nucleotide polymorphism (SNP) data. This is because SNPs are very abundant and have properties that make them easier to model mathematically. 
 
-SNPs and other polymorphisms are affected by many processes, such as genetic drift, migration, selection and recombination. However, it can be represented relatively simply as a table. 
+SNPs and other polymorphisms are affected by many processes, such as genetic drift, migration, selection and recombination. However, SNP data can be represented relatively simply as a table. 
 
-Teh standard format for representing SNP data is called VCF (Variant Call Format). Here is a small example of what a VCF file looks like. 
+The standard format for representing SNP data is called VCF (Variant Call Format). Here is a small example of what a VCF file looks like. 
 
 
 ```{bash}
-#CHROM	POS	REF	ALT	Lg1	Lg2	Lg3	Lg3
+#CHROM	POS	REF	ALT	Lg1	Lg2	Lg3	Lg4
 01	2177	A	G	0/1	1/1	1/1	0/1
 01	2636	G	A	0/0	0/1	0/1	0/0
 01	9844	G	A	0/1	0/0	0/0	0/0
@@ -115,7 +115,7 @@ Teh standard format for representing SNP data is called VCF (Variant Call Format
 35	9999	G	A	1/1	0/0	0/1	0/0
 ```
 
-It is almost like a table that we could lod into Excel, where each **row** indicates position in the genome, and **columns** contain information about that position.
+It is almost like a table that we could load into Excel, where each **row** indicates a position in the genome, and **columns** contain information about that position.
 
 It has a header line: 
 
@@ -123,51 +123,51 @@ It has a header line:
 #CHROM POS REF ALT
 ```
 
-This indicates that the first column is the chromosome number (`#CHROM`), the second column is the position on that chromosome (`POS`), the third column is the reference allele (`REF`) and the fourth column is the alternative allele (`ALT`).
+This indicates that the first column is the chromosome number (`#CHROM`), the second column is the position on that chromosome (`POS`), the third column is the reference allele (`REF`), and the fourth column is the alternative allele (`ALT`).
 
 After this, we have the genotypes for each sample. In this example, there are four samples:
 
 ```{bash}
-Lg1 Lg2 Lg3 Lg3
+Lg1 Lg2 Lg3 Lg4
 ```
 
 
-After this, we have the genotypes for the strains that are in the VCF (four in this case). They are coded as 0 for the reference allele (A), 1 for the second allele (G), so for an A/G polymorphism:
+After this, we have the genotypes for the strains that are in the VCF (four in this case). They are coded as 0 for the reference allele (A) and 1 for the alternative allele (G). So for an A/G polymorphism:
 
 - AA is coded as `0/0`
 - AG is coded as `0/1`
 - GG is coded as `1/1`
 
-The population genomics community has developed many software tools that process this data to extract some of this information (no tool does it all). In this workshop we will look at a phylogenetic tree, principal components analysis (PCA) and a STRUCTURE plot. These are all used to describe population structure and detect hybrids between populations or between species.
+The population genomics community has developed many software tools that process these data to extract information (no tool does it all). In this workshop we will look at a phylogenetic tree, principal components analysis (PCA), and a STRUCTURE plot. These are all used to describe population structure and detect hybrids between populations or between species.
 
 
 ## The phylogeny
 
-A phylogenetic tree is a good first look at how similar or different many samples are. But when individuals mix between populations or species (hybridization), a *simple branching* tree can be misleading.
+A phylogenetic tree is a good first look at how similar or different many samples are. But when individuals mix between populations or species (hybridisation), a simple branching tree can be misleading.
 
-Think of a tree of people grouped by ancestry. Where would you place someone with one parent from Spain and one from Fiji? They don’t fit neatly on a single branch with the Spanish and the Fijians. The same data display issue can happen in nature when populations interbreed.
+Think of a tree of people grouped by ancestry. Where would you place someone with one parent from Spain and one from Fiji? They don’t fit neatly on a single branch with the Spanish and the Fijians. The same display issue can happen in nature when populations interbreed.
 
 To handle this, we used a network approach (a splits network made with the software *SplitsTree*) that can show conflicting signals in the data—like those caused by mixing between populations or species.
 
-Below is our SplitsTree network. There are many samples, so coloured dots cluster tightly. The Manaus samples are dark blue. Most cluster near Leishmania guyanensis at the top. We marked the Manaus samples that don’t with arrows.
+Below is our SplitsTree network. There are many samples, so coloured dots cluster tightly. The Manaus samples are dark blue. Most cluster near *Leishmania guyanensis* at the top. We marked the Manaus samples that do not with arrows.
 
 ![](images/populations2.jpg)
-Figure 2: A SplitsTree phylogeny. The overall phylgeny is in the center, and we zoom in to various *clades* (groups of related samples) around the edges. Each dot is a sample, coloured by species. The dark blue dots are samples we collected from Manaus, Brazil.
+Figure 2: A SplitsTree phylogeny. The overall phylogeny is in the centre, and we zoom in to various clades (groups of related samples) around the edges. Each dot is a sample, coloured by species. The dark blue dots are samples we collected from Manaus, Brazil.
 
 
-### Interpeting phylogeny
-Now spend some time discussing the SplitsTree phylogeny, using the using the discussion points below as a guide.
+### Interpreting the phylogeny
+Now spend some time discussing the SplitsTree phylogeny, using the discussion points below as a guide.
 
 ::: callout-tip
 
 # Discussion points: phylogeny
 
-- From this figure, do the Viannia species look clearly separated or do some overlap?
+- From this figure, do the Viannia species look clearly separated, or do some overlap?
 - A few Manaus samples don’t cluster with *L. guyanensis*. What could explain that?
 
 - What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?
 - Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?
-- Examine the data from the single *L. shawi* sample (light blue). Does its branch look unusually long? Remember: longer branches usually mean more mutations (this isn’t a dated tree, just a measure of genetic differences).
+- Examine the data from the single *L. shawi* sample (light blue). Does its branch look unusually long? Remember: longer branches usually mean more mutations (this is not a dated tree, just a measure of genetic differences).
 
 :::
 
@@ -180,9 +180,9 @@ Now spend some time discussing the SplitsTree phylogeny, using the using the dis
 
 Population structure is an important facet of most (if not all) species. Populations sometimes split into species, and all natural selection begins within a population. So when we start to examine the genetic diversity of a species, it is wise to look at population structure. 
 
-Principal components analysis (PCA) is a useful tool for understanding population structure.  PCA reduces the variables in our data set (thousands of SNPs in our rows, and many individuals in columns), while preserving a lot of the information about population structure. 
+Principal components analysis (PCA) is a useful tool for understanding population structure. PCA reduces the variables in our data set (thousands of SNPs in rows, and many individuals in columns), while preserving a lot of the information about population structure. 
 
-A simple way to interpret PCA data is by considering that the distance between two individuals on a two-dimensional PCA plot is a representation of the genetic distance between those samples. So, if they are close on the plot, they are close genetically. And if they are distant in the plot, they are distant genetically. We would expect individuals from within a population, or a species to fall close to each other on a PCA plot.
+A simple way to interpret PCA data is to consider that the distance between two individuals on a two-dimensional PCA plot represents the genetic distance between those samples. So, if they are close on the plot, they are close genetically. If they are distant on the plot, they are distant genetically. We would expect individuals from within a population or species to fall close to each other on a PCA plot.
 
 First look at Figure 3 below. This shows PCA clustering of all the other Viannia species, apart from the samples we collected from Manaus. Discuss with the people at your table:
 
@@ -192,25 +192,25 @@ First look at Figure 3 below. This shows PCA clustering of all the other Viannia
 Note: The blue dashed lines are a guide to the eye to help you see the clusters.
 
 ![](images/populations3.jpg)
-Figure 3. PCA clustering of all the other Viannia species from thoughout South America
+Figure 3. PCA clustering of Viannia species from throughout South America.
 
-Now look at Figure 4, which shows PCA clustering of all the other Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that **the PC axes are on the same scale** here.
+Now look at Figure 4, which shows PCA clustering of Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that the PC axes are on the same scale here.
 
 
 ![Figure 4. PCA clustering of all the *Leishmania* samples from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)
 
-### Interpeting principal component plots
+### Interpreting principal component plots
 
-To learn to interpret principal components plots, using the using the discussion points below for a discuss with the people at your table.
+Use the discussion points below to discuss the PCA plots with the people at your table.
 
 ::: callout-tip
 
 # Discussion points: PCA (species)
 
 - Does it look like the samples that came from Manaus are all the same species?
-- Since we ensured the positions on the PCA plot identify the species, does it help to identify the species from Manaus?
+- Since the positions on the PCA plot separate the species, does this help to identify the species from Manaus?
 - What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?
-- Since *Leishmania* are single celled organisms, and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?
+- Since *Leishmania* are single-celled organisms and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?
 :::
 
 {{< pagebreak >}}
@@ -221,31 +221,31 @@ We can look at the PC plots another way, simply by colouring the samples accordi
 
 Because sand flies that carry *Leishmania* do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between *Leishmania* populations. This concept is called **isolation by distance**.
 
-The *Leishmania* parasite we have genome data from come from Brazil, Peru and Panama which are *very* far apart, so we might expect to see isolation by distance in the PCA plot.
+The *Leishmania* parasites we have genome data for come from Brazil, Peru and Panama, which are very far apart, so we might expect to see isolation by distance in the PCA plot.
 
 
-Note that in Figure 4 below:
-- the *colour* of each point indicates the location where the sample was collected
-- the *position* on the PCA plot indicated how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.
+Note that in Figure 5 below:
+- the colour of each point indicates the location where the sample was collected
+- the position on the PCA plot indicates how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.
 
 {{< pagebreak >}}
 
 
 ![](images/populations5.jpg){width=400, height=400}
 
-Figure 4. PCA clustering of all the other Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 5 below.)
+Figure 5. PCA clustering of Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 6 below.
 
 
 ::: callout-tip
 
 # Discussion points: PCA and isolation by distance
 
-Note that samples from the *same country* are plotted in the same colour, and
-samples that are *genetically similar* will be fall close together on the plot.
+Note that samples from the same country are plotted in the same colour, and
+samples that are genetically similar will fall close together on the plot.
 
-- Do you see any examples of genetically similar that are all from the same country? These will be one local population of the same species. This is what we expect, from a local population that is one species.
+- Do you see any examples of genetically similar samples that are all from the same country? These will represent one local population of the same species. This is what we expect from a local population that is one species.
 
-- Do you see any examples of the opposite: genetically similar samples that are close together on  the PCA plot, with *different* colours showing that they are from different countries? 
+- Do you see any examples of the opposite: genetically similar samples that are close together on the PCA plot, with different colours showing that they are from different countries?
 
 - How can we interpret the finding that there are genetically similar individuals living in different countries? It might help to think about this with respect to human populations.
 
@@ -253,17 +253,17 @@ samples that are *genetically similar* will be fall close together on the plot.
 
 ![](images/populations6.jpg){width=400, height=400}
 
-Figure 5. PCA clustering of only the *Leishmania* strain we collected from Manaus. The PCA axes are the same as Figure 4 above. The blue will help with interpretation, compared to Figure 4.
+Figure 6. PCA clustering of only the *Leishmania* strains we collected from Manaus. The PCA axes are the same as Figure 5 above. The blue dashed lines will help with interpretation compared to Figure 5.
 
 ::: callout-tip
 
-# Discussion points: PCA and specis in Manaus
+# Discussion points: PCA and species in Manaus
 
-- Since samples that are *genetically similar* will be fall close together on the plot, does it look like all the samples from Manaus are the same species?
+- Since samples that are genetically similar will fall close together on the plot, does it look like all the samples from Manaus are the same species?
 
 - What does this tell us about the causes of genetic differentiation between species? 
 
-- In other words, why are all these *Leishmania* samples from Manaus not interbreeding, and becoming genetically related?
+- In other words, why are all these *Leishmania* samples from Manaus not interbreeding and becoming more genetically similar?
 
 - Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots? 
 
@@ -275,35 +275,35 @@ Figure 5. PCA clustering of only the *Leishmania* strain we collected from Manau
 
 ## Admixture/STRUCTURE plots
 
-A common way of showing population genomic data are so-called STRUCTURE plots, generated using a software called STRUCTURE, or a similar one called Admixture, which is what we used. I’ll call these STRUCTURE plots for now.
+A common way of showing population genomic data is with so-called STRUCTURE plots, generated using software called STRUCTURE, or a similar approach called ADMIXTURE, which is what we used. We’ll call these STRUCTURE plots for now.
 
-STRUCTURE plots show the proportion of ancestry from different populations (or species) for each individual in the data set. Usually, eah column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species). 
+STRUCTURE plots show the proportion of ancestry from different populations (or species) for each individual in the data set. Usually, each column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species). 
 
 STRUCTURE plots are usually used to describe population structure within a species, but they can also be used to describe structure between closely related species, as we do here.
 
-Our STRUCTURE plot is below. Samples from Manaus are marked in the open rectangle at the bottom of the plot. Again, most look like *L. guyanensis*, and those that do not, are marked with arrows as we did in the phylogeny.
+Our STRUCTURE plot is below. Samples from Manaus are marked in the open rectangle at the bottom of the plot. Again, most look like *L. guyanensis*, and those that do not are marked with arrows, as we did in the phylogeny.
 
 ![](images/populations7.jpg)
 
-Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples that weer obtained from Manaus are marked in the open rectangle at the bottom of the plot. Most appear to be *Leishmania guyanensis*, but a few do not, and these are marked with arrows as we did in Figure 2, the SplitsTree phylogeny.
+Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples that were obtained from Manaus are marked in the open rectangle at the bottom of the plot. Most appear to be *Leishmania guyanensis*, but a few do not, and these are marked with arrows as we did in Figure 2, the SplitsTree phylogeny.
 
 ::: callout-tip
 
 # Discussion points: the STRUCTURE plot
 
-- Each column is a different strain, and the colours represent the *proportion* of this strain's ancestry that is derived from each species. If there are hybrids between species, we would expect to see columns with multiple colours.
+- Each column is a different strain, and the colours represent the proportion of this strain’s ancestry that is derived from each species. If there are hybrids between species, we would expect to see columns with multiple colours.
 
 - The most obvious thing about this plot is that the species are different colours. 
 
-- Does this visualisation of the data suggest that there is extensive breeding between species of the Viannia?
+- Does this visualisation of the data suggest that there is extensive breeding between species in the Viannia group?
 
-- Consider the *Leishmania* parasites circulating around Manaus (see Figure 5). Do they all look like one species, or are there multiple species present?
-
-
-- Look at the one strain of *Leishmania shawi*. This certainly looks like a hybrid between two species.
+- Consider the *Leishmania* parasites circulating around Manaus (see Figure 6). Do they all look like one species, or are there multiple species present?
 
 
-- Go back to Figure 2 (the phylogeny) and thr PCA plots to examine and see how the *Leishmania shawi* sample is placed. Does its placement in those plots make sense, given what we see in the STRUCTURE plot?
+- Look at the one strain of *Leishmania shawi*. This looks like a hybrid between two species.
+
+
+- Go back to Figure 2 (the phylogeny) and the PCA plots to examine where the *Leishmania shawi* sample is placed. Does its placement in those plots make sense, given what we see in the STRUCTURE plot?
 
 
 :::
@@ -312,43 +312,43 @@ Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples 
 
 # Summary: what we have learned
 
-- Population genomics data can be used to explore population structure and hybridization between populations and species.
+- Population genomics data can be used to explore population structure and hybridisation between populations and species.
 
 - There are different ways of visualising population genomics data, each with their own strengths and weaknesses.
 
 - In this workshop, we have seen examples of:
 
-  - isolation by distance (different species occurring in various counties)
-  - multiple species in one location (Manaus) with rare hybrids between species
+  - isolation by distance (populations/species distributed across countries)
+  - multiple species in one location (Manaus), with rare hybrids between species
 
-# After the workshop: exam style questions
+# After the workshop: exam-style questions
 
-## Question 1. Populations and migration.
+## Question 1. Populations and migration
 
-A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are colored by the country they come from. Small coloured labels represent individuals and large coloured points represent median PC1 and PC2 values for each country.
+A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.
 
-- Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.
+- a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.
 
-- What can we infer from this data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?
+- b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?
 
-- What can we infer from this data about the interbreeding between countries? Does this look like between country marriages are common, or the exception?
+- c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?
 
-- Part b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian).  Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in part a. Explain how this kind of analysis could be used to understand a) the migration of a parasite, b) how to conserve a threatened species. 
+- d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. 
 
-- Part b of the plot shows the correlation between genetic distance and geographic distance (km between individuals' birthplaces). What phenomenon does this illustrate? How would you expect this to be different for a highly mobile species, such as birds, or a less mobile species, such as fish in lakes?
+- e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?
 
 ![](images/populations8.jpg)
 
-Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are colored by the country they come from. Small coloured labels represent individuals and large coloured points represent median PC1 and PC2 values for each country. 
+Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country. 
   
 
 ## Question 2. Understanding populations from DNA
 
-- Describe how population genomic data is collected; starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.
+- a) Outline how population genomic data are collected—starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.
 
-- Describe three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, describe one strength and one weakness.
+- b) Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.
 
-- List three features of the *genetics* of natural populations that we can learn from population genomic data.
+- c) List three features of the genetics of natural populations that we can learn from population genomic data.
 
 
 
