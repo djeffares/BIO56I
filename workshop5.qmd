@@ -25,8 +25,10 @@ editor: source
 ---
 
 ::: callout-important
-We do not advise doing this workshop on a Mac since Mega software does not work very well on the Mac OS. It is best to use the University PCs which have the software already installed.
+# Anwsers to exam style questions are provided at the end of this document.
 :::
+
+
 
 # Learning objectives
 
@@ -401,7 +403,7 @@ wilcox.test(Distance ~ comparison.type, data = tas)
 -   This change is approximately clock-like, with a roughly constant rate of mutation accumulation over time
 -   We can answer other questions about the spread of viruses using genetic data, such as whether influenza viruses spread freely between one place (Australia) and another (New Zealand)
 
-# Exam style questions
+# Exam style questions with answers
 
 ## Question 1 (10 points)
 
@@ -409,13 +411,53 @@ A plant pathogenic virus has been spreading across farms in the United Kingdom. 
 
 a) **Define** what the molecular clock hypothesis is. (2 points)
 
+:::callout-note
+# Answer
+The molecular clock hypothesis is that th erate of accumulation of mutatinos in a population is approximately constant over time. This means that the number of mutations that accumulate in a lineage is proportional to the time since the common ancestor of samples.
+:::
+
 b) You create a phylogenetic tree from your viral sequences. On this tree, sequences from 2015 are near the root, and sequences from 2025 are at the tips. **Explain** what the branch lengths on this tree represent. (2 points)
+
+:::callout-note
+# Answer
+The branch lengths of phylogenetic trees represent the number of mutations that have occurred between lineages. Due to the molecular clock these lengths are proportional to the time that has elapsed since the common ancestor of samples. In this case, the branch lengths represent the time since the strain(s) in question diverged from each other.
+:::
+
 
 c) You plot genetic distance against time (in years) between virus samples and observe a positive linear relationship. **State** which evolutionary process causes mutations to accumulate over time. (2 points)
 
+:::callout-note
+# Answer
+The evolutionary processes that cause mutations to accumulate over time are:
+
+- Mutations, which arise mainly from DNA replication errors.
+- Genetic drift, which causes mutations to become fixed in a population over time.
+- NB: Natural selection, also filters mutations, by removing deleterious mutations, and increasing the frequency of beneficial mutations, but this is not the main cause of the clock-like accumulation of mutations over time.
+- NB: Migration is another source of mutations, but the original source of new mutations from a migration is mutation in some other population.
+:::
+
 d) **Suggest** ONE piece of information that phylogenetic analysis could provide to help farmers control the spread of this virus. (2 points)
 
+:::callout-note
+# Possible answers include:
+
+
+- Identifying when the virus first arrived in the UK. To determine this we would obtain the date of the most recent common ancestor (MRCA) of the UK samples (the root of the tree).
+- Identifying the source of the virus. To determine this we would need to include samples from other countries in the phylogenetic analysis, and see which country’s samples are most closely related to the UK samples.
+- Identifying whether transmission was local or long-distance. To determine this we would need to include location metadata for each sample, and see whether closely related samples are from nearby locations (local transmission) or from distant locations (long-distance transmission).
+:::
+
 e) To make your analysis more reliable, **identify** TWO pieces of metadata you would need to collect along with each viral sequence sample. (2 points)
+
+:::callout-note
+# Answer
+
+- Date of sample collection: This is **essential** for calibrating the molecular clock and estimating the rate of mutation accumulation over time.
+- The location of sample collection: This helps to understand the geographic spread and transmission patterns of the virus.
+- We could also collect information about movement of plants, seed and spoil into and out of each field. This might identify causal factors.
+
+:::
+
 
 ## Question 2 (10 points)
 
@@ -423,11 +465,36 @@ This practical examined molecular evolution in the influenza virus using phyloge
 
 a) RNA viruses like influenza are particularly good for studying the molecular clock over short time periods. **Give TWO reasons** why RNA viruses accumulate mutations rapidly. (4 points)
 
+:::callout-note
+# Answer
+1. RNA viruses have high mutation rates because their RNA-dependent RNA polymerases lack proofreading ability, leading to more replication errors.
+2. RNA viruses often have short generation times, allowing for many replication cycles in a short period
+:::
+
+
 b) In the Wellington influenza data, you found that genetic distance increased with time between sample groups. **Describe** the pattern you observed in the plot and **state** whether this supports the molecular clock hypothesis. (3 points)
+
+:::callout-note
+# Answer
+
+Yes, the plot showed a positive linear relationship between genetic distance and time between sample groups. This means that as the time between samples increased, the genetic distance also increased. This pattern supports the molecular clock hypothesis, which predicts that mutations accumulate at a roughly constant rate over time.
+:::
 
 c) **Define** what purifying selection is. (1 point)
 
+:::callout-note
+# Answer
+Purifying selection is the loss of deleterious mutations from populations.
+:::
+
+
 d) A gene under strong purifying selection will have fewer mutations accumulate over time compared to a gene under weak purifying selection. **Explain** why this occurs. (2 points)
+
+:::callout-note
+# Answer
+Population genetic processes *within species* give rise to divergence *between species*. Since  purifying selection that acts to preserve functional DNA sequences by removing harmful mutations that negatively affect an organism's fitness, genes under strong purifying selection will accumulate fewer mutations accumulate over time.
+:::
+
 
 # Further reading
 
