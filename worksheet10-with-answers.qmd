@@ -3,7 +3,7 @@ title: "BIO00056I"
 subtitle: "Directed study 10 (worksheet): Phylogenies & Molecular Clock"
 
 author: Daniel Jeffares
-date: 2025-10-31
+date: last-modified
 format:
     html:
         code-copy: true
