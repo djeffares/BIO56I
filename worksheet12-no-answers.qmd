@@ -64,13 +64,19 @@ Two genes are **orthologs** if they are in different species and have evolved fr
 
 :::
 
+
 We can compare the cladogram of the Trypanosomatid species to Figure 2 (below), which is a phylogenetic tree drawn using the single nucleotide differences in  ~1000 single copy genes (genes that every species has exactly one of). This phylogenetic tree will be very reliable, as it is created from tens of thousands of single nucleotide differences.
+
+![**Figure 2.** A phylogenetic tree of the same Trypanosomatid species, drawn using single nucleotide differences in ~1000 single copy genes. This tree has the same species as the gene presence/absence heatmap (Figure 1). Species names are written slightly differently, because Figure 1 indicates the name of the strain used.](images/comp2.jpg){width=600px}
+
+
+# Interpreting the data
 
 You will recall that we examined a phylogenetic tree of influenza viruses in [workshop 5](https://djeffares.github.io/BIO56I/workshop5.html). The influenza virus phylogenetic tree spanned only a few years, whereas this Trypanosomatid tree spans millions of years. 
 
 But remember that within-population process (especially genetic drift and natural selection) give rise to the differences *between species* regardless of timescale. A big difference is that we expect many more differences to have accumulated over millions of years than over a few years.
 
-![**Figure 2.** A phylogenetic tree of the same Trypanosomatid species, drawn using single nucleotide differences in ~1000 single copy genes. This tree has the same species as the gene presence/absence heatmap (Figure 1). Species names are written slightly differently, because Figure 1 indicates the name of the strain used.](images/comp2.jpg){width=600px}
+
 
 # The exam style questions
 
