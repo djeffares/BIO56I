@@ -98,7 +98,7 @@ Directed study 11 (worksheet): Population Genomics: done
 
 - Model answers from last week
   - Worksheet 10 Phylogenies & Molecular Clock, improved answers; done
-  - worksheet 11 Population Genomics, model answers
+  - worksheet 11 Population Genomics, improved answers; done
   - Workshop 6: Population Genomics, model answers
 
 - This weeks learning materials
