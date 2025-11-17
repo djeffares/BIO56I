@@ -34,7 +34,7 @@ editor: source
 # Learning objectives
 
 This worksheet is designed to prepare you for exam questions on population genomics.
-Upon completing this worksheet your  knowlede will be enhanced in these areas:
+Upon completing this worksheet your knowledge will be enhanced in these areas:
 
 - Understanding how population genomic data can be collected
 - Appreciating how population genomic data can be applied to various biological questions
@@ -56,16 +56,16 @@ For example, the study of [Population genomics of the Viking world](https://doi.
 
 ## Background Information
 
-There is a high-quality reference genome for sheep and goats. Studies have shown that it is possible to map reads from sheep and to ghosts and vice versa. But it is better to map reads within species, rather than between.
+There is a high-quality reference genome for sheep and goats. Studies have shown that it is possible to map reads from sheep and goats and vice versa. But it is better to map reads within species, rather than between.
 
 ### The data
 
-You can obtain small amounts of DNA from these ancient sheet/goat samples:
+You can obtain small amounts of DNA from these ancient sheep/goat samples:
 
 -	10 samples from Çatalhöyük
 -	10 samples from Aşıklı Höyük
 
-There are thousands of genomes of modern goats and available at the European Nucleotide Archive (ENA) from the [VarGoats project](https://www.goatgenome.org/vargoats.html). This includes goat genomes from Pakistan, Spain & France, the Mediterranean, Northern Europe and most importantly, wild goats from Turkey and Iran.
+There are thousands of genomes of modern goats and available at the European Nucleotide Archive (ENA) from the [VarGoats project](https://www.goatgenome.org/vargoats.html). This includes the genomes of *domesticated* goats from Pakistan, Spain & France, the Mediterranean, Northern Europe and most importantly, *wild* goats from Turkey and Iran.
 
 There are also more than 100 ancient genomes from Eurasian domestic and wild sheep samples spanning the past 12,000 years [from this article](https://www.science.org/doi/10.1126/science.adn2094), and 100s of modern sheep genomes available at ENA.
 
@@ -75,33 +75,50 @@ You do not need to read these articles, but they show us what population genomic
 
 ### The problem
 
-The archaeologists want to know whether Çatalhöyük and Aşıklı Höyük regularly traded sheet and/or goats.
+The archaeologists want to know whether Çatalhöyük and Aşıklı Höyük regularly traded sheep and/or goats.
 
 An experienced ancient DNA technician has extracted DNA for you from Çatalhöyük and Aşıklı Höyük. There isn’t much, but you can sequence it. You do, and it is disappointing - the sequence reads map to only ten tiny regions in 0.5% of the goat genome and 0.4% of the sheep genome. They don't have the funds or the samples to obtain any more.
 
 The challenge is to explain what this might mean if the SNPs show the samples are more like sheep, more like goats, or in between, and if they traded sheep and goats with each other, or merely caught wild sheep and goats.
 
+## The questions
 
-# The exam style questions
+**Question 1. Explain how you would use population genomics data to determine if the people of Çatalhöyük and Aşıklí Höyük kept sheep, goats, or both? (10 marks).**
 
-1.	Did they keep sheep, or goats or both? 	
-a.	How can you use the ENA data to prove your point?
-b.	How might the data be ambiguous?
+In your answer, explain a) what samples you would use from ENA and how many (3 marks), b) what steps you would need to take to process the genome sequence data to obtain SNPs (3 marks), c) once you have SNP calls, what kinds of plots or analysis you would conduct to determine if the Çatalhöyük and Aşıklí Höyük samples were sheep or goats and what the different displays would show you (4 marks).
 
-2.	Did they domesticate these livestock?
-a.	What signals might you expect from domestication, for example from selective inbreeding of the sheep/goats?
-b.	How could you use the ENA data to prove your point?
+**Question 2. Explain how you could use the 10 samples from Çatalhöyük and the 10 samples from Aşíklí Höyük to determine if the people of Çatalhöyük and Aşíklí traded sheep and/or goats (3 marks). Hint: Trading would appear like migration of goats.**
 
-3.	Did they share the livestock between settlements?
-a.	It is possible that the various settlements might have independently domesticated sheep/goats from the same wild stock in Turkey.
-b.	How can you distinguish between this, and real trading of livestock?
-c.	Could the ENA data help here? If so, how?
+**Question 3. There is a proposal that the people of Çatalhöyük and Aşıklí domesticated goats, and this domestic breed gave rise to modern domestic breeds in Pakistan and the Mediterranean. Explain how you could use population genomics data to test this proposal. In this answer, assume we have SNP calls from these locations and explain how you would visualize and interpret the data (6 marks).**
+  
+  - The 10 ancient goat genomes from each of Çatalhöyük and Aşıklı 
+  - Hundreds of modern domestic goats from Pakistan and the Mediterranean
+  - A few dozen wild goats from Turkey and Iran
 
 
 # Model answers
 
-Will be provided at this website at a later date
+**Question 1.	Explain how you woul use population genomics data to determine if the people of Çatalhöyük and Aşıklı kept sheep, or goats or both?  (10 marks).**
 
+Ultimately, a PCA plot would be the most useful way to determine if the samples are more like sheep or goats. To generate this plot, we would need to follow these steps:
+
+a) Download genomes of modern wild and domestic sheep and goats from ENA. About 50 samples of each species should be sufficient to make a PCA plot that separates the sheep from the goats. If possible, we should include sheep and goats from Turkey and nearby regions (3 marks).
+
+b) To process the genome sequence data to obtain SNPs, we would obtain a reference sheep genome (or reference goat genome) and map the reads from ENA and the ancient samples to the reference genome using a read mapper like BWA. Next, we would use a variant caller to call SNPs across all samples, generating a file containing all the SNPs from all the samples (3 marks).
+
+c) Once we have SNP calls, we would use a tool like PLINK to generate the PCA coordinates. We would plot the first two principal components. If the Çatalhöyük and Aşıklí samples cluster with the sheep samples, they are likely sheep. If they cluster with the goat samples, they are likely goats. If they fall in between, it may suggest they are hybrids or that there is some uncertainty (4 marks).
+
+
+**Question 2. Explain how you could use the 10 samples from Çatalhöyük and the 10 samples from Aşıklı Höyük to determine if the people of Çatalhöyük and Aşıklı Höyük traded sheep and/or goats (3 marks). Hint: Trading would appear like migration of goats.**
+
+Let's assume they kept goats. Since trading of goats would appear like *migration*, we would expect to observe goats in Çatalhöyük that are genetically similar to goats in Aşıklı Höyük or vice versa (1). A PCA plot may show this, but only if these two places had different breeds (like different populations), and we had a *fairly recent* goat trade in the data set of 10 ancient samples from each place (1). Such a recent traded goat would also be visible on a phylogenetic tree, as a Çatalhöyük goat in the Aşıklı clade or vice versa (1).
+
+
+**Question 3. Imagine there is a proposal that the people of Çatalhöyük and Aşıklı Höyük domesticated goats, and their domestic breeds gave rise to modern domestic breeds in Pakistan and the Mediterranean. Explain how you could use population genomics data to test this proposal. (6 marks)**
+
+If this were the case, then we would expect the modern domestic breeds in Pakistan and the Mediterranean to be genetically similar to the ancient goats from Çatalhöyük and Aşıklı Höyük.  Alternatively, if domestication occurred again from wild goats, the modern domestic samples would look different. A PCA plot would help here (3);
+
+- We would plot the ancient Çatalhöyük and Aşıklí samples along with the modern domestic goats from Pakistan and the Mediterranean, and the wild goats from Turkey and Iran. If the modern domestic goats cluster closely with the ancient Çatalhöyük and Aşıklí samples, it would support the proposal that they are descended from these ancient domesticated goats (2). If they cluster separately, it would suggest a different origin (1).
 
 
 
