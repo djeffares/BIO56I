@@ -38,12 +38,9 @@ https://drive.google.com/file/d/10sfCdPjMEtQodSCrULoT5LJuZFRmJWVA/view
 
 ### week6: done
 
-Directed study 9 (recording): Phylogenies \& Molecular Clock
-Directed study 10 (worksheet): Phylogenies \& Molecular Clock
-Workshop 5: Phylogenies \& Molecular Clock
-
-
-
+Directed study 9 (recording): Phylogenies & Molecular Clock
+Directed study 10 (worksheet): Phylogenies & Molecular Clock
+Workshop 5: Phylogenies & Molecular Clock
 
 Monday announcement:
 
@@ -64,17 +61,9 @@ The model answers from last week’s workshop are available under week 5/Learnin
 Best wishes,
 Dan
 
-
-
 ### week7: ongoing checks
 
-
-
-Week 7: BIO00056I Population Genetics \& Evolution
-
-
-
-
+Week 7: BIO00056I Population Genetics & Evolution
 
 Hi everyone,
 
@@ -83,12 +72,9 @@ Last week we learned about the information we can extract from phylogenetic tree
 
 This week the learning materials are:
 
-
 * A lecture on population genomics (Tuesday)
 * Worksheet 11, which will help you to develop you understanding of population genomics: https://djeffares.github.io/BIO56I/worksheet11.html
 * A workshop on population genomics (Friday): https://djeffares.github.io/BIO56I/workshop6.html
-
-
 
 Tomorrow, I will provide the model answers from last week’s workshop and self study worksheet via these links:
 
@@ -96,38 +82,32 @@ https://djeffares.github.io/BIO56I/workshop5.html
 
 https://djeffares.github.io/BIO56I/worksheet10.html
 
-
-
 As usual, please use the discussion board if you have any questions, or ask in one of the sessions.
-
-
 
 Best wishes,
 Dan
-
-
 
 Workshop 6: Population Genomics: done
 
 Lecture 4: Population Genomics
 Directed study 11 (worksheet): Population Genomics: done
 
-### 
+###
 
-### week8
+### week 8
 
-Watch the four videos below about comparative genomics
-Attempt the revision exercise - this is good practice for the exam
-Attend the workshop on comparative genomics
+- Model answers from last week
+  - Worksheet 10 Phylogenies & Molecular Clock, improved answers; done
+  - worksheet 11 Population Genomics, model answers
+  - Workshop 6: Population Genomics, model answers
 
-Directed study 12 (recording): Comparative Genomics
-Directed study 13 (worksheet): Comparative Genomics
-Workshop 7: Comparative Genomics
+- This weeks learning materials
+  - Directed study recording on Comparative Genomics
+  - Directed study worksheet on Comparative Genomics
+  - Workshop 7: Comparative Genomics
 
 
 ### week 10
-
-
 
 Workshop 9: Quantitative Genetics 2
 
