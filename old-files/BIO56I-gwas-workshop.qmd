@@ -2,7 +2,7 @@
 title: "BIO00056I GWAS Workshop"
 
 author: Daniel Jeffares
-date: 2024-10-16
+date: last-modified
 format:
     html:
       

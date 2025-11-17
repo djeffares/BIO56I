@@ -4,7 +4,7 @@ subtitle: "Directed study 11 (worksheet): Population genomics"
 
 
 author: Daniel Jeffares
-date: 2025-10-31
+date: last-modified
 format:
     html:
       
