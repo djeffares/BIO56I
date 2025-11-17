@@ -25,9 +25,8 @@ editor: source
 ---
 
 ::: callout-important
-# Anwsers to exam style questions are provided at the end of this document.
+# This document now contains answers to questions.
 :::
-
 
 
 # Learning objectives

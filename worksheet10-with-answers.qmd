@@ -23,6 +23,11 @@ format:
 editor: source
 ---
 
+::: callout-important
+# This document now contains answers to questions.
+:::
+
+
 # Learning objectives
 
 This worksheet is designed to prepare you for exam questions on phylogenies and molecular clocks.Here we show one example for how we can use and interpret a phylogenetic trees.
@@ -71,12 +76,16 @@ You have a team of clinicians and laboratory technicians that can do parasite is
 
 ## Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? (8 marks)
 
-If our PCR primers worked, we can follow the same strategy for detecting pathogen DNA in the two sand fly species (2 marks). We would want to focus on sand flies that live near the places where people are infected (2 marks). This time, building a phylogeny is even more important - and we can add the sequences we obtained from the patients (2 marks). If we find that the sequences from patients match those from the local sand flies, we have found the vector (2 marks).
+We can start by isolating the pathogen from patients, culturing it and extracting DNA (2 marks). Next, we need to PCR amplify and sequence two genes that are known to distinguish *L. major* and *E. colombiensis* (2 marks). If we have PCR primers for these genes already, great. If not, we will need to design some (2 marks). Once we have the sequences, we can build a phylogeny including sequences from known *L. major* and *E. colombiensis* samples (2 marks). If the sequences from the mystery pathogen cluster with one of these known pathogens, it is likely a more virulent strain of that pathogen (2 marks). If it forms a separate cluster, it is likely a new protozoan (2 marks).
 
-If our PCR primers did not work, it is more of a challenge.
 
-## Question 2. Is there an insect vector? If so, what is it? (8 marks)
+If our PCR primers did not work, it is more of a challenge, and we might need to resort to sequencing the whole genome of the mystery pathogen, which will be more expensive and time consuming.
 
-Again, if we have PCR primers we can do what we did for the sand flies. We should catch rats, dogs and pigs that live near infected people, humanely obtain some skin samples, extract DNA, PCR, sequence and add the reservoirs to our phylogeny  (2 marks). If the reservoir samples should cluster with patient samples for both genes, we can implicate a reservoir (2 marks). As a control, we can catch rats, dogs and pigs from far away from the infected people  (2 marks). If the PCR results are negative here, this will tell us if the reservoir is important  (2 marks).
+## Question 2. Is there an insect vector? If so, what is it? (10 marks)
+
+
+If our PCR primers worked, we can follow the same strategy for detecting pathogen DNA above. We would want to focus on potential vectors that live near the places where people are infected (1 mark). We would collect samples of these potential vectors, extract DNA and use our PCR primers to test for the presence of the pathogen DNA (2 marks). It would be wise to collect many vector samples (tens to hundreds) to increase our chances of finding the pathogen (1 marks). Then, we would sequence the PCR products from any positive samples and align the sequences (2 marks). This time,  we can add the sequences we obtained from the patients (1 mark). If we find that the sequences from patients match those from the local sand flies, we have found the vector (2 marks). If not, we may need to test other potential vectors or consider that there may not be an insect vector involved (1 marks).
+
+
 
 

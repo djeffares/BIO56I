@@ -1,5 +1,11 @@
 # BIO00056I notes
 
+## TO DO FOR NEXT YEAR:
+
+- population genomics workshop:
+	- update te PCA plots ot be colour-bind friendly, with symbols as well as colours
+	- check the qustions
+
 ## Updates for 2025:
 
 ## TO DO:

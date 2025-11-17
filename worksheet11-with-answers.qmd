@@ -25,6 +25,12 @@ editor: source
     
 ---
 
+::: callout-important
+# This document now contains answers to questions.
+:::
+
+
+
 # Learning objectives
 
 This worksheet is designed to prepare you for exam questions on population genomics.
