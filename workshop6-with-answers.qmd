@@ -177,7 +177,7 @@ Now spend some time discussing the SplitsTree phylogeny, using the discussion po
 - **Answer:** There are multiple species. They might interbreed in this location, but we cannot see this in the current phylogeny. We cannot tell anything about local ecology, host/vector differences from this phylogeny.
   
 4. Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?
-- **Answer:** This is a probably a hybrid.
+- **Answer:** This is probably a hybrid.
   
 5. Examine the data from the single *L. shawi* sample (light blue). Does its branch look unusually short? Remember: branch lengths indicate the genetic distance between strains or species.
 - **Answer:** Yes, it does look short. This is suspicious, but it is difficult to diagnose from this representation of the data. This shows a limitation of phylogeny.
@@ -295,7 +295,7 @@ Figure 6. PCA clustering of only the *Leishmania* strains we collected from Mana
 - **Answer:** No, certainly not. This is consistent with what we observe in the phylogeny.
 
 - What does this tell us about the causes of genetic differentiation between species? 
-- **Answer:** While species may have evolved in isolation, they now co-exist in Manaus. We do see hybrids on occasion, but generally the species remain distinct, even when they are are in the same location.
+- **Answer:** While species may have evolved in isolation, they now co-exist in Manaus. We do see hybrids on occasion, but generally the species remain distinct, even when they are in the same location.
 
 - In other words, why are all these *Leishmania* samples from Manaus not interbreeding and becoming more genetically similar?
 - **Answer:** There appears to be some kind of reproductive barrier between species, preventing them from interbreeding extensively. This could be due to the sand fly vectors, or some other ecological factor.
@@ -410,7 +410,7 @@ d) Panel b of the plot shows the PCA coordinates of people from Switzerland, wit
 
 **Answer:**  
 
-  - (i) The migration of a parasite: the Switzerland PCA shows three barely-separated groups.indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.
+  - (i) The migration of a parasite: the Switzerland PCA shows three barely-separated groups, indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.
 
   - (ii) To conserve a threatened species so that it is robust to threats such as diseases and environmental change, we would like to retain the genetic diversity of the species. If we saw a PCA plot with distinct clusters, this would suggest that there are distinct populations that should be conserved separately to retain genetic diversity, and we should aim to preserve all these populations.
 
@@ -421,5 +421,37 @@ e) Panel c of the plot shows the correlation between genetic distance and geogra
 This illustrates the phenomenon of *isolation by distance*, where individuals that are geographically close are also genetically similar. Isolation by distance occurs because individuals are more likely to breed with nearby individuals than with distant individuals, and drift, new mutations and selection cause populations to diverge genetically between locations.
 
 For a large highly mobile species, such as birds, we would expect less isolation by distance, because individuals can move long distances and interbreed with individuals from far away. In contrast, for a less mobile species, such as fish in lakes, or a species that is smaller we would expect stronger isolation by distance, because individuals are more likely to breed with nearby individuals.
+
+
+**Question 2. Understanding populations from DNA**
+
+a) Outline how population genomic data are collected—starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.
+
+**Answer:** 
+
+Blood, tissue or whole organism samples are collected from individuals in the region and species of interest. Ideally, we would obtain tens to hundreds of samples. We then extract DNA from these samples in the laboratory. DNA is sequenced using a high-throughput sequencing platform, such as Illumina. Reads are then mapped to a reference genome, and variants (SNPs) are called using variant-calling software. The output is a VCF file containing SNP data for all individuals.
+
+
+b) Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.
+
+**Answer:** 
+\
+Method: phylogenetic tree. Strength: Shows populations and relatedness clearly. Weakness: Performs badly with hybrids, or other complex situations.
+\
+\
+Method: principle components analysis (PCA). Strengths: Shows hybrids well. Can sometimes show population geography patterns. Weakness: Does not show direction of evolution as phylogenetic trees do, nor quantitative information about timing of events that we can obtain from phylogenetic tree branch lengths.
+\
+\
+Method: STRUCTURE plot. Strength: Shows hybrids well, and can distinguish species that do not appear to hybridism. Weakness: Does not show the genetic distances or relatedness between individuals or populations very well.
+
+c) List three features of the genetics of natural populations that we can learn more about from population genomic data.
+
+**Answer:** 
+
+
+- Population structure: by identifying genetically similar individuals, we can define populations within a species.
+- Migration: by identifying genetically similar individuals in different locations, we can infer migration between populations.
+- Hybridisation: by identifying individuals with mixed ancestry from different populations or species, we can determine if hybridisation is occurring, or the populations are isolated.
+- Selection: by looking for genomic signatures of selection, we can identify genes or genomic regions that are under selection in natural populations.
 
 
