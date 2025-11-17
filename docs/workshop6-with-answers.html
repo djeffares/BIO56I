@@ -192,6 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-1.-populations-and-migration" id="toc-question-1.-populations-and-migration" class="nav-link" data-scroll-target="#question-1.-populations-and-migration"><span class="header-section-number">5.1</span> Question 1. Populations and migration</a></li>
   <li><a href="#question-2.-understanding-populations-from-dna" id="toc-question-2.-understanding-populations-from-dna" class="nav-link" data-scroll-target="#question-2.-understanding-populations-from-dna"><span class="header-section-number">5.2</span> Question 2. Understanding populations from DNA</a></li>
   </ul></li>
+  <li><a href="#model-answers" id="toc-model-answers" class="nav-link" data-scroll-target="#model-answers"><span class="header-section-number">6</span> Model answers</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="workshop6-with-answers.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -361,7 +362,7 @@ Discussion points: phylogeny
 <li>What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?</li>
 </ol>
 <ul>
-<li><strong>Answer:</strong> There are multiple species. They might interbreed in this location, but we cannot see this in the current phyloegncy. We cannot tell anything about local ecology, host/vector differences from this phylogeny.</li>
+<li><strong>Answer:</strong> There are multiple species. They might interbreed in this location, but we cannot see this in the current phylogeny. We cannot tell anything about local ecology, host/vector differences from this phylogeny.</li>
 </ul>
 <ol start="4" type="1">
 <li>Look at the <em>L. peruviana</em>–<em>L. braziliensis</em> area (red box). One strain sits between the two. What could that indicate?</li>
@@ -397,7 +398,7 @@ Discussion points: phylogeny
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/populations3.populations4.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. PCA clustering of all the <em>Leishmania</em> samples from thoughout South America (left), and those that were collected from Manaus (right)</figcaption>
+<figcaption>Figure 4. PCA clustering of all the <em>Leishmania</em> samples from throughout South America (left), and those that were collected from Manaus (right)</figcaption>
 </figure>
 </div>
 <section id="interpreting-principal-component-plots" class="level3" data-number="3.3.1">
@@ -570,11 +571,46 @@ Discussion points: the STRUCTURE plot
 <li>List three features of the genetics of natural populations that we can learn from population genomic data.</li>
 </ol></li>
 </ul>
+</section>
+</section>
+<section id="model-answers" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Model answers</h1>
+<p><strong>Question 1. Populations and migration</strong></p>
+<p>A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</p>
+<ol type="a">
+<li>Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</li>
+</ol>
+<p><strong>Answer:</strong> If there were extensive migration between countries, we would expect to see individuals from different countries mixed together on the PCA plot. However, the PCA plot shows that individuals from the same country <em>generally</em> cluster together, to the exclusion of other countries. There are exceptions, however, such as Spain and Portugal that appear to be mixing.</p>
+<ol start="2" type="a">
+<li>What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</li>
+</ol>
+<p><strong>Answer:</strong> We expect from the PCA plot that there are some alleles within countries that are shared between countries that are close together on the PCA plot (e.g., Spain and Portugal). In contrast, countries that are far apart on the PCA plot (e.g., Finland and Italy) are expected to share fewer alleles.</p>
+<ol start="3" type="a">
+<li>What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</li>
+</ol>
+<p><strong>Answer:</strong> Between-country marriages appear to be the exception rather than the rule.</p>
+<ol start="4" type="a">
+<li>Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species.</li>
+</ol>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><ol type="i">
+<li>The migration of a parasite: the Switzerland PCA shows three barely-separated groups.indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.</li>
+</ol></li>
+<li><ol start="2" type="i">
+<li>To conserve a threatened species so that it is robust to threats such as diseases and environmental change, we would like to retain the genetic diversity of the species. If we saw a PCA plot with distinct clusters, this would suggest that there are distinct populations that should be conserved separately to retain genetic diversity, and we should aim to preserve all these populations.</li>
+</ol></li>
+</ul>
+<ol start="5" type="a">
+<li>Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</li>
+</ol>
+<p><strong>Answer:</strong></p>
+<p>This illustrates the phenomenon of <em>isolation by distance</em>, where individuals that are geographically close are also genetically similar. Isolation by distance occurs because individuals are more likely to breed with nearby individuals than with distant individuals, and drift, new mutations and selection cause populations to diverge genetically between locations.</p>
+<p>For a large highly mobile species, such as birds, we would expect less isolation by distance, because individuals can move long distances and interbreed with individuals from far away. In contrast, for a less mobile species, such as fish in lakes, or a species that is smaller we would expect stronger isolation by distance, because individuals are more likely to breed with nearby individuals.</p>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1225,7 +1261,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Some of the Manaus samples are different species. So there must be several species in this location.</span>
 <span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?</span>
-<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** There are multiple species. They might interbreed in this location, but we cannot see this in the current phyloegncy. We cannot tell anything about local ecology, host/vector differences from this phylogeny.</span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** There are multiple species. They might interbreed in this location, but we cannot see this in the current phylogeny. We cannot tell anything about local ecology, host/vector differences from this phylogeny.</span>
 <span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?</span>
 <span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** This is a probably a hybrid.</span>
@@ -1263,7 +1299,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>Now look at Figure 4, which shows PCA clustering of Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that the PC axes are on the same scale here.</span>
 <span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 4. PCA clustering of all the *Leishmania* samples from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)</span></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 4. PCA clustering of all the *Leishmania* samples from throughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)</span></span>
 <span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpreting principal component plots</span></span>
 <span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a></span>
@@ -1399,50 +1435,80 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-354"><a href="#cb4-354" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-355"><a href="#cb4-355" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb4-356"><a href="#cb4-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-357"><a href="#cb4-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-357"><a href="#cb4-357" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
 <span id="cb4-358"><a href="#cb4-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-359"><a href="#cb4-359" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
+<span id="cb4-359"><a href="#cb4-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Population genomics data can be used to explore population structure and hybridisation between populations and species.</span>
 <span id="cb4-360"><a href="#cb4-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-361"><a href="#cb4-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Population genomics data can be used to explore population structure and hybridisation between populations and species.</span>
+<span id="cb4-361"><a href="#cb4-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There are different ways of visualising population genomics data, each with their own strengths and weaknesses.</span>
 <span id="cb4-362"><a href="#cb4-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-363"><a href="#cb4-363" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There are different ways of visualising population genomics data, each with their own strengths and weaknesses.</span>
+<span id="cb4-363"><a href="#cb4-363" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In this workshop, we have seen examples of:</span>
 <span id="cb4-364"><a href="#cb4-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-365"><a href="#cb4-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In this workshop, we have seen examples of:</span>
-<span id="cb4-366"><a href="#cb4-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-367"><a href="#cb4-367" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>isolation by distance (populations/species distributed across countries)</span>
-<span id="cb4-368"><a href="#cb4-368" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>multiple species in one location (Manaus), with rare hybrids between species</span>
+<span id="cb4-365"><a href="#cb4-365" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>isolation by distance (populations/species distributed across countries)</span>
+<span id="cb4-366"><a href="#cb4-366" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>multiple species in one location (Manaus), with rare hybrids between species</span>
+<span id="cb4-367"><a href="#cb4-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-368"><a href="#cb4-368" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam-style questions</span></span>
 <span id="cb4-369"><a href="#cb4-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-370"><a href="#cb4-370" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam-style questions</span></span>
+<span id="cb4-370"><a href="#cb4-370" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1. Populations and migration</span></span>
 <span id="cb4-371"><a href="#cb4-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-372"><a href="#cb4-372" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1. Populations and migration</span></span>
+<span id="cb4-372"><a href="#cb4-372" aria-hidden="true" tabindex="-1"></a>A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</span>
 <span id="cb4-373"><a href="#cb4-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-374"><a href="#cb4-374" aria-hidden="true" tabindex="-1"></a>A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</span>
+<span id="cb4-374"><a href="#cb4-374" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</span>
 <span id="cb4-375"><a href="#cb4-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-376"><a href="#cb4-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</span>
+<span id="cb4-376"><a href="#cb4-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</span>
 <span id="cb4-377"><a href="#cb4-377" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-378"><a href="#cb4-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</span>
+<span id="cb4-378"><a href="#cb4-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</span>
 <span id="cb4-379"><a href="#cb4-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-380"><a href="#cb4-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</span>
+<span id="cb4-380"><a href="#cb4-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. </span>
 <span id="cb4-381"><a href="#cb4-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-382"><a href="#cb4-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. </span>
+<span id="cb4-382"><a href="#cb4-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</span>
 <span id="cb4-383"><a href="#cb4-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-384"><a href="#cb4-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</span>
+<span id="cb4-384"><a href="#cb4-384" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations8.jpg)</span></span>
 <span id="cb4-385"><a href="#cb4-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-386"><a href="#cb4-386" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations8.jpg)</span></span>
-<span id="cb4-387"><a href="#cb4-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-388"><a href="#cb4-388" aria-hidden="true" tabindex="-1"></a>Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country. </span>
-<span id="cb4-389"><a href="#cb4-389" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-386"><a href="#cb4-386" aria-hidden="true" tabindex="-1"></a>Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country. </span>
+<span id="cb4-387"><a href="#cb4-387" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-388"><a href="#cb4-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-389"><a href="#cb4-389" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2. Understanding populations from DNA</span></span>
 <span id="cb4-390"><a href="#cb4-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-391"><a href="#cb4-391" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2. Understanding populations from DNA</span></span>
+<span id="cb4-391"><a href="#cb4-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a) Outline how population genomic data are collected—starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.</span>
 <span id="cb4-392"><a href="#cb4-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-393"><a href="#cb4-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a) Outline how population genomic data are collected—starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.</span>
+<span id="cb4-393"><a href="#cb4-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b) Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.</span>
 <span id="cb4-394"><a href="#cb4-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-395"><a href="#cb4-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b) Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.</span>
+<span id="cb4-395"><a href="#cb4-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>c) List three features of the genetics of natural populations that we can learn from population genomic data.</span>
 <span id="cb4-396"><a href="#cb4-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-397"><a href="#cb4-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>c) List three features of the genetics of natural populations that we can learn from population genomic data.</span>
+<span id="cb4-397"><a href="#cb4-397" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model answers</span></span>
 <span id="cb4-398"><a href="#cb4-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-399"><a href="#cb4-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-399"><a href="#cb4-399" aria-hidden="true" tabindex="-1"></a>**Question 1. Populations and migration**</span>
 <span id="cb4-400"><a href="#cb4-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-401"><a href="#cb4-401" aria-hidden="true" tabindex="-1"></a>A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</span>
+<span id="cb4-402"><a href="#cb4-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-403"><a href="#cb4-403" aria-hidden="true" tabindex="-1"></a>a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</span>
+<span id="cb4-404"><a href="#cb4-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-405"><a href="#cb4-405" aria-hidden="true" tabindex="-1"></a>**Answer:** If there were extensive migration between countries, we would expect to see individuals from different countries mixed together on the PCA plot. However, the PCA plot shows that individuals from the same country *generally* cluster together, to the exclusion of other countries. There are exceptions, however, such as Spain and Portugal that appear to be mixing. </span>
+<span id="cb4-406"><a href="#cb4-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-407"><a href="#cb4-407" aria-hidden="true" tabindex="-1"></a>b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</span>
+<span id="cb4-408"><a href="#cb4-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-409"><a href="#cb4-409" aria-hidden="true" tabindex="-1"></a>**Answer:** We expect from the PCA plot that there are some alleles within countries that are shared between countries that are close together on the PCA plot (e.g., Spain and Portugal). In contrast, countries that are far apart on the PCA plot (e.g., Finland and Italy) are expected to share fewer alleles.</span>
+<span id="cb4-410"><a href="#cb4-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-411"><a href="#cb4-411" aria-hidden="true" tabindex="-1"></a>c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</span>
+<span id="cb4-412"><a href="#cb4-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-413"><a href="#cb4-413" aria-hidden="true" tabindex="-1"></a>**Answer:**  Between-country marriages appear to be the exception rather than the rule.</span>
+<span id="cb4-414"><a href="#cb4-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-415"><a href="#cb4-415" aria-hidden="true" tabindex="-1"></a>d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. </span>
+<span id="cb4-416"><a href="#cb4-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-417"><a href="#cb4-417" aria-hidden="true" tabindex="-1"></a>**Answer:**  </span>
+<span id="cb4-418"><a href="#cb4-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-419"><a href="#cb4-419" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>(i) The migration of a parasite: the Switzerland PCA shows three barely-separated groups.indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.</span>
+<span id="cb4-420"><a href="#cb4-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-421"><a href="#cb4-421" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>(ii) To conserve a threatened species so that it is robust to threats such as diseases and environmental change, we would like to retain the genetic diversity of the species. If we saw a PCA plot with distinct clusters, this would suggest that there are distinct populations that should be conserved separately to retain genetic diversity, and we should aim to preserve all these populations.</span>
+<span id="cb4-422"><a href="#cb4-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-423"><a href="#cb4-423" aria-hidden="true" tabindex="-1"></a>e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</span>
+<span id="cb4-424"><a href="#cb4-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-425"><a href="#cb4-425" aria-hidden="true" tabindex="-1"></a>**Answer:** </span>
+<span id="cb4-426"><a href="#cb4-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-427"><a href="#cb4-427" aria-hidden="true" tabindex="-1"></a>This illustrates the phenomenon of *isolation by distance*, where individuals that are geographically close are also genetically similar. Isolation by distance occurs because individuals are more likely to breed with nearby individuals than with distant individuals, and drift, new mutations and selection cause populations to diverge genetically between locations.</span>
+<span id="cb4-428"><a href="#cb4-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-429"><a href="#cb4-429" aria-hidden="true" tabindex="-1"></a>For a large highly mobile species, such as birds, we would expect less isolation by distance, because individuals can move long distances and interbreed with individuals from far away. In contrast, for a less mobile species, such as fish in lakes, or a species that is smaller we would expect stronger isolation by distance, because individuals are more likely to breed with nearby individuals.</span>
+<span id="cb4-430"><a href="#cb4-430" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

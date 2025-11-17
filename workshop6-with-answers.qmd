@@ -174,7 +174,7 @@ Now spend some time discussing the SplitsTree phylogeny, using the discussion po
 - **Answer:** Some of the Manaus samples are different species. So there must be several species in this location.
 
 3. What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?
-- **Answer:** There are multiple species. They might interbreed in this location, but we cannot see this in the current phyloegncy. We cannot tell anything about local ecology, host/vector differences from this phylogeny.
+- **Answer:** There are multiple species. They might interbreed in this location, but we cannot see this in the current phylogeny. We cannot tell anything about local ecology, host/vector differences from this phylogeny.
   
 4. Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?
 - **Answer:** This is a probably a hybrid.
@@ -212,7 +212,7 @@ Figure 3. PCA clustering of Viannia species from throughout South America.
 Now look at Figure 4, which shows PCA clustering of Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that the PC axes are on the same scale here.
 
 
-![Figure 4. PCA clustering of all the *Leishmania* samples from thoughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)
+![Figure 4. PCA clustering of all the *Leishmania* samples from throughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)
 
 ### Interpreting principal component plots
 
@@ -348,8 +348,6 @@ Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples 
 
 :::
 
-
-
 # Summary: what we have learned
 
 - Population genomics data can be used to explore population structure and hybridisation between populations and species.
@@ -390,6 +388,38 @@ Figure 8. A PCA plot of human populations from Europe. Each point is an individu
 
 - c) List three features of the genetics of natural populations that we can learn from population genomic data.
 
+# Model answers
 
+**Question 1. Populations and migration**
+
+A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.
+
+a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.
+
+**Answer:** If there were extensive migration between countries, we would expect to see individuals from different countries mixed together on the PCA plot. However, the PCA plot shows that individuals from the same country *generally* cluster together, to the exclusion of other countries. There are exceptions, however, such as Spain and Portugal that appear to be mixing. 
+
+b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?
+
+**Answer:** We expect from the PCA plot that there are some alleles within countries that are shared between countries that are close together on the PCA plot (e.g., Spain and Portugal). In contrast, countries that are far apart on the PCA plot (e.g., Finland and Italy) are expected to share fewer alleles.
+
+c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?
+
+**Answer:**  Between-country marriages appear to be the exception rather than the rule.
+
+d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. 
+
+**Answer:**  
+
+  - (i) The migration of a parasite: the Switzerland PCA shows three barely-separated groups.indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.
+
+  - (ii) To conserve a threatened species so that it is robust to threats such as diseases and environmental change, we would like to retain the genetic diversity of the species. If we saw a PCA plot with distinct clusters, this would suggest that there are distinct populations that should be conserved separately to retain genetic diversity, and we should aim to preserve all these populations.
+
+e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?
+
+**Answer:** 
+
+This illustrates the phenomenon of *isolation by distance*, where individuals that are geographically close are also genetically similar. Isolation by distance occurs because individuals are more likely to breed with nearby individuals than with distant individuals, and drift, new mutations and selection cause populations to diverge genetically between locations.
+
+For a large highly mobile species, such as birds, we would expect less isolation by distance, because individuals can move long distances and interbreed with individuals from far away. In contrast, for a less mobile species, such as fish in lakes, or a species that is smaller we would expect stronger isolation by distance, because individuals are more likely to breed with nearby individuals.
 
 

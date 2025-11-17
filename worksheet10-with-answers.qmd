@@ -74,7 +74,7 @@ You have a team of clinicians and laboratory technicians that can do parasite is
 
 # Model answers
 
-## Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? is there an alternative to simple phylogentic methods? (10 marks)
+## Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? Also, is there an alternative to simple phylogentic methods? (10 marks)
 
 We can start by isolating the pathogen from patients, culturing it and extracting DNA (2 marks). Next, we need to PCR amplify and sequence two genes that are known to distinguish *L. major* and *E. colombiensis* (1 marks). If we have PCR primers for these genes already, great. If not, we will need to design some (1 marks). Once we have the sequences, we can build a phylogeny including sequences from known *L. major* and *E. colombiensis* samples (2 marks). If the sequences from the mystery pathogen cluster with one of these known pathogens, it is likely a more virulent strain of that pathogen (2 marks). If it forms a separate cluster, it is likely a new protozoan (2 marks).
 
