@@ -97,7 +97,6 @@ Hint: You can check this by:
 \
 **Question 3. Would you expect such changes to affect traits or fitness? If so, would you expect the average fitness change to be large or small?**
 
-Attach approximate quantities to fitness changes here.
 
 ----
 

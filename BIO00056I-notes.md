@@ -97,14 +97,38 @@ Directed study 11 (worksheet): Population Genomics: done
 ### week 8
 
 - Model answers from last week
-  - Worksheet 10 Phylogenies & Molecular Clock, improved answers; done
-  - worksheet 11 Population Genomics, improved answers; done
-  - Workshop 6: Population Genomics, model answers; done
+  - Workshop 6: Population Genomics, with model answers
+  - Worksheet 10 Phylogenies & Molecular Clock, with improved model answers
+  - Worksheet 11 Population Genomics, with improved questions. Answers wil be posted next week.
 
 - This weeks learning materials
-  - Directed study recording on Comparative Genomics
-  - Directed study worksheet on Comparative Genomics
-  - Workshop 7: Comparative Genomics
+  - Directed study recordings on Comparative Genomics
+
+Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cc8b5614-79f5-4d23-a64f-b0be0106669a
+OK
+
+Part 2: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bccbfa56-156a-435d-b462-afc100d31866  
+
+OK
+
+Record new video 3
+
+
+Part 3: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f6db4faf-496b-432f-8078-afc100d31833
+does not match the slides and much too complex
+plus can't find the slides!
+
+Part 4: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=515454d0-24a5-4eba-80af-afc100d3180b
+
+
+
+
+
+  - Worksheet 12 Comparative Genomics
+  - Workshop 7: Comparative Genomics (work in progress)
+
+
+
 
 
 ### week 10

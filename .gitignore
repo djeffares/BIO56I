@@ -8,6 +8,6 @@
 *.Rda
 *potx
 *.dotx
-*.png
 /.quarto/
 .DS_Store
+

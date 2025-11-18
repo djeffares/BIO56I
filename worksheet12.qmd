@@ -24,6 +24,7 @@ editor: source
     
 ---
 
+
 # Learning objectives
 
 This worksheet aims to:
@@ -91,12 +92,11 @@ Hint: You can check this by:
 \
 **Question 3. Would you expect such changes to affect traits or fitness? If so, would you expect the average fitness change to be large or small?**
 
-Attach approximate quantities to fitness changes here.
 
 ----
 
 
 # Model answers
 
-Will be provided on this page at a later date.
+Will be places here next week.
 

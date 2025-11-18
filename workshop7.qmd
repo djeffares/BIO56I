@@ -1,6 +1,6 @@
 ---
 title: "BIO00056I"
-subtitle: "Workshop 6: Population Genomics"
+subtitle: "Workshop 7: Comparative Genomics"
 
 author: Daniel Jeffares
 date: last-modified
@@ -25,6 +25,10 @@ format:
 editor: source
     
 ---
+
+:::callout-note
+This is a work in progress. 
+:::
 
 # Learning objectives
 
@@ -169,6 +173,7 @@ ggplot(table1, aes(x=n_s_ratio)) +
   ggtitle("")+
   geom_vline(xintercept=1, linetype="dashed", color = "red")
 
+
 #totals
 nonsyn_total <- sum(table1$nonsynonymous_snps)
 #48460
@@ -176,6 +181,8 @@ syn_total <- sum(table1$synonymous_snps)
 #57886
 total_ratio <- nonsyn_total / syn_total
 #0.8376
+
+
 ```
 
 **Figure 3. The distribution of N/S ratios within L. donovani genes**.
