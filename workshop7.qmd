@@ -75,12 +75,13 @@ We told you in the lectures that:
 **Today, we will examine these predictions**
 :::
 
-{{< pagebreak >}}
-
 
 # Exercises
 
 ## The phylogeny
+
+This time, compare within species gene diversity of *Leishmania donovani*, then between species gene divergence between *Leishmania donovani*, and *Leishmania braziliensis*, and finally  between species gene divergence with yeast. Figure 2 below shows a phylogenetic tree of *Leishmania* and related species.
+
 
 ![](images/compgen2.jpg)
 
@@ -99,6 +100,7 @@ Today, we will examine patterns of evolutionary change over three time scales, a
 
 : **Time scales** {.striped .hover}
 
+Note: These times scales are *very approximate*, but we certainly know that the within-species differences are much more recent than the between-species differences, and that the yeast divergence is *much older* still.
 
 ### Synonymous and non-synonymous mutations
 
@@ -139,7 +141,6 @@ To understand selection within a gene, we can calculate ratio of non-synonymous 
 
 NB: These are toy examples. We would seldom observe such extreme N/S values in real data.
 
-
 ## Shallow time: N/S ratios
 
 First lets look at Figure 3, which shows the distribution of N/S ratios within *L. donovani* genes.
@@ -149,6 +150,7 @@ First lets look at Figure 3, which shows the distribution of N/S ratios within *
 #| echo: false
 #| warning: false
 #| eval: true
+#| output: false
 
 #load libraries
 library(tidyverse)
@@ -173,20 +175,24 @@ ggplot(table1, aes(x=n_s_ratio)) +
   ggtitle("")+
   geom_vline(xintercept=1, linetype="dashed", color = "red")
 
-
+#save plot
+ggsave("images/compgen3.jpg", width=6, height=4)
+       
 #totals
 nonsyn_total <- sum(table1$nonsynonymous_snps)
 #48460
+
 syn_total <- sum(table1$synonymous_snps)
 #57886
-total_ratio <- nonsyn_total / syn_total
-#0.8376
 
+total_ratio <- sum(nonsyn_total / syn_total)
+#0.8376
 
 ```
 
-**Figure 3. The distribution of N/S ratios within L. donovani genes**.
+![](images/compgen3.jpg)
 
+**Figure 3. The distribution of N/S ratios within L. donovani genes**. We can see that most genes have N/S ratios less than 1 (left of the red dashed line), indicating that purifying selection is acting on most genes.
 
 :::callout-tip
 # Discussion points: N/S ratios in L. donovani genes
@@ -213,6 +219,7 @@ There are 1714, genes with N/S ratio > 1.3. Here is a list of those with the hig
 #| echo: false
 #| warning: false
 #| eval: true
+#| output: true
 
 #high N/S ratio genes
 high_ns_genes <- table1 |>
@@ -227,6 +234,8 @@ high_ns_genes_named_only <- high_ns_genes |>
 head(high_ns_genes_named_only$genedescription, 10)
 ```
 
+
+
 To explain what kinds of genes have high N/S ratios, we can use a technique called **gene ontology (GO) enrichment analysis**. 
 
 :::callout-note
@@ -235,43 +244,206 @@ To explain what kinds of genes have high N/S ratios, we can use a technique call
 - If we have a gene list, we can use GO enrichment analysis to look for patterns in the kinds of genes that are present in the list.
 :::
 
-{{< pagebreak >}}
+
 
 ### Shallow time: gene enrichment analysis
 
 I ran a gene enrichment analysis, looking for enrichment of in the **cellular locations** of the **high N/S ratio genes**, that might be subject to positive selection. I also ran an enrichment analysis on the **low N/S ratio genes**, that are subject to strong purifying selection.
 The results are shown in Figure 4 (positive selection) and Figure 5 (purifying selection) below.
 
-
-
 ![](workshop7-data/table2-location.png)
 **Figure 4. A word cloud showing the cellular locations enriched in positive selection genes.** I selected genes with high N/S ratios (> 1.3), and ran the gene enrichment analysis using [TriTrypDB](https://tritrypdb.org/tritrypdb/app). Larger words indicate greater enrichment, and the grey text intensity indicates the statistical significance of the enrichment (darker = more significant, paler = less significant).
-
-
 
 ![](workshop7-data/table3-location.png)
 **Figure 5. A word cloud showing the cellular locations enriched in genes that are subject to strong purifying selection**. I selected genes with low N/S ratios (< 0.15), and ran the gene enrichment analysis using [TriTrypDB](https://tritrypdb.org/tritrypdb/app). Larger words indicate greater enrichment, and the grey text intensity indicates the statistical significance of the enrichment (darker = more significant, paler = less significant).
 
-\
-
 :::callout-tip
 # Discussion points: gene enrichment analysis
 
-- What kinds of cellular locations do the proteins made by rapidly evolving (positive selection) genes tend to reside in (Figure 4)?
-- What kinds of cellular locations do the proteins made by slowly evolving genes tend to reside in  (Figure 5)?
-- Do these results make sense to you? Why might genes in certain cellular locations be subject to different types of selection? Consider two categories of proteins: 
+- Where do positive selection proteins localise (Figure 4)?
+- Where do slowly evolving proteins localise (Figure 5)?
+, in the same way that the MK test example showeded us that different sites *within proteins* are subject to different types of selection.
 
-- centrally located, important proteins
-- peripheral, environment exposed proteins.
 :::
 
 
-# Summary: what we have learned
+
+## Deep time analysis
+
+Since diversity with species gives rise to divergence between species, we might expect that the genes that evolve rapidly within species would also evolve rapidly between species over long periods of time. We'll examine this now.
+
+To study this, we wil now compare how similar the proteins are between between *L. donovani* and *L. braziliensis*. You can see that these are quite distant on the phylogenetic tree (Figure 2). We don't know exactly how long ago they diverged, but it will be much longer ago that the within-species differences we saw earlier, so perhaps 100,000 years or even millions of years ago.
+
+To compare the proteins between these two species, I calculated the *percent identity* of each *L. donovani* and *L. braziliensis* ortholog (ie: what percent of amino acids in the alignment are the same). The percent identities range from  22% to 100%. What is remarkable here is that smoe proteins have change an enormous amount over this time, while others have not changed at all, showing that **over evolutionary time, genes change at different rates**.
+
+Of the ~8,000 orthologous proteins I selected the most rapidly evolving 1500 genes (lowest percent identity) and the most slowly evolving 1500 genes (highest percent identity), and ran gene enrichment analyses on both sets of genes. 
+
+
+### Deep time analysis: first look at the results
+
+Let's look at the most slowly evolving genes first. Here is a list of the most conserved, slowly evolving genes (with the highest percent identity):
+
+----
+
+```{r}
+#| echo: false
+#| warning: false
+#| eval: true
+#| output: true
+
+#load libraries
+library(tidyverse)
+library(readxl)
+library(janitor)
+
+#load gene function data
+t5gene <- read_tsv("week8/table5-genes.tsv", show_col_types = FALSE)
+t5gene <- clean_names(t5gene)
+#load gene percent id data
+t5id <- read_tsv("week8/table5-percent-id.tsv", show_col_types = FALSE)
+t5id <- clean_names(t5id)
+
+#merge data: join on ldon_gene (in t4id) matching gene_id (in t4gene)
+table5 <- left_join(t5id, t5gene, by = c("ldon_gene" = "gene_id"))
+
+#arrange and remove hypothetical proteins
+table5_most_conserved_genes <- table5 |>
+  #arrange by percent)_identity ascending
+  arrange(percent_identity,reverse = T) |>
+  filter(!grepl("hypothetical", product_description, ignore.case = TRUE))
+
+#show a list of the top 10 product_descriptions
+head(table5_most_conserved_genes$product_description, 10)
+```
+----
+
+This time, there is **certainly** a pattern!
+\
+\
+
+
+
+And now here's the list of the most rapidly evolving genes (with the *lowest* percent identity):
+
+----
+
+```{r}
+#| echo: false
+#| warning: false
+#| eval: true
+#| output: true
+
+#load libraries
+library(tidyverse)
+library(readxl)
+library(janitor)
+
+#load gene function data
+t4gene <- read_tsv("week8/table4-genes.tsv", show_col_types = FALSE)
+t4gene <- clean_names(t4gene)
+#load gene percent id data
+t4id <- read_tsv("week8/table4-percent-id.tsv", show_col_types = FALSE)
+t4id <- clean_names(t4id)
+
+#merge data: join on ldon_gene (in t4id) matching gene_id (in t4gene)
+table4 <- left_join(t4id, t4gene, by = c("ldon_gene" = "gene_id"))
+
+#arrange and remove hypothetical proteins
+table4_least_conserved_genes <- table4 |>
+  #arrange by percent)_identity ascending
+  arrange(percent_identity) |>
+  filter(!grepl("hypothetical", product_description, ignore.case = TRUE))
+
+#show a list of the top 10 product_descriptions
+head(table4_least_conserved_genes$product_description, 10)
+```
+
+----
+
+I am not such a 'Leishmaniac' that I can see a pattern here, but do you notice anything that reminds me of the shallow time results?
+
+
+### Deep time analysis: GO enrichment analysis
+
+To understand these large lists of geenes, I again ran gene enrichment analyses on both the most slowly evolving genes (highest percent identity) and the most rapidly evolving genes (lowest percent identity). The results are shown in Figure 6 (slowly evolving genes) and Figure 7 (rapidly evolving genes) below.
+
+![](images/table5-wordcloud.png)
+
+
+**Figure 6. A word cloud showing the cellular locations enriched in slowly evolving genes.** I selected genes with high percent identity (most slowly evolving), and ran the gene enrichment analysis using [TriTrypDB](https://tritrypdb.org/tritrypdb/app). Larger words indicate greater enrichment, and the grey text intensity indicates the statistical significance of the enrichment (darker = more significant, paler = less significant).
+
+![](images/table4-wordcloud.png)
+**Figure 7. A word cloud showing the cellular locations enriched in rapidly evolving genes.** I selected genes with low percent identity (most rapidly evolving), and ran the gene enrichment analysis using [TriTrypDB](https://tritrypdb.org/tritrypdb/app). Larger words indicate greater enrichment, and the grey text intensity indicates the statistical significance of the enrichment (darker = more significant, paler = less significant).
+
+## Deep time analysis: discussion points
+
+:::callout-tip
+# Discussion points: deep time gene enrichment analysis
+- Conditioner what kinds of genes are slowly evolving in (Figure 6), and are rapidly evolving (Figure 7).
+- Is this consistent with what we saw in the shallow time analysis?
+- We used slightly different methods (N/S ratios vs percent identity), and different species comparisons (*L. donovani* within-species vs *L. donovani* vs *L. braziliensis* between-species). 
+- Yet we see similar patterns. What does this tell us about the processes of selection that operate within species (*L. donovani*) and between species?
+- Are rates of change higher for proteins the insides of cells, or the outsides of cells? Why might this be?
+:::
+
+ 
+
+
+## Very deep time analysis
+
+So far we have looked at genetic differences within *L. donovani* (shallow time) and between *L. donovani* and *L. braziliensis* (deep time). Now we will compare Leishmania proteins to the fission yeast *Schizosaccharomyces pombe*, which diverged from Leishmania a very long time ago, perhaps a billion years ago.
+
+
+Again, I calculated the percent identity of each *L. donovani* and *S. pombe* ortholog (ie: what percent of amino acids in the alignment are the same). 
+
+This time, we will only look at the conserved, slowly evolving proteins, because the rapidly evolving proteins have changed so much that we cannot identify orthologs between these very distantly-related species. The top 150 conserved proteins (with the highest percent identity) are between 58% and 83% identical between *L. donovani* and *S. pombe*.
+
+![](images/table6-wordcloud.png)
+**Figure 8. A word cloud showing the cellular locations enriched in very slowly evolving genes.** I selected genes with high percent identity (most slowly evolving), and ran the gene enrichment analysis using [TriTrypDB](https://tritrypdb.org/tritrypdb/app). Larger words indicate greater enrichment, and the grey text intensity indicates the statistical significance of the enrichment (darker = more significant, paler = less significant). 
+
+Here there is one very clear outline: **the ribosome**.
+
+## Final discussion points
+
+:::callout-tip
+# Discussion points
+We observe a fairly consistent pattern across all time scales that we have examined:genes that are located on the outsides of cells tend to evolve rapidly, while genes that are located deep within cells tend to evolve slowly. of course, there are exceptions, and the rates of protein change are affected by many other factors, but this general pattern is very clear. Let's consider this.
+
+- Why do you think that ribosomal proteins are so highly conserved over such long periods of time (Figure 8)?
+- Given the function of ribosomes in the cell, what might the consequences of mutation  that reduced protein translation accuracy by 0.1%?
+- Why do you think that proteins located on the outsides of cells tend to evolve rapidly?
+:::
+
+For those that are curious [the genes lists that I used for this analysis are here](https://docs.google.com/spreadsheets/d/1KmtZizHfnWdP1V2PJQZXV5G0p_NLEIM2vR8yGiTule0/edit?usp=sharing). You'll need to be signed in with your University of York Google account to access it.
+
+
+# Summary
+
+Today, we examined the patterns of evolutionary change within and between species. We observed that:
+
+- Different kinds of genes evolve at different rates, both within species and between species
+- These patterns are consistent over both short time scales (within species) and long time scales
+- Genes that are located on the outsides of cells tend to evolve rapidly, while genes that are located deep within cells tend to evolve slowly
+
 
 # After the workshop: exam style questions
 
-## Question 1. 
+**Question 1. If the rate of mutation is the same for all genes in a genome, and we compare two very closely related species, we should observe the same numbers of mutations in each gene. Is this correct?**
 
-## Question 2. 
+In your answer, explain;
+
+- If we *do* to see the same numbers of mutations in each gene, or not
+- What genetic and evolutionary factors might cause us to *not* observe the same numbers of mutations in each gene
+
+Hint: consider both stochastic factors (randomness) and biological processes of evolutionary change. 
+
+**Question 2. Given what you know about the fitness effects of mutations, which population genetic process would we expect to have the main impact on differences in evolutionary rates between genes?**
+
+In your answer, explain;
+
+- What the main population genetic process is
+- Why this results in differences in evolutionary rates between genes
+- How we could test this hypothesis using genetic data from within and between species
+
 
 

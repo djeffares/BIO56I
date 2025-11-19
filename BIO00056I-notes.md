@@ -105,31 +105,44 @@ Directed study 11 (worksheet): Population Genomics: done
   - Directed study recordings on Comparative Genomics
 
 Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cc8b5614-79f5-4d23-a64f-b0be0106669a
-OK
-
 Part 2: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bccbfa56-156a-435d-b462-afc100d31866  
-
-OK
-
-Record new video 3
-
-
-Part 3: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f6db4faf-496b-432f-8078-afc100d31833
-does not match the slides and much too complex
-plus can't find the slides!
-
-Part 4: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=515454d0-24a5-4eba-80af-afc100d3180b
-
-
-
 
 
   - Worksheet 12 Comparative Genomics
   - Workshop 7: Comparative Genomics (work in progress)
 
 
+------
+
+Hello everyone,
+
+My apologies for sending this message on a Tuesday (rather than Monday).
+
+Last week we learned about population genomics, which is the collection and analysis of population genetic data on a genome-wide scale. We saw in the workshop how we can describe populations using various display methods.
+
+This week we learn about comparative genomics, the comparative study of the genomes of different species. We can learn an enormous amount about evolution from comparative genomics, particularly about the longer time scales of evolution, over millions of even billions of years.
+
+This week, the learning materials are:
+
+1. Recordings on Comparative genomics
+  Part 1: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cc8b5614-79f5-4d23-a64f-b0be0106669a
+  Part 2: https://york.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bccbfa56-156a-435d-b462-afc100d31866  
+
+2. Worksheet 12, on comparative genomics
+https://djeffares.github.io/BIO56I/worksheet12.html
+
+3. Workshop 7: comparative genomics, where we will observe patterns of evolution over thousands, then millions of even billions of years.
+
+https://djeffares.github.io/BIO56I/workshop7.html
+
+Later today, I'll provide a final video on comparative genomics.
+
+best wishes
+Daniel Jeffares
 
 
+
+------
 
 ### week 10
 
