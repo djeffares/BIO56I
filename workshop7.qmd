@@ -26,9 +26,6 @@ editor: source
     
 ---
 
-:::callout-note
-This is a work in progress. 
-:::
 
 # Learning objectives
 
