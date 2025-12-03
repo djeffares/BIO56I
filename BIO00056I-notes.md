@@ -1,5 +1,12 @@
 # BIO00056I notes
 
+## Model anwsers for 2025
+
+- workshop5: done
+- workshop6: done
+
+
+
 ## TO DO FOR NEXT YEAR:
 
 - population genomics workshop:
