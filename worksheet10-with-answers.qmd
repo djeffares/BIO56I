@@ -76,16 +76,13 @@ You have a team of clinicians and laboratory technicians that can do parasite is
 
 ## Question 1. Is this a new protozoan or a more virulent strain of an already known protozoan? Also, is there an alternative to simple phylogentic methods? (10 marks)
 
-We can start by isolating the pathogen from patients, culturing it and extracting DNA (2 marks). Next, we need to PCR amplify and sequence two genes that are known to distinguish *L. major* and *E. colombiensis* (1 marks). If we have PCR primers for these genes already, great. If not, we will need to design some (1 marks). Once we have the sequences, we can build a phylogeny including sequences from known *L. major* and *E. colombiensis* samples (2 marks). If the sequences from the mystery pathogen cluster with one of these known pathogens, it is likely a more virulent strain of that pathogen (2 marks). If it forms a separate cluster, it is likely a new protozoan (2 marks).
+To determine this, we could obtain the seuwnce of a gene rrom this new new protozoan and build a phylogeny. This would tell us if it is closely related to *L. major* or *E. colombiensis*, or if it is a new protozoan (1 mark). We can start by isolating the pathogen from patients, culturing it and extracting DNA (1 mark). Next, we need to PCR amplify and sequence two genes that are known to distinguish *L. major* and *E. colombiensis* (1 marks). If we have PCR primers for these genes already, great. If not, we will need to design some (1 marks). Once we have the sequences, we can build a phylogeny including sequences from known *L. major* and *E. colombiensis* samples (2 marks). If the sequences from the mystery pathogen cluster with one of these known pathogens, it is likely a more virulent strain of that pathogen (2 marks). If it forms a separate cluster, it is likely a new protozoan (2 marks).
 
 
 If our PCR primers did not work, it is more of a challenge, and we might need to resort to sequencing the whole genome of the mystery pathogen, which will be more expensive and time consuming (2 marks).
 
 ## Question 2. Is there an insect vector? If so, what is it? (10 marks)
 
-
 If our PCR primers worked, we can follow the same strategy for detecting pathogen DNA above. We would want to focus on potential vectors that live near the places where people are infected (1 mark). We would collect samples of these potential vectors, extract DNA and use our PCR primers to test for the presence of the pathogen DNA (2 marks). It would be wise to collect many vector samples (tens to hundreds) to increase our chances of finding the pathogen (1 marks). Then, we would sequence the PCR products from any positive samples and align the sequences (2 marks). This time,  we can add the sequences we obtained from the patients (1 mark). If we find that the sequences from patients match those from the local sand flies, we have found the vector (2 marks). If not, we may need to test other potential vectors or consider that there may not be an insect vector involved (1 marks).
-
-
 
 

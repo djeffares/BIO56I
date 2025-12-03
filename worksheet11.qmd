@@ -98,7 +98,28 @@ In your answer, explain a) what samples you would use from ENA and how many (3 m
 
 # Model answers
 
-Will be provided here at a later date.
+**Question 1.	Explain how you woul use population genomics data to determine if the people of Çatalhöyük and Aşıklı kept sheep, or goats or both?  (10 marks).**
+
+Ultimately, a PCA plot would be the most useful way to determine if the samples are more like sheep or goats. To generate this plot, we would need to follow these steps:
+
+a) Download genomes of modern wild and domestic sheep and goats from ENA. About 50 samples of each species should be sufficient to make a PCA plot that separates the sheep from the goats. If possible, we should include sheep and goats from Turkey and nearby regions (3 marks).
+
+b) To process the genome sequence data to obtain SNPs, we would obtain a reference sheep genome (or reference goat genome) and map the reads from ENA and the ancient samples to the reference genome using a read mapper like BWA. Next, we would use a variant caller to call SNPs across all samples, generating a file containing all the SNPs from all the samples (3 marks).
+
+c) Once we have SNP calls, we would use a tool like PLINK to generate the PCA coordinates. We would plot the first two principal components. If the Çatalhöyük and Aşıklí samples cluster with the sheep samples, they are likely sheep. If they cluster with the goat samples, they are likely goats. If they fall in between, it may suggest they are hybrids or that there is some uncertainty (4 marks).
+
+
+**Question 2. Explain how you could use the 10 samples from Çatalhöyük and the 10 samples from Aşıklı Höyük to determine if the people of Çatalhöyük and Aşıklı Höyük traded sheep and/or goats (3 marks). Hint: Trading would appear like migration of goats.**
+
+Let's assume they kept goats. Since trading of goats would appear like *migration*, we would expect to observe goats in Çatalhöyük that are genetically similar to goats in Aşıklı Höyük or vice versa (1). A PCA plot may show this, but only if these two places had different breeds (like different populations), and we had a *fairly recent* goat trade in the data set of 10 ancient samples from each place (1). Such a recent traded goat would also be visible on a phylogenetic tree, as a Çatalhöyük goat in the Aşıklı clade or vice versa (1).
+
+
+**Question 3. Imagine there is a proposal that the people of Çatalhöyük and Aşıklı Höyük domesticated goats, and their domestic breeds gave rise to modern domestic breeds in Pakistan and the Mediterranean. Explain how you could use population genomics data to test this proposal. (6 marks)**
+
+If this were the case, then we would expect the modern domestic breeds in Pakistan and the Mediterranean to be genetically similar to the ancient goats from Çatalhöyük and Aşıklı Höyük.  Alternatively, if domestication occurred again from wild goats, the modern domestic samples would look different. A PCA plot would help here (3);
+
+- We would plot the ancient Çatalhöyük and Aşıklí samples along with the modern domestic goats from Pakistan and the Mediterranean, and the wild goats from Turkey and Iran. If the modern domestic goats cluster closely with the ancient Çatalhöyük and Aşıklí samples, it would support the proposal that they are descended from these ancient domesticated goats (2). If they cluster separately, it would suggest a different origin (1).
+
 
 
 

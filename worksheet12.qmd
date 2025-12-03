@@ -24,6 +24,11 @@ editor: source
     
 ---
 
+::: callout-important
+# This document now contains answers to questions.
+:::
+
+
 
 # Learning objectives
 
@@ -98,5 +103,23 @@ Hint: You can check this by:
 
 # Model answers
 
-Will be places here next week.
+**Question 1. Do Figure 1 and Figure 2 show the same tree topology?**
 
+While the two main clades contain the same members, these two phylogenetic trees do **not** have the same topology. For example, in Figure 1, *Leishmania infantum* and *Leishmania major* are sister species, but in Figure 2, *Leishmania infantum* is more closely related to *Leishmania donovani*.
+
+**Question 2. What do you notice about the gene content of the two main clades of species (A and B) in Figure 1? If there is a pattern, what evolutionary processes that operate within species will influence this?**
+
+There is a pattern: there is a large difference in the gene content between the two main clades. The *Leishmania* clade (A) has many genes that are absent from the *Trypanosome* clade (B), and vice versa. This suggests that there have been many gene gain and/or loss events since the two clades diverged from their common ancestor.
+
+The evolutionary processes that operate within species that will influence this include:
+
+ - mutation, in this case the mutations will be gene gain/loss events
+ - genetic drift, which can lead to the fixation or loss of genes in small populations
+ - natural selection, which can favour the retention of beneficial genes and the loss of deleterious
+
+
+**Question 3. Would you expect such changes to affect traits or fitness? If so, would you expect the average fitness change to be large or small?**
+
+Yes, we would expect such changes to affect traits and fitness. However, since the majority of changes with genomes are selectively neutral, we would you expect the average fitness change to be small. 
+
+For example, experiments with yeast have showed that most gene deletions very small effect on fitness in laboratory conditions, causing less than 5% increase or decrease in growth rates. 

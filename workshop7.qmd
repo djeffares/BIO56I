@@ -26,6 +26,10 @@ editor: source
     
 ---
 
+::: callout-important
+# This document now contains answers to questions.
+NB: Some of the answer are longer than we would expect in a real workshop setting, or for exam questions. But they provide more background information about evolutionary processes.
+:::
 
 # Learning objectives
 
@@ -119,9 +123,9 @@ To understand selection within a gene, we can calculate ratio of non-synonymous 
 
 | Gene | synonymous SNPs | non-synonymous SNPs | Interpretation |
 |:------:|:------:|:------:|:-------|
-| A | 1 | 10 | far fewer non-synonymous than synonymous SNPs: **purifying selection** has removed many non-synonymous SNPs |
-| B | 10 | 11 | non-synonymous and synonymous SNPs about the same: **no selection**  |
-| C | 20 | 10 | more non-synonymous than synonymous SNPs: **positive selection** has selected for non-synonymous SNPs |
+| A | 10 | 1 | far fewer non-synonymous than synonymous SNPs: **purifying selection** has removed many non-synonymous SNPs |
+| B | 11 | 10 | non-synonymous and synonymous SNPs about the same: **no selection**  |
+| C | 10 | 15 | more non-synonymous than synonymous SNPs: **positive selection** has selected for non-synonymous SNPs |
 
 : **N/S ratio examples** {.striped .hover}{tbl-colwidths="[5,15,15,60]"}
 
@@ -131,6 +135,7 @@ To understand selection within a gene, we can calculate ratio of non-synonymous 
 - **Gene A**: The N/S ratio is very low (N=1, S=10, N/S = 0.1). Since we observe many fewer non-synonymous (amino-acid changing) SNPs than synonymous SNPs **strong purifying selection** has probably been acting on this gene.
 
 - **Gene B**: The N/S ratio is near to 1 (N=10, S=11, N/S = 0.9). Since we observe the same number of non-synonymous (amino-acid changing) SNPs as synonymous SNPs it is likely that **no selection** has been acting on this gene.
+
 
 - **Gene C**: The N/S ratio is high (N=20, S=10, N/S = 2). Since we observe more non-synonymous (amino-acid changing) SNPs than synonymous SNPs **strong positive selection** has probably been acting on this gene
 
@@ -195,8 +200,18 @@ total_ratio <- sum(nonsyn_total / syn_total)
 # Discussion points: N/S ratios in L. donovani genes
 
 - Most genes have N/S ratios less than 1 (left of the red dashed line). What does this indicate?
+
+**Answer**: Mutations are approximately as likely to occur in 
+synonymous and non-synonymous sites. The fact that we observe far fewer non-synonymous SNPs than synonymous SNPs indicates purifying selection has removed many non-synonymous SNPs. Hence most genes are subject to purifying selection, to remove harmful mutations.
+
 - A few genes have N/S ratios greater than 1 (right of the red dashed line). What does this indicate?
+
+**Answer**: This could be one of two things. This could be merely stochastic (random) variation, where by chance we observe more non-synonymous SNPs than synonymous SNPs. Or it could indicate positive (or balancing) selection, where beneficial non-synonymous SNPs have been selected for.
+
 - In total, there are `57886` synonymous SNPs. We can assume that these are not subject to strong selection. In contrast, there are `48460` non-synonymous SNPs. So we have 83% as many **non-synonymous SNPs** as **synonymous SNPs**. Where did the other 17% of non-synonymous SNPs go? 
+
+**Answer**: They were probably removed by purifying selection, because most new non-synonymous mutations are harmful. Thsi shows the power of purifying selection, acting even over the short term, when examining within species variation.
+
 :::
 
 ## Shallow time: what kinds of genes have high or low N/S ratios?
@@ -379,9 +394,21 @@ To understand these large lists of genes, I again ran gene enrichment analyses o
 
 - Consider what kinds of genes are slowly evolving (Figure 6) and rapidly evolving (Figure 7).
 - Is this consistent with what we saw in the shallow time analysis?
+
+**Answer**: Yes, it is very consistent. In both cases, the rapidly evolving genes tend to be located on the outsides of cells (eg: membrane proteins), while the slowly evolving genes tend to be located deep within cells (eg: ribosomal proteins, mitochondrial proteins).
+
+
 - We used slightly different methods (N/S ratios vs percent identity), and different species comparisons (*L. donovani* within-species vs *L. donovani* vs *L. braziliensis* between-species). 
+
 - Yet we see similar patterns. What does this tell us about the processes of selection that operate within species (*L. donovani*) and between species?
+
+**Answer**: This provides support for the idea that within species diversity gives rise to between species divergence. The same kinds of genes tend to evolve rapidly or slowly over both short and long time scales, indicating that similar selective pressures are operating over both time scales.
+
 - Are rates of change higher for proteins the insides of cells, or the outsides of cells? Why might this be?
+
+**Answer**: Rates of change are higher for proteins located on the outsides of cells. This is probably because these proteins interact with the external environment, which is constantly changing, so these proteins need to adapt rapidly. In contrast, proteins located deep within cells tend to perform fundamental cellular processes (eg: protein translation by ribosomes), so changes to these proteins are more likely to be harmful, and hence purifying selection acts strongly to remove harmful mutations.
+
+
 :::
 
  
@@ -408,8 +435,17 @@ Here there is one very clear outline: **the ribosome**.
 We observe a fairly consistent pattern across all time scales that we have examined: genes that are located on the outsides of cells tend to evolve rapidly, while genes that are located deep within cells tend to evolve slowly. of course, there are exceptions, and the rates of protein change are affected by many other factors, but this general pattern is very clear. Let's consider this.
 
 - Why do you think that ribosomal proteins are so highly conserved over such long periods of time (Figure 8)?
+
+**Answer**: Ribosomes perform a fundamental cellular process: protein translation, so they produce every other protein in the cell (including the proteins that amke the ribosomes themselves). Imagine if a mutation altered the *accuracy* of protein translation, or the *speed* of the translation process. The consequences for ceullar (and therefore organismal) gitness coudl be disastrous. Therefore, ribosomal proteins are subject to **very strong** purifying selection, removing any harmful mutations, leading to very slow rates of evolutionary change.
+
 - Given the function of ribosomes in the cell, what might be the consequences of a mutation that reduced protein translation accuracy by 0.1%?
+
+**Answer**: A mutation that reduced protein translation accuracy by 0.1% could have very serious consequences for cellular fitness, because many proteins that have been evolving for millions of years would be sub-optimal. If ribsomal proteins themselves were mistranslated, this could lead to an *error cascade*, where more and more proteins are mistranslated, leading to a catastrophic failure of cellular function. 
+
 - Why do you think that proteins located on the outsides of cells tend to evolve rapidly?
+
+**Answer**: Proteins located on the outsides of cells often interact with the external environment, which is constantly changing. For example, membrane proteins may interact with other cells, pathogens, or environmental molecules. Therefore, these proteins need to adapt rapidly to changing conditions, leading to higher rates of evolutionary change.
+
 :::
 
 For those that are curious [the genes lists that I used for this analysis are here](https://docs.google.com/spreadsheets/d/1KmtZizHfnWdP1V2PJQZXV5G0p_NLEIM2vR8yGiTule0/edit?usp=sharing). You'll need to be signed in with your University of York Google account to access it.
@@ -438,6 +474,14 @@ In your answer, explain:
 
 Hint: consider both stochastic factors (randomness) and biological processes of evolutionary change. 
 
+**Answer 1.** No, we don't expect to see the same numbers of mutations in each gene. There are several factors that will alter the number of mutations we observe.
+
+- gene length (longer genes have more sites that can mutate)
+- stochastic factors (randomness): mutations occur ar random, so by chance some genes will acquire more mutations than others
+- selection: some genes are subject to strong purifying selection, which removes harmful mutations, leading to fewer observed mutations. 
+- Other genes may be subject to positive selection. Recent and strong periods of positive selection can dramatically *reduce* the number of observed mutations *within* a species. This could result in large differences in the number of observed mutations between genes.
+
+
 **Question 2. Given what you know about the fitness effects of mutations, which population genetic process would we expect to have the main impact on differences in evolutionary rates between genes?**
 
 In your answer, explain:
@@ -446,5 +490,12 @@ In your answer, explain:
 - Why this results in differences in evolutionary rates between genes
 - How we could test this hypothesis using genetic data from within and between species
 
+**Answer 2.**
+
+Since we observe in experimental data that most mutation are harmful, we would expect that **purifying selection** would have the main impact on differences in evolutionary rates between genes.
+
+Since some genes are more important for cellular function than others, we would expect that purifying selection would be stronger on these genes, removing more harmful mutations, leading to slower evolutionary rates. 
+
+We could count the number of synonymous and non-synonymous mutations within species. If purifying selection was the dominant process, we would expect to see far fewer non-synonymous mutations than synonymous mutations, because purifying selection would have removed many harmful non-synonymous mutations.
 
 

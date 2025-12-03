@@ -4,6 +4,11 @@
 
 - workshop5: done
 - workshop6: done
+- workshop7: done
+- worksheet10: done
+- worksheet11: done
+- worksheet12: done
+
 
 
 
