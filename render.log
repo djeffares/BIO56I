@@ -1,0 +1,900 @@
+[1m[34m[ 1/31] workshop7-no-answers.qmd[39m[22m
+[31m
+
+processing file: workshop7-no-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop7-no-answers.knit.md
+
+[39m[31m
+
+processing file: workshop7-no-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop7-no-answers.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[ 2/31] BIO00056I-notes.md[39m[22m
+[1m[34m[ 3/31] workshop5b.qmd[39m[22m
+[31m
+
+processing file: workshop5b.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5b.knit.md
+
+[39m[31m
+
+processing file: workshop5b.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5b.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[ 4/31] worksheet11.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[ 5/31] worksheet10.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[ 6/31] workshop9b.qmd[39m[22m
+[31m
+
+processing file: workshop9b.qmd
+[39m1/15                  
+2/15 [unnamed-chunk-1]
+3/15                  
+4/15 [unnamed-chunk-2]
+5/15                  
+6/15 [unnamed-chunk-3]
+7/15                  
+8/15 [unnamed-chunk-4]
+9/15                  
+10/15 [unnamed-chunk-5]
+11/15                  
+12/15 [unnamed-chunk-6]
+13/15                  
+14/15 [unnamed-chunk-7]
+15/15                  
+[31moutput file: workshop9b.knit.md
+
+[39m[WARNING] Div at line 56 column 1 unclosed at line 845 column 1, closing implicitly.
+[WARNING] Div at line 52 column 1 unclosed at line 845 column 1, closing implicitly.
+[31m
+
+processing file: workshop9b.qmd
+[39m1/15                  
+2/15 [unnamed-chunk-1]
+3/15                  
+4/15 [unnamed-chunk-2]
+5/15                  
+6/15 [unnamed-chunk-3]
+7/15                  
+8/15 [unnamed-chunk-4]
+9/15                  
+10/15 [unnamed-chunk-5]
+11/15                  
+12/15 [unnamed-chunk-6]
+13/15                  
+14/15 [unnamed-chunk-7]
+15/15                  
+[31moutput file: workshop9b.knit.md
+
+[39m[WARNING] Div at line 58 column 1 unclosed at line 432 column 1, closing implicitly.
+[WARNING] Div at line 54 column 1 unclosed at line 432 column 1, closing implicitly.
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[ 7/31] worksheet12.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[ 8/31] workshop5-old.qmd[39m[22m
+[31m
+
+processing file: workshop5-old.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5-old.knit.md
+
+[39m[31m
+
+processing file: workshop5-old.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5-old.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[ 9/31] workshop6-no-answers.qmd[39m[22m
+
+Starting python3 kernel...Done
+
+Executing 'workshop6-no-answers.quarto_ipynb'
+
+
+Starting python3 kernel...Done
+
+Executing 'workshop6-no-answers.quarto_ipynb'
+
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[10/31] workshop9c.qmd[39m[22m
+[31m
+
+processing file: workshop9c.qmd
+[39m1/14                  
+2/14 [unnamed-chunk-1]
+3/14                  
+4/14 [unnamed-chunk-2]
+5/14                  
+6/14 [unnamed-chunk-3]
+7/14                  
+8/14 [unnamed-chunk-4]
+9/14                  
+10/14 [unnamed-chunk-5]
+11/14 [unnamed-chunk-6]
+12/14                  
+13/14 [unnamed-chunk-7]
+14/14                  
+[31moutput file: workshop9c.knit.md
+
+[39m[WARNING] Div at line 56 column 1 unclosed at line 977 column 1, closing implicitly.
+[WARNING] Div at line 52 column 1 unclosed at line 977 column 1, closing implicitly.
+[31m
+
+processing file: workshop9c.qmd
+[39m1/14                  
+2/14 [unnamed-chunk-1]
+3/14                  
+4/14 [unnamed-chunk-2]
+5/14                  
+6/14 [unnamed-chunk-3]
+7/14                  
+8/14 [unnamed-chunk-4]
+9/14                  
+10/14 [unnamed-chunk-5]
+11/14 [unnamed-chunk-6]
+12/14                  
+13/14 [unnamed-chunk-7]
+14/14                  
+[31moutput file: workshop9c.knit.md
+
+[39m[WARNING] Div at line 58 column 1 unclosed at line 537 column 1, closing implicitly.
+[WARNING] Div at line 54 column 1 unclosed at line 537 column 1, closing implicitly.
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[11/31] workshop5-with-answers.qmd[39m[22m
+[31m
+
+processing file: workshop5-with-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5-with-answers.knit.md
+
+[39m[31m
+
+processing file: workshop5-with-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5-with-answers.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[12/31] worksheet11-questions-only.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[13/31] workshop5.qmd[39m[22m
+[31m
+
+processing file: workshop5.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5.knit.md
+
+[39m[31m
+
+processing file: workshop5.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[14/31] worksheet12-with-answers.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[15/31] old-files/BIO56I-pop-genomics-workshop.qmd[39m[22m
+[1m[34m[16/31] old-files/BIO56I-gwas-workshop.qmd[39m[22m
+[31m
+
+processing file: BIO56I-gwas-workshop.qmd
+[39m1/15                  
+2/15 [unnamed-chunk-1]
+3/15                  
+4/15 [unnamed-chunk-2]
+5/15                  
+6/15 [unnamed-chunk-3]
+7/15                  
+8/15 [unnamed-chunk-4]
+9/15                  
+10/15 [unnamed-chunk-5]
+11/15                  
+12/15 [unnamed-chunk-6]
+13/15                  
+14/15 [unnamed-chunk-7]
+15/15                  
+[31moutput file: BIO56I-gwas-workshop.knit.md
+
+[39m[WARNING] Div at line 55 column 1 unclosed at line 828 column 1, closing implicitly.
+[WARNING] Div at line 51 column 1 unclosed at line 828 column 1, closing implicitly.
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[17/31] old-files/BIO56I-phylogeny-and-clock-workshop.qmd[39m[22m
+[1m[34m[18/31] old-files/BIO56I-comp-genomics-workshop.qmd[39m[22m
+[1m[34m[19/31] index.qmd[39m[22m
+[1m[34m[20/31] workshop7.qmd[39m[22m
+[31m
+
+processing file: workshop7.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop7.knit.md
+
+[39m[31m
+
+processing file: workshop7.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop7.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[21/31] workshop5-no-answers.qmd[39m[22m
+[31m
+
+processing file: workshop5-no-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5-no-answers.knit.md
+
+[39m[31m
+
+processing file: workshop5-no-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop5-no-answers.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[22/31] workshop6.qmd[39m[22m
+
+Starting python3 kernel...Done
+
+Executing 'workshop6.quarto_ipynb'
+
+
+Starting python3 kernel...Done
+
+Executing 'workshop6.quarto_ipynb'
+
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[23/31] BIO00056I-exam-questions-2025.md[39m[22m
+[1m[34m[24/31] workshop6-with-answers.qmd[39m[22m
+
+Starting python3 kernel...Done
+
+Executing 'workshop6-with-answers.quarto_ipynb'
+
+
+Starting python3 kernel...Done
+
+Executing 'workshop6-with-answers.quarto_ipynb'
+
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[25/31] workshop9.qmd[39m[22m
+[31m
+
+processing file: workshop9.qmd
+[39m1/14                  
+2/14 [unnamed-chunk-1]
+3/14                  
+4/14 [unnamed-chunk-2]
+5/14                  
+6/14 [unnamed-chunk-3]
+7/14                  
+8/14 [unnamed-chunk-4]
+9/14                  
+10/14 [unnamed-chunk-5]
+11/14 [unnamed-chunk-6]
+12/14                  
+13/14 [unnamed-chunk-7]
+14/14                  
+[31moutput file: workshop9.knit.md
+
+[39m[WARNING] Div at line 58 column 1 unclosed at line 1027 column 1, closing implicitly.
+[WARNING] Div at line 54 column 1 unclosed at line 1027 column 1, closing implicitly.
+[31m
+
+processing file: workshop9.qmd
+[39m1/14                  
+2/14 [unnamed-chunk-1]
+3/14                  
+4/14 [unnamed-chunk-2]
+5/14                  
+6/14 [unnamed-chunk-3]
+7/14                  
+8/14 [unnamed-chunk-4]
+9/14                  
+10/14 [unnamed-chunk-5]
+11/14 [unnamed-chunk-6]
+12/14                  
+13/14 [unnamed-chunk-7]
+14/14                  
+[31moutput file: workshop9.knit.md
+
+[39m[WARNING] Div at line 58 column 1 unclosed at line 537 column 1, closing implicitly.
+[WARNING] Div at line 54 column 1 unclosed at line 537 column 1, closing implicitly.
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[26/31] worksheet10-questions-only.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[27/31] worksheet11-with-answers.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[28/31] worksheet12-no-answers.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[1m[34m[29/31] workshop7-with-answers.qmd[39m[22m
+[31m
+
+processing file: workshop7-with-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop7-with-answers.knit.md
+
+[39m[31m
+
+processing file: workshop7-with-answers.qmd
+[39m1/9                  
+2/9 [unnamed-chunk-1]
+3/9                  
+4/9 [unnamed-chunk-2]
+5/9                  
+6/9 [unnamed-chunk-3]
+7/9                  
+8/9 [unnamed-chunk-4]
+9/9                  
+[31moutput file: workshop7-with-answers.knit.md
+
+[39m[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[30/31] workshop9-old.qmd[39m[22m
+[31m
+
+processing file: workshop9-old.qmd
+[39m1/15                  
+2/15 [unnamed-chunk-1]
+3/15                  
+4/15 [unnamed-chunk-2]
+5/15                  
+6/15 [unnamed-chunk-3]
+7/15                  
+8/15 [unnamed-chunk-4]
+9/15                  
+10/15 [unnamed-chunk-5]
+11/15                  
+12/15 [unnamed-chunk-6]
+13/15                  
+14/15 [unnamed-chunk-7]
+15/15                  
+[31moutput file: workshop9-old.knit.md
+
+[39m[WARNING] Div at line 55 column 1 unclosed at line 828 column 1, closing implicitly.
+[WARNING] Div at line 51 column 1 unclosed at line 828 column 1, closing implicitly.
+[31mWarning message:
+The downlit and xml2 packages are required for code linking 
+[39m[1m[34m[31/31] worksheet10-with-answers.qmd[39m[22m
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning xelatex - 1[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 2[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+[1m[34mrunning xelatex - 3[39m[22m
+  This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+  
+
+
+Output created: docs/index.html
+

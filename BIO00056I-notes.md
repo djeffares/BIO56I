@@ -2,12 +2,13 @@
 
 ## Model anwsers for 2025
 
-- workshop5: done
-- workshop6: done
-- workshop7: done
-- worksheet10: done
-- worksheet11: done
-- worksheet12: done
+- workshop5: answers done, OK
+- workshop6: answers done, broken
+- workshop7: answers done, OK
+- workshop9: no answers, broken
+- worksheet10: done, broken
+- worksheet11: done, broken
+- worksheet12: done, broken
 
 
 
