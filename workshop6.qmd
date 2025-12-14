@@ -24,10 +24,9 @@ editor: source
 
 ---
 
-::: callout-important
-# This document now contains answers to questions.
+::: {.callout-important title="Assessment deadline for this module: update on 9/12/25"}
+The assessment for this module is a 2000 word report. **The deadline for this report has been moved by the Department of Biology, from Monday 19th January to Tuesday 20th Jan 12:00 noon.** See the [report guide](https://docs.google.com/document/d/19fI94usu-mPuBSbQf5j22jP1yhvExZE8EXied95IaQ0/edit?usp=sharing) for more details.
 :::
-
 
 # Learning objectives
 
