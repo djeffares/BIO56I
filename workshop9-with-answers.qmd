@@ -218,7 +218,7 @@ for (j in 1:3){
 
 - What biological processes could lead to a few tall peaks versus many low signals (e.g., selection, drift, mutation rate, linkage)?
 
-**Answer:** Selection might lead to this effect. If  alleles were present that had strong effects on traits, but they had not yet swept to fixation.
+**Answer:** Selection might lead to this effect. If alleles were present that had strong effects on traits, but they had not yet swept to fixation.
 
 :::
 
@@ -251,7 +251,7 @@ hist(salt$Effect_size,br=30)
 
 - What does the histogram shape tell you about the distribution of SNP effect sizes?
 
-**Answer:** The vast majority of SNPs that we find in genetic diversity this set have small effects on traits.
+**Answer:** The vast majority of SNPs that we find in genetic diversity in this set have small effects on traits.
 
 - How does this pattern relate to the Neutral Theory (many neutral or near-neutral variants)?
 
@@ -276,7 +276,7 @@ A [selective sweep](https://en.wikipedia.org/wiki/Selective_sweep) is a process 
 
 - If a trait is influenced by a few large-effect mutations, how likely is a classic selective sweep and why?
 
-**Answer:**  In this case a classic selective sweep is more likely, because selection will be acting strongly on those few SNPs, so their allele frequencies would be expected to change rapidly, thereby removing the genetic various around them.
+**Answer:** In this case a classic selective sweep is more likely, because selection will be acting strongly on those few SNPs, so their allele frequencies would be expected to change rapidly, thereby removing the genetic variation around them.
 
 - If a trait is influenced by many tiny-effect mutations, what evolutionary pattern replaces a sweep? (Think subtle allele frequency shifts.)
 
@@ -284,11 +284,11 @@ A [selective sweep](https://en.wikipedia.org/wiki/Selective_sweep) is a process 
 
 - How can tight linkage to a deleterious allele modify or slow a sweep?
 
-**Answer:**  If an advantageous SNP is very close to a deleterious SNP, and on the same haplotype, it might not change frequency at all.
+**Answer:** If an advantageous SNP is very close to a deleterious SNP, and on the same haplotype, it might not change frequency at all.
 
 - What genomic signatures (e.g., reduced diversity, extended haplotype homozygosity) would differ between oligogenic and highly polygenic adaptation?
 
-**Answer:** Reduced diversity would be less obvious in highly polygenic adaptation, as it difficult to distinguish from stochastic variation in diversity. 
+**Answer:** Reduced diversity would be less obvious in highly polygenic adaptation, as it is difficult to distinguish from stochastic variation in diversity. 
 
 :::
 
@@ -331,7 +331,7 @@ for (j in 1:3){
 
 - How could environmental context (salinity vs sugar availability) shift which alleles are favoured?
 
-**Answer:** If the organism (yeast, in this case) moves from one environment to another, or if the environment changes (e.g., the soil  more saline or more sugary), different alleles may be favoured by selection, depending on which traits are more important for survival and reproduction in that context.
+**Answer:** If the organism (yeast, in this case) moves from one environment to another, or if the environment changes (e.g., the soil becomes more saline or more sugary), different alleles may be favoured by selection, depending on which traits are more important for survival and reproduction in that context.
 
 :::
 
@@ -425,7 +425,7 @@ The figures below will help to explain.
 
 - Which scenario (single vs opposing haplotypes) better facilitates rapid multi-trait optimisation?
 
-**Answer:**  The single haplotype scenario better facilitates rapid multi-trait optimisation, as it allows for the simultaneous selection of beneficial alleles for both traits without interference.
+**Answer:** The single haplotype scenario better facilitates rapid multi-trait optimisation, as it allows for the simultaneous selection of beneficial alleles for both traits without interference.
 :::
 
 ![](images/pombe2.jpg){width=100%}
@@ -469,11 +469,24 @@ This question checks your understanding of quantitative traits and why most vari
 
 a) **Define** the difference between a simple (single-gene) trait and a quantitative trait. Give one example of each from this workshop. (2 points)
 
+**Answer**: A simple (single-gene) trait is controlled by one gene, where a mutation in that gene can lead to a distinct phenotype. An example from this workshop could be a hypothetical mutation in a gene that confers resistance to a specific toxin. A quantitative trait is influenced by multiple genes, each contributing a small effect to the overall phenotype. An example from this workshop is salt tolerance, which is affected by many SNPs with small effect sizes.
+
 b) The histogram of SNP effect sizes for the salt trait is heavily skewed towards zero. **Describe** what this pattern tells us about the distribution of SNP effects in the population. (3 points)
+
+**Answer**: The histogram indicates that the majority of SNPs have very small or negligible effects on the salt tolerance trait. This suggests that most genetic variation in the population does not significantly influence this trait, while only a few SNPs have larger effects. This pattern is consistent with the idea that quantitative traits are polygenic, with many loci contributing small effects rather than a few loci having large effects.
 
 c) Using the [Neutral Theory of Molecular Evolution](https://en.wikipedia.org/wiki/Neutral_theory_of_molecular_evolution), **explain** why most SNPs are expected to have little or no effect on fitness. (3 points)
 
+**Answer**: The Neutral Theory of Molecular Evolution posits that most genetic variation is neutral with respect to fitness, meaning that it does not affect an organism's ability to survive and reproduce. There are several reasons for this; 
+
+- From molecular biology, we know that synonymous mutations (that do not change the protein sequence) are unlikely to affect fitness. Even nonsynonymous mutations in coding regions (that **do** change the protein sequence) generally have small effects on fitness, because we are altering just one amino acid within the 5,000 protein-coding genes of fission yeast.
+- From population genetics, we know that deleterious mutations are removed by purifying selection, and beneficial mutations are rare and often fixed rapidly by positive selection.
+- So, most SNPs that *persist in the population* are either neutral or nearly neutral, leading to the expectation that most SNPs will have little or no effect on fitness.
+
+
 d) **Suggest** one practical way to increase the power of a GWAS to detect very small-effect variants and explain why it helps. (2 points)
+
+**Answer**: Increase the sample size of the study population. A larger sample size increases the statistical power to detect associations between SNPs and traits.
 
 ## Question 2 (10 points)
 
@@ -481,10 +494,16 @@ You notice that the Manhattan plots for salt tolerance and glucose/fructose util
 
 a) **Describe** what an overlapping peak for both traits suggests about the underlying genetics of those traits. (3 points)
 
+**Answer:** An overlapping peak for both traits suggests that there may be a shared genetic basis influencing both salt tolerance and glucose/fructose utilisation. This could indicate pleiotropy, where a single genetic variant affects multiple traits, or it could suggest that the two traits are influenced by closely linked genetic variants located near each other on the chromosome.
+
 b) **State** one additional analysis you could carry out to test whether the same causal variant influences both traits. (2 points)
+
+**Answer**: We could use CRISPR-Cas9 gene editing to create targeted mutations in the candidate gene(s) located within the overlapping peak region. By observing the effects of these mutations on both salt tolerance and glucose/fructose utilisation, we can determine if the same causal variant influences both traits.
 
 c) **Explain** how recombination could help resolve a situation where beneficial alleles for two traits are on different haplotypes. (3 points)
 
+**Answer**: Recombination during meiosis can shuffle genetic variants between homologous chromosomes, allowing beneficial alleles for different traits that are initially on separate haplotypes to be brought together onto the same haplotype. This process can create new combinations of alleles that confer advantages for both traits simultaneously, thereby resolving the conflict between opposing haplotypes and facilitating multi-trait optimisation.
+
 d) **Identify** one environmental measurement you would collect alongside the genomic data to interpret potential trade-offs between the two traits, and justify your choice. (2 points)
 
-
+**Answer**: All of the experiments in this workshop relate to salt tolerance and sugar metabolism in the laboratory. Therefore, we would collect data on environmental salinity levels in the natural habitats where *S. pombe* is found, and measure environmental salinity. Justification: The workshop emphasizes that species face complex, multivariable environments—illustrated by the example of a "coastal vineyard" that is both salty and fructose-rich. By measuring natural salinity levels in the fruiting environments we could determine how the laboratory experiments might relate to the natural environment.
