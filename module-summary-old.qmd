@@ -124,20 +124,20 @@ $$F_{ST} = \frac{H_T - H_S}{H_T}$$
 
 - **Neutral Theory of Molecular Evolution**: Formulated by Motoo Kimura (1983), stating that most genetic variation within and between species is selectively neutral (having little or no effect on fitness).
 - **Mathematical Derivation of the Molecular Clock**:
-  - In a diploid population of size $N$, with a neutral mutation rate $\mu$ per gamete per generation, there are $2N\mu$ new mutations each generation.
+  - In a diploid population of size $N$, with a neutral mutation rate $v$ per gamete per generation, there are $2Nv$ new mutations each generation.
   - The fixation probability $u$ of any single neutral mutation by random genetic drift equals its initial frequency:
 
 $$u = \frac{1}{2N}$$
 
   - The substitution rate $k$ (number of fixed substitutions per unit time) is:
 
-$$k = 2N\mu \cdot u = 2N\mu \left(\frac{1}{2N}\right) = \mu$$
+$$k = 2Nv \cdot u = 2Nv \left(\frac{1}{2N}\right) = v$$
 
-- **Core Result**: The substitution rate $k$ equals the neutral mutation rate $\mu$ and is completely independent of population size $N$.
-- **The Molecular Clock Concept**: Because $k = \mu$, neutral mutations become fixed at a constant rate over time, allowing sequence divergence to act as a clock.
+- **Core Result**: The substitution rate $k$ equals the neutral mutation rate $v$ and is completely independent of population size $N$.
+- **The Molecular Clock Concept**: Because $k = v$, neutral mutations become fixed at a constant rate over time, allowing sequence divergence to act as a clock.
 - **Stochastic Nature**: Accumulation of substitutions is a stochastic process (contains inherent randomness).
 - **Factors Influencing Clock Rates**:
-  - **Mutation Rate ($\mu$)**: Varies across organisms and viral types.
+  - **Mutation Rate ($v$)**: Varies across organisms and viral types.
   - **Purifying Selection**: Removes harmful mutations, slowing the rate of substitution. Exons experience stronger purifying selection than introns, resulting in fewer observed substitutions.
 
 ---
@@ -180,7 +180,7 @@ $$k = 2N\mu \cdot u = 2N\mu \left(\frac{1}{2N}\right) = \mu$$
 - **Medical Genetics & Pathogen Tracking**: Mapping disease loci, quantifying pathogen substitution rates, and tracking transmission chains using time trees.
 - **Agriculture & Pest Management**: Detecting selection on pesticide resistance ($F_{ST}$ outliers) and modeling crop pest adaptation.
 - **Conservation Management**: Incorporating $N_e$, $F_{ST}$, ESUs, and genetic rescue to halt extinction vortices in threatened populations.
-- **Genomics & Computational Tools**: Synthesis of theoretical population models ($N_e$, $F_{ST}$, $k = \mu$) with high-throughput sequencing, non-tree clustering (PCA, STRUCTURE), and phylogenetic software (MEGA, IQ-TREE, RAxML-NG).
+- **Genomics & Computational Tools**: Synthesis of theoretical population models ($N_e$, $F_{ST}$, $k = v$) with high-throughput sequencing, non-tree clustering (PCA, STRUCTURE), and phylogenetic software (MEGA, IQ-TREE, RAxML-NG).
 
 ---
 
@@ -266,9 +266,9 @@ $$V_G = V_A + V_D + V_I$$
   - Single-parent regression slope $b$ gives $h^2 = 2b$.
 - **The Breeder's Equation**:
 
-$$R = h^2 S$$
+$$R = h^2 s$$
 
-  - Selection Differential ($S = M_S - M$) and Response to Selection ($R = M' - M$).
+  - Selection Differential ($s = M_S - M$) and Response to Selection ($R = M' - M$).
 
 ---
 
