@@ -30,6 +30,8 @@ website:
       - href: worksheet12.qmd
         text: "worksheet 12"
 
+      - href: module-summary
+        text: "module summary"
 
 format:
   html:
