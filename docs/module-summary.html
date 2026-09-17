@@ -383,7 +383,7 @@ window.Quarto = {
 <li><strong>Neutral Theory of Molecular Evolution</strong>: Formulated by Motoo Kimura (1983), stating that most genetic variation within and between species is selectively neutral (having little or no effect on fitness).</li>
 <li><strong>Mathematical Derivation of the Molecular Clock</strong>:
 <ul>
-<li>In a diploid population of size <span class="math inline">\(N\)</span>, with a neutral mutation rate <span class="math inline">\(v\)</span> per gamete per generation, there are <span class="math inline">\(2Nv\)</span> new mutations each generation.</li>
+<li>In a diploid population of size <span class="math inline">\(N\)</span>, with a neutral mutation rate <span class="math inline">\(\mu\)</span> per gamete per generation, there are <span class="math inline">\(2N\mu\)</span> new mutations each generation.</li>
 <li>The fixation probability <span class="math inline">\(u\)</span> of any single neutral mutation by random genetic drift equals its initial frequency:</li>
 </ul></li>
 </ul>
@@ -391,14 +391,14 @@ window.Quarto = {
 <ul>
 <li>The substitution rate <span class="math inline">\(k\)</span> (number of fixed substitutions per unit time) is:</li>
 </ul>
-<p><span class="math display">\[k = 2Nv \cdot u = 2Nv \left(\frac{1}{2N}\right) = v\]</span></p>
+<p><span class="math display">\[k = 2N\mu \cdot u = 2N\mu \left(\frac{1}{2N}\right) = \mu\]</span></p>
 <ul>
-<li><strong>Core Result</strong>: The substitution rate <span class="math inline">\(k\)</span> equals the neutral mutation rate <span class="math inline">\(v\)</span> and is completely independent of population size <span class="math inline">\(N\)</span>.</li>
-<li><strong>The Molecular Clock Concept</strong>: Because <span class="math inline">\(k = v\)</span>, neutral mutations become fixed at a constant rate over time, allowing sequence divergence to act as a clock.</li>
+<li><strong>Core Result</strong>: The substitution rate <span class="math inline">\(k\)</span> equals the neutral mutation rate <span class="math inline">\(\mu\)</span> and is completely independent of population size <span class="math inline">\(N\)</span>.</li>
+<li><strong>The Molecular Clock Concept</strong>: Because <span class="math inline">\(k = \mu\)</span>, neutral mutations become fixed at a constant rate over time, allowing sequence divergence to act as a clock.</li>
 <li><strong>Stochastic Nature</strong>: Accumulation of substitutions is a stochastic process (contains inherent randomness).</li>
 <li><strong>Factors Influencing Clock Rates</strong>:
 <ul>
-<li><strong>Mutation Rate (<span class="math inline">\(v\)</span>)</strong>: Varies across organisms and viral types.</li>
+<li><strong>Mutation Rate (<span class="math inline">\(\mu\)</span>)</strong>: Varies across organisms and viral types.</li>
 <li><strong>Purifying Selection</strong>: Removes harmful mutations, slowing the rate of substitution. Exons experience stronger purifying selection than introns, resulting in fewer observed substitutions.</li>
 </ul></li>
 </ul>
@@ -451,7 +451,7 @@ window.Quarto = {
 <li><strong>Medical Genetics &amp; Pathogen Tracking</strong>: Mapping disease loci, quantifying pathogen substitution rates, and tracking transmission chains using time trees.</li>
 <li><strong>Agriculture &amp; Pest Management</strong>: Detecting selection on pesticide resistance (<span class="math inline">\(F_{ST}\)</span> outliers) and modeling crop pest adaptation.</li>
 <li><strong>Conservation Management</strong>: Incorporating <span class="math inline">\(N_e\)</span>, <span class="math inline">\(F_{ST}\)</span>, ESUs, and genetic rescue to halt extinction vortices in threatened populations.</li>
-<li><strong>Genomics &amp; Computational Tools</strong>: Synthesis of theoretical population models (<span class="math inline">\(N_e\)</span>, <span class="math inline">\(F_{ST}\)</span>, <span class="math inline">\(k = v\)</span>) with high-throughput sequencing, non-tree clustering (PCA, STRUCTURE), and phylogenetic software (MEGA, IQ-TREE, RAxML-NG).</li>
+<li><strong>Genomics &amp; Computational Tools</strong>: Synthesis of theoretical population models (<span class="math inline">\(N_e\)</span>, <span class="math inline">\(F_{ST}\)</span>, <span class="math inline">\(k = \mu\)</span>) with high-throughput sequencing, non-tree clustering (PCA, STRUCTURE), and phylogenetic software (MEGA, IQ-TREE, RAxML-NG).</li>
 </ul>
 <hr>
 </section>
@@ -598,9 +598,9 @@ window.Quarto = {
 </ul></li>
 <li><strong>The Breeder’s Equation</strong>:</li>
 </ul>
-<p><span class="math display">\[R = h^2 s\]</span></p>
+<p><span class="math display">\[R = h^2 S\]</span></p>
 <ul>
-<li>Selection Differential (<span class="math inline">\(s = M_S - M\)</span>) and Response to Selection (<span class="math inline">\(R = M' - M\)</span>).</li>
+<li>Selection Differential (<span class="math inline">\(S = M_S - M\)</span>) and Response to Selection (<span class="math inline">\(R = M' - M\)</span>).</li>
 </ul>
 <hr>
 </section>
@@ -1306,20 +1306,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Neutral Theory of Molecular Evolution**: Formulated by Motoo Kimura (1983), stating that most genetic variation within and between species is selectively neutral (having little or no effect on fitness).</span>
 <span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mathematical Derivation of the Molecular Clock**:</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>In a diploid population of size $N$, with a neutral mutation rate $v$ per gamete per generation, there are $2Nv$ new mutations each generation.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>In a diploid population of size $N$, with a neutral mutation rate $\mu$ per gamete per generation, there are $2N\mu$ new mutations each generation.</span>
 <span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The fixation probability $u$ of any single neutral mutation by random genetic drift equals its initial frequency:</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>$$u = \frac{1}{2N}$$</span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The substitution rate $k$ (number of fixed substitutions per unit time) is:</span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$k = 2Nv \cdot u = 2Nv \left(\frac{1}{2N}\right) = v$$</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$k = 2N\mu \cdot u = 2N\mu \left(\frac{1}{2N}\right) = \mu$$</span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Core Result**: The substitution rate $k$ equals the neutral mutation rate $v$ and is completely independent of population size $N$.</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The Molecular Clock Concept**: Because $k = v$, neutral mutations become fixed at a constant rate over time, allowing sequence divergence to act as a clock.</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Core Result**: The substitution rate $k$ equals the neutral mutation rate $\mu$ and is completely independent of population size $N$.</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The Molecular Clock Concept**: Because $k = \mu$, neutral mutations become fixed at a constant rate over time, allowing sequence divergence to act as a clock.</span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Stochastic Nature**: Accumulation of substitutions is a stochastic process (contains inherent randomness).</span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Factors Influencing Clock Rates**:</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Mutation Rate ($v$)**: Varies across organisms and viral types.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Mutation Rate ($\mu$)**: Varies across organisms and viral types.</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Purifying Selection**: Removes harmful mutations, slowing the rate of substitution. Exons experience stronger purifying selection than introns, resulting in fewer observed substitutions.</span>
 <span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>---</span>
@@ -1362,7 +1362,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Medical Genetics &amp; Pathogen Tracking**: Mapping disease loci, quantifying pathogen substitution rates, and tracking transmission chains using time trees.</span>
 <span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Agriculture &amp; Pest Management**: Detecting selection on pesticide resistance ($F_{ST}$ outliers) and modeling crop pest adaptation.</span>
 <span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Conservation Management**: Incorporating $N_e$, $F_{ST}$, ESUs, and genetic rescue to halt extinction vortices in threatened populations.</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Genomics &amp; Computational Tools**: Synthesis of theoretical population models ($N_e$, $F_{ST}$, $k = v$) with high-throughput sequencing, non-tree clustering (PCA, STRUCTURE), and phylogenetic software (MEGA, IQ-TREE, RAxML-NG).</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Genomics &amp; Computational Tools**: Synthesis of theoretical population models ($N_e$, $F_{ST}$, $k = \mu$) with high-throughput sequencing, non-tree clustering (PCA, STRUCTURE), and phylogenetic software (MEGA, IQ-TREE, RAxML-NG).</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
@@ -1448,9 +1448,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Single-parent regression slope $b$ gives $h^2 = 2b$.</span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The Breeder's Equation**:</span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>$$R = h^2 s$$</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>$$R = h^2 S$$</span>
 <span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Selection Differential ($s = M_S - M$) and Response to Selection ($R = M' - M$).</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Selection Differential ($S = M_S - M$) and Response to Selection ($R = M' - M$).</span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
