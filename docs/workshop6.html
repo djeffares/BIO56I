@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Daniel Jeffares">
-<meta name="dcterms.date" content="2025-12-09">
+<meta name="dcterms.date" content="2026-09-17">
 
 <title>BIO00056I</title>
 <style>
@@ -103,6 +103,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -176,25 +205,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">1</span> Learning objectives</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">1</span> Learning Objectives</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a>
   <ul class="collapse">
   <li><a href="#evolution-populations-and-genome-data" id="toc-evolution-populations-and-genome-data" class="nav-link" data-scroll-target="#evolution-populations-and-genome-data"><span class="header-section-number">2.1</span> Evolution, populations and genome data</a></li>
-  <li><a href="#the-topic-for-today" id="toc-the-topic-for-today" class="nav-link" data-scroll-target="#the-topic-for-today"><span class="header-section-number">2.2</span> The topic for today</a></li>
-  <li><a href="#the-data-we-will-use-in-this-workshop" id="toc-the-data-we-will-use-in-this-workshop" class="nav-link" data-scroll-target="#the-data-we-will-use-in-this-workshop"><span class="header-section-number">2.3</span> The data we will use in this workshop</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3</span> Exercises</a>
+  <li><a href="#case-study-context-amazonian-leishmania" id="toc-case-study-context-amazonian-leishmania" class="nav-link" data-scroll-target="#case-study-context-amazonian-leishmania"><span class="header-section-number">3</span> Case Study Context: Amazonian <em>Leishmania</em></a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data"><span class="header-section-number">4</span> The data</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">5</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link" data-scroll-target="#exploring-the-data"><span class="header-section-number">3.1</span> Exploring the data</a></li>
-  <li><a href="#the-phylogeny" id="toc-the-phylogeny" class="nav-link" data-scroll-target="#the-phylogeny"><span class="header-section-number">3.2</span> The phylogeny</a></li>
-  <li><a href="#principal-components-clustering" id="toc-principal-components-clustering" class="nav-link" data-scroll-target="#principal-components-clustering"><span class="header-section-number">3.3</span> Principal components clustering</a></li>
-  <li><a href="#admixturestructure-plots" id="toc-admixturestructure-plots" class="nav-link" data-scroll-target="#admixturestructure-plots"><span class="header-section-number">3.4</span> Admixture/STRUCTURE plots</a></li>
+  <li><a href="#data-variant-call-format-vcf" id="toc-data-variant-call-format-vcf" class="nav-link" data-scroll-target="#data-variant-call-format-vcf"><span class="header-section-number">5.1</span> Data &amp; Variant Call Format (VCF)</a></li>
+  <li><a href="#reticulate-evolution-network-phylogenetics" id="toc-reticulate-evolution-network-phylogenetics" class="nav-link" data-scroll-target="#reticulate-evolution-network-phylogenetics"><span class="header-section-number">5.2</span> Reticulate Evolution &amp; Network Phylogenetics</a></li>
+  <li><a href="#population-structure-dimensionality-reduction-pca" id="toc-population-structure-dimensionality-reduction-pca" class="nav-link" data-scroll-target="#population-structure-dimensionality-reduction-pca"><span class="header-section-number">5.3</span> Population Structure &amp; Dimensionality Reduction (PCA)</a></li>
+  <li><a href="#ancestry-proportions-admixture-analysis" id="toc-ancestry-proportions-admixture-analysis" class="nav-link" data-scroll-target="#ancestry-proportions-admixture-analysis"><span class="header-section-number">5.4</span> Ancestry Proportions &amp; Admixture Analysis</a></li>
   </ul></li>
-  <li><a href="#summary-what-we-have-learned" id="toc-summary-what-we-have-learned" class="nav-link" data-scroll-target="#summary-what-we-have-learned"><span class="header-section-number">4</span> Summary: what we have learned</a></li>
-  <li><a href="#after-the-workshop-exam-style-questions" id="toc-after-the-workshop-exam-style-questions" class="nav-link" data-scroll-target="#after-the-workshop-exam-style-questions"><span class="header-section-number">5</span> After the workshop: exam-style questions</a>
+  <li><a href="#summary-of-core-takeaways" id="toc-summary-of-core-takeaways" class="nav-link" data-scroll-target="#summary-of-core-takeaways"><span class="header-section-number">6</span> Summary of Core Takeaways</a></li>
+  <li><a href="#post-workshop-practice-questions" id="toc-post-workshop-practice-questions" class="nav-link" data-scroll-target="#post-workshop-practice-questions"><span class="header-section-number">7</span> Post-Workshop Practice Questions</a>
   <ul class="collapse">
-  <li><a href="#question-1.-populations-and-migration" id="toc-question-1.-populations-and-migration" class="nav-link" data-scroll-target="#question-1.-populations-and-migration"><span class="header-section-number">5.1</span> Question 1. Populations and migration</a></li>
-  <li><a href="#question-2.-understanding-populations-from-dna" id="toc-question-2.-understanding-populations-from-dna" class="nav-link" data-scroll-target="#question-2.-understanding-populations-from-dna"><span class="header-section-number">5.2</span> Question 2. Understanding populations from DNA</a></li>
+  <li><a href="#question-1-human-population-structure-isolation-by-distance" id="toc-question-1-human-population-structure-isolation-by-distance" class="nav-link" data-scroll-target="#question-1-human-population-structure-isolation-by-distance"><span class="header-section-number">7.1</span> Question 1: Human Population Structure &amp; Isolation by Distance</a></li>
+  <li><a href="#question-2-population-genomic-methods-workflows" id="toc-question-2-population-genomic-methods-workflows" class="nav-link" data-scroll-target="#question-2-population-genomic-methods-workflows"><span class="header-section-number">7.2</span> Question 2: Population Genomic Methods &amp; Workflows</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="workshop6.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -205,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">BIO00056I</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Workshop 6: Population Genomics</p>
+<p class="subtitle lead">Workshop 6: Population Genomics &amp; Parasite Eco-Epidemiology</p>
 </div>
 
 
@@ -222,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 9, 2025</p>
+      <p class="date">September 17, 2026</p>
     </div>
   </div>
   
@@ -234,409 +263,373 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled" title="Assessment deadline for this module: update on 9/12/25">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Assessment deadline for this module: update on 9/12/25
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The assessment for this module is a 2000 word report. <strong>The deadline for this report has been moved by the Department of Biology, from Monday 19th January to Tuesday 20th Jan 12:00 noon.</strong> See the <a href="https://docs.google.com/document/d/19fI94usu-mPuBSbQf5j22jP1yhvExZE8EXied95IaQ0/edit?usp=sharing">report guide</a> for more details.</p>
-</div>
-</div>
 <section id="learning-objectives" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Learning objectives</h1>
-<p>The aims of this workshop are to:</p>
+<h1 data-number="1"><span class="header-section-number">1</span> Learning Objectives</h1>
 <ul>
-<li>Learn more about population genomics data</li>
-<li>View a real-world example of population structure analysis</li>
-<li>Appreciate how population genomics can be applied to eco-epidemiology (the study of the ecology of infectious diseases)</li>
+<li><p><strong>SNP Data</strong>: We show how single nucleotide polymorphism (SNP) data are stored in Variant Call Format (VCF). This kind of data is fundamental to modern population genomics. For example, we used the VCF file to generate the phylogenetic network, PCA, and STRUCTURE plots shown in this workshop.</p></li>
+<li><p><strong>Population Structure</strong>: We show how to understand population structure using three different methods; a phylogenetic network, principal component analysis (PCA), and STRUCTURE/ADMIXTURE plots.</p></li>
+<li><p><strong>Species diversity and hybridization</strong>: We show how to interpret the population structure of sympatric species, and how to identify hybrid individuals, various ways of analysing and displaying the SNP data; phylogenetic network, PCA, and STRUCTURE plots shown in this workshop.</p></li>
 </ul>
+<hr>
 </section>
 <section id="introduction" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
 <section id="evolution-populations-and-genome-data" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="evolution-populations-and-genome-data"><span class="header-section-number">2.1</span> Evolution, populations and genome data</h2>
-<p>You will be aware now from earlier on in this module that:</p>
-<p>– Sometimes hybrids occur between these closely related species.</p>
+<p>Earlier on in this module we introduced some concepts of populations:</p>
 <ul>
-<li>Most species contain multiple populations. Genetically, a population is a group of individuals more closely related to each other than to other groups, reflecting shared ancestry.</li>
+<li>Virtually all species contain different <strong>populations</strong> of individuals</li>
+<li>Populations contain some genetic differences between them</li>
+<li>There can be <strong>gene flow</strong> between some populations</li>
+<li>Gene flow occurs when an individual from one population mates with an individual from another population</li>
 </ul>
-<p>In practice, it can be hard to tell which population—or even which species—an individual belongs to, especially for micro-organisms. In this workshop, we’ll use genome data to investigate these questions.</p>
+<p>In practice, it can be hard to tell which population—or even which species—an individual belongs to, especially for micro-organisms. In this workshop, we’ll use genome data to examine populations, and species of <em>Leishmania</em> a single celled parasite.</p>
 <p>In Figure 1 below, each box represents a <em>population</em> that contains many individuals. Red and blue boxes represent two species. Some regions have hybrids (mixed colours), and some do not. Some populations show a little mixing; others show a lot.</p>
 <p><img src="images/populations1.jpg" class="img-fluid"> Figure 1: Imagined populations of two species (red and blue), with some hybrids and varying levels of mixing.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In this workshop, we aim to improve our understanding of these topics
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Populations and population structure:</strong> Populations are very important, because all evolution occurs within a population</p></li>
+<li><p><strong>Population Genomics</strong>: We show show whole-genome sequencing can reveal populations, and hybrids between populations and species.</p></li>
+<li><p><strong>Population analysis</strong>: We see how populations can be visualised in different ways. Today, use principal component analysis (PCA), STRUCTURE plots, and a phylogenetic networks to look at the same data.</p></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="the-topic-for-today" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="the-topic-for-today"><span class="header-section-number">2.2</span> The topic for today</h2>
-<p>In this workshop, we’ll look at new genome data from <em>Leishmania</em> parasites collected in the Amazon. <em>Leishmania</em> are single-celled protozoan parasites that infect mammals, including people. They have two copies of each chromosome (diploid) and reproduce sexually (they undergo meiosis).</p>
-<p>We’ll focus on <em>Leishmania guyanensis</em> and closely related species found in South America. Together they form a species complex called Viannia—closely related species that can sometimes interbreed where their ranges overlap.</p>
-<p>These parasites cause cutaneous leishmaniasis (CL), a skin disease that leads to long-lasting sores. CL is zoonotic, meaning it mostly circulates in wild animals; humans are infected but probably play a small role in maintaining the parasite population.</p>
-<p>Because Viannia parasites infect many native mammals in South America, they are probably deeply embedded in the region’s ecology.</p>
-<section id="leishmania-are-spread-by-sand-flies" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="leishmania-are-spread-by-sand-flies"><span class="header-section-number">2.2.1</span> Leishmania are spread by sand flies</h3>
-<p>Three facts about sand flies are important for today:</p>
+</section>
+<section id="case-study-context-amazonian-leishmania" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Case Study Context: Amazonian <em>Leishmania</em></h1>
+<p><em>Leishmania</em> parasites are diploid, single-celled protozoans that reproduce sexually via meiosis and cause Cutaneous Leishmaniasis (CL). In South America, species within the <em>Viannia</em> subgenus infect wild mammalian reservoir hosts and are transmitted by phlebotomine sand fly vectors. Because sand flies are weak fliers with narrow ecological niches, spatial gene flow (<span class="math inline">\(m\)</span>) is limited, allowing stochastic genetic drift to drive differentiation between geographically separated populations.</p>
+<p>We analyzed whole-genome short-read sequencing data from 152 isolates (or strains) of <em>Leishmania</em>. In this context, a <em>strain</em> is the same as an individual within a species. We look at <em>Leishmania</em> strains from several different species. All these species are present in the Amazonian region of Brazil.</p>
+<p>Today, we examine some population genomics results. These were generated from the genomes <em>Leishmania</em> strains. As we explained in the lecture on <strong>Population Genomics</strong>, we used the genome data to identify single nucleotide polymorphisms (SNPs) across the genomes of these strains. We then used the SNP data to generate a phylogenetic network, PCA, and STRUCTURE plots.</p>
+</section>
+<section id="the-data" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The data</h1>
+<p>The data we look at today come from 152 <em>Leishmania</em> strains. These strains are from several different species of <em>Leishmania</em>. The strains were collected from two sources:</p>
 <ul>
-<li>Sand flies are mainly found in forests or forest edges (not in sand on the beach).</li>
-<li>They are not strong flyers, so they don’t carry <em>Leishmania</em> parasites very long distances.</li>
-<li>The different sand fly species, and even populations within species, have their own ecological niches and characteristics.
+<li>71 <em>Leishmania</em> genomes that were collected from CL patients in Manaus, Brazil (we <em>think</em> these are <em>L. guyanensis</em>, but we’ll see)</li>
+<li>81 <em>Leishmania</em> genomes that we downloaded from the the <a href="https://www.ncbi.nlm.nih.gov/sra">NCBI Sequence Read Archive (SRA)</a> for the following species: <em>L. braziliensis</em> (<span class="math inline">\(n=21\)</span>), <em>L. panamensis</em> (<span class="math inline">\(n=25\)</span>), <em>L. peruviana</em> (<span class="math inline">\(n=34\)</span>), and <em>L. shawi</em> (<span class="math inline">\(n=1\)</span>).</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The <a href="https://www.ncbi.nlm.nih.gov/sra">NCBI Sequence Read Archive (SRA)</a> contain genomes from many different species.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SRA is a public repository for raw sequencing data. It is a great resource for population genomics studies, because it allows researchers to download and analyze data from many different species and populations.</p>
+</div>
+</div>
+</section>
+<section id="exercises" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Exercises</h1>
+<section id="data-variant-call-format-vcf" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="data-variant-call-format-vcf"><span class="header-section-number">5.1</span> Data &amp; Variant Call Format (VCF)</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Core concepts: Population Genomics &amp; Population Structure
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>For example, certain populations of sand flies carry some species of <em>Leishmania</em>, but not others.</li>
+<li><p>Population genomic studies almost always use Single Nucleotide Polymorphisms (SNPs) as their input data.</p></li>
+<li><p>This is because we find many SNPs in genomes, and they are relatively easy to analyze.This make SNPs ideal for discovering <strong>population structure</strong>, and analysing <strong>genetic drift</strong>, <strong>allele frequencies</strong> and <strong>natural selection</strong></p></li>
+<li><p>Population genomic studies very often start by analysing <strong>population structure</strong></p></li>
+</ul>
+</div>
+</div>
+<p>SNP data are recorded in a standardized format, called Variant Call Format (VCF). Below is a sample VCF matrix containing diploid genotypes:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#CHROM  POS REF ALT Lg1 Lg2 Lg3 Lg4</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  2177    A   G   0/1 1/1 1/1 0/1</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  2636    G   A   0/0 0/1 0/1 0/0</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  9844    G   A   0/1 0/0 0/0 0/0</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">35</span>  9999    G   A   1/1 0/0 0/1 0/0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Coordinates</strong>: <code>#CHROM</code> (chromosome ID), <code>POS</code> (bp position), <code>REF</code> (reference allele), <code>ALT</code> (alternate allele).</li>
+<li><strong>Genotype Calls</strong>:
+<ul>
+<li><code>0/0</code>: Homozygous reference allele.</li>
+<li><code>0/1</code>: Heterozygous carrier.</li>
+<li><code>1/1</code>: Homozygous alternate allele.</li>
 </ul></li>
 </ul>
+<hr>
 </section>
-</section>
-<section id="the-data-we-will-use-in-this-workshop" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="the-data-we-will-use-in-this-workshop"><span class="header-section-number">2.3</span> The data we will use in this workshop</h2>
-<p>We’re studying the genetics of the Viannia group of <em>Leishmania</em> parasites. The analysis is being carried out at the University of York, working with colleagues in Manaus, Brazil—a large city on the Amazon River surrounded by the Amazon Rainforest. Because the Amazon is so biodiverse, several Viannia species may be present there.</p>
-<p>Parasites were isolated from patients with cutaneous leishmaniasis (CL) and grown in the lab to extract DNA. We then sequenced the DNA from 70+ parasites using short-read (Illumina) sequencing.</p>
-<p>From these genomes, we identified single-nucleotide polymorphisms (SNPs)—tiny differences at single DNA letters. To add context, we also included public data for related Viannia species from the European Nucleotide Archive. A short summary of the computational steps is at the end of this document.</p>
-<p>For this workshop, all you need to know is that we have SNP data from:</p>
-<ul>
-<li>71 <em>Leishmania</em> strains collected in Manaus (most likely to be <em>L. guyanensis</em>)</li>
-<li>21 <em>L. braziliensis</em> strains from various locations in Brazil</li>
-<li>25 <em>L. panamensis</em> strains from Panama</li>
-<li>34 <em>L. peruviana</em> strains from Peru</li>
-<li>one <em>L. shawi</em> strain from Brazil</li>
-</ul>
-<p>We’ll use these data to explore species, populations, and mixing (hybridization) within the Viannia group.</p>
-</section>
-</section>
-<section id="exercises" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Exercises</h1>
-<section id="exploring-the-data" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="exploring-the-data"><span class="header-section-number">3.1</span> Exploring the data</h2>
-<p>In this workshop we will explore the results we generated. We will look at three ways to visualise population structure.</p>
-<section id="population-genomic-data-files" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="population-genomic-data-files"><span class="header-section-number">3.1.1</span> Population genomic data files</h3>
-<p>While genomes contain many types of polymorphisms, population genomic analysis often uses only single nucleotide polymorphism (SNP) data. This is because SNPs are very abundant and have properties that make them easier to model mathematically.</p>
-<p>SNPs and other polymorphisms are affected by many processes, such as genetic drift, migration, selection and recombination. However, SNP data can be represented relatively simply as a table.</p>
-<p>The standard format for representing SNP data is called VCF (Variant Call Format). Here is a small example of what a VCF file looks like.</p>
-<pre class="{bash}"><code>#CHROM  POS REF ALT Lg1 Lg2 Lg3 Lg4
-01  2177    A   G   0/1 1/1 1/1 0/1
-01  2636    G   A   0/0 0/1 0/1 0/0
-01  9844    G   A   0/1 0/0 0/0 0/0
-...
-35  9999    G   A   1/1 0/0 0/1 0/0</code></pre>
-<p>It is almost like a table that we could load into Excel, where each <strong>row</strong> indicates a position in the genome, and <strong>columns</strong> contain information about that position.</p>
-<p>It has a header line:</p>
-<pre class="{bash}"><code>#CHROM POS REF ALT</code></pre>
-<p>This indicates that the first column is the chromosome number (<code>#CHROM</code>), the second column is the position on that chromosome (<code>POS</code>), the third column is the reference allele (<code>REF</code>), and the fourth column is the alternative allele (<code>ALT</code>).</p>
-<p>After this, we have the genotypes for each sample. In this example, there are four samples:</p>
-<pre class="{bash}"><code>Lg1 Lg2 Lg3 Lg4</code></pre>
-<p>After this, we have the genotypes for the strains that are in the VCF (four in this case). They are coded as 0 for the reference allele (A) and 1 for the alternative allele (G). So for an A/G polymorphism:</p>
-<ul>
-<li>AA is coded as <code>0/0</code></li>
-<li>AG is coded as <code>0/1</code></li>
-<li>GG is coded as <code>1/1</code></li>
-</ul>
-<p>The population genomics community has developed many software tools that process these data to extract information (no tool does it all). In this workshop we will look at a phylogenetic tree, principal components analysis (PCA), and a STRUCTURE plot. These are all used to describe population structure and detect hybrids between populations or between species.</p>
-</section>
-</section>
-<section id="the-phylogeny" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="the-phylogeny"><span class="header-section-number">3.2</span> The phylogeny</h2>
-<p>A phylogenetic tree is a good first look at how similar or different many samples are. But when individuals mix between populations or species (hybridisation), a simple branching tree can be misleading.</p>
-<p>Think of a tree of people grouped by ancestry. Where would you place someone with one parent from Spain and one from Fiji? They don’t fit neatly on a single branch with the Spanish and the Fijians. The same display issue can happen in nature when populations interbreed.</p>
-<p>To handle this, we used a network approach (a splits network made with the software <em>SplitsTree</em>) that can show conflicting signals in the data—like those caused by mixing between populations or species.</p>
-<p>Below is our SplitsTree network. There are many samples, so coloured dots cluster tightly. The Manaus samples are dark blue. Most cluster near <em>Leishmania guyanensis</em> at the top. We marked the Manaus samples that do not with arrows.</p>
-<p><img src="images/populations2.jpg" class="img-fluid"> Figure 2: A SplitsTree phylogeny. The overall phylogeny is in the centre, and we zoom in to various clades (groups of related samples) around the edges. Each dot is a sample, coloured by species. The dark blue dots are samples we collected from Manaus, Brazil.</p>
-<section id="interpreting-the-phylogeny" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="interpreting-the-phylogeny"><span class="header-section-number">3.2.1</span> Interpreting the phylogeny</h3>
-<p>Now spend some time discussing the SplitsTree phylogeny, using the discussion points below as a guide.</p>
+<section id="reticulate-evolution-network-phylogenetics" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="reticulate-evolution-network-phylogenetics"><span class="header-section-number">5.2</span> Reticulate Evolution &amp; Network Phylogenetics</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Core Module Concept: Topic 8 (Phylogenetic Analysis) &amp; Topic 5 (Maintaining Variation)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Standard bifurcating phylogenetic trees assume purely vertical inheritance. When interspecific hybridization occurs, conflicting allele signals create reticulate evolution (network-like splitting), requiring split-network representations.</p>
+</div>
+</div>
+<p><img src="images/populations2.jpg" class="img-fluid"> <em>Figure 1: SplitsTree network of Viannia isolates. Dark blue dots represent Manaus clinical samples.</em></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Discussion points: phylogeny
+Discussion Points: Network Phylogenetics
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Species Boundaries</strong>: Do <em>Viannia</em> species form distinct monophyletic groups, or do they show interspecific overlapping?
 <ul>
-<li><p>From this figure, do the Viannia species look clearly separated, or do some overlap?</p></li>
-<li><p><strong>Answer:</strong> Yes, the species are mostly separated, but there looks to be a hybrid in the inset on the right.</p></li>
-<li><p>A few Manaus samples don’t cluster with <em>L. guyanensis</em>. What could explain that?</p></li>
-<li><p><strong>Answer:</strong> Some of the Manaus samples are different species. So there must be several species in this location.</p></li>
-</ul>
-<ol start="3" type="1">
-<li>What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?</li>
+<li><strong>Answer</strong>: Species form largely distinct clades, but central reticulations indicate historical gene flow and hybridization between lineages.</li>
+</ul></li>
+<li><strong>Etiology in Manaus</strong>: Most Manaus isolates cluster with <em>L. guyanensis</em>, but several map to separate species clades. What does this reveal about local disease ecology?
+<ul>
+<li><strong>Answer</strong>: Cutaneous leishmaniasis in Manaus is sympatric and multi-species, driven by distinct parasite species occupying specific sand fly vector niches.</li>
+</ul></li>
+<li><strong>Phylogenetic Artifacts (<em>L. shawi</em>)</strong>: <em>L. shawi</em> (light blue) shows an unusually short branch length. Why do standard distance trees misplace hybrid genotypes?
+<ul>
+<li><strong>Answer</strong>: Hybrid genomes inherit intermediate allele frequencies from parental species, causing cladogram algorithms to artificially pull the sample toward central internal nodes.</li>
+</ul></li>
 </ol>
-<ul>
-<li><strong>Answer:</strong> There are multiple species. They might interbreed in this location, but we cannot see this in the current phylogeny. We cannot tell anything about local ecology, host/vector differences from this phylogeny.</li>
-</ul>
-<ol start="4" type="1">
-<li>Look at the <em>L. peruviana</em>–<em>L. braziliensis</em> area (red box). One strain sits between the two. What could that indicate?</li>
-</ol>
-<ul>
-<li><strong>Answer:</strong> This is probably a hybrid.</li>
-</ul>
-<ol start="5" type="1">
-<li>Examine the data from the single <em>L. shawi</em> sample (light blue). Does its branch look unusually short? Remember: branch lengths indicate the genetic distance between strains or species.</li>
-</ol>
-<ul>
-<li><strong>Answer:</strong> Yes, it does look short. This is suspicious, but it is difficult to diagnose from this representation of the data. This shows a limitation of phylogeny.</li>
-</ul>
 </div>
 </div>
 <hr>
-<div style="page-break-after: always;"></div>
 </section>
-</section>
-<section id="principal-components-clustering" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="principal-components-clustering"><span class="header-section-number">3.3</span> Principal components clustering</h2>
-<p>Population structure is an important facet of most (if not all) species. Populations sometimes split into species, and all natural selection begins within a population. So when we start to examine the genetic diversity of a species, it is wise to look at population structure.</p>
-<p>Principal components analysis (PCA) is a useful tool for understanding population structure. PCA reduces the variables in our data set (thousands of SNPs in rows, and many individuals in columns), while preserving a lot of the information about population structure.</p>
-<p>A simple way to interpret PCA data is to consider that the distance between two individuals on a two-dimensional PCA plot represents the genetic distance between those samples. So, if they are close on the plot, they are close genetically. If they are distant on the plot, they are distant genetically. We would expect individuals from within a population or species to fall close to each other on a PCA plot.</p>
-<p>First look at Figure 3 below. This shows PCA clustering of all the other Viannia species, apart from the samples we collected from Manaus. Discuss with the people at your table:</p>
-<ul>
-<li>Do the species cluster genetically?</li>
-<li>Do <em>L. peruviana</em> and <em>L. braziliensis</em> really look like two different species?</li>
-</ul>
-<p>Note: The blue dashed lines are a guide to the eye to help you see the clusters.</p>
-<p><img src="images/populations3.jpg" class="img-fluid"> Figure 3. PCA clustering of Viannia species from throughout South America.</p>
-<p>Now look at Figure 4, which shows PCA clustering of Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that the PC axes are on the same scale here.</p>
+<section id="population-structure-dimensionality-reduction-pca" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="population-structure-dimensionality-reduction-pca"><span class="header-section-number">5.3</span> Population Structure &amp; Dimensionality Reduction (PCA)</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Core Module Concept: Topic 6 (Population Structure) &amp; Topic 1 (Stochastic Processes)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Principal Component Analysis (PCA) is a non-tree spatial method that reduces genome-wide SNP dimensions to summarize genetic distance, highlighting drift, subgroup differentiation, and continuous spatial variation.</p>
+</div>
+</div>
+<section id="global-vs.-local-species-differentiation" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="global-vs.-local-species-differentiation"><span class="header-section-number">5.3.1</span> Global vs.&nbsp;Local Species Differentiation</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/populations3.populations4.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. PCA clustering of all the <em>Leishmania</em> samples from throughout South America (left), and those that were collected from Manaus (right)</figcaption>
+<figcaption>Figure 2: Global Viannia PCA reference baseline (left) alongside Manaus clinical isolates (right).</figcaption>
 </figure>
 </div>
-<section id="interpreting-principal-component-plots" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="interpreting-principal-component-plots"><span class="header-section-number">3.3.1</span> Interpreting principal component plots</h3>
-<p>Use the discussion points below to discuss the PCA plots with the people at your table.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Discussion points: PCA (species)
+Discussion Points: Species Structure
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Sympatric Species Diversity</strong>: Are all Manaus clinical isolates a single species?
 <ul>
-<li><p>Does it look like the samples that came from Manaus are all the same species?</p></li>
-<li><p><strong>Answer:</strong> No certainly not. Some are in the same position as <em>L. guyanensis</em>, but others are from different species.</p></li>
-<li><p>Since the positions on the PCA plot separate the species, does this help to identify the species from Manaus?</p></li>
-<li><p><strong>Answer:</strong> Yes, some are <em>L. guyanensis</em>, some are <em>L. naiffi</em> and others <em>L. peruviana</em>.</p></li>
-<li><p>What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?</p></li>
-<li><p><strong>Answer:</strong> Since all these samples were <strong>collected</strong> from cutaneous leishmaniasis patients, this disease is caused by at least three different <em>Leishmania species</em>.</p></li>
-<li><p>Since <em>Leishmania</em> are single-celled organisms and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?</p></li>
-<li><p><strong>Answer:</strong> Because we do see hybrids. If we used PCR, we might misidentify hybrids as one species or the other, depending on which gene we amplified. Population genomics allows us to see the whole genome, so we can identify hybrids.</p></li>
-</ul>
+<li><strong>Answer</strong>: No.&nbsp;Strains resolve into three distinct PCA clusters corresponding to <em>L. guyanensis</em>, <em>L. naiffi</em>, and <em>L. peruviana</em>.</li>
+</ul></li>
+<li><strong>Genomic vs.&nbsp;Single-Locus Diagnostics</strong>: Why is whole-genome PCA superior to single-gene PCR diagnostic assays?
+<ul>
+<li><strong>Answer</strong>: Single-locus PCR can misclassify hybrids depending on which parental locus is amplified; whole-genome sequencing captures total genome-wide ancestry.</li>
+</ul></li>
+</ol>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </section>
-<section id="principal-components-clustering-2-geography-and-genetics" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="principal-components-clustering-2-geography-and-genetics"><span class="header-section-number">3.3.2</span> Principal components clustering 2: geography and genetics</h3>
-<p>We can look at the PC plots another way, simply by colouring the samples according to where they came from (geography).</p>
-<p>Because sand flies that carry <em>Leishmania</em> do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between <em>Leishmania</em> populations. This concept is called <strong>isolation by distance</strong>.</p>
-<p>The <em>Leishmania</em> parasites we have genome data for come from Brazil, Peru and Panama, which are very far apart, so we might expect to see isolation by distance in the PCA plot.</p>
-<p>Note that in Figure 5 below: - the colour of each point indicates the location where the sample was collected - the position on the PCA plot indicates how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.</p>
-<div style="page-break-after: always;"></div>
-<p><img src="images/populations5.jpg" height="400"></p>
-<p>Figure 5. PCA clustering of Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 6 below.</p>
+<section id="spatial-differentiation-isolation-by-distance-ibd" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="spatial-differentiation-isolation-by-distance-ibd"><span class="header-section-number">5.3.2</span> Spatial Differentiation &amp; Isolation by Distance (IBD)</h3>
+<p><img src="images/populations5.jpg" class="img-fluid" width="400"> <img src="images/populations6.jpg" class="img-fluid" width="400"> <em>Figure 3: Global Viannia PCA colored by country of origin (top) and Manaus clinical isolates on identical PC axes (bottom).</em></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Discussion points: PCA and isolation by distance
+Discussion Points: Isolation by Distance &amp; Gene Flow
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note that samples from the same country are plotted in the same colour, and samples that are genetically similar will fall close together on the plot.</p>
+<ol type="1">
+<li><strong>Isolation by Distance (IBD)</strong>: How does restricted sand fly movement create an Isolation by Distance pattern (<span class="math inline">\(F_{ST}\)</span> increasing with geographic separation)?
 <ul>
-<li><p>Do you see any examples of genetically similar samples that are all from the same country? These will represent one local population of the same species. This is what we expect from a local population that is one species.</p></li>
-<li><p><strong>Answer:</strong> Yes, Panama is the best example. We see many samples from Panama (blue) that are close together on the PCA plot, and so genetically related.</p></li>
-<li><p>Do you see any examples of the opposite: genetically similar samples that are close together on the PCA plot, with different colours showing that they are from different countries?</p></li>
-<li><p><strong>Answer:</strong> Yes, there is a cluster of genetically-related strains where the blue dashed line cross each other, that are from different countries.</p></li>
-<li><p>How can we interpret the finding that there are genetically similar individuals living in different countries? It might help to think about this with respect to human populations.</p></li>
-<li><p><strong>Answer:</strong> This suggests that there has been migration of <em>Leishmania</em> parasites between countries. This could be due to movement of infected people, or (less likely) the movement of infected animals that are reservoirs of the parasite.</p></li>
-</ul>
+<li><strong>Answer</strong>: Restricted vector flight ranges restrict gene flow (<span class="math inline">\(m\)</span>), allowing stochastic genetic drift to increase genetic differentiation (<span class="math inline">\(F_{ST}\)</span>) over geographic distance.</li>
+</ul></li>
+<li><strong>Signatures of Migration</strong>: What does finding genetically identical isolates in geographically distant regions imply?
+<ul>
+<li><strong>Answer</strong>: Recent long-distance migration, driven by the movement of infected human hosts or wild reservoir animal hosts.</li>
+</ul></li>
+<li><strong>Reproductive Isolation</strong>: If multiple <em>Leishmania</em> species co-occur sympatrically in Manaus, why do they remain distinct rather than blending via panmixia?
+<ul>
+<li><strong>Answer</strong>: Specific vector-parasite interactions or pre-/post-zygotic reproductive barriers prevent unbounded interbreeding, preserving species identity.</li>
+</ul></li>
+</ol>
 </div>
 </div>
-<p><img src="images/populations6.jpg" height="400"></p>
-<p>Figure 6. PCA clustering of only the <em>Leishmania</em> strains we collected from Manaus. The PCA axes are the same as Figure 5 above. The blue dashed lines will help with interpretation compared to Figure 5.</p>
+<hr>
+</section>
+</section>
+<section id="ancestry-proportions-admixture-analysis" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="ancestry-proportions-admixture-analysis"><span class="header-section-number">5.4</span> Ancestry Proportions &amp; Admixture Analysis</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Core Module Concept: Topic 6 (STRUCTURE Analysis) &amp; Topic 5 (Maintaining Variation)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>STRUCTURE/ADMIXTURE uses model-based Bayesian clustering to assign individual genomes to <span class="math inline">\(K\)</span> ancestral populations, quantifying admixture proportions and interspecific gene flow.</p>
+</div>
+</div>
+<p><img src="images/populations7.jpg" class="img-fluid"> <em>Figure 4: ADMIXTURE plot (<span class="math inline">\(K=5\)</span>) across Viannia strains, with Manaus samples highlighted at the bottom.</em></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Discussion points: PCA and species in Manaus
+Discussion Points: Admixture Analysis
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Interspecific Admixture</strong>: Does genome-wide admixture analysis show ongoing, widespread interbreeding across <em>Viannia</em> species?
 <ul>
-<li><p>Since samples that are genetically similar will fall close together on the plot, does it look like all the samples from Manaus are the same species?</p></li>
-<li><p><strong>Answer:</strong> No, certainly not. This is consistent with what we observe in the phylogeny.</p></li>
-<li><p>What does this tell us about the causes of genetic differentiation between species?</p></li>
-<li><p><strong>Answer:</strong> While species may have evolved in isolation, they now co-exist in Manaus. We do see hybrids on occasion, but generally the species remain distinct, even when they are in the same location.</p></li>
-<li><p>In other words, why are all these <em>Leishmania</em> samples from Manaus not interbreeding and becoming more genetically similar?</p></li>
-<li><p><strong>Answer:</strong> There appears to be some kind of reproductive barrier between species, preventing them from interbreeding extensively. This could be due to the sand fly vectors, or some other ecological factor.</p></li>
-<li><p>Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots?</p></li>
-<li><p><strong>Answer:</strong> Yes, we can see that there are samples that look like <em>L. guyanensis</em>, <em>L. naiffi</em> and <em>L. peruviana</em>.</p></li>
-<li><p>Is the idea that there are different <em>Leishmania</em> species in Manaus that we obtain from the PCA plots consistent with the phylogeny we looked at earlier?</p></li>
-<li><p><strong>Answer:</strong> Yes.</p></li>
-</ul>
+<li><strong>Answer</strong>: No.&nbsp;Most individuals show single-color ancestral assignments, demonstrating strong reproductive barriers despite local sympatry.</li>
+</ul></li>
+<li><strong>Hybrid Composition (<em>L. shawi</em>)</strong>: What is the ancestry profile of <em>L. shawi</em>?
+<ul>
+<li><strong>Answer</strong>: <em>L. shawi</em> displays ~50% <em>L. guyanensis</em> (orange) and ~50% <em>L. panamensis</em> (green) ancestry, confirming an admixed <span class="math inline">\(F_1\)</span>-like hybrid origin.</li>
+</ul></li>
+</ol>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
+<hr>
 </section>
 </section>
-<section id="admixturestructure-plots" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="admixturestructure-plots"><span class="header-section-number">3.4</span> Admixture/STRUCTURE plots</h2>
-<p>A common way of showing population genomic data is with so-called STRUCTURE plots, generated using software called STRUCTURE, or a similar approach called ADMIXTURE, which is what we used. We’ll call these STRUCTURE plots for now.</p>
-<p>STRUCTURE plots show the proportion of ancestry from different populations (or species) for each individual in the data set. Usually, each column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species).</p>
-<p>STRUCTURE plots are usually used to describe population structure within a species, but they can also be used to describe structure between closely related species, as we do here.</p>
-<p>Our STRUCTURE plot is below. Samples from Manaus are marked in the open rectangle at the bottom of the plot. Again, most look like <em>L. guyanensis</em>, and those that do not are marked with arrows, as we did in the phylogeny.</p>
-<p><img src="images/populations7.jpg" class="img-fluid"></p>
-<p>Figure 7. A STRUCTURE plot showing the <em>Leishmania</em> species we studied. Samples that were obtained from Manaus are marked in the open rectangle at the bottom of the plot. Most appear to be <em>Leishmania guyanensis</em>, but a few do not, and these are marked with arrows as we did in Figure 2, the SplitsTree phylogeny.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Discussion points: the STRUCTURE plot
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="summary-of-core-takeaways" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Summary of Core Takeaways</h1>
 <ul>
-<li><p>Each column is a different strain, and the colours represent the proportion of this strain’s ancestry that is derived from each species. If there are hybrids between species, we would expect to see columns with multiple colours.</p></li>
-<li><p>The most obvious thing about this plot is that the species are different colours.</p></li>
-<li><p>Does this visualisation of the data suggest that there is extensive breeding between species in the Viannia group?</p></li>
-<li><p><strong>Answer:</strong> No, most columns are a single colour, indicating that there is little interbreeding between species.</p></li>
-<li><p>Consider the <em>Leishmania</em> parasites circulating around Manaus (see Figure 6). Do they all look like one species, or are there multiple species present?</p></li>
-<li><p><strong>Answer:</strong> No, there are multiple species present, consistent with what we saw in the phylogeny and PCA plots.</p></li>
-<li><p>Look at the one strain of <em>Leishmania shawi</em>. This looks like a hybrid between two species.</p></li>
-<li><p><strong>Answer:</strong> Yes, it does look like a hybrid, with approximately half its ancestry is from <em>L. guyanensis</em> (orange) and half from <em>L. panamensis</em> (green).</p></li>
-<li><p>Go back to Figure 2 (the phylogeny) and the PCA plots to examine where the <em>Leishmania shawi</em> sample is placed. Does its placement in those plots make sense, given what we see in the STRUCTURE plot?</p></li>
-<li><p><strong>Answer:</strong> Yes, in the phylogeny it sits between <em>L. guyanensis</em> and <em>L. panamensis</em>. This is not clear from the PCA plot.</p></li>
-</ul>
-</div>
-</div>
-</section>
-</section>
-<section id="summary-what-we-have-learned" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Summary: what we have learned</h1>
+<li><strong>Methodological Comparison</strong>:
 <ul>
-<li><p>Population genomics data can be used to explore population structure and hybridisation between populations and species.</p></li>
-<li><p>There are different ways of visualising population genomics data, each with their own strengths and weaknesses.</p></li>
-<li><p>In this workshop, we have seen examples of:</p>
+<li><strong>Phylogenetic Networks</strong>: Reveal reticulate evolution and non-treelike speciation events.</li>
+<li><strong>PCA</strong>: Summarizes population structure, continuous Isolation by Distance (IBD), and non-bifurcating relationships.</li>
+<li><strong>STRUCTURE/ADMIXTURE</strong>: Quantifies exact individual ancestry proportions (<span class="math inline">\(K\)</span>) and identifies hybrid individuals.</li>
+</ul></li>
+<li><strong>Biological Insights</strong>:
 <ul>
-<li>isolation by distance (populations/species distributed across countries)</li>
-<li>multiple species in one location (Manaus), with rare hybrids between species</li>
+<li>Cutaneous Leishmaniasis in Manaus is caused by multiple sympatric species.</li>
+<li>Restricted sand fly dispersal drives spatial drift and IBD, while reproductive barriers maintain species integrity.</li>
 </ul></li>
 </ul>
+<hr>
 </section>
-<section id="after-the-workshop-exam-style-questions" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> After the workshop: exam-style questions</h1>
-<section id="question-1.-populations-and-migration" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="question-1.-populations-and-migration"><span class="header-section-number">5.1</span> Question 1. Populations and migration</h2>
-<p>A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</p>
-<ul>
-<li><ol type="a">
-<li>Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species.</li>
-</ol></li>
-<li><ol start="5" type="a">
-<li>Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</li>
-</ol></li>
-</ul>
-<section id="model-answers" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="model-answers"><span class="header-section-number">5.1.1</span> Model answers</h3>
+<section id="post-workshop-practice-questions" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Post-Workshop Practice Questions</h1>
+<section id="question-1-human-population-structure-isolation-by-distance" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="question-1-human-population-structure-isolation-by-distance"><span class="header-section-number">7.1</span> Question 1: Human Population Structure &amp; Isolation by Distance</h2>
+<p><img src="images/populations8.jpg" class="img-fluid"> <em>Figure 5: Human genomic variation across European populations.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sub-questions &amp; Model Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ol type="a">
-<li>Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</li>
-</ol>
-<p><strong>Answer:</strong> If there were extensive migration between countries, we would expect to see individuals from different countries mixed together on the PCA plot. However, the PCA plot shows that individuals from the same country <em>generally</em> cluster together, to the exclusion of other countries. There are exceptions, however, such as Spain and Portugal that appear to be mixing.</p>
-<ol start="2" type="a">
-<li>What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</li>
-</ol>
-<p><strong>Answer:</strong> We expect from the PCA plot that there are some alleles within countries that are shared between countries that are close together on the PCA plot (e.g., Spain and Portugal). In contrast, countries that are far apart on the PCA plot (e.g., Finland and Italy) are expected to share fewer alleles.</p>
-<ol start="3" type="a">
-<li>What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</li>
-</ol>
-<p><strong>Answer:</strong> Between-country marriages appear to be the exception rather than the rule.</p>
-<ol start="4" type="a">
-<li>Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species.</li>
-</ol>
+<li><strong>Is there evidence of complete panmixia across European populations?</strong>
 <ul>
-<li><ol type="i">
-<li>The migration of a parasite: the Switzerland PCA shows three barely-separated groups, indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.</li>
-</ol></li>
-<li><ol start="2" type="i">
-<li>To conserve a threatened species so that it is robust to threats such as diseases and environmental change, we would like to retain the genetic diversity of the species. If we saw a PCA plot with distinct clusters, this would suggest that there are distinct populations that should be conserved separately to retain genetic diversity, and we should aim to preserve all these populations.</li>
-</ol></li>
-</ul>
-<ol start="5" type="a">
-<li>Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</li>
-</ol>
-<p><strong>Answer:</strong></p>
-<p>This illustrates the phenomenon of <em>isolation by distance</em>, where individuals that are geographically close are also genetically similar. Isolation by distance occurs because individuals are more likely to breed with nearby individuals than with distant individuals, and drift, new mutations and selection cause populations to diverge genetically between locations.</p>
-<p>For a large highly mobile species, such as birds, we would expect less isolation by distance, because individuals can move long distances and interbreed with individuals from far away. In contrast, for a less mobile species, such as fish in lakes, or a species that is smaller we would expect stronger isolation by distance, because individuals are more likely to breed with nearby individuals.</p>
-<p><img src="images/populations8.jpg" class="img-fluid"></p>
-<p>Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</p>
-</section>
-</section>
-<section id="question-2.-understanding-populations-from-dna" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="question-2.-understanding-populations-from-dna"><span class="header-section-number">5.2</span> Question 2. Understanding populations from DNA</h2>
+<li><strong>Answer</strong>: No.&nbsp;Individuals cluster by country of origin, reflecting structured non-random mating rather than panmixia.</li>
+</ul></li>
+<li><strong>Compare allele frequency sharing between close vs.&nbsp;distant geographical populations.</strong>
 <ul>
-<li><ol type="a">
-<li>Outline how population genomic data are collected; starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>List three features of the genetics of natural populations that we can learn from population genomic data.</li>
-</ol></li>
-</ul>
-<section id="model-answers-1" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="model-answers-1"><span class="header-section-number">5.2.1</span> Model answers</h3>
+<li><strong>Answer</strong>: Neighboring populations (e.g., Spain and Portugal) share higher allele frequencies due to gene flow (<span class="math inline">\(m\)</span>), whereas distant populations (e.g., Finland and Italy) exhibit higher differentiation (<span class="math inline">\(F_{ST}\)</span>) due to isolation by distance and drift.</li>
+</ul></li>
+<li><strong>How can spatial genomic PCA be applied to pathogen tracking and conservation genetics?</strong>
+<ul>
+<li><strong>Answer</strong>:
+<ul>
+<li><em>(i) Pathogen tracking</em>: Tracing outbreak geographic origins and transmission pathways.</li>
+<li><em>(ii) Conservation</em>: Defining Evolutionary Significant Units (ESUs) to preserve adaptive genetic diversity and avoid extinction vortices.</li>
+</ul></li>
+</ul></li>
+<li><strong>Which evolutionary process explains the correlation between genetic and geographic distance?</strong>
+<ul>
+<li><strong>Answer</strong>: Isolation by distance (IBD). High-mobility species exhibit flatter IBD slopes due to extensive gene flow, while low-mobility species exhibit steep IBD slopes due to localized drift.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2-population-genomic-methods-workflows" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="question-2-population-genomic-methods-workflows"><span class="header-section-number">7.2</span> Question 2: Population Genomic Methods &amp; Workflows</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sub-questions &amp; Model Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ol type="a">
-<li>Outline how population genomic data are collected—starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.</li>
-</ol>
-<p><strong>Answer:</strong></p>
-<p>Blood, tissue or whole organism samples are collected from individuals in the region and species of interest. Ideally, we would obtain tens to hundreds of samples. We then extract DNA from these samples in the laboratory. DNA is sequenced using a high-throughput sequencing platform, such as Illumina. Reads are then mapped to a reference genome, and variants (SNPs) are called using variant-calling software. The output is a VCF file containing SNP data for all individuals.</p>
-<ol start="2" type="a">
-<li>Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.</li>
-</ol>
-<p><strong>Answer:</strong><br>
-Method 1: phylogenetic tree. Strength: Shows populations and relatedness clearly. Weakness: Performs badly with hybrids, or other complex situations.<br>
-<br>
-Method 2: principle components analysis (PCA). Strengths: Shows hybrids well. Can sometimes show population geography patterns. Weakness: Does not show direction of evolution as phylogenetic trees do, nor quantitative information about timing of events that we can obtain from phylogenetic tree branch lengths.<br>
-<br>
-Method 3: STRUCTURE plot. Strength: Shows hybrids well, and can distinguish species that do not appear to hybridism. Weakness: Does not show the genetic distances or relatedness between individuals or populations very well.</p>
-<ol start="3" type="a">
-<li>List three features of the genetics of natural populations that we can learn more about from population genomic data.</li>
-</ol>
-<p><strong>Answer:</strong></p>
+<li><strong>Outline the analytical pipeline from field sample to VCF file.</strong>
 <ul>
-<li>Population structure: by identifying genetically similar individuals, we can define populations within a species.</li>
-<li>Migration: by identifying genetically similar individuals in different locations, we can infer migration between populations.</li>
-<li>Hybridisation: by identifying individuals with mixed ancestry from different populations or species, we can determine if hybridisation is occurring, or the populations are isolated.</li>
-<li>Selection: by looking for genomic signatures of selection, we can identify genes or genomic regions that are under selection in natural populations.</li>
-</ul>
+<li><strong>Answer</strong>: Tissue collection <span class="math inline">\(\rightarrow\)</span> DNA extraction <span class="math inline">\(\rightarrow\)</span> High-throughput short-read sequencing (Illumina) <span class="math inline">\(\rightarrow\)</span> Read alignment to reference genome <span class="math inline">\(\rightarrow\)</span> Variant calling <span class="math inline">\(\rightarrow\)</span> Filtered VCF generation.</li>
+</ul></li>
+<li><strong>Compare Phylogenetic Trees, PCA, and STRUCTURE plots.</strong>
+<ul>
+<li><strong>Answer</strong>:
+<ul>
+<li><em>Phylogenetic Trees</em>: Model bifurcating vertical descent, but perform poorly with hybrids or reticulate signals.</li>
+<li><em>PCA</em>: Captures continuous variation and hybrids without prior assumptions, but lacks evolutionary time directionality.</li>
+<li><em>STRUCTURE</em>: Quantifies individual admixture proportions (<span class="math inline">\(K\)</span>), but does not measure absolute genetic distance or evolutionary dates.</li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
 
 
 <!-- -->
 
-</section>
 </section>
 </section>
 
@@ -1112,453 +1105,262 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "BIO00056I"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Workshop 6: Population Genomics"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Daniel Jeffares</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    html:</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">        code-copy: true</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">        code-tools: true</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">        code-link: true</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">        toc: true</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">        number-sections: true</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">        toc-location: right</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">        toc-depth: 2</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">        highlight-style: github</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">    pdf:</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">      toc: true</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">      number-sections: true</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">      colorlinks: true</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> source</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title="Assessment deadline for this module: update on 9/12/25"}</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>The assessment for this module is a 2000 word report. **The deadline for this report has been moved by the Department of Biology, from Monday 19th January to Tuesday 20th Jan 12:00 noon.** See the <span class="co">[</span><span class="ot">report guide</span><span class="co">](https://docs.google.com/document/d/19fI94usu-mPuBSbQf5j22jP1yhvExZE8EXied95IaQ0/edit?usp=sharing)</span> for more details.</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Learning objectives</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>The aims of this workshop are to:</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn more about population genomics data</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>View a real-world example of population structure analysis</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Appreciate how population genomics can be applied to eco-epidemiology </span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  (the study of the ecology of infectious diseases)</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evolution, populations and genome data</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>You will be aware now from earlier on in this module that: </span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>-- Sometimes hybrids occur between these closely related species.</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Most species contain multiple populations. Genetically, a population is a group of individuals more closely related to each other than to other groups, reflecting shared ancestry.</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>In practice, it can be hard to tell which population—or even which species—an individual belongs to, especially for micro-organisms. In this workshop, we’ll use genome data to investigate these questions.</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>In Figure 1 below, each box represents a *population* that contains many individuals. Red and blue boxes represent two species. Some regions have hybrids (mixed colours), and some do not. Some populations show a little mixing; others show a lot.</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations1.jpg)</span></span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>Figure 1: Imagined populations of two species (red and blue), with some hybrids and varying levels of mixing.</span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## The topic for today</span></span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>In this workshop, we’ll look at new genome data from *Leishmania* parasites collected in the Amazon. *Leishmania* are single-celled protozoan parasites that infect mammals, including people. They have two copies of each chromosome (diploid) and reproduce sexually (they undergo meiosis).</span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>We’ll focus on *Leishmania guyanensis* and closely related species found in South America. Together they form a species complex called Viannia—closely related species that can sometimes interbreed where their ranges overlap.</span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>These parasites cause cutaneous leishmaniasis (CL), a skin disease that leads to long-lasting sores. CL is zoonotic, meaning it mostly circulates in wild animals; humans are infected but probably play a small role in maintaining the parasite population.</span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>Because Viannia parasites infect many native mammals in South America, they are probably deeply embedded in the region’s ecology.</span>
-<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Leishmania are spread by sand flies</span></span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>Three facts about sand flies are important for today: </span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sand flies are mainly found in forests or forest edges (not in sand on the beach).</span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They are not strong flyers, so they don’t carry *Leishmania* parasites very long distances.</span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The different sand fly species, and even populations within species, have their own ecological niches and characteristics. </span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>For example, certain populations of sand flies carry some species of *Leishmania*, but not others.</span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## The data we will use in this workshop</span></span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>We’re studying the genetics of the Viannia group of *Leishmania* parasites. The analysis is being carried out at the University of York, working with colleagues in Manaus, Brazil—a large city on the Amazon River surrounded by the Amazon Rainforest. Because the Amazon is so biodiverse, several Viannia species may be present there.</span>
-<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>Parasites were isolated from patients with cutaneous leishmaniasis (CL) and grown in the lab to extract DNA. We then sequenced the DNA from 70+ parasites using short-read (Illumina) sequencing.</span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>From these genomes, we identified single-nucleotide polymorphisms (SNPs)—tiny differences at single DNA letters. To add context, we also included public data for related Viannia species from the European Nucleotide Archive. A short summary of the computational steps is at the end of this document.</span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>For this workshop, all you need to know is that we have SNP data from:</span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>71 *Leishmania* strains collected in Manaus (most likely to be *L. guyanensis*)</span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>21 *L. braziliensis* strains from various locations in Brazil</span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>25 *L. panamensis* strains from Panama</span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>34 *L. peruviana* strains from Peru</span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one *L. shawi* strain from Brazil</span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>We’ll use these data to explore species, populations, and mixing (hybridization) within the Viannia group.</span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exercises</span></span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exploring the data</span></span>
-<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>In this workshop we will explore the results we generated. We will look at three ways to visualise population structure. </span>
-<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="fu">### Population genomic data files</span></span>
-<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>While genomes contain many types of polymorphisms, population genomic analysis often uses only single nucleotide polymorphism (SNP) data. This is because SNPs are very abundant and have properties that make them easier to model mathematically. </span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>SNPs and other polymorphisms are affected by many processes, such as genetic drift, migration, selection and recombination. However, SNP data can be represented relatively simply as a table. </span>
-<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>The standard format for representing SNP data is called VCF (Variant Call Format). Here is a small example of what a VCF file looks like. </span>
-<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a><span class="in">```{bash}</span></span>
-<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a><span class="co">#CHROM  POS REF ALT Lg1 Lg2 Lg3 Lg4</span></span>
-<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  2177    A   G   0/1 1/1 1/1 0/1</span>
-<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  2636    G   A   0/0 0/1 0/1 0/0</span>
-<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  9844    G   A   0/1 0/0 0/0 0/0</span>
-<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a><span class="ex">35</span>  9999    G   A   1/1 0/0 0/1 0/0</span>
-<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>It is almost like a table that we could load into Excel, where each **row** indicates a position in the genome, and **columns** contain information about that position.</span>
-<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>It has a header line: </span>
-<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{bash}</span></span>
-<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a><span class="co">#CHROM POS REF ALT</span></span>
-<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>This indicates that the first column is the chromosome number (<span class="in">`#CHROM`</span>), the second column is the position on that chromosome (<span class="in">`POS`</span>), the third column is the reference allele (<span class="in">`REF`</span>), and the fourth column is the alternative allele (<span class="in">`ALT`</span>).</span>
-<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>After this, we have the genotypes for each sample. In this example, there are four samples:</span>
-<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{bash}</span></span>
-<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a><span class="ex">Lg1</span> Lg2 Lg3 Lg4</span>
-<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>After this, we have the genotypes for the strains that are in the VCF (four in this case). They are coded as 0 for the reference allele (A) and 1 for the alternative allele (G). So for an A/G polymorphism:</span>
-<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AA is coded as <span class="in">`0/0`</span></span>
-<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AG is coded as <span class="in">`0/1`</span></span>
-<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GG is coded as <span class="in">`1/1`</span></span>
-<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a>The population genomics community has developed many software tools that process these data to extract information (no tool does it all). In this workshop we will look at a phylogenetic tree, principal components analysis (PCA), and a STRUCTURE plot. These are all used to describe population structure and detect hybrids between populations or between species.</span>
-<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## The phylogeny</span></span>
-<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>A phylogenetic tree is a good first look at how similar or different many samples are. But when individuals mix between populations or species (hybridisation), a simple branching tree can be misleading.</span>
-<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a>Think of a tree of people grouped by ancestry. Where would you place someone with one parent from Spain and one from Fiji? They don’t fit neatly on a single branch with the Spanish and the Fijians. The same display issue can happen in nature when populations interbreed.</span>
-<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a>To handle this, we used a network approach (a splits network made with the software *SplitsTree*) that can show conflicting signals in the data—like those caused by mixing between populations or species.</span>
-<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a>Below is our SplitsTree network. There are many samples, so coloured dots cluster tightly. The Manaus samples are dark blue. Most cluster near *Leishmania guyanensis* at the top. We marked the Manaus samples that do not with arrows.</span>
-<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations2.jpg)</span></span>
-<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>Figure 2: A SplitsTree phylogeny. The overall phylogeny is in the centre, and we zoom in to various clades (groups of related samples) around the edges. Each dot is a sample, coloured by species. The dark blue dots are samples we collected from Manaus, Brazil.</span>
-<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpreting the phylogeny</span></span>
-<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a>Now spend some time discussing the SplitsTree phylogeny, using the discussion points below as a guide.</span>
-<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: phylogeny</span></span>
-<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>From this figure, do the Viannia species look clearly separated, or do some overlap?</span>
-<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, the species are mostly separated, but there looks to be a hybrid in the inset on the right.</span>
-<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A few Manaus samples don’t cluster with *L. guyanensis*. What could explain that?</span>
-<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Some of the Manaus samples are different species. So there must be several species in this location.</span>
-<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?</span>
-<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** There are multiple species. They might interbreed in this location, but we cannot see this in the current phylogeny. We cannot tell anything about local ecology, host/vector differences from this phylogeny.</span>
-<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?</span>
-<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** This is probably a hybrid.</span>
-<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Examine the data from the single *L. shawi* sample (light blue). Does its branch look unusually short? Remember: branch lengths indicate the genetic distance between strains or species.</span>
-<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, it does look short. This is suspicious, but it is difficult to diagnose from this representation of the data. This shows a limitation of phylogeny.</span>
-<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>----</span>
-<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
-<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## Principal components clustering</span></span>
-<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>Population structure is an important facet of most (if not all) species. Populations sometimes split into species, and all natural selection begins within a population. So when we start to examine the genetic diversity of a species, it is wise to look at population structure. </span>
-<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>Principal components analysis (PCA) is a useful tool for understanding population structure. PCA reduces the variables in our data set (thousands of SNPs in rows, and many individuals in columns), while preserving a lot of the information about population structure. </span>
-<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>A simple way to interpret PCA data is to consider that the distance between two individuals on a two-dimensional PCA plot represents the genetic distance between those samples. So, if they are close on the plot, they are close genetically. If they are distant on the plot, they are distant genetically. We would expect individuals from within a population or species to fall close to each other on a PCA plot.</span>
-<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>First look at Figure 3 below. This shows PCA clustering of all the other Viannia species, apart from the samples we collected from Manaus. Discuss with the people at your table:</span>
-<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do the species cluster genetically?</span>
-<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do *L. peruviana* and  *L. braziliensis* really look like two different species?</span>
-<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>Note: The blue dashed lines are a guide to the eye to help you see the clusters.</span>
-<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations3.jpg)</span></span>
-<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>Figure 3. PCA clustering of Viannia species from throughout South America.</span>
-<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>Now look at Figure 4, which shows PCA clustering of Viannia species from throughout South America (on the left), and those that were collected from Manaus (on the right). Note that the PC axes are on the same scale here.</span>
-<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 4. PCA clustering of all the *Leishmania* samples from throughout South America (left), and those that were collected from Manaus (right)](images/populations3.populations4.jpg)</span></span>
-<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpreting principal component plots</span></span>
-<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>Use the discussion points below to discuss the PCA plots with the people at your table.</span>
-<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: PCA (species)</span></span>
-<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does it look like the samples that came from Manaus are all the same species?</span>
-<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:**  No certainly not. Some are in the same position as *L. guyanensis*, but others are from different species.</span>
-<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since the positions on the PCA plot separate the species, does this help to identify the species from Manaus?</span>
-<span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, some are *L. guyanensis*, some are *L. naiffi* and others *L. peruviana*.</span>
-<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?</span>
-<span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Since all these samples were **collected** from cutaneous leishmaniasis patients, this disease is caused by at least three different *Leishmania species*.</span>
-<span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since *Leishmania* are single-celled organisms and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?</span>
-<span id="cb4-239"><a href="#cb4-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Because we do see hybrids. If we used PCR, we might misidentify hybrids as one species or the other, depending on which gene we amplified. Population genomics allows us to see the whole genome, so we can identify hybrids.</span>
-<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
-<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### Principal components clustering 2: geography and genetics</span></span>
-<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a>We can look at the PC plots another way, simply by colouring the samples according to where they came from (geography). </span>
-<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a>Because sand flies that carry *Leishmania* do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between *Leishmania* populations. This concept is called **isolation by distance**.</span>
-<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a>The *Leishmania* parasites we have genome data for come from Brazil, Peru and Panama, which are very far apart, so we might expect to see isolation by distance in the PCA plot.</span>
-<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a>Note that in Figure 5 below:</span>
-<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the colour of each point indicates the location where the sample was collected</span>
-<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the position on the PCA plot indicates how closely related each sample is. If two strains sit close together on the plot, they are closely related genetically.</span>
-<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
-<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations5.jpg)</span>{width=400, height=400}</span>
-<span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a>Figure 5. PCA clustering of Viannia species from throughout South America. The blue dashed lines are not important here, but will help with interpretation of Figure 6 below.</span>
-<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: PCA and isolation by distance</span></span>
-<span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a>Note that samples from the same country are plotted in the same colour, and</span>
-<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a>samples that are genetically similar will fall close together on the plot.</span>
-<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do you see any examples of genetically similar samples that are all from the same country? These will represent one local population of the same species. This is what we expect from a local population that is one species.</span>
-<span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, Panama is the best example. We see many samples from Panama (blue) that are close together on the PCA plot, and so genetically related.</span>
-<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do you see any examples of the opposite: genetically similar samples that are close together on the PCA plot, with different colours showing that they are from different countries?</span>
-<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, there is a cluster of genetically-related strains where the blue dashed line cross each other, that are from different countries.</span>
-<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How can we interpret the finding that there are genetically similar individuals living in different countries? It might help to think about this with respect to human populations.</span>
-<span id="cb4-284"><a href="#cb4-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-285"><a href="#cb4-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** This suggests that there has been migration of *Leishmania* parasites between countries. This could be due to movement of infected people, or (less likely) the movement of infected animals that are reservoirs of the parasite.</span>
-<span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-291"><a href="#cb4-291" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations6.jpg)</span>{width=400, height=400}</span>
-<span id="cb4-292"><a href="#cb4-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-293"><a href="#cb4-293" aria-hidden="true" tabindex="-1"></a>Figure 6. PCA clustering of only the *Leishmania* strains we collected from Manaus. The PCA axes are the same as Figure 5 above. The blue dashed lines will help with interpretation compared to Figure 5.</span>
-<span id="cb4-294"><a href="#cb4-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-295"><a href="#cb4-295" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb4-296"><a href="#cb4-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-297"><a href="#cb4-297" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: PCA and species in Manaus</span></span>
-<span id="cb4-298"><a href="#cb4-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-299"><a href="#cb4-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Since samples that are genetically similar will fall close together on the plot, does it look like all the samples from Manaus are the same species?</span>
-<span id="cb4-300"><a href="#cb4-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** No, certainly not. This is consistent with what we observe in the phylogeny.</span>
-<span id="cb4-301"><a href="#cb4-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-302"><a href="#cb4-302" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What does this tell us about the causes of genetic differentiation between species? </span>
-<span id="cb4-303"><a href="#cb4-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** While species may have evolved in isolation, they now co-exist in Manaus. We do see hybrids on occasion, but generally the species remain distinct, even when they are in the same location.</span>
-<span id="cb4-304"><a href="#cb4-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-305"><a href="#cb4-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In other words, why are all these *Leishmania* samples from Manaus not interbreeding and becoming more genetically similar?</span>
-<span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** There appears to be some kind of reproductive barrier between species, preventing them from interbreeding extensively. This could be due to the sand fly vectors, or some other ecological factor.</span>
-<span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots? </span>
-<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, we can see that there are samples that look like *L. guyanensis*, *L. naiffi* and *L. peruviana*.</span>
-<span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Is the idea that there are different *Leishmania* species in Manaus that we obtain from the PCA plots consistent with the phylogeny we looked at earlier?</span>
-<span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes.</span>
-<span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
-<span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a><span class="fu">## Admixture/STRUCTURE plots</span></span>
-<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a>A common way of showing population genomic data is with so-called STRUCTURE plots, generated using software called STRUCTURE, or a similar approach called ADMIXTURE, which is what we used. We’ll call these STRUCTURE plots for now.</span>
-<span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a>STRUCTURE plots show the proportion of ancestry from different populations (or species) for each individual in the data set. Usually, each column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species). </span>
-<span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a>STRUCTURE plots are usually used to describe population structure within a species, but they can also be used to describe structure between closely related species, as we do here.</span>
-<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a>Our STRUCTURE plot is below. Samples from Manaus are marked in the open rectangle at the bottom of the plot. Again, most look like *L. guyanensis*, and those that do not are marked with arrows, as we did in the phylogeny.</span>
-<span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations7.jpg)</span></span>
-<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a>Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples that were obtained from Manaus are marked in the open rectangle at the bottom of the plot. Most appear to be *Leishmania guyanensis*, but a few do not, and these are marked with arrows as we did in Figure 2, the SplitsTree phylogeny.</span>
-<span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion points: the STRUCTURE plot</span></span>
-<span id="cb4-337"><a href="#cb4-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-338"><a href="#cb4-338" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each column is a different strain, and the colours represent the proportion of this strain’s ancestry that is derived from each species. If there are hybrids between species, we would expect to see columns with multiple colours.</span>
-<span id="cb4-339"><a href="#cb4-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-340"><a href="#cb4-340" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The most obvious thing about this plot is that the species are different colours. </span>
-<span id="cb4-341"><a href="#cb4-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-342"><a href="#cb4-342" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does this visualisation of the data suggest that there is extensive breeding between species in the Viannia group?</span>
-<span id="cb4-343"><a href="#cb4-343" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** No, most columns are a single colour, indicating that there is little interbreeding between species.</span>
-<span id="cb4-344"><a href="#cb4-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-345"><a href="#cb4-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consider the *Leishmania* parasites circulating around Manaus (see Figure 6). Do they all look like one species, or are there multiple species present?</span>
-<span id="cb4-346"><a href="#cb4-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** No, there are multiple species present, consistent with what we saw in the phylogeny and PCA plots.</span>
-<span id="cb4-347"><a href="#cb4-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-348"><a href="#cb4-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Look at the one strain of *Leishmania shawi*. This looks like a hybrid between two species.</span>
-<span id="cb4-349"><a href="#cb4-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, it does look like a hybrid, with approximately half its ancestry is from *L. guyanensis* (orange) and half from *L. panamensis* (green).</span>
-<span id="cb4-350"><a href="#cb4-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-351"><a href="#cb4-351" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Go back to Figure 2 (the phylogeny) and the PCA plots to examine where the *Leishmania shawi* sample is placed. Does its placement in those plots make sense, given what we see in the STRUCTURE plot?</span>
-<span id="cb4-352"><a href="#cb4-352" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Answer:** Yes, in the phylogeny it sits between *L. guyanensis* and *L. panamensis*. This is not clear from the PCA plot.</span>
-<span id="cb4-353"><a href="#cb4-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-354"><a href="#cb4-354" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-355"><a href="#cb4-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-356"><a href="#cb4-356" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary: what we have learned</span></span>
-<span id="cb4-357"><a href="#cb4-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-358"><a href="#cb4-358" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Population genomics data can be used to explore population structure and hybridisation between populations and species.</span>
-<span id="cb4-359"><a href="#cb4-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-360"><a href="#cb4-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There are different ways of visualising population genomics data, each with their own strengths and weaknesses.</span>
-<span id="cb4-361"><a href="#cb4-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-362"><a href="#cb4-362" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In this workshop, we have seen examples of:</span>
-<span id="cb4-363"><a href="#cb4-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-364"><a href="#cb4-364" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>isolation by distance (populations/species distributed across countries)</span>
-<span id="cb4-365"><a href="#cb4-365" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>multiple species in one location (Manaus), with rare hybrids between species</span>
-<span id="cb4-366"><a href="#cb4-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-367"><a href="#cb4-367" aria-hidden="true" tabindex="-1"></a><span class="fu"># After the workshop: exam-style questions</span></span>
-<span id="cb4-368"><a href="#cb4-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-369"><a href="#cb4-369" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1. Populations and migration</span></span>
-<span id="cb4-370"><a href="#cb4-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-371"><a href="#cb4-371" aria-hidden="true" tabindex="-1"></a>A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.</span>
-<span id="cb4-372"><a href="#cb4-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-373"><a href="#cb4-373" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</span>
-<span id="cb4-374"><a href="#cb4-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-375"><a href="#cb4-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</span>
-<span id="cb4-376"><a href="#cb4-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-377"><a href="#cb4-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</span>
-<span id="cb4-378"><a href="#cb4-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-379"><a href="#cb4-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. </span>
-<span id="cb4-380"><a href="#cb4-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-381"><a href="#cb4-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</span>
-<span id="cb4-382"><a href="#cb4-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-383"><a href="#cb4-383" aria-hidden="true" tabindex="-1"></a><span class="fu">### Model answers</span></span>
-<span id="cb4-384"><a href="#cb4-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-385"><a href="#cb4-385" aria-hidden="true" tabindex="-1"></a>a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.</span>
-<span id="cb4-386"><a href="#cb4-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-387"><a href="#cb4-387" aria-hidden="true" tabindex="-1"></a>**Answer:** If there were extensive migration between countries, we would expect to see individuals from different countries mixed together on the PCA plot. However, the PCA plot shows that individuals from the same country *generally* cluster together, to the exclusion of other countries. There are exceptions, however, such as Spain and Portugal that appear to be mixing. </span>
-<span id="cb4-388"><a href="#cb4-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-389"><a href="#cb4-389" aria-hidden="true" tabindex="-1"></a>b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?</span>
-<span id="cb4-390"><a href="#cb4-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-391"><a href="#cb4-391" aria-hidden="true" tabindex="-1"></a>**Answer:** We expect from the PCA plot that there are some alleles within countries that are shared between countries that are close together on the PCA plot (e.g., Spain and Portugal). In contrast, countries that are far apart on the PCA plot (e.g., Finland and Italy) are expected to share fewer alleles.</span>
-<span id="cb4-392"><a href="#cb4-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-393"><a href="#cb4-393" aria-hidden="true" tabindex="-1"></a>c) What can we infer from these data about interbreeding between countries? Do between-country marriages look common, or the exception?</span>
-<span id="cb4-394"><a href="#cb4-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-395"><a href="#cb4-395" aria-hidden="true" tabindex="-1"></a>**Answer:**  Between-country marriages appear to be the exception rather than the rule.</span>
-<span id="cb4-396"><a href="#cb4-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-397"><a href="#cb4-397" aria-hidden="true" tabindex="-1"></a>d) Panel b of the plot shows the PCA coordinates of people from Switzerland, with individuals coloured by the language they speak (Germanic, French or Italian). Note that the location of these groups on the PCA plot corresponds to the location of their home countries on the PCA plot in panel a. Explain how this kind of analysis could be used to understand: (i) the migration of a parasite; (ii) how to conserve a threatened species. </span>
-<span id="cb4-398"><a href="#cb4-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-399"><a href="#cb4-399" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>(i) The migration of a parasite: the Switzerland PCA shows three barely-separated groups, indicating frequent mixing. If we saw such a signal for a parasite, it would suggest that the parasite is moving frequently between regions.</span>
-<span id="cb4-400"><a href="#cb4-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-401"><a href="#cb4-401" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>(ii) To conserve a threatened species so that it is robust to threats such as diseases and environmental change, we would like to retain the genetic diversity of the species. If we saw a PCA plot with distinct clusters, this would suggest that there are distinct populations that should be conserved separately to retain genetic diversity, and we should aim to preserve all these populations.</span>
-<span id="cb4-402"><a href="#cb4-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-403"><a href="#cb4-403" aria-hidden="true" tabindex="-1"></a>e) Panel c of the plot shows the correlation between genetic distance and geographic distance (km between individuals’ birthplaces). What phenomenon does this illustrate? How would you expect this to differ for a highly mobile species, such as birds, versus a less mobile species, such as fish in lakes?</span>
-<span id="cb4-404"><a href="#cb4-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-405"><a href="#cb4-405" aria-hidden="true" tabindex="-1"></a>**Answer:** </span>
-<span id="cb4-406"><a href="#cb4-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-407"><a href="#cb4-407" aria-hidden="true" tabindex="-1"></a>This illustrates the phenomenon of *isolation by distance*, where individuals that are geographically close are also genetically similar. Isolation by distance occurs because individuals are more likely to breed with nearby individuals than with distant individuals, and drift, new mutations and selection cause populations to diverge genetically between locations.</span>
-<span id="cb4-408"><a href="#cb4-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-409"><a href="#cb4-409" aria-hidden="true" tabindex="-1"></a>For a large highly mobile species, such as birds, we would expect less isolation by distance, because individuals can move long distances and interbreed with individuals from far away. In contrast, for a less mobile species, such as fish in lakes, or a species that is smaller we would expect stronger isolation by distance, because individuals are more likely to breed with nearby individuals.</span>
-<span id="cb4-410"><a href="#cb4-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-411"><a href="#cb4-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-412"><a href="#cb4-412" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations8.jpg)</span></span>
-<span id="cb4-413"><a href="#cb4-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-414"><a href="#cb4-414" aria-hidden="true" tabindex="-1"></a>Figure 8. A PCA plot of human populations from Europe. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country. </span>
-<span id="cb4-415"><a href="#cb4-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-416"><a href="#cb4-416" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2. Understanding populations from DNA</span></span>
-<span id="cb4-417"><a href="#cb4-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-418"><a href="#cb4-418" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a) Outline how population genomic data are collected; starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.</span>
-<span id="cb4-419"><a href="#cb4-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-420"><a href="#cb4-420" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>b) Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.</span>
-<span id="cb4-421"><a href="#cb4-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-422"><a href="#cb4-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>c) List three features of the genetics of natural populations that we can learn from population genomic data.</span>
-<span id="cb4-423"><a href="#cb4-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-424"><a href="#cb4-424" aria-hidden="true" tabindex="-1"></a><span class="fu">### Model answers</span></span>
-<span id="cb4-425"><a href="#cb4-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-426"><a href="#cb4-426" aria-hidden="true" tabindex="-1"></a>a) Outline how population genomic data are collected—starting with the collection of samples from individuals, laboratory work, and the data analysis steps to obtain a VCF file containing SNP data.</span>
-<span id="cb4-427"><a href="#cb4-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-428"><a href="#cb4-428" aria-hidden="true" tabindex="-1"></a>**Answer:** </span>
-<span id="cb4-429"><a href="#cb4-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-430"><a href="#cb4-430" aria-hidden="true" tabindex="-1"></a>Blood, tissue or whole organism samples are collected from individuals in the region and species of interest. Ideally, we would obtain tens to hundreds of samples. We then extract DNA from these samples in the laboratory. DNA is sequenced using a high-throughput sequencing platform, such as Illumina. Reads are then mapped to a reference genome, and variants (SNPs) are called using variant-calling software. The output is a VCF file containing SNP data for all individuals.</span>
-<span id="cb4-431"><a href="#cb4-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-432"><a href="#cb4-432" aria-hidden="true" tabindex="-1"></a>b) Name and briefly explain three methods to display population genomic data to show genetic relatedness (population structure) between individuals. For each method, give one strength and one weakness.</span>
-<span id="cb4-433"><a href="#cb4-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-434"><a href="#cb4-434" aria-hidden="true" tabindex="-1"></a>**Answer:** </span>
-<span id="cb4-435"><a href="#cb4-435" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb4-436"><a href="#cb4-436" aria-hidden="true" tabindex="-1"></a>Method 1: phylogenetic tree. Strength: Shows populations and relatedness clearly. Weakness: Performs badly with hybrids, or other complex situations.</span>
-<span id="cb4-437"><a href="#cb4-437" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb4-438"><a href="#cb4-438" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb4-439"><a href="#cb4-439" aria-hidden="true" tabindex="-1"></a>Method 2: principle components analysis (PCA). Strengths: Shows hybrids well. Can sometimes show population geography patterns. Weakness: Does not show direction of evolution as phylogenetic trees do, nor quantitative information about timing of events that we can obtain from phylogenetic tree branch lengths.</span>
-<span id="cb4-440"><a href="#cb4-440" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb4-441"><a href="#cb4-441" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb4-442"><a href="#cb4-442" aria-hidden="true" tabindex="-1"></a>Method 3: STRUCTURE plot. Strength: Shows hybrids well, and can distinguish species that do not appear to hybridism. Weakness: Does not show the genetic distances or relatedness between individuals or populations very well.</span>
-<span id="cb4-443"><a href="#cb4-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-444"><a href="#cb4-444" aria-hidden="true" tabindex="-1"></a>c) List three features of the genetics of natural populations that we can learn more about from population genomic data.</span>
-<span id="cb4-445"><a href="#cb4-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-446"><a href="#cb4-446" aria-hidden="true" tabindex="-1"></a>**Answer:** </span>
-<span id="cb4-447"><a href="#cb4-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-448"><a href="#cb4-448" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Population structure: by identifying genetically similar individuals, we can define populations within a species.</span>
-<span id="cb4-449"><a href="#cb4-449" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Migration: by identifying genetically similar individuals in different locations, we can infer migration between populations.</span>
-<span id="cb4-450"><a href="#cb4-450" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hybridisation: by identifying individuals with mixed ancestry from different populations or species, we can determine if hybridisation is occurring, or the populations are isolated.</span>
-<span id="cb4-451"><a href="#cb4-451" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Selection: by looking for genomic signatures of selection, we can identify genes or genomic regions that are under selection in natural populations.</span>
-<span id="cb4-452"><a href="#cb4-452" aria-hidden="true" tabindex="-1"></a></span>
-</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "BIO00056I"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Workshop 6: Population Genomics &amp; Parasite Eco-Epidemiology"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Daniel Jeffares</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> last-modified</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">    html:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">        code-copy: true</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">        code-tools: true</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">        code-link: true</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">        toc: true</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">        number-sections: true</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">        toc-location: right</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">        toc-depth: 2</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">        highlight-style: github</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">    pdf:</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">      toc: true</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">      number-sections: true</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">      colorlinks: true</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> source</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu"># Learning Objectives</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**SNP Data**: We show how single nucleotide polymorphism (SNP) data are stored in Variant Call Format (VCF). This kind of data is fundamental to modern population genomics. For example, we used the VCF file to generate the phylogenetic network, PCA, and STRUCTURE plots shown in this workshop.</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population Structure**: We show how to understand population structure using three different methods; a phylogenetic network, principal component analysis (PCA), and STRUCTURE/ADMIXTURE plots.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Species diversity and hybridization**: We show how to interpret the population structure of sympatric species, and how to identify hybrid individuals, various ways of analysing and displaying the SNP data; phylogenetic network, PCA, and STRUCTURE plots shown in this workshop.</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evolution, populations and genome data</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>Earlier on in this module we introduced some concepts of populations:</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Virtually all species contain different **populations** of individuals</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Populations contain some genetic differences between them</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There can be **gene flow** between some populations</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gene flow occurs when an individual from one population mates with an individual from another population</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>In practice, it can be hard to tell which population—or even which species—an individual belongs to, especially for micro-organisms. In this workshop, we’ll use genome data to examine populations, and species of *Leishmania* a single celled parasite.</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>In Figure 1 below, each box represents a *population* that contains many individuals. Red and blue boxes represent two species. Some regions have hybrids (mixed colours), and some do not. Some populations show a little mixing; others show a lot.</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations1.jpg)</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>Figure 1: Imagined populations of two species (red and blue), with some hybrids and varying levels of mixing.</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="fu"># In this workshop, we aim to improve our understanding of these topics</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Populations and population structure:** Populations are very important, because all evolution occurs within a population</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Population Genomics**: We show show whole-genome sequencing can reveal populations, and hybrids between populations and species.</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Population analysis**: We see how populations can be visualised in different ways. Today, use principal component analysis (PCA), STRUCTURE plots, and a phylogenetic networks to look at the same data.</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="fu"># Case Study Context: Amazonian *Leishmania*</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>*Leishmania* parasites are diploid, single-celled protozoans that reproduce sexually via meiosis and cause Cutaneous Leishmaniasis (CL). In South America, species within the *Viannia* subgenus infect wild mammalian reservoir hosts and are transmitted by phlebotomine sand fly vectors. Because sand flies are weak fliers with narrow ecological niches, spatial gene flow ($m$) is limited, allowing stochastic genetic drift to drive differentiation between geographically separated populations.</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>We analyzed whole-genome short-read sequencing data from 152 isolates (or strains) of *Leishmania*. In this context, a *strain* is the same as an individual within a species. We look at  *Leishmania* strains from several different species. All these species are present in the Amazonian region of Brazil.</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>Today, we examine some population genomics results. These were generated from the genomes  *Leishmania* strains. As we explained in the lecture on **Population Genomics**, we used the genome data to identify single nucleotide polymorphisms (SNPs) across the genomes of these strains. We then used the SNP data to generate a phylogenetic network, PCA, and STRUCTURE plots.</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="fu"># The data</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>The data we look at today come from 152 *Leishmania* strains. These strains are from several different species of *Leishmania*. The strains were collected from two sources:</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>71 *Leishmania* genomes that were collected from CL patients in Manaus, Brazil (we *think* these are *L. guyanensis*, but we'll see)</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>81 *Leishmania* genomes that we downloaded from the the [NCBI Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) for the following species: *L. braziliensis* ($n=21$), *L. panamensis* ($n=25$), *L. peruviana* ($n=34$), and *L. shawi* ($n=1$). </span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="fu"># The [NCBI Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) contain genomes from many different species. </span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>SRA is a public repository for raw sequencing data. It is a great resource for population genomics studies, because it allows researchers to download and analyze data from many different species and populations.</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>::: </span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exercises</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data &amp; Variant Call Format (VCF)</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core concepts: Population Genomics &amp; Population Structure</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Population genomic studies almost always use Single Nucleotide Polymorphisms (SNPs) as their input data. </span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This is because we find many SNPs in genomes, and they are relatively easy to analyze.This make SNPs ideal for discovering **population structure**, and analysing **genetic drift**, **allele frequencies** and  **natural selection**</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Population genomic studies very often start by analysing **population structure**</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>SNP data are recorded in a standardized format, called Variant Call Format (VCF). Below is a sample VCF matrix containing diploid genotypes:</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="co">#CHROM  POS REF ALT Lg1 Lg2 Lg3 Lg4</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  2177    A   G   0/1 1/1 1/1 0/1</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  2636    G   A   0/0 0/1 0/1 0/0</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="ex">01</span>  9844    G   A   0/1 0/0 0/0 0/0</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="ex">35</span>  9999    G   A   1/1 0/0 0/1 0/0</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Coordinates**: <span class="in">`#CHROM`</span> (chromosome ID), <span class="in">`POS`</span> (bp position), <span class="in">`REF`</span> (reference allele), <span class="in">`ALT`</span> (alternate allele).</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Genotype Calls**:</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="in">`0/0`</span>: Homozygous reference allele.</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="in">`0/1`</span>: Heterozygous carrier.</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="in">`1/1`</span>: Homozygous alternate allele.</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reticulate Evolution &amp; Network Phylogenetics</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core Module Concept: Topic 8 (Phylogenetic Analysis) &amp; Topic 5 (Maintaining Variation)</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>Standard bifurcating phylogenetic trees assume purely vertical inheritance. When interspecific hybridization occurs, conflicting allele signals create reticulate evolution (network-like splitting), requiring split-network representations.</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations2.jpg)</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>*Figure 1: SplitsTree network of Viannia isolates. Dark blue dots represent Manaus clinical samples.*</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion Points: Network Phylogenetics</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Species Boundaries**: Do *Viannia* species form distinct monophyletic groups, or do they show interspecific overlapping?</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Species form largely distinct clades, but central reticulations indicate historical gene flow and hybridization between lineages.</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Etiology in Manaus**: Most Manaus isolates cluster with *L. guyanensis*, but several map to separate species clades. What does this reveal about local disease ecology?</span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Cutaneous leishmaniasis in Manaus is sympatric and multi-species, driven by distinct parasite species occupying specific sand fly vector niches.</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Phylogenetic Artifacts (*L. shawi*)**: *L. shawi* (light blue) shows an unusually short branch length. Why do standard distance trees misplace hybrid genotypes?</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Hybrid genomes inherit intermediate allele frequencies from parental species, causing cladogram algorithms to artificially pull the sample toward central internal nodes.</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## Population Structure &amp; Dimensionality Reduction (PCA)</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core Module Concept: Topic 6 (Population Structure) &amp; Topic 1 (Stochastic Processes)</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>Principal Component Analysis (PCA) is a non-tree spatial method that reduces genome-wide SNP dimensions to summarize genetic distance, highlighting drift, subgroup differentiation, and continuous spatial variation.</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="fu">### Global vs. Local Species Differentiation</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 2: Global Viannia PCA reference baseline (left) alongside Manaus clinical isolates (right).](images/populations3.populations4.jpg)</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion Points: Species Structure</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Sympatric Species Diversity**: Are all Manaus clinical isolates a single species?</span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: No. Strains resolve into three distinct PCA clusters corresponding to *L. guyanensis*, *L. naiffi*, and *L. peruviana*.</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Genomic vs. Single-Locus Diagnostics**: Why is whole-genome PCA superior to single-gene PCR diagnostic assays?</span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Single-locus PCR can misclassify hybrids depending on which parental locus is amplified; whole-genome sequencing captures total genome-wide ancestry.</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spatial Differentiation &amp; Isolation by Distance (IBD)</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations5.jpg)</span>{width=400}</span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations6.jpg)</span>{width=400}</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>*Figure 3: Global Viannia PCA colored by country of origin (top) and Manaus clinical isolates on identical PC axes (bottom).*</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion Points: Isolation by Distance &amp; Gene Flow</span></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Isolation by Distance (IBD)**: How does restricted sand fly movement create an Isolation by Distance pattern ($F_{ST}$ increasing with geographic separation)?</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Restricted vector flight ranges restrict gene flow ($m$), allowing stochastic genetic drift to increase genetic differentiation ($F_{ST}$) over geographic distance.</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Signatures of Migration**: What does finding genetically identical isolates in geographically distant regions imply?</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Recent long-distance migration, driven by the movement of infected human hosts or wild reservoir animal hosts.</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Reproductive Isolation**: If multiple *Leishmania* species co-occur sympatrically in Manaus, why do they remain distinct rather than blending via panmixia?</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Specific vector-parasite interactions or pre-/post-zygotic reproductive barriers prevent unbounded interbreeding, preserving species identity.</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ancestry Proportions &amp; Admixture Analysis</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core Module Concept: Topic 6 (STRUCTURE Analysis) &amp; Topic 5 (Maintaining Variation)</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>STRUCTURE/ADMIXTURE uses model-based Bayesian clustering to assign individual genomes to $K$ ancestral populations, quantifying admixture proportions and interspecific gene flow.</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations7.jpg)</span></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>*Figure 4: ADMIXTURE plot ($K=5$) across Viannia strains, with Manaus samples highlighted at the bottom.*</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion Points: Admixture Analysis</span></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Interspecific Admixture**: Does genome-wide admixture analysis show ongoing, widespread interbreeding across *Viannia* species?</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: No. Most individuals show single-color ancestral assignments, demonstrating strong reproductive barriers despite local sympatry.</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Hybrid Composition (*L. shawi*)**: What is the ancestry profile of *L. shawi*?</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: *L. shawi* displays ~50% *L. guyanensis* (orange) and ~50% *L. panamensis* (green) ancestry, confirming an admixed $F_1$-like hybrid origin.</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary of Core Takeaways</span></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Methodological Comparison**:</span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>**Phylogenetic Networks**: Reveal reticulate evolution and non-treelike speciation events.</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>**PCA**: Summarizes population structure, continuous Isolation by Distance (IBD), and non-bifurcating relationships.</span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>**STRUCTURE/ADMIXTURE**: Quantifies exact individual ancestry proportions ($K$) and identifies hybrid individuals.</span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Biological Insights**:</span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>Cutaneous Leishmaniasis in Manaus is caused by multiple sympatric species.</span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>Restricted sand fly dispersal drives spatial drift and IBD, while reproductive barriers maintain species integrity.</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="fu"># Post-Workshop Practice Questions</span></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 1: Human Population Structure &amp; Isolation by Distance</span></span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/populations8.jpg)</span></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>*Figure 5: Human genomic variation across European populations.*</span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sub-questions &amp; Model Answers</span></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>a) **Is there evidence of complete panmixia across European populations?**</span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: No. Individuals cluster by country of origin, reflecting structured non-random mating rather than panmixia.</span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>b) **Compare allele frequency sharing between close vs. distant geographical populations.**</span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Neighboring populations (e.g., Spain and Portugal) share higher allele frequencies due to gene flow ($m$), whereas distant populations (e.g., Finland and Italy) exhibit higher differentiation ($F_{ST}$) due to isolation by distance and drift.</span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>c) **How can spatial genomic PCA be applied to pathogen tracking and conservation genetics?**</span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**:</span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a><span class="ss">     * </span>*(i) Pathogen tracking*: Tracing outbreak geographic origins and transmission pathways.</span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a><span class="ss">     * </span>*(ii) Conservation*: Defining Evolutionary Significant Units (ESUs) to preserve adaptive genetic diversity and avoid extinction vortices.</span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>d) **Which evolutionary process explains the correlation between genetic and geographic distance?**</span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Isolation by distance (IBD). High-mobility species exhibit flatter IBD slopes due to extensive gene flow, while low-mobility species exhibit steep IBD slopes due to localized drift.</span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## Question 2: Population Genomic Methods &amp; Workflows</span></span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sub-questions &amp; Model Answers</span></span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a>a) **Outline the analytical pipeline from field sample to VCF file.**</span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**: Tissue collection $\rightarrow$ DNA extraction $\rightarrow$ High-throughput short-read sequencing (Illumina) $\rightarrow$ Read alignment to reference genome $\rightarrow$ Variant calling $\rightarrow$ Filtered VCF generation.</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a>b) **Compare Phylogenetic Trees, PCA, and STRUCTURE plots.**</span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a><span class="ss">   * </span>**Answer**:</span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a><span class="ss">     * </span>*Phylogenetic Trees*: Model bifurcating vertical descent, but perform poorly with hybrids or reticulate signals.</span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="ss">     * </span>*PCA*: Captures continuous variation and hybrids without prior assumptions, but lacks evolutionary time directionality.</span>
+<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a><span class="ss">     * </span>*STRUCTURE*: Quantifies individual admixture proportions ($K$), but does not measure absolute genetic distance or evolutionary dates.</span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
