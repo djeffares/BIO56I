@@ -24,6 +24,10 @@ editor: source
 
 ---
 
+::: callout-important
+# This document now contains answers to questions.
+:::
+
 
 # Learning objectives
 
@@ -41,7 +45,7 @@ The aims of this workshop are to:
 
 You will be aware now from earlier on in this module that: 
 
-- Sometimes hybrids occur between these closely related species.
+-- Sometimes hybrids occur between these closely related species.
 
 - Most species contain multiple populations. Genetically, a population is a group of individuals more closely related to each other than to other groups, reflecting shared ancestry.
 
