@@ -167,7 +167,7 @@ Now spend some time discussing the SplitsTree phylogeny, using the discussion po
 
 - What might this suggest about the causes of CL in the Amazon (e.g., multiple species, local ecology, host/vector differences)?
 - Look at the *L. peruviana*–*L. braziliensis* area (red box). One strain sits between the two. What could that indicate?
-- Examine the data from the single *L. shawi* sample (light blue). Does its branch look unusually long? Remember: longer branches usually mean more mutations (this is not a dated tree, just a measure of genetic differences).
+
 
 :::
 
@@ -178,7 +178,7 @@ Now spend some time discussing the SplitsTree phylogeny, using the discussion po
 
 ## Principal components clustering
 
-Population structure is an important facet of most (if not all) species. Populations sometimes split into species, and all natural selection begins within a population. So when we start to examine the genetic diversity of a species, it is wise to look at population structure. 
+Population structure is an important facet of most (if not all) species. Populations sometimes split into species. And remember that *all* natural selection begins within a population. So when we start to examine the genetic diversity of a species, it is important to know about the population structures.  
 
 Principal components analysis (PCA) is a useful tool for understanding population structure. PCA reduces the variables in our data set (thousands of SNPs in rows, and many individuals in columns), while preserving a lot of the information about population structure. 
 
@@ -210,7 +210,9 @@ Use the discussion points below to discuss the PCA plots with the people at your
 - Does it look like the samples that came from Manaus are all the same species?
 - Since the positions on the PCA plot separate the species, does this help to identify the species from Manaus?
 - What does this tell you about the causes of cutaneous leishmaniasis in the Amazon region?
-- Since *Leishmania* are single-celled organisms and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. Why would we not merely use PCR to identify the species?
+- Since *Leishmania* are single-celled organisms and they all cause a similar disease, population genomics is the only way to identify which sample belongs to which species. 
+- Why would we not just use PCR to identify the species? It would be a lot cheaper to do PCR than whole genome sequencing.
+
 :::
 
 {{< pagebreak >}}
@@ -220,6 +222,12 @@ Use the discussion points below to discuss the PCA plots with the people at your
 We can look at the PC plots another way, simply by colouring the samples according to where they came from (geography). 
 
 Because sand flies that carry *Leishmania* do not fly very far, it is possible that geographic distance is the main factor that determines the genetic distance between *Leishmania* populations. This concept is called **isolation by distance**.
+
+:::callout-note
+# Isolation by distance
+
+As populations separate, they become genetically different. The further apart they are, the more different they tend to become, as they get less and less likely to interbreed. This is called **isolation by distance**. In many species, we can observe a correlation between geographic distance and genetic distance, as the **genomic signature of isolation by distance**.
+:::
 
 The *Leishmania* parasites we have genome data for come from Brazil, Peru and Panama, which are very far apart, so we might expect to see isolation by distance in the PCA plot.
 
@@ -267,7 +275,7 @@ Figure 6. PCA clustering of only the *Leishmania* strains we collected from Mana
 
 - Can you guess what species are present in Manaus, based on the coordinates of species in previous PCA plots? 
 
-- Is the idea that there are different *Leishmania* species in Manaus that we obtain from the PCA plots consistent with the phylogeny we looked at earlier?
+- The PCA plots suggest that there are different *Leishmania* species in Manaus. Is this conclusion consistent with the phylogeny we looked at earlier?
 
 :::
 
@@ -277,7 +285,7 @@ Figure 6. PCA clustering of only the *Leishmania* strains we collected from Mana
 
 A common way of showing population genomic data is with so-called STRUCTURE plots, generated using software called STRUCTURE, or a similar approach called ADMIXTURE, which is what we used. We’ll call these STRUCTURE plots for now.
 
-STRUCTURE plots show the proportion of ancestry from different populations (or species) for each individual in the data set. Usually, each column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species). 
+STRUCTURE plots show the **proportion of ancestry** from different populations (or species) for each individual in the data set. Usually, each column of a STRUCTURE plot represents one individual, and the different colours within each column represent the proportion of ancestry from different populations (or species). 
 
 STRUCTURE plots are usually used to describe population structure within a species, but they can also be used to describe structure between closely related species, as we do here.
 
@@ -291,7 +299,7 @@ Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples 
 
 # Discussion points: the STRUCTURE plot
 
-- Each column is a different strain, and the colours represent the proportion of this strain’s ancestry that is derived from each species. If there are hybrids between species, we would expect to see columns with multiple colours.
+- Each column is a different strain, and the colours represent the proportion of this strain’s ancestry from each species. A strain whose genome is derived from just one species will have only one colour in its bar. Any hybrids between species, will have multiple coloured bars.
 
 - The most obvious thing about this plot is that the species are different colours. 
 
@@ -300,7 +308,7 @@ Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples 
 - Consider the *Leishmania* parasites circulating around Manaus (see Figure 6). Do they all look like one species, or are there multiple species present?
 
 
-- Look at the one strain of *Leishmania shawi*. This looks like a hybrid between two species.
+- Look at the one strain of *Leishmania shawi*. Does  *Leishmania shawi* look lie a real species?
 
 
 - Go back to Figure 2 (the phylogeny) and the PCA plots to examine where the *Leishmania shawi* sample is placed. Does its placement in those plots make sense, given what we see in the STRUCTURE plot?
@@ -325,9 +333,9 @@ Figure 7. A STRUCTURE plot showing the *Leishmania* species we studied. Samples 
 
 ## Question 1. Populations and migration
 
-A PCA plot of human populations from Europe is shown in Figure 8 below. Each point is an individual, and they are coloured by the country they come from. Small coloured labels represent individuals, and large coloured points represent median PC1 and PC2 values for each country.
+A PCA plot of human populations from Europe is shown in Figure 8 below. Small coloured two-letter labels represent individuals coloured by their country of origin, and large coloured points represent median PC1 and PC2 values for each country. 
 
-- a) Is there evidence for extensive migration of individuals between countries in Europe? Explain your answer.
+- a) What does this plot tell us about the genetic relatedness of people from different countries in Europe? Do people tend to stay in the same country, or move to other countries?
 
 - b) What can we infer from these data about the alleles within countries that are close together on the PCA plot (e.g., Spain and Portugal) compared to countries that are far apart on the PCA plot (e.g., Finland and Italy)?
 
