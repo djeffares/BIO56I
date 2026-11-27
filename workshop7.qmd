@@ -44,20 +44,24 @@ In the last workshop, we saw how several species of *Leishmania* parasites that 
 
 In this workshop, we continue looking at *Leishmania* data, but the observations we make will apply to any group of species.
 
-This time, we look at how more **distantly-related** *Leishmania* species. We know from the **molecular clock** concept, that if two species are dissimilar genetically, this is because mutations have accumulated over time. Figure 2 below shows that the molecular clock also holds over very long periods of time. 
+This time, we look at how more **distantly-related** *Leishmania* species. We know from the **molecular clock** concept, that if two species are dissimilar genetically, this is because mutations have accumulated over time. Figure 1 below shows that the molecular clock also holds over very long periods of time. 
 
 ![](images/compgen1.jpg)
-**Figure 1.** Evidence that molecular clock causes divergence between species over both short and long periods of time.  Panel a: We saw from the influenza virus workshop that mutations occurred within influenza viruses at a regular rate with time over merely a few decades. Panel b: This also occurs over long periods of time. For example, geologists know that the Pacific islands of Hawaii have been formed over millions of years, emerging one after the other over the last 5 million years. Evolutionary biologists know that both honeycreeper birds and *Drosophila* fruit flies have populated these islands during this time, and from the geological data, we know *how long ago* they diverged. If we look at genetic data from the *Yp1* gene in honeycreepers (Panel c) and the Cytb gene from fruit flies (Panel d), we observe a very consistent correlation between genetic distance (vertical axis) and time between island formation (horizontal axis). Just like the data you saw from the influenza virus, it looks very much like there is a constant rate of genetic divergence with time, this time over millions of years. Plots b-d are from [Bromham and Penny, 2003](https://www.nature.com/articles/nrg1020).
+
+
+
+**Figure 1.** Evidence that molecular clock causes divergence between species over both short and long periods of time.  **Panel a**: We saw from the influenza virus workshop that mutations occurred within influenza viruses at a regular rate with time over merely a few decades. **Panel b**: This also occurs over long periods of time. For example, geologists know that the Pacific islands of Hawaii have been formed over millions of years, emerging one after the other over the last 5 million years. Evolutionary biologists know that both honeycreeper birds and *Drosophila* fruit flies have populated these islands during this time, and from the geological data, we know *how long ago* they diverged. If we look at genetic data from the *Yp1* gene in honeycreepers (**Panel c**) and the Cytb gene from fruit flies (**Panel d**), we observe a very consistent correlation between genetic distance (vertical axis) and time between island formation (horizontal axis). Just like the data you saw from the influenza virus, it looks very much like there is a constant rate of genetic divergence with time, this time over millions of years. Plots b-d are from [Bromham and Penny, 2003](https://www.nature.com/articles/nrg1020).
 
 ## Evolutionary change over deep time 
 
 
-We told you in the lectures that:
+
+In the lectures we learned that:
 
 - The accumulation of mutations within species generates the genetic differences between species
-- The	different kinds of genes have different evolutionary rates, for example:
-  - In a single-celled organism, proteins that are located on the outside of the cells tend to  evolve relatively rapidly, to adapt to the external environment
-  - Proteins that are located deep on the insides of the cells, performing fundamental processes (like DNA replication), tend to change slowly because they are so important
+- The different kinds of genes have different evolutionary rates, for example:
+  - In a single-celled organism, proteins that are located on the outside of the cells tend to evolve relatively rapidly, to adapt to the external environment
+  - Proteins that are located deep inside the cells, performing fundamental processes (like DNA replication), tend to change slowly because they are so important
 
 \
 \
@@ -66,7 +70,7 @@ We told you in the lectures that:
 # Are there consistent patterns of evolution within and between species?
 
 - The accumulation of mutations within species generates the genetic differences between species 
-- Therefore, we might expect that the genes that evolve *evolve rapidly within species* would also *evolve rapidly between species*
+- Therefore, we might expect that the genes that *evolve rapidly within species* would also *evolve rapidly between species*
 - And the genes that change slowly *within species* should also change slowly *between species*.
 
 **Today, we will examine these predictions**
@@ -77,16 +81,16 @@ We told you in the lectures that:
 
 ## The phylogeny
 
-This time, compare within species gene diversity of *Leishmania donovani*, then between species gene divergence between *Leishmania donovani*, and *Leishmania braziliensis*, and finally  between species gene divergence with yeast. Figure 2 below shows a phylogenetic tree of *Leishmania* and related species.
+This time, compare within species gene diversity of *Leishmania donovani*, then between species gene divergence between *Leishmania donovani*, and *Leishmania braziliensis*, and finally between species gene divergence with yeast. Figure 2 below shows a phylogenetic tree of *Leishmania* and related species.
 
 
 ![](images/compgen2.jpg)
 
-**Figure 2**. A phylogenetic tree of *Leishmania* and related species. Two of species that we looked at last time in the Viannia clade are included (blue brackets). Today, we will study genetic differences within the *L. donovani* species (red arrow). We will also look at genetic differences *between species*, by comparing *L. braziliensis* to  *L. donovani*. We will also compare *L. donovani* proteins to a yeast species that diverged from *Leishmania* over a billion years ago (but yeast is not shown on this tree).
+**Figure 2**. A phylogenetic tree of *Leishmania* and related species. Two of the species that we looked at last time in the Viannia clade are included (blue brackets). Today, we will study genetic differences within the *L. donovani* species (red arrow). We will also look at genetic differences *between species*, by comparing *L. braziliensis* to *L. donovani*. We will also compare *L. donovani* proteins to a yeast species that diverged from *Leishmania* over a billion years ago (but yeast is not shown on this tree).
 
 ## Genetic distances: shallow and deep time
 
-Today, we will examine patterns of evolutionary change over three time scales, as summarised in Table 1 below. Our aim is to examine whether the same kinds genes tend to evolve rapidly or slowly over all these time scales.
+Today, we will examine patterns of evolutionary change over three time scales, as summarised in Table 1 below. Our aim is to examine whether the same kinds of genes tend to evolve rapidly or slowly over all these time scales.
 
 
 | Time scale  | Years (approximate)  | Data comparison |
@@ -97,7 +101,7 @@ Today, we will examine patterns of evolutionary change over three time scales, a
 
 : **Time scales** {.striped .hover}
 
-Note: These times scales are *very approximate*, but we certainly know that the within-species differences are much more recent than the between-species differences, and that the yeast divergence is *much older* still.
+Note: These time scales are *very approximate*, but we certainly know that the within-species differences are much more recent than the between-species differences, and that the yeast divergence is *much older* still.
 
 ### Synonymous and non-synonymous mutations
 
@@ -110,7 +114,7 @@ We expect the **synonymous** mutations to be more or less neutral (ie: not subje
 
 The **non-synonymous** mutations that do change the protein, will often be subject to selection. Since most new mutations are harmful, we expect that many non-synonymous mutations will be removed by **purifying selection**. Very occasionally, a non-synonymous mutation will be beneficial, and will be favoured by **positive selection**.
 
-To understand selection within a gene, we can calculate ratio of non-synonymous (selection) / synonymous (control) ratio. We will call this the **N/S ratio**. I show some toy examples of N/S ratios in Table 2 below.
+To understand selection within a gene, we can calculate the ratio of non-synonymous (selection) / synonymous (control) ratio. We will call this the **N/S ratio**. I show some toy examples of N/S ratios in Table 2 below.
 
 \
 *NB: More complex analyses call this ratio the dN/dS ratio, or the Ka/Ks ratio.*
@@ -164,7 +168,7 @@ table1 <- read_xlsx("workshop7-data/BIO00056I-workshop7.xlsx", sheet = 1, skip=6
 table1 <- table1 %>%
   clean_names()
 
-#histgram of table1$n_s_ratio
+#histogram of table1$n_s_ratio
 ggplot(table1, aes(x=n_s_ratio)) +
   geom_histogram(binwidth=0.3) +
   xlab("N/S ratio within L. donovani") +
@@ -210,7 +214,7 @@ To understand what kinds of genes have high or low N/S ratios, I divided the gen
 
 Note: I say *might be*, because N/S ratios can be noisy, and positive selection can be quite difficult to prove. 
 
-There are 1714, genes with N/S ratio > 1.3. Here is a list of those with the highest N/S ratios - it doesn't tell us much does it!
+There are 1714 genes with N/S ratio > 1.3. Here is a list of those with the highest N/S ratios - it doesn't tell us much, does it?
 
 ```{r}
 #| echo: false
@@ -257,7 +261,7 @@ The results are shown in Figure 4 (positive selection) and Figure 5 (purifying s
 :::callout-tip
 # Discussion points: gene enrichment analysis
 
-- Where do positive selection proteins localise (Figure 4)?
+- Where do proteins under positive selection localise (Figure 4)?
 - Where do slowly evolving proteins localise (Figure 5)?
 - In the same way that the MK test example showed us that different sites *within proteins* are subject to different types of selection, what patterns do you observe here?
 
@@ -269,7 +273,7 @@ The results are shown in Figure 4 (positive selection) and Figure 5 (purifying s
 
 Since diversity within species gives rise to divergence between species, we might expect that the genes that evolve rapidly within species would also evolve rapidly between species over long periods of time. We'll examine this now.
 
-To study this, we will now compare how similar the proteins are between *L. donovani* and *L. braziliensis*. You can see that these are quite distant on the phylogenetic tree (Figure 2). We don't know exactly how long ago they diverged, but it will be much longer ago that the within-species differences we saw earlier, so perhaps 100,000 years or even millions of years ago.
+To study this, we will now compare how similar the proteins are between *L. donovani* and *L. braziliensis*. You can see that these are quite distant on the phylogenetic tree (Figure 2). We don't know exactly how long ago they diverged, but it will have been much longer ago than the within-species differences we saw earlier, so perhaps 100,000 years or even millions of years ago.
 
 To compare the proteins between these two species, I calculated the *percent identity* of each *L. donovani* and *L. braziliensis* ortholog (ie: what percent of amino acids in the alignment are the same). The percent identities range from 22% to 100%. What is remarkable here is that some proteins have changed an enormous amount over this time, while others have not changed at all, showing that **over evolutionary time, genes change at different rates**.
 
@@ -300,13 +304,13 @@ t5gene <- clean_names(t5gene)
 t5id <- read_tsv("week8/table5-percent-id.tsv", show_col_types = FALSE)
 t5id <- clean_names(t5id)
 
-#merge data: join on ldon_gene (in t4id) matching gene_id (in t4gene)
+#merge data: join on ldon_gene (in t5id) matching gene_id (in t5gene)
 table5 <- left_join(t5id, t5gene, by = c("ldon_gene" = "gene_id"))
 
 #arrange and remove hypothetical proteins
 table5_most_conserved_genes <- table5 |>
-  #arrange by percent)_identity ascending
-  arrange(percent_identity,reverse = T) |>
+  #arrange by percent_identity ascending
+  arrange(percent_identity) |>
   filter(!grepl("hypothetical", product_description, ignore.case = TRUE))
 
 #show a list of the top 10 product_descriptions
@@ -347,7 +351,7 @@ table4 <- left_join(t4id, t4gene, by = c("ldon_gene" = "gene_id"))
 
 #arrange and remove hypothetical proteins
 table4_least_conserved_genes <- table4 |>
-  #arrange by percent)_identity ascending
+  #arrange by percent_identity ascending
   arrange(percent_identity) |>
   filter(!grepl("hypothetical", product_description, ignore.case = TRUE))
 
@@ -381,7 +385,7 @@ To understand these large lists of genes, I again ran gene enrichment analyses o
 - Is this consistent with what we saw in the shallow time analysis?
 - We used slightly different methods (N/S ratios vs percent identity), and different species comparisons (*L. donovani* within-species vs *L. donovani* vs *L. braziliensis* between-species). 
 - Yet we see similar patterns. What does this tell us about the processes of selection that operate within species (*L. donovani*) and between species?
-- Are rates of change higher for proteins the insides of cells, or the outsides of cells? Why might this be?
+- Are rates of change higher for proteins on the insides of cells, or the outsides of cells? Why might this be?
 :::
 
  
@@ -405,7 +409,7 @@ Here there is one very clear outline: **the ribosome**.
 
 :::callout-tip
 # Discussion points
-We observe a fairly consistent pattern across all time scales that we have examined: genes that are located on the outsides of cells tend to evolve rapidly, while genes that are located deep within cells tend to evolve slowly. of course, there are exceptions, and the rates of protein change are affected by many other factors, but this general pattern is very clear. Let's consider this.
+We observe a fairly consistent pattern across all time scales that we have examined: genes that are located on the outsides of cells tend to evolve rapidly, while genes that are located deep within cells tend to evolve slowly. Of course, there are exceptions, and the rates of protein change are affected by many other factors, but this general pattern is very clear. Let's consider this.
 
 - Why do you think that ribosomal proteins are so highly conserved over such long periods of time (Figure 8)?
 - Given the function of ribosomes in the cell, what might be the consequences of a mutation that reduced protein translation accuracy by 0.1%?
@@ -433,7 +437,7 @@ Today, we examined the patterns of evolutionary change within and between specie
 
 In your answer, explain:
 
-- If we *do* see the same numbers of mutations in each gene, or not
+- Whether we *do* see the same numbers of mutations in each gene, or not
 - What genetic and evolutionary factors might cause us to *not* observe the same numbers of mutations in each gene
 
 Hint: consider both stochastic factors (randomness) and biological processes of evolutionary change. 

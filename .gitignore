@@ -11,3 +11,4 @@
 /.quarto/
 .DS_Store
 
+.posit/assistant
