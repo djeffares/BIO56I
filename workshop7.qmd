@@ -121,7 +121,7 @@ To understand selection within a gene, we can calculate the ratio of non-synonym
 
 \
 
-| Gene | synonymous SNPs | non-synonymous SNPs | Interpretation |
+| Gene | non-synonymous SNPs | synonymous SNPs | Interpretation |
 |:------:|:------:|:------:|:-------|
 | A | 1 | 10 | far fewer non-synonymous than synonymous SNPs: **purifying selection** has removed many non-synonymous SNPs |
 | B | 10 | 11 | non-synonymous and synonymous SNPs about the same: **no selection**  |
